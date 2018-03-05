@@ -120,7 +120,9 @@ p {
 .white-block {
   padding: 21px 30px 10px;
   border-radius: 3px;
-  background: #fff; }
+  background: #fff;
+  position: relative;
+  overflow: hidden; }
   .white-block.large {
     min-height: 284px; }
   .white-block.medium {
@@ -128,6 +130,42 @@ p {
   .white-block.small {
     min-height: 135px;
     margin-bottom: 14px; }
+
+#gadget1 {
+  position: absolute;
+  top: 218px;
+  left: 123px; }
+
+#gadget2 {
+  position: absolute;
+  top: 144px;
+  left: 176px; }
+
+#gadget3 {
+  position: absolute;
+  top: 59px;
+  left: 262px; }
+
+#gadget4 {
+  position: absolute;
+  top: 19px;
+  left: 362px; }
+
+.stack-line {
+  position: absolute;
+  top: -357px;
+  right: -74px;
+  -webkit-transform: rotate(24deg);
+  -ms-transform: rotate(24deg);
+  transform: rotate(24deg); }
+  .stack-line img {
+    width: 156px;
+    margin-left: 12px;
+    position: relative; }
+    .stack-line img:nth-of-type(1) {
+      top: 382px; }
+    .stack-line img:nth-of-type(3) {
+      top: -433px; }
 
 .service .row {
   padding-left: 8px;

@@ -115,6 +115,8 @@ p
 	padding: 21px 30px 10px
 	border-radius: 3px
 	background: #fff
+	position: relative
+	overflow: hidden
 	&.large
 		min-height: 284px
 	&.medium
@@ -122,7 +124,36 @@ p
 	&.small
 		min-height: 135px
 		margin-bottom: 14px
-	
+
+#gadget1
+	position: absolute
+	top: 218px
+	left: 123px
+#gadget2
+	position: absolute
+	top: 144px
+	left: 176px
+#gadget3
+	position: absolute
+	top: 59px
+	left: 262px
+#gadget4
+	position: absolute
+	top: 19px
+	left: 362px
+.stack-line
+	position: absolute
+	top: -357px
+	right: -74px
+	transform: rotate(24deg)
+	img
+		width: 156px
+		margin-left: 12px
+		position: relative
+		&:nth-of-type(1)
+			top: 382px
+		&:nth-of-type(3)
+			top: -433px
 
 .service
 	.row
