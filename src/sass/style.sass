@@ -9,8 +9,6 @@ $link-color: #0070c9
 
 body
 	background-color: #f4f4f4
-	//background: url('../img/all.png') center top no-repeat
-	//background-size: 1920px
 
 header
 	background: #202020
@@ -37,11 +35,201 @@ p
 	padding-right: 15px
 	padding-left: 15px
 .slider-head
-	height: 900px 
+	height: 93vh 
 	width: 100%
-	background: url("../img/back-slider.png") center no-repeat
+	background-position: center
+	background-repeat: no-repeat 
 	background-size: cover
 	margin-bottom: 30px
+	position: relative
+	&__logo
+		display: block
+		width: 300px
+		margin: 0 auto 25px
+		height: auto
+	&__item
+		height: 93vh
+		background-size: cover
+		padding-top: 100px
+		padding-bottom: 100px
+		.row
+			flex-direction: column
+		h1
+			font-weight: $light
+			font-size: 54px
+			line-height: 60px
+			text-align: center
+			color: #fff
+			width: 650px
+			margin: 25px auto
+		h2
+			max-width: 365px
+			font-weight: 300
+			text-align: left
+			font-family: 'Open Sans'
+			color: #fff
+			line-height: 60px
+			margin-bottom: 35px	
+		&.invideo
+			display: flex
+			padding: 0
+			.video
+				background: url('../img/back-video.png') center no-repeat
+				height: 100%
+				width: 100%
+			.row-half
+				flex: 1
+				align-items: center
+				justify-content: center
+				display: flex
+				flex-direction: column
+
+
+		&.center-content
+			.row
+				height: 100%
+				display: flex
+				justify-content: center
+
+		&.slick-current
+			h2
+				animation-name: slideTop
+				-webkit-animation-name: slideTop
+				animation-duration: 2s
+				-webkit-animation-duration: 2s
+				animation-timing-function: ease-in-out
+				-webkit-animation-timing-function: ease-in-out
+				visibility: visible !important
+			p
+				animation-name: slideTop2
+				-webkit-animation-name: slideTop2
+				animation-duration: 2s
+				-webkit-animation-duration: 2s
+				animation-timing-function: ease-in-out
+				-webkit-animation-timing-function: ease-in-out
+				visibility: visible !important
+			h1, .slider-head__logo				
+				animation-name: sleft
+				-webkit-animation-name: sleft
+				animation-duration: 2s
+				-webkit-animation-duration: 2s
+				animation-timing-function: ease-in-out
+				-webkit-animation-timing-function: ease-in-out
+				visibility: visible !important
+			a
+				animation-name: sleft
+				-webkit-animation-name: sleft
+				animation-duration: 2s
+				-webkit-animation-duration: 2s
+				animation-timing-function: ease-in-out
+				-webkit-animation-timing-function: ease-in-out
+				visibility: visible !important
+		p
+			font-size: 18px
+			line-height: 30px
+			color: #fff
+			max-width: 365px
+			margin-bottom: 35px
+			ility: visible !important
+		a
+			color: #fff
+			font-size: 16px
+			display: inline-block
+			background: #de0a36
+			line-height: 45px
+			width: 220px
+			text-align: center
+			transition: all 0.3s
+			&:hover
+				background: #bc042b
+	.slick-next
+		top: 48%
+		right: 5px
+		z-index: 299
+		background: url('../img/arrow-header.png') center no-repeat
+		background-size: 15px 30px
+		transform: rotate(180deg)
+	.slick-prev
+		top: 48%
+		left: 5px
+		z-index: 299
+		background: url('../img/arrow-header.png') center no-repeat
+		background-size: 15px 30px
+	.slick-dots
+		position: absolute
+		bottom: 50px
+		width: 100%
+		text-align: center
+		li
+			display: inline-block
+			width: 68px
+			height: 10px
+			background-color: transparent
+			font-size: 0
+			margin: 0 15px
+			cursor: pointer
+			border-top: 2px solid #d88a92
+			&.slick-active
+				border-top: 2px solid #fff
+
+
+@keyframes slideTop
+	0%
+		transform: translateY(-200%)
+		opacity: 0
+
+	100%
+		transform: translateY(0%)
+		opacity: 1
+
+
+@-webkit-keyframes slideTop
+	0%
+		-webkit-transform: translateY(-200%)
+		opacity: 0
+
+	100%
+		-webkit-transform: translateY(0%)
+		opacity: 1
+@keyframes slideTop2
+	0%
+		transform: translateY(-300%)
+		opacity: 0
+
+	100%
+		transform: translateY(0%)
+		opacity: 1
+
+
+@-webkit-keyframes slideTop2
+	0%
+		-webkit-transform: translateY(-300%)
+		opacity: 0
+
+	100%
+		-webkit-transform: translateY(0%)
+		opacity: 1
+
+@keyframes sleft
+	0%
+		transform: translateX(-20%)
+		opacity: 0
+
+	100%
+		transform: translateX(0%)
+		opacity: 1
+
+
+@-webkit-keyframes sleft
+	0%
+		transform: translateX(-20%)
+		opacity: 0
+
+	100%
+		transform: translateX(0%)
+		opacity: 1
+.header .row	
+	position: relative
 .logo
 	width: 114px
 	&-wrap
@@ -51,17 +239,84 @@ p
 		display: flex
 		justify-content: space-around
 		padding-left: 19px
-		li
-			a
+		>li
+			>a
 				color: #fff
 				font-family: "Open Sans"
 				font-size: 14px
+				line-height: 45px	
 				transition: all 0.3s
 			&:hover
-				a
+				>a
 					color: #888
+			&:hover .head-menu__dropdown
+				display: block
+	&__dropdown
+		position: absolute
+		display: none
+		transition: all 1s
+		top: 45px
+		left: -22px		
+		z-index: 399
+		p
+			font-size: 14px
+			line-height: 24px
+			margin-bottom: 6px
+			margin-top: 30px
+			font-weight: $semibold
+			color: #000
+		a
+			font-size: 13px
+			line-height: 20px
+			margin-bottom: 8px
+			display: block
+			color: #000
+			&:hover
+				text-decoration: underline
+		&.full-drop
+			width: calc(100% + 44px)
+			padding: 0 37px
+			background-color: #fff
+			border-bottom-left-radius: 3px
+			border-bottom-right-radius: 3px
+		&.service
+			padding: 0 37px 66px
+			background: #fff url('../img/brand.png') center right no-repeat
+			background-size: contain
+			.brand
+				font-size: 20px
+				font-weight: $semibold
+				color: #fff
+				margin-left: -40px
+				line-height: 32px
+				position: relative
+				bottom: -57px
+				transition: all 0.3s
+				&:hover
+					text-decoration: none
+					color: #e6e6e6
+			.columns:nth-of-type(4)
+				display: flex
+				align-items: flex-end
+		&.portfolio-dropdown
+			padding-bottom: 32px
+		.our-project
+			p
+				margin-top: 0
+				margin-bottom: 0
+				line-height: 12px
+			img
+				margin-top: 3px
+				margin-bottom: 11px
+				width: 250px
+			span
+				font-size: 13px
+				color: #999
+
+
+
 .arrow-down
-	a
+	>a
 		position: relative
 		&:after
 			border: 3px solid transparent

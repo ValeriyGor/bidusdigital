@@ -1,0 +1,1 @@
+!function(g){g("#gadget1"),g("#gadget2"),g("#gadget3"),g("#gadget4")}(jQuery),(new WOW).init();

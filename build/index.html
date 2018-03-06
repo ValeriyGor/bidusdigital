@@ -8,6 +8,7 @@
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation-flex.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" type="text/css" href="css/bundle.min.css">
 </head>
 <body>
@@ -19,8 +20,102 @@
 			<div class="columns small-2 small-7 align-self-middle head-menu">
 				<ul>
 					<li><a href="#">Главная</a></li>                                                                        
-					<li class="arrow-down"><a href="#">Услуги</a></li>
-					<li class="arrow-down"><a href="#">Портфолио</a></li>
+					<li class="arrow-down"><a href="#">Услуги</a>
+						<div class="head-menu__dropdown full-drop service">
+							<div class="row">
+								<div class="columns small-3">
+									<p>Разработка сайтов</p>
+									<a href="#">Разработка интернет-магазинов</a>
+									<a href="#">Разработка корпоративных сайтов</a>
+									<a href="#">Разработка Landing page</a>
+
+									<p>Брендирование и дизайн (UI/UX)</p>
+									<a href="#">Айдентика</a>
+									<a href="#">Фирменный стиль</a>
+									<a href="#">Бизнес-презентации</a>
+									<a href="#">Видеографика</a>
+									<a href="#">Проектирование интерфейсов</a>
+									<a href="#">Дизайн сайтов</a>
+
+									<p>Локализация</p>
+									<a href="#">Перевод на разные языки</a>
+									<a href="#">Адаптация LTR</a>
+								</div>
+								<div class="columns small-3">
+									<p>Мобильные приложения</p>
+									<a href="#">Приложения под iOS</a>
+									<a href="#">Приложения под Android</a>
+
+									<p>Привлечение клиентов</p>
+									<a href="#">SEO продвижение</a>
+									<a href="#">SMM продвижение</a>
+									<a href="#">Проработка маркетинга</a>
+									<a href="#">Управление репутацией</a>
+									<a href="#">Контекстная реклама</a>
+									<a href="#">E-mail маркетинг</a>
+
+									<p>Поддержка и развитие</p>
+									<a href="#">Наполнение сайтов</a>
+									<a href="#">Техническая поддержка сайтов</a>
+									<a href="#">Модернизация сайтов</a>
+								</div>
+								<div class="columns small-3">
+									<p>IT-аудит и экспертиза</p>
+									<a href="#">Технический аудит сайта</a>
+									<a href="#">SEO анализ сайта</a>
+									<a href="#">Юзабилити аудит</a>
+									<a href="#">Юридическая экспертиза</a>
+
+									<p>Автоматизация бизнеса</p>
+									<a href="#">Разработка CRM систем</a>
+									<a href="#">Интеграция CRM и ERP</a>
+									<a href="#">Платежные системы <br>и терминалы</a>
+									<a href="#">IP-телефония</a>
+								</div>
+								<div class="columns small-3">
+									<a class="brand" href="">Разработка уникального фирменного стиля</a>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="arrow-down"><a href="#">Портфолио</a>
+						<div class="head-menu__dropdown full-drop portfolio-dropdown">	
+							<div class="row">	
+								<div class="columns small-3">	
+									<p>Категории</p>
+									<a href="#">Брендирование</a>
+									<a href="#">SEO-продвижение</a>
+									<a href="#">Разработка CRM систем</a>
+									<a href="#">Разработка интернет-магазинов</a>
+									<a href="#">Разработка корпоративных сайтов</a>
+									<a href="#">Разработка Landing page</a>
+									<a href="#">Бизнес-презентации</a>
+									<a href="#">Мобильные приложения</a>
+								</div>
+									<div class="columns small-9">	
+										<p>Новые проекты</p>
+										<div class="row our-project">	
+											<div class="columns small-4">	
+													<img src="img/portf1.png" alt="">
+													<p>Березовский завод емкостей</p>
+													<span>Брендирование, корп. сайт</span>
+											</div>
+											<div class="columns small-4">	
+														<img src="img/portf2.png" alt="">
+														<p>Hantel Art</p>
+														<span>Брендирование</span>
+												</div>
+												<div class="columns small-4">	
+														<img src="img/portf3.png" alt="">
+														<p>Restamenu</p>
+														<span>Мобильные приложения</span>
+												</div>
+											</div>
+									</div>
+							</div>
+							
+						</div>
+					</li>
 					<li class="arrow-down"><a href="#">Компания</a></li>
 					<li><a href="#">Контакты</a></li>
 				</ul>
@@ -33,7 +128,58 @@
 			</div>
 		</div>
 	</header>
-	<section class="slider-head"></section>
+	<section class="slider-head">
+		<div class="slider-head__item center-content" style="background-image: url('img/back-slider.png'); background-color: #cd1829;">
+			<div class="row align-self-middle">
+				<img class="slider-head__logo" src="img/white-logo.png" alt="">
+				<h1 class="slideerRight">Профессиональное маркетинговое агенство в России и ОАЭ</h1>
+			</div>			
+		</div>
+		<div class="slider-head__item invideo" style="background: #cd1829 url('img/back-slider.png') center left -50vh no-repeat; background-size: auto 100%;">
+			<div class="row-half">
+				<img class="slider-head__logo" src="img/white-logo.png" alt="">
+				<h1>Профессиональное маркетинговое агенство в России и ОАЭ</h1>	
+			</div>	
+			<div class="row-half">
+				<div class="video"></div>
+			</div>				
+		</div>
+		<div class="slider-head__item" style="background-image: url('img/back-slider3.png');">
+			<div class="row">
+				<h2 slider-head__header>Разработка мобильных приложений</h2>
+				<p class="slider-head__link">Уникальная возможность для вашего бизнеса повысить лояльность  клиентов, закрепиться в свое нише и освоить новый функционал.</p>
+				<a href="#" class="slider-head__link">Подробнее об услуге</a>
+			</div>
+		</div>
+		<div class="slider-head__item" style="background-image: url('img/back-slider4.png');">
+			<div class="row">
+				<h2 slider-head__header>Брендирование компании</h2>
+				<p class="slider-head__link">Мы создаем лицо компании, которое расскажет о вас, передаст философию, расскрое всю ее уникальность и запомнится вашим клиентам.</p>
+				<a href="#" class="slider-head__link">Подробнее об услуге</a>
+			</div>			
+		</div>
+		<div class="slider-head__item" style="background-image: url('img/back-slider5.png');">
+			<div class="row">
+				<h2 slider-head__header>Разработка современных сайтов</h2>
+				<p class="slider-head__link">Расскажите о своей компании всему миру, найдите новых клиентов или начните автономные продажи с нового интернет-магазина.</p>
+				<a href="#" class="slider-head__link">Подробнее об услуге</a>
+			</div>			
+		</div>
+		<div class="slider-head__item" style="background-image: url('img/back-slider6.png');">
+			<div class="row">
+				<h2 slider-head__header>Комплексное продвижение бизнеса</h2>
+				<p class="slider-head__link">Перечень эффективных решений, которые способны повысить прибыльность вашего бизнеса и компании вцелом.</p>
+				<a href="#" class="slider-head__link">Подробнее об услуге</a>
+			</div>			
+		</div>
+		<div class="slider-head__item" style="background-image: url('img/back-slider7.png');">
+			<div class="row">
+				<h2 slider-head__header>Автоматизация вашего бизнеса</h2>
+				<p class="slider-head__link">Оптимизируйте все рабочие процессы, которые мешают эффективности вашего дела, чтобы повысить прибыль и освободить себя для новых целей.</p>
+				<a href="#" class="slider-head__link">Подробнее об услуге</a>
+			</div>			
+		</div>
+	</section>
 	<section class="service">
 		<div class="row">
 			<div class="columns small-4 service-item">
@@ -48,11 +194,15 @@
 				</div>
 			</div>
 			<div class="columns small-8 service-item">
-				<div class="white-block large">
+				<div class="white-block large gadgets-anim">
 					<h3>Разработка сайтов</h3>
 					<a href="">Интернет-магазин</a>
 					<a href="">Корпоративный сайт</a>
 					<a href="">Landing page</a>
+					<img id="gadget1" src="img/watch-slide1.png" alt="" class="wow fadeInRight">
+					<img id="gadget2" src="img/phone-slide1.png" alt="" class="wow fadeInRight" data-wow-delay="0.15s">
+					<img id="gadget3" src="img/ipad-slide1.png" alt="" class="wow fadeInRight" data-wow-delay="0.3s">
+					<img id="gadget4" src="img/mac-slide1.png" alt="" class="wow fadeInRight" data-wow-delay="0.45s"> 
 				</div>
 			</div>
 			<div class="columns small-4 service-item">
@@ -88,6 +238,11 @@
 					<a href="">SMM продвижение</a>
 					<a href="">Проработка маркетинга</a>
 					<a href="">Управление репутацией</a>
+					<div class="stack-line">
+						<img id="clients-line1" src="img/client-line2.png" alt="" class="wow bounceInUp" data-wow-delay="0.5s">
+						<img id="clients-line2" src="img/client-line1.png" alt="" class="wow bounceInDown" data-wow-delay="0.5s">
+						<img id="clients-line3" src="img/client-line2.png" alt="" class="wow bounceInUp" data-wow-delay="0.5s">
+					</div>
 				</div>
 			</div>
 			<div class="columns small-4 service-item">
@@ -199,7 +354,7 @@
 	<section class="blog">
 		<h2>Корпоративный блог</h2>
 		<div class="blog__wrap">
-			<div class="blog-item">
+			<div class="blog-item wow bounceInUp">
 				<div class="blog-item__img" style="background-image: url('img/blog/blog1.png');"></div>				
 				<div class="blog-item__descr">
 					<h3 class="blog-item__head">Типовые виды индидов в профессии дизайнера</h3>
@@ -210,7 +365,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="blog-item">
+			<div class="blog-item wow bounceInUp">
 				<div class="blog-item__img" style="background-image: url('img/blog/blo.png');"></div>				
 				<div class="blog-item__descr">
 					<h3 class="blog-item__head">Как стать востребованным программистом</h3>
@@ -221,7 +376,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="blog-item">
+			<div class="blog-item wow bounceInUp">
 				<div class="blog-item__img" style="background-image: url('img/blog/blog3.png');"></div>
 				<div class="blog-item__descr">
 					<h3 class="blog-item__head">Открытие 3-го филиала компании в Дубае</h3>
@@ -232,7 +387,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="blog-item">
+			<div class="blog-item wow bounceInUp">
 				<div class="blog-item__img" style="background-image: url('img/blog/blo.png');"></div>
 				<div class="blog-item__descr">
 					<h3 class="blog-item__head">Как стать востребованным программистом</h3>
@@ -304,6 +459,9 @@
 	<script
 	src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenLite.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/plugins/CSSPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <script type="" src="js/script.js"></script>
 
 <script>
@@ -330,6 +488,15 @@
 	  slidesToScroll: 1,
 	  dots: false
 	});
+	$('.slider-head').slick({
+		arrows: true,
+		dots: true,
+		infinite: true,
+		speed: 800,
+		fade: true,
+		cssEase: 'linear'
+	});
+
 </script>
 
 </body>
