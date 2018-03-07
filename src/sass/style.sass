@@ -35,7 +35,7 @@ p
 	padding-right: 15px
 	padding-left: 15px
 .slider-head
-	height: 93vh 
+	height: calc(100vh - 45px)
 	width: 100%
 	background-position: center
 	background-repeat: no-repeat 
@@ -44,11 +44,11 @@ p
 	position: relative
 	&__logo
 		display: block
-		width: 300px
-		margin: 0 auto 25px
+		width: 260px
+		margin: 20px auto 0
 		height: auto
 	&__item
-		height: 93vh
+		height: calc(100vh - 45px)
 		background-size: cover
 		padding-top: 100px
 		padding-bottom: 100px
@@ -56,12 +56,12 @@ p
 			flex-direction: column
 		h1
 			font-weight: $light
-			font-size: 54px
-			line-height: 60px
+			font-size: 48px
+			line-height: 54px
 			text-align: center
 			color: #fff
 			width: 650px
-			margin: 25px auto
+			margin: 20px auto
 		h2
 			max-width: 365px
 			font-weight: 300
@@ -230,6 +230,7 @@ p
 		opacity: 1
 .header .row	
 	position: relative
+	z-index: 999
 .logo
 	width: 114px
 	&-wrap
@@ -237,8 +238,9 @@ p
 .head-menu
 	ul
 		display: flex
-		justify-content: space-around
-		padding-left: 19px
+		justify-content: space-between
+		padding-left: 15px
+		padding-right: 0
 		>li
 			>a
 				color: #fff
@@ -246,6 +248,9 @@ p
 				font-size: 14px
 				line-height: 45px	
 				transition: all 0.3s
+				display: block
+				padding-right: 28px
+				padding-left: 35px
 			&:hover
 				>a
 					color: #888
@@ -257,7 +262,22 @@ p
 		transition: all 1s
 		top: 45px
 		left: -22px		
+		background-color: #fff
 		z-index: 399
+		border-bottom-left-radius: 3px
+		border-bottom-right-radius: 3px
+		&:before
+			content: ""
+			top: -5px
+			left: 105px
+			width: 0
+			height: 0
+			position: absolute
+			border: 5.5px solid transparent
+			border-bottom-width: 5px
+			border-top-width: 0
+			border-color: rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) rgba(255, 255, 255, 1) rgba(255, 255, 255, 0)
+
 		p
 			font-size: 14px
 			line-height: 24px
@@ -276,13 +296,12 @@ p
 		&.full-drop
 			width: calc(100% + 44px)
 			padding: 0 37px
-			background-color: #fff
-			border-bottom-left-radius: 3px
-			border-bottom-right-radius: 3px
 		&.service
 			padding: 0 37px 66px
 			background: #fff url('../img/brand.png') center right no-repeat
 			background-size: contain
+			&:before
+				left: 35%
 			.brand
 				font-size: 20px
 				font-weight: $semibold
@@ -300,6 +319,8 @@ p
 				align-items: flex-end
 		&.portfolio-dropdown
 			padding-bottom: 32px
+			&:before
+				left: 45%
 		.our-project
 			p
 				margin-top: 0
@@ -312,6 +333,23 @@ p
 			span
 				font-size: 13px
 				color: #999
+		&.company-drop
+			width: 436px
+			background: #fff url('../img/company.png') center right no-repeat
+			background-size: contain
+			padding-bottom: 19px
+			padding-left: 35px
+			left: 564px
+.curtain
+	position: fixed
+	top: 0
+	height: 0
+	background: rgba(0, 0, 0, 0.2)
+	width: 100%
+	height: 100vh
+	z-index: 399
+	display: none
+
 
 
 
@@ -328,27 +366,72 @@ p
 			border-color: #909090 rgba(255,212,52,0) rgba(255,212,52,0)
 			border-top-width: 4px
 			border-bottom-width: 0
-			top: 45%
-			right: -10px
+			top: 47%
+			right: 16px
 			transition: all .3s
 		&:hover:after
 			transform: scale(1,-1)
 .search
+	position: absolute
+	top: 0
+	right: 17%
+	width: 8.3%
+	transition: all 0.3s
+	background: #202020	
+	.fast-link, .result-search
+		position: absolute
+		top: 45px
+		left: 0
+		width: 100%
+		min-height: 260px
+		background: #fff
+		padding-top: 27px
+		padding-left: 33px
+		display: none
+		p
+			font-size: 11px
+			color: #737373
+			margin-bottom: 6px
+		a
+			font-size: 16px
+			padding-left: 20px
+			line-height: 38px
+			color: #000
+			display: block
+			&:hover
+				color: #0070c9
+	&.active
+		width: 60%
+		right: 20%
+		background: #1A1A1A
+		.close-input
+			background: url('../img/svg/ic_close_gray.svg') center no-repeat
+			background-size: 14px
+			height: 45px
+			width: 14px
+			position: absolute
+			top: 0
+			right: 28px
+			cursor: pointer
+		input, input:hover, input:focus	
+			background: transparent url('../img/svg/ic_search_link-gray.svg') center left 20px no-repeat
+		input
+			padding-left: 46px
 	input
 		margin: 0
 		padding: 0
 		border: none
 		outline: none
-		background: transparent url('../img/svg/ic_search_link.svg') center left 0px no-repeat;
+		background: transparent url('../img/svg/ic_search_link.svg') center left 0px no-repeat
 		width: 100%
 		height: 45px
 		color: #fff
+		font-size: 14px
 		&:focus
-			background: transparent
 			border: none
 			box-shadow: none
-		&:hover
-			background: transparent url('../img/svg/ic_search_link-gray.svg') center left 0px no-repeat;
+		&:hover, &:focus
+			background: transparent url('../img/svg/ic_search_link-gray.svg') center left 0px no-repeat
 
 
 .phone
@@ -431,13 +514,50 @@ p
 				text-decoration: underline
 
 .portfolio
-	height: 850px
-	background: #242627 url('../img/img-portfolio.png') center right no-repeat
-	background-size: auto 850px
-	margin-top: 19px
+	margin-top: 23px
 	margin-bottom: 50px
-	h2
+	position: relative
+	h2.head-block
 		color: #fff
+		position: absolute
+		top: 45px
+		left: 0
+		z-index: 100
+		width: 100%
+	.slider-head
+		height: 100vh
+		&__item
+			height: 100vh
+
+		.portfolio-slider-link
+			font-size: 18px
+			color: #fff
+			font-weight: 300
+			background: none
+			text-align: left
+			padding-left: 5px
+			line-height: 40px
+			&:before
+				content: "—"
+				display: inline-block
+				margin-right: 10px
+		h3
+			font-size: 36px
+			font-weight: 300
+			color: #fff
+		.portfolio-slider-title
+			font-size: 14px
+			line-height: 16px
+			color: #fff
+			padding-left: 5px
+			margin-bottom: 48px
+		.portfolio-slider-descr
+			font-size: 16px
+			color: #fff
+			padding-left: 5px
+			max-width: 275px
+
+
 
 .specoffer
 	h2
