@@ -75,6 +75,7 @@ p
 			padding: 0
 			.video
 				background: url('../img/back-video.png') center no-repeat
+				background-size: cover
 				height: 100%
 				width: 100%
 			.row-half
@@ -143,15 +144,19 @@ p
 			&:hover
 				background: #bc042b
 	.slick-next
-		top: 48%
-		right: 5px
+		height: 100%
+		width: 120px
+		top: 0
+		right: 0
 		z-index: 299
 		background: url('../img/arrow-header.png') center no-repeat
 		background-size: 15px 30px
 		transform: rotate(180deg)
 	.slick-prev
-		top: 48%
-		left: 5px
+		height: 100%
+		width: 120px
+		top: 0
+		left: 0
 		z-index: 299
 		background: url('../img/arrow-header.png') center no-repeat
 		background-size: 15px 30px
@@ -168,7 +173,7 @@ p
 			font-size: 0
 			margin: 0 15px
 			cursor: pointer
-			border-top: 2px solid #d88a92
+			border-top: 2px solid rgba(255, 255, 255, 0.5)
 			&.slick-active
 				border-top: 2px solid #fff
 
@@ -253,7 +258,7 @@ p
 				padding-left: 35px
 			&:hover
 				>a
-					color: #888
+					color: #b7b7b7
 			&:hover .head-menu__dropdown
 				display: block
 	&__dropdown
@@ -307,9 +312,9 @@ p
 				font-weight: $semibold
 				color: #fff
 				margin-left: -40px
-				line-height: 32px
+				line-height: 30px
 				position: relative
-				bottom: -57px
+				bottom: -55px
 				transition: all 0.3s
 				&:hover
 					text-decoration: none
@@ -369,6 +374,8 @@ p
 			top: 47%
 			right: 16px
 			transition: all .3s
+			margin-top: 2px
+
 		&:hover:after
 			transform: scale(1,-1)
 .search
@@ -427,11 +434,21 @@ p
 		height: 45px
 		color: #fff
 		font-size: 14px
+		cursor: pointer
 		&:focus
 			border: none
 			box-shadow: none
 		&:hover, &:focus
 			background: transparent url('../img/svg/ic_search_link-gray.svg') center left 0px no-repeat
+			cursor: pointer
+		&::-webkit-input-placeholder 
+			color: #808080
+		&::-moz-placeholder
+			color: #808080
+		&:-moz-placeholder
+			color: #808080
+		&:-ms-input-placeholder
+			color: #808080
 
 
 .phone
@@ -507,11 +524,18 @@ p
 			line-height: 30px
 			&:before
 				display: inline-block
-				content: '—'
+				content: ""
+				width: 20px
+				height: 1px
+				background: #0070c9
 				margin-left: 2px
 				margin-right: 10px
+				margin-bottom: 4px
+				transition: all 0.3s
 			&:hover
-				text-decoration: underline
+				&:before
+					width: 25px
+
 
 .portfolio
 	margin-top: 23px
@@ -525,9 +549,9 @@ p
 		z-index: 100
 		width: 100%
 	.slider-head
-		height: 100vh
+		height: 700px
 		&__item
-			height: 100vh
+			height: 700px
 
 		.portfolio-slider-link
 			font-size: 18px
@@ -538,9 +562,18 @@ p
 			padding-left: 5px
 			line-height: 40px
 			&:before
-				content: "—"
 				display: inline-block
+				content: ""
+				width: 20px
+				height: 1px
+				background: #fff
+				margin-left: 0
 				margin-right: 10px
+				margin-bottom: 4px
+				transition: all 0.3s
+			&:hover
+				&:before
+					width: 25px
 		h3
 			font-size: 36px
 			font-weight: 300
@@ -613,7 +646,7 @@ p
 			width: 110px
 			text-align: center
 			font-size: 11px
-			line-height: 24px
+			line-height: 22px
 			border-radius: 12px
 			background-color: #de0a36
 			margin-left: 15px
@@ -647,7 +680,8 @@ p
 		width: 195px
 		height: 40px
 		background: #de0a36
-		line-height: 40px
+		line-height: 38px
+		border-radius: 3px
 		margin-top: 20px
 		transition: all 0.3s
 		&:hover
@@ -780,17 +814,32 @@ p
 		margin-left: 15px
 		margin-right: 15px
 		background: #fff
+		border-radius: 3px
+		overflow: hidden
 		&__img
 			height: 240px
 			background-position: center
 			background-size: cover
 		&__descr
 			padding: 20px 30px
-			h3
+			a
 				line-height: 1.3em
 				margin-bottom: 12px
+				font-size: 20px
+				line-height: 26px
+				color: #000
+				transition: all 0.3s
+				font-weight: $semibold
+				display: block
+				&:hover
+					color: #0070c9
+					&~p 
+						color: #000
+
 			p
 				line-height: 1.75em
+				color: #737373
+				transition: all 0.3s
 		&__category
 			font-size: 13px
 		&__marker
