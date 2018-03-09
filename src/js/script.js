@@ -1,10 +1,11 @@
 
 (function($) {	
 var el = $(".invideo__head");
+var el2 = $(".invideo__media");
 
 //Set The Tween Width
-	TweenMax.set(el, {width: "80%"}); 
-
+	// TweenMax.to(el, 2, {width:"-=50%", delay:3, ease:Power2.easeOut});
+	// TweenLite.to(el2, 2, {css: {right:"0"}, delay:3, ease:Power2.easeOut});
 })(jQuery);
 
 new WOW().init();
@@ -44,9 +45,11 @@ $( ".close-input" ).click(function(e) {
     $(".curtain").slideDown(0);
     $(".curtain").addClass('open');
     $(".fast-link").delay(300).slideDown(0);
+    $(".fast-link").addClass('open');
   });
 
 
 	$( ".search input" ).keyup(function() {    
 		$(".result-search").slideDown(0);
+    	$(".result-search").addClass('open');
 	});

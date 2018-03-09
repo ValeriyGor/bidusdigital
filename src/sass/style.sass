@@ -70,22 +70,46 @@ p
 			color: #fff
 			line-height: 60px
 			margin-bottom: 24px	
+		.play
+			width: 82px
+			cursor: pointer
+			transition: all 0.3s
+			&:hover
+				opacity: 0.8
 		&.invideo
-			display: flex
+			display: block
 			padding: 0
+			background-size: cover
+			background-repeat: no-repeat
+			background-position: center
+			background-color: #cd1829 
 			.video
 				background: url('../img/back-video.png') center no-repeat
 				background-size: cover
 				height: 100%
 				width: 100%
-			.row-half
-				flex: 1
-				align-items: center
-				justify-content: center
 				display: flex
 				flex-direction: column
-
-
+				align-items: center
+				justify-content: center
+				p
+					max-width: 500px
+					margin-bottom: 25px
+				h1
+					margin-bottom: 10px
+			.row-half
+				display: flex
+				align-items: center
+				justify-content: center
+				flex-direction: column
+				width: 50%
+				height: 100%
+				&:nth-of-type(2)
+					position: absolute
+					top: 0
+					right: 0%
+					width: 50%
+					
 		&.center-content
 			.row
 				height: 100%
@@ -93,45 +117,52 @@ p
 				justify-content: center
 
 		&.slick-current
+			&.invideo
+				animation-name: leftbg
+				animation-duration: 2s
+				animation-timing-function: ease
+				animation-fill-mode: both
+				animation-delay: 3s
 			h2
 				animation-name: slideTop
-				-webkit-animation-name: slideTop
 				animation-duration: 2s
-				-webkit-animation-duration: 2s
 				animation-timing-function: ease-in-out
-				-webkit-animation-timing-function: ease-in-out
 				visibility: visible !important
 			p
 				animation-name: slideTop2
-				-webkit-animation-name: slideTop2
 				animation-duration: 2s
-				-webkit-animation-duration: 2s
 				animation-timing-function: ease-in-out
-				-webkit-animation-timing-function: ease-in-out
 				visibility: visible !important
 			h1, .slider-head__logo				
 				animation-name: sleft
-				-webkit-animation-name: sleft
 				animation-duration: 2s
-				-webkit-animation-duration: 2s
 				animation-timing-function: ease-in-out
-				-webkit-animation-timing-function: ease-in-out
 				visibility: visible !important
 			a
 				animation-name: sleft
-				-webkit-animation-name: sleft
 				animation-duration: 2s
-				-webkit-animation-duration: 2s
 				animation-timing-function: ease-in-out
-				-webkit-animation-timing-function: ease-in-out
 				visibility: visible !important
+			.row-half
+				&.invideo__media
+					animation-name: show-right
+					animation-duration: 2s
+					animation-timing-function: ease
+					animation-fill-mode: both
+					animation-delay: 3s
+				&.invideo__head
+					animation-name: width-half
+					animation-duration: 2s
+					animation-timing-function: ease
+					animation-fill-mode: both
+					animation-delay: 3s
 		p
 			font-size: 18px
 			line-height: 30px
 			color: #fff
 			max-width: 365px
 			margin-bottom: 35px
-			ility: visible !important
+			visibility: visible !important
 		a
 			color: #fff
 			font-size: 16px
@@ -189,6 +220,22 @@ p
 		transform: translateY(0%)
 		opacity: 1
 
+@keyframes width-half
+	0%
+		width: 100%
+
+	100%
+		width: 50%
+
+@keyframes show-right
+	0%
+		right: -50%
+		opacity: 0
+
+	100%
+		right: 0
+		opacity: 1
+
 
 @keyframes slideTop2
 	0%
@@ -217,6 +264,20 @@ p
 		transform: translateX(0)
 		opacity: 1
 
+@keyframes show
+	0%
+		opacity: 0
+
+	100%
+		opacity: 1
+
+@keyframes leftbg
+	0%
+		background-position: center
+
+	100%
+		background-position: center left -50vh
+
 @keyframes spin
   from
     transform: rotate(0deg)
@@ -225,6 +286,23 @@ p
   to
     transform: rotate(90deg)
     opacity: 1
+
+
+@keyframes show-active
+	0%
+		width: 8.3%
+		opacity: 0
+		background: transparent
+	10%
+		width: 58%
+		opacity: 0
+		background: #1a1a1a
+	100%
+		width: 63%
+		opacity: 1
+		background: #1a1a1a
+
+		
 
 .header .row	
 	position: relative
@@ -255,7 +333,6 @@ p
 					color: #b7b7b7
 			&:hover .head-menu__dropdown
 				display: block
-
 	&__dropdown
 		position: absolute
 		display: none
@@ -403,6 +480,13 @@ p
 		padding-top: 27px
 		padding-left: 33px
 		display: none
+		opacity: 0
+		&.open
+			animation-name: show
+			animation-duration: 0.5s
+			animation-timing-function: ease
+			animation-fill-mode: both
+
 		p
 			font-size: 11px
 			color: #737373
@@ -427,6 +511,14 @@ p
 				animation-delay: 120ms
 			&:nth-of-type(5)
 				animation-delay: 160ms
+			&:nth-of-type(6)
+				animation-delay: 200ms
+			&:nth-of-type(7)
+				animation-delay: 240ms
+			&:nth-of-type(8)
+				animation-delay: 280ms
+			&:nth-of-type(9)
+				animation-delay: 320ms
 
 	.close-input
 		height: 45px
@@ -439,6 +531,10 @@ p
 	&.active
 		width: 63%
 		background: #1A1A1A
+		animation-name: show-active
+		animation-duration: 0.5s
+		animation-timing-function: ease
+		animation-fill-mode: both
 		.close-input
 			background: url('../img/svg/ic_close_gray.svg') center no-repeat
 			background-size: 14px
