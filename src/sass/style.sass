@@ -44,14 +44,14 @@ p
 	position: relative
 	&__logo
 		display: block
-		width: 260px
+		width: 262px
 		margin: 20px auto 0
 		height: auto
 	&__item
 		height: calc(100vh - 45px)
 		background-size: cover
-		padding-top: 100px
-		padding-bottom: 100px
+		padding-top: 92px
+		padding-bottom: 92px
 		.row
 			flex-direction: column
 		h1
@@ -69,7 +69,7 @@ p
 			font-family: 'Open Sans'
 			color: #fff
 			line-height: 60px
-			margin-bottom: 35px	
+			margin-bottom: 24px	
 		&.invideo
 			display: flex
 			padding: 0
@@ -137,10 +137,12 @@ p
 			font-size: 16px
 			display: inline-block
 			background: #de0a36
-			line-height: 45px
+			line-height: 43px
+			height: 45px
 			width: 220px
 			text-align: center
 			transition: all 0.3s
+			border-radius: 3px
 			&:hover
 				background: #bc042b
 	.slick-next
@@ -188,14 +190,6 @@ p
 		opacity: 1
 
 
-@-webkit-keyframes slideTop
-	0%
-		-webkit-transform: translateY(-200%)
-		opacity: 0
-
-	100%
-		-webkit-transform: translateY(0%)
-		opacity: 1
 @keyframes slideTop2
 	0%
 		transform: translateY(-300%)
@@ -203,16 +197,6 @@ p
 
 	100%
 		transform: translateY(0%)
-		opacity: 1
-
-
-@-webkit-keyframes slideTop2
-	0%
-		-webkit-transform: translateY(-300%)
-		opacity: 0
-
-	100%
-		-webkit-transform: translateY(0%)
 		opacity: 1
 
 @keyframes sleft
@@ -224,22 +208,32 @@ p
 		transform: translateX(0%)
 		opacity: 1
 
-
-@-webkit-keyframes sleft
+@keyframes sright
 	0%
-		transform: translateX(-20%)
+		transform: translateX(50px)
 		opacity: 0
 
 	100%
-		transform: translateX(0%)
+		transform: translateX(0)
 		opacity: 1
+
+@keyframes spin
+  from
+    transform: rotate(0deg)
+    opacity: 0
+
+  to
+    transform: rotate(90deg)
+    opacity: 1
+
 .header .row	
 	position: relative
 	z-index: 999
 .logo
-	width: 114px
+	width: 115px
 	&-wrap
 		display: flex
+		align-items: center
 .head-menu
 	ul
 		display: flex
@@ -261,16 +255,20 @@ p
 					color: #b7b7b7
 			&:hover .head-menu__dropdown
 				display: block
+
 	&__dropdown
 		position: absolute
 		display: none
-		transition: all 1s
+		transition: all 0.3s
 		top: 45px
 		left: -22px		
 		background-color: #fff
 		z-index: 399
 		border-bottom-left-radius: 3px
 		border-bottom-right-radius: 3px
+		opacity: 0
+		&.open
+			opacity: 1
 		&:before
 			content: ""
 			top: -5px
@@ -354,6 +352,10 @@ p
 	height: 100vh
 	z-index: 399
 	display: none
+	transition: all 0.3s
+	opacity: 0
+	&.open
+		opacity: 1
 
 
 
@@ -378,18 +380,24 @@ p
 
 		&:hover:after
 			transform: scale(1,-1)
+
+@keyframes ac-gn-searchresults-items-show
+	0%
+		opacity: 0
+		transform: translateX(100px)
+
 .search
 	position: absolute
 	top: 0
 	right: 17%
 	width: 8.3%
-	transition: all 0.3s
+	transition: all 0.5s
 	background: #202020	
 	.fast-link, .result-search
 		position: absolute
 		top: 45px
 		left: 0
-		width: 100%
+		width: 95%
 		min-height: 260px
 		background: #fff
 		padding-top: 27px
@@ -405,21 +413,44 @@ p
 			line-height: 38px
 			color: #000
 			display: block
+			animation-name: ac-gn-searchresults-items-show
+			animation-duration: 0.3s
+			animation-timing-function: ease
+			animation-fill-mode: both
 			&:hover
 				color: #0070c9
+			&:nth-of-type(2)
+				animation-delay: 40ms
+			&:nth-of-type(3)
+				animation-delay: 80ms
+			&:nth-of-type(4)
+				animation-delay: 120ms
+			&:nth-of-type(5)
+				animation-delay: 160ms
+
+	.close-input
+		height: 45px
+		width: 45px
+		display: none
+		transition: all 0.3s
+		opacity: 0
+		top: 0
+		right: 47px
 	&.active
-		width: 60%
-		right: 20%
+		width: 63%
 		background: #1A1A1A
 		.close-input
 			background: url('../img/svg/ic_close_gray.svg') center no-repeat
 			background-size: 14px
-			height: 45px
-			width: 14px
 			position: absolute
-			top: 0
-			right: 28px
 			cursor: pointer
+			display: block
+			opacity: 1
+			transform: rotate(90deg)
+			animation-name: spin
+			animation-duration: 300ms
+			animation-timing-function: linear
+
 		input, input:hover, input:focus	
 			background: transparent url('../img/svg/ic_search_link-gray.svg') center left 20px no-repeat
 		input
@@ -589,7 +620,9 @@ p
 			color: #fff
 			padding-left: 5px
 			max-width: 275px
-
+	.slider-head .slick-dots li
+		border-top-width: 1px
+		width: 60px
 
 
 .specoffer
@@ -612,6 +645,19 @@ p
 			p 
 				color: #737373
 				line-height: 24px
+				transition: all 0.3s
+			a
+				font-size: 20px
+				line-height: 1.3em
+				margin-bottom: 7px
+				font-weight: $semibold
+				display: block
+				color: #000
+				transition: all 0.3s
+				&:hover
+					color: #0070c9
+					&~p
+						color: #000
 		&__img
 			padding: 28px 35px
 			background-size: cover
@@ -785,8 +831,19 @@ p
 				font-size: 14px
 				display: block
 				margin-top: 11px
+				&:before
+					display: inline-block
+					content: ""
+					width: 20px
+					height: 1px
+					background: $link-color
+					margin-left: 0
+					margin-right: 10px
+					margin-bottom: 4px
+					transition: all 0.3s
 				&:hover
-					color: #024173
+					&:before
+						width: 25px
 	.slick-arrow
 		top: 33%
 		background: #454547
@@ -794,14 +851,14 @@ p
 		left: -115px
 		&:after
 			border-color: rgba(255,212,52,0) #fff rgba(255,212,52,0) rgba(255,212,52,0)
-		&:hover
-			background: #383838
+		&:hover:after
+			border-color: rgba(255,212,52,0) #0070c9 rgba(255,212,52,0) rgba(255,212,52,0)
 	.slick-next
 		right: -115px
 		&:after
 			border-color: rgba(255,212,52,0) rgba(255,212,52,0) rgba(255,212,52,0) #fff 
-		&:hover
-			background: #383838
+		&:hover:after
+			border-color: rgba(255,212,52,0) rgba(255,212,52,0) rgba(255,212,52,0) #0070c9 
 
 
 
@@ -868,14 +925,14 @@ p
 		left: -100px
 		&:after
 			border-color: rgba(255,212,52,0) #000 rgba(255,212,52,0) rgba(255,212,52,0)
-		&:hover
-			background: #ccc
+		&:hover:after
+			border-color: rgba(255,212,52,0) #0070c9 rgba(255,212,52,0) rgba(255,212,52,0)
 	.slick-next
 		right: -100px
-		&:hover
-			background: #ccc
 		&:after
-			border-color: rgba(255,212,52,0) rgba(255,212,52,0) rgba(255,212,52,0) #000 
+			border-color: rgba(255,212,52,0) rgba(255,212,52,0) rgba(255,212,52,0) #000
+		&:hover:after
+			border-color: rgba(255,212,52,0) rgba(255,212,52,0) rgba(255,212,52,0) #0070c9 
 
 .consultation
 	height: 105px
@@ -883,7 +940,7 @@ p
 	padding: 30px 0
 	&__general
 		img
-			width: 225px
+			width: 226px
 			display: inline-block
 			vertical-align: middle
 		p
@@ -900,7 +957,7 @@ p
 			border: 1px solid #e6e6e6
 			border-radius: 3px
 			color: #000
-			line-height: 38px
+			line-height: 36px
 			height: 40px
 			display: block
 			width: 220px
@@ -914,6 +971,7 @@ p
 		p
 			font-size: 12px
 			line-height: 18px
+			color: #999
 		span
 			font-size: 24px
 			line-height: 24px 
@@ -934,8 +992,10 @@ p
 		font-size: 13px
 		display: block
 		line-height: 28px
+		color: #737373
+		transition: all 0.3s 
 		&:hover
-			text-decoration: underline
+			color: #0070c9
 	p
 		font-size: 13px
 		color: #737373
@@ -958,15 +1018,33 @@ p
 	.social-link
 		width: 30px
 		height: 30px
-		background: #ccc
 		display: flex
 		border-radius: 50%
 		transition: all 0.3s
+		color: #fff
 		img
 			margin: auto
+			width: 100%
+		&:nth-of-type(1)
+			&:hover
+				background: url("../img/svg/ic_fb_h.svg") center no-repeat
+				background-size: contain
+		&:nth-of-type(2)
+			&:hover
+				background: url("../img/svg/ic_inst_h.svg") center no-repeat
+				background-size: contain
+		&:nth-of-type(3)
+			&:hover
+				background: url("../img/svg/ic_vk_h.svg") center no-repeat
+				background-size: contain
+		&:nth-of-type(4)
+			&:hover
+				background: url("../img/svg/ic_youtube_h.svg") center no-repeat
+				background-size: contain
 		&:hover
-			background: #de0a36
-
+			img
+				opacity: 0
+				transition: all 0.3s
 
 
 
