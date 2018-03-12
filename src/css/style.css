@@ -260,6 +260,9 @@ p {
       .slider-head .slick-dots li.slick-active {
         border-top: 2px solid #fff; }
 
+.medium-hide {
+  display: none; }
+
 @-webkit-keyframes slideTop {
   0% {
     -webkit-transform: translateY(-200%);
@@ -1375,14 +1378,64 @@ p {
       -o-transition: all 0.3s;
       transition: all 0.3s; }
 
-@media screen and (min-width: 767px) and (max-width: 991px) {
+@media screen and (min-width: 1025px) and (max-width: 1400px) {
+  .blog .slick-next {
+    right: -50px; }
+  .blog .slick-prev {
+    left: -50px; }
+  .about .slick-next {
+    right: -65px; }
+  .about .slick-prev {
+    left: -65px; } }
+
+@media screen and (min-width: 767px) and (max-width: 1024px) {
   h2 {
     font-size: 30px; }
   h3 {
     font-size: 12px; }
   header .phone span {
-    font-size: 0; }
+    font-size: 0;
+    display: block;
+    margin-right: 2px; }
   footer {
+    display: none; }
+  .arrow-down > a:after {
+    display: none; }
+  .logo {
+    width: 22px;
+    height: 22px;
+    margin-left: 10px; }
+  .search {
+    right: 9%; }
+    .search input {
+      height: 40px;
+      background-size: 12px;
+      padding-left: 30px; }
+      .search input:hover, .search input:focus {
+        background: transparent url(../img/svg/ic_search_link-gray.svg) center left 0 no-repeat;
+        background-size: 12px; }
+    .search.active input, .search.active input:focus {
+      background: transparent url(../img/svg/ic_search_link-gray.svg) center left 0 no-repeat;
+      background-size: 12px; }
+    .search .fast-link, .search .result-search {
+      top: 40px;
+      padding-top: 20px;
+      padding-left: 25px;
+      min-height: 230px; }
+      .search .fast-link a, .search .result-search a {
+        font-size: 14px;
+        line-height: 34px; }
+    .search .close-input {
+      right: 30px;
+      height: 40px;
+      width: 40px; }
+  .head-menu ul li a {
+    font-size: 13px;
+    line-height: 38px;
+    height: 40px;
+    padding-left: 40px;
+    padding-right: 1px; }
+  .head-menu ul li:hover .head-menu__dropdown {
     display: none; }
   .slider-head {
     height: 450px; }
@@ -1512,7 +1565,7 @@ p {
           width: 34px;
           margin: 0 8px; }
       .portfolio .slider-head__item {
-        padding: 8px 83px 48px; }
+        padding: 8px 3px 48px; }
       .portfolio .slider-head h3 {
         font-size: 32px;
         line-height: 38px; }
@@ -1677,7 +1730,11 @@ p {
         font-size: 9px; }
       .blog-item__datetime {
         font-size: 9px;
-        margin-left: 2px; } }
+        margin-left: 2px; }
+  .medium-hide {
+    display: block; }
+  .medium-show {
+    display: none; } }
 
 @media screen and (min-width: 768px) {
   .service-item p {

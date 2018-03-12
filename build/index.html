@@ -14,10 +14,12 @@
 <body>
 	<header class="header">
 		<div class="row">
-			<div class="columns medium-2 medium-2 align-self-middle">
-				<a class="logo-wrap" href="index.html"><img class="logo" src="img/svg/ic_logo_white.svg" alt=""></a>
+			<div class="columns medium-1 large-2 align-self-middle">
+				<a class="logo-wrap" href="index.html">
+					<img class="logo medium-show" src="img/svg/ic_logo_white.svg" alt="">
+					<img class="logo medium-hide" src="img/medium-logo.png" alt=""></a>
 			</div>
-			<div class="columns medium-2 medium-7 align-self-middle head-menu">
+			<div class="columns medium-9 large-7 align-self-middle head-menu">
 				<ul>
 					<li><a href="#">Главная</a></li>                                                                        
 					<li class="arrow-down"><a href="#">Услуги</a>
@@ -154,7 +156,7 @@
 					<a href="#">Автоматизация бизнеса</a>
 				</div>
 			</div>
-			<div class="columns medium-3 align-self-middle phone">
+			<div class="columns medium-2 large-3 align-self-middle phone">
 				<span class="">8 800 1000 759</span>
 			</div>
 			<div id="menu-btn" class="mob-button desktop-none">
@@ -554,6 +556,18 @@
 	      settings: {
 			arrows: false
 	      }
+	    },
+	    {
+	      breakpoint: 1025,
+	      settings: {
+			arrows: true
+	      }
+	    },
+	    {
+	      breakpoint: 1280,
+	      settings: {
+			arrows: false
+	      }
 	    }
 	  ]
 	});
@@ -576,6 +590,14 @@
 			centerPadding: '35px',
 			arrows: false
 	      }
+	    },
+	    {
+	      breakpoint: 1024,
+	      settings: {
+	        slidesToShow: 4,
+			centerMode: true,
+			centerPadding: '60px',
+	      }
 	    }
 	  ]
 	});
@@ -592,6 +614,21 @@
 	        slidesToShow: 1,
 			centerMode: true,
 			centerPadding: '35px',
+			arrows: false
+	      }
+	    },
+	    {
+	      breakpoint: 1024,
+	      settings: {
+	        slidesToShow: 3,
+			centerMode: true,
+			centerPadding: '40px',
+			arrows: false
+	      }
+	    },
+	    {
+	      breakpoint: 1280,
+	      settings: {
 			arrows: false
 	      }
 	    }

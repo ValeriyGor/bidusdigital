@@ -11,8 +11,9 @@ var el2 = $(".invideo__media");
 new WOW().init();
 
 $( "li.arrow-down" ).hover(function(e) {
-    $(".curtain").slideToggle(0);
-    $(".curtain").toggleClass("open");
+    if ($(window).width() > '1024'){
+        $(".curtain").slideToggle(0);
+        $(".curtain").toggleClass("open");}
     $(this).children(".head-menu__dropdown").toggleClass("open");
 });
 
