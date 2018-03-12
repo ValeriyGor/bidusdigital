@@ -53,3 +53,18 @@ $( ".close-input" ).click(function(e) {
 		$(".result-search").slideDown(0);
     	$(".result-search").addClass('open');
 	});
+
+var wnd = $(window);
+
+wnd.scroll(function(){
+    var top = wnd.scrollTop(),
+        opacity = top > 500 ? 1 : top * 2 / 1000;
+   $("header").css("background", "rgba(0, 0, 0, " + opacity + ")");
+});
+
+$(document).ready(function() {
+    if ($(window).width() <= '767'){
+        $('.search').appendTo($(".head-menu"));
+        $(".search input").attr("placeholder", "Поиск по сайту");
+    }
+});
