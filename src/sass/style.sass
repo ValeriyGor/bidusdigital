@@ -7,9 +7,11 @@ $bold: 700
 
 $link-color: #0070c9
 
+$red: #ff6100
+$anim_time: 1s
+
 body
-	background: #f4f4f4 url('../img/all-mob.png') center bottom no-repeat
-	background-size: 320px
+	background: #f4f4f4
 
 header
 	background: #202020
@@ -280,13 +282,13 @@ p
 		background-position: center left -50vh
 
 @keyframes spin
-  from
-    transform: rotate(0deg)
-    opacity: 0
+	from
+		transform: rotate(0deg)
+		opacity: 0
 
-  to
-    transform: rotate(90deg)
-    opacity: 1
+	to
+		transform: rotate(90deg)
+		opacity: 1
 
 
 @keyframes show-active
@@ -1148,7 +1150,334 @@ p
 				transition: all 0.3s
 
 
+@media screen and (min-width: 767px) and (max-width: 991px)
+	h2
+		font-size: 30px
+	h3
+		font-size: 12px
+	header	
+		.phone span
+			font-size: 0
+	footer
+		display: none
+	.slider-head
+		height: 450px
+		.slick-next, .slick-prev
+			width: 60px
+			background-size: 11px 22px
+		.slick-dots 
+			bottom: 25px
+			li
+				width: 34px
+				margin: 0 8px
+		&__item
+			height: 450px
+			.row
+				padding-right: 50px
+				padding-left: 80px
+			h1
+				font-size: 30px
+				line-height: 35px
+				max-width: 360px
+				margin: 10px auto
+			h2
+				line-height: 40px
+				margin-bottom: 15px
+			p
+				font-size: 12px
+				line-height: 20px
+				margin-bottom: 20px
+			a
+				font-size: 12px
+				height: 35px
+				width: 160px
+				line-height: 33px
+			&.invideo 
+				.video 	
+					h1
+						margin-bottom: 5px
+					p 
+						margin-bottom: 14px
+			.play
+				width: 48px
+		&__logo
+			width: 173px
 
+
+	.consultation
+		height: 70px
+		padding: 20px 0
+		&__general 
+			img
+				width: 140px
+				margin-left: 10px
+			p
+				margin-left: 18px
+				padding-left: 16px
+				font-size: 8px
+				width: 165px
+		&__order
+			a
+				width: 138px
+				height: 25px
+				line-height: 23px
+				font-size: 9px
+		&__contacts 
+			span
+				font-size: 16px
+				line-height: 16px
+				height: 18px
+				display: block
+			p
+				font-size: 9px
+				line-height: 4px
+	.service
+		.row
+			padding: 0 19px
+		&-item 
+			padding: 0 6px
+			margin-bottom: 8px
+			a
+				font-size: 10px
+				line-height: 19px
+				&:before
+					width: 10px
+					margin-right: 5px
+				&:hover:before
+					width: 14px
+	.stack-line 
+		top: -227px
+		right: -50px
+		img
+			width: 100px
+			margin-left: 6px
+		img:first-of-type
+			top: 243px
+		img:nth-of-type(3)
+			top: -278px
+	#gadget1
+		top: 138px
+		left: 77px
+		width: 17px
+	#gadget2
+		top: 92px
+		left: 110px
+		width: 39px
+	#gadget3
+		top: 38px
+		left: 164px
+		width: 92px
+	#gadget4
+		top: 12px
+		left: 226px
+		width: 316px
+	.white-block
+		padding: 13px 19px 
+		&.large
+			min-height: 179px
+		&.medium
+			min-height: 125px
+		&.small
+			min-height: 85px
+			margin-bottom: 9px
+	.portfolio 
+		margin-bottom: 20px
+		margin-top: 12px
+		h2.head-block
+			top: 20px
+		.slider-head
+			margin-bottom: 20px
+			.slick-next, .slick-prev
+				width: 60px
+				background-size: 11px 22px
+			.slick-dots 
+				bottom: 25px
+				li
+					width: 34px
+					margin: 0 8px
+			&__item
+				padding: 8px 83px 48px
+			h3
+				font-size: 32px
+				line-height: 38px
+			.portfolio-slider
+				&-title
+					font-size: 9px
+					line-height: 15px
+					margin-bottom: 26px
+				&-descr
+					font-size: 10px
+					line-height: 18px
+					margin-bottom: 28px
+					max-width: 175px
+				&-link
+					height: 24px
+					line-height: 10px
+					font-size: 11px
+					&:before
+						width: 10px
+						margin-right: 5px
+					&:hover:before
+						width: 14px
+
+		.slider-head, .slider-head__item
+			height: 450px
+
+	.specoffer
+		h2
+			margin-bottom: 16px
+		.medium-6
+			&:nth-of-type(2n+1)
+				padding-right: 8px
+			&:nth-of-type(2n)
+				padding-left: 8px
+		&-item
+			margin-bottom: 17px
+
+			&__text
+				min-height: 182px
+				padding: 16px 25px 18px 18px
+				h3
+					font-size: 12px
+				p
+					font-size: 9px
+					line-height: 14px
+			&__img
+				padding: 28px 25px
+			&__price
+				bottom: 21px
+				span
+					font-size: 15px
+					&.specoffer-item__price-old
+						font-size: 10px
+						margin-left: 5px
+						&:after
+							width: 30px
+							top: 7px
+							left: 15%
+			.profitable-price
+				height: 15px
+				width: 67px
+				line-height: 15px
+				font-size: 7px
+				margin-left: 5px
+	.all-solution
+		margin-bottom: 15px
+		height: 182px
+		padding-bottom: 0
+		span
+			font-size: 24px
+			line-height: 30px
+		p
+			font-size: 12px
+		a
+			height: 32px
+			width: 162px
+			font-size: 12px
+			line-height: 30px
+			margin-top: 5px
+	.about
+		padding-bottom: 39px
+		padding-top: 15px
+		margin-top: 10px
+		.slider-nav
+			margin-bottom: 15px
+			padding: 0 70px
+			&__item
+				height: 53px
+		.slider-for
+			&__item
+				height: 245px
+				padding: 25px 37px
+			p
+				max-width: 300px
+				font-size: 11px
+				line-height: 18px
+				margin-bottom: 0
+			.comment
+				font-size: 11px
+				margin-bottom: 22px
+				line-height: 18px
+			.about__worker 
+				p
+					font-size: 9px
+					line-height: 15px
+				span
+					font-size: 8px
+					line-height: 14px
+				a
+					font-size: 9px
+					margin-top: 5px
+					&:before
+						width: 10px
+						margin-right: 5px
+					&:hover:before
+						width: 13px
+		.slick-next
+			right: 12px
+			&:after
+				border: 3px solid transparent
+				border-color: rgba(255,212,52,0) rgba(255,212,52,0) rgba(255,212,52,0) #fff
+				border-left-width: 4px
+				left: 11px
+		.slick-prev
+			left: 12px
+			&:after
+				border: 3px solid transparent
+				border-color: rgba(255,212,52,0) #fff rgba(255,212,52,0) rgba(255,212,52,0)
+				border-right-width: 4px
+				right: 11px
+		.slick-arrow
+			width: 25px
+			height: 25px
+	.title
+		font-size: 12px
+		line-height: 16px
+		margin-bottom: 20px
+		margin-top: 0
+
+	.slider-for
+		padding: 0 70px
+	.blog
+		margin-bottom: 25px
+		padding-top: 20px
+		&__wrap
+			margin-top: 10px
+		&-item
+			margin-right: 8px
+			margin-left: 8px
+			&__marker
+				height: 5px
+				width: 5px
+			&__img
+				height: 125px
+			&__text
+				margin-bottom: 2px
+			&__descr
+				padding: 10px 15px 8px
+				h3
+					font-size: 11px
+					line-height: 14px
+					margin-bottom: 4px
+					color: $link-color
+				p
+					font-size: 9px
+					line-height: 14px
+					max-height: 42px
+					overflow: hidden
+					margin-bottom: -5px
+			&__category
+				font-size: 9px
+			&__datetime
+				font-size: 9px
+				margin-left: 2px
+
+@media screen and (min-width: 768px)
+	.service-item 
+		p 
+			display: none
+	.desktop-none
+		display: none
 
 @media screen and (max-width: 767px)
 	h2
@@ -1165,6 +1494,8 @@ p
 		background-color: rgba(0, 0, 0, 0)
 		z-index: 399
 		height: 36px
+		.row>.search
+			display: none
 	.head-menu
 		position: absolute
 		background: #000
@@ -1188,6 +1519,73 @@ p
 				&:hover 
 					.head-menu__dropdown
 						display: none
+	.mob-button
+		position: absolute
+		top: 14px
+		left: 15px
+		transition: all 0.3s
+		img
+			width: 19px
+	.white-block.large
+		min-height: auto
+	.white-block.medium
+		min-height: auto
+	.white-block.small
+		min-height: auto
+		margin-bottom: 0
+		border-bottom: 1px solid #e6e6e6
+	.service
+		.row
+			padding-left: 0
+			padding-right: 0
+			flex-direction: column
+		&-item 
+			height: auto
+			padding: 0
+			margin: 0
+			border-bottom: 1px solid #e6e6e6
+			border-radius: 0
+			&.be-hide
+				display: none
+			.small:last-child
+				border-bottom: 0
+			.white-block
+				border-radius: 0
+				padding: 15px 20px 18px
+				p
+					font-size: 10px
+					line-height: 16px
+				h3
+					color: #0070c9
+		.seen-all
+			display: block
+			height: 40px
+			width: 100%
+			color: #0070c9
+			line-height: 38px
+			text-align: center
+			font-size: 11px
+			background: #fff
+			&:after
+				border: 2px solid transparent
+				content: ""
+				display: inline-block
+				height: 0
+				width: 0
+				border-color: #0070c9 rgba(255, 212, 52, 0) rgba(255, 212, 52, 0)
+				border-top-width: 3px
+				border-bottom-width: 0
+				transition: all .3s
+				position: relative
+				top: -1px
+				margin-left: 4px
+			&.close:after
+				transform: scale(1, -1)
+		a, img
+			display: none
+	.slider-head
+		margin-bottom: 0
+
 	.logo-wrap
 		position: absolute
 		top: 6px
@@ -1214,15 +1612,26 @@ p
 			position: absolute
 			top: 25px
 			left: 55px
+			width: calc(100% - 110px)
+			animation: none
+			padding-right: 0
+			input, input:focus, input:hover
+				background: transparent url(../img/svg/ic_search_link-gray.svg) center left 0 no-repeat
+				padding-left: 25px
 		.fast-link.open, .result-search.open
 			background: #000
 			color: #fff
 			padding-left: 0
+			padding-right: 0
 			width: 100%
 			a
 				font-size: 15px
 				color: #fff
 				padding-left: 0
+		.close-input
+			right: 0px
+			top: 2px
+
 	.slider-head
 		.slick-dots 
 			bottom: 17px
@@ -1232,9 +1641,27 @@ p
 		&__logo
 			display: none!important
 		&__item
+			height: 325px
+			padding-top: 60px
+			padding-bottom: 50px
+			h2
+				line-height: 30px
+				margin-bottom: 10px
+			p
+				font-size: 12px
+				line-height: 20px
+				margin-bottom: 15px
+			a
+				font-size: 12px
+				line-height: 28px
+				height: 30px
+				width: 150px
 			h1
 				font-size: 20px
 				line-height: 28px
+			.row
+				padding-left: 15px
+				padding-right: 15px
 			&.slick-current 
 				.row-half.invideo__media
 					animation: none
@@ -1285,6 +1712,7 @@ p
 			margin-top: 5px
 	.portfolio
 		margin-bottom: 30px
+		margin-top: 0
 		.slider-head, .slider-head__item
 			height: 360px
 		.slider-head
@@ -1381,6 +1809,8 @@ p
 				p
 					font-size: 10px
 					line-height: 15px
+					max-height: 45px
+					overflow: hidden
 			&__category
 				font-size: 9px
 			&__datetime
@@ -1445,3 +1875,195 @@ p
 			p
 				font-size: 7px
 				line-height: 4px
+
+
+	@keyframes topBar_open
+		0%
+			transform: translateY(0px) rotate(0deg)
+			width: 20px
+
+		10%
+			transform: translateY(-2px) rotate(0deg)
+			width: 20px
+
+		50%
+			transform: translateY(6px) rotate(45deg)
+			width: 28px
+
+		75%
+			transform: translateY(3px) rotate(45deg)
+			width: 28px
+
+		100%
+			transform: translateY(4px) rotate(45deg)
+			width: 28px
+
+
+	@keyframes bottomBar_open
+		0%
+			transform: translateY(0px) rotate(0deg)
+			width: 20px
+
+		10%
+			transform: translateY(-2px) rotate(0deg)
+			width: 20px
+
+		60%
+			transform: translateY(0px) rotate(-45deg)
+			width: 28px
+
+		75%
+			transform: translateY(-3px) rotate(-45deg)
+			width: 28px
+
+		100%
+			transform: translateY(-2px) rotate(-45deg)
+			width: 28px
+
+
+	@keyframes menuLabel_open
+		0%
+			transform: translateY(0px)
+			opacity: 1
+
+		25%
+			transform: translateY(-4px)
+
+		45%
+			transform: translateY(11px)
+			opacity: 1
+
+		48%
+			transform: translateY(12px)
+			opacity: 0
+
+		100%
+			transform: translateY(8px)
+			opacity: 0
+
+
+	// CLOSE
+
+	@keyframes topBar_close
+		0%
+			transform: translateY(4px) rotate(45deg)
+			width: 25px
+
+		35%
+			transform: translateY(-2px) rotate(-4deg)
+			width: 20px
+
+		53%
+			transform: translateY(3px) rotate(3deg)
+			width: 20px
+
+		70%
+			transform: translateY(-2px) rotate(0deg)
+			width: 20px
+
+		100%
+			transform: translateY(-1px) rotate(0deg)
+			width: 20px
+
+
+	@keyframes bottomBar_close
+		0%
+			transform: translateY(-8px) rotate(-45deg)
+			width: 25px
+
+		35%
+			transform: translateY(-6px) rotate(6deg)
+			width: 25px
+
+		53%
+			transform: translateY(0px) rotate(-3deg)
+			width: 20px
+
+		68%
+			transform: translateY(-3px) rotate(0deg)
+			width: 20px
+
+		100%
+			transform: translateY(0px) rotate(0deg)
+			width: 20px
+
+
+	@keyframes menuLabel_close
+		0%
+			transform: translateY(8px)
+			opacity: 0
+
+		5%
+			transform: translateY(6px)
+			opacity: 1
+
+		25%
+			transform: translateY(-8px)
+			opacity: 1
+
+		37%
+			transform: translateY(-5px)
+			opacity: 1
+
+		45%
+			transform: translateY(-5px)
+			opacity: 1
+
+		58%
+			transform: translateY(2px) rotate(-10deg)
+			opacity: 1
+
+		83%
+			transform: translateY(-1px) rotate(0deg)
+			opacity: 1
+
+		100%
+			transform: translateY(0px)
+			opacity: 1
+
+	#menu-btn
+		text-align: center
+		width: 20px
+		height: 20px
+
+		&:before, &:after 
+			content: ''
+			width: 100%
+			height: 1px
+			background-color: #FFF
+			display: block
+			position: absolute
+
+		&:before 
+			 transform-origin: left center		
+		&:after
+			right: 0
+			top: 6px
+			transform-origin: right center
+
+		&:hover
+			cursor: pointer
+
+		&.open   
+			&:before 
+				animation: topBar_open $anim_time ease-in-out
+				animation-fill-mode: forwards
+			
+			
+			&:after
+				animation: bottomBar_open $anim_time ease-in-out
+				animation-fill-mode: forwards
+						
+			
+		
+		&.close
+			&:before 
+				animation: topBar_close $anim_time ease-in-out
+				animation-fill-mode: forwards
+			
+			
+			&:after 
+				animation: bottomBar_close $anim_time ease-in-out
+				animation-fill-mode: forwards
+			
+			

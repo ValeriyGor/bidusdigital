@@ -28,12 +28,32 @@ $( ".curtain" ).click(function(e) {
 
 $( ".close-input" ).click(function(e) {
     $(".fast-link").hide(0);
-	$(".result-search").hide(0);
+    $(".result-search").hide(0);
     $(".search").removeClass('active');    
-	$(".search input").attr("placeholder", "");
     $(".curtain").delay(300).slideUp(0);
     $(".curtain").removeClass('open');
-	$(".search input").val('');
+    $(".search input").val('');
+    if ($(window).width() > '767'){
+        $(".search input").attr("placeholder", "");
+    }
+    else {
+        $(".search input").attr("placeholder", "Поиск по сайту");
+    }
+});
+
+$( ".seen-all" ).click(function(e) {
+    $(".service .be-hide").slideToggle(0);
+    $(this).toggleClass("close");
+    var text = $(this).text();
+    $(this).text(
+    text == "Показать все услуги" ? "Скрыть" : "Показать все услуги");
+});
+$( ".mob-button" ).click(function(e) {
+    $(".head-menu").slideToggle(300);
+    $('.curtain').removeClass('open');
+    $('.search').removeClass('active');
+    $('.fast-link.open, .result-search.open').hide(0);
+    $(this).children('img').attr("src","img/close-menu.png");
 });
 
 
@@ -57,14 +77,29 @@ $( ".close-input" ).click(function(e) {
 var wnd = $(window);
 
 wnd.scroll(function(){
-    var top = wnd.scrollTop(),
-        opacity = top > 500 ? 1 : top * 2 / 1000;
-   $("header").css("background", "rgba(0, 0, 0, " + opacity + ")");
+    if ($(window).width() <= '767'){
+        var top = wnd.scrollTop(),
+            opacity = top > 500 ? 1 : top * 2 / 1000;
+       $("header").css("background", "rgba(0, 0, 0, " + opacity + ")");
+    }
 });
 
 $(document).ready(function() {
     if ($(window).width() <= '767'){
         $('.search').appendTo($(".head-menu"));
         $(".search input").attr("placeholder", "Поиск по сайту");
+    }
+});
+
+var $button = $('#menu-btn');
+
+$button.on('click', function(e){
+    e.preventDefault();
+    if( $button.hasClass('open') ){
+      $button.removeClass('open');
+      $button.addClass('close');
+    } else {
+      $button.removeClass('close');
+      $button.addClass('open');
     }
 });
