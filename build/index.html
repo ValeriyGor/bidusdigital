@@ -5,7 +5,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
     <title>BIDUS DIGITAL</title>
     <!-- Latest compiled and minified CSS -->
-	<!-- Optional theme -->
+	<!-- Optional theme -->	
+	<link rel="shortcut icon" href="favicon.ico" type="image/png">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation-flex.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
@@ -31,13 +32,12 @@
 									<a href="#">Разработка корпоративных сайтов</a>
 									<a href="#">Разработка Landing page</a>
 
-									<p>Брендирование и дизайн (UI/UX)</p>
-									<a href="#">Айдентика</a>
+									<p>Брендирование и дизайн</p>
 									<a href="#">Фирменный стиль</a>
 									<a href="#">Бизнес-презентации</a>
 									<a href="#">Видеографика</a>
 									<a href="#">Проектирование интерфейсов</a>
-									<a href="#">Дизайн сайтов</a>
+									<a href="#">Дизайн сайтов (UI/UX)</a>
 
 									<p>Локализация</p>
 									<a href="#">Перевод на разные языки</a>
@@ -166,22 +166,21 @@
 		<div class="curtain"></div>
 	</header>
 	<section class="slider-head">
-		<!-- <div class="slider-head__item center-content" style="background-image: url('img/back-slider.png'); background-color: #cd1829;">
-			<div class="row align-self-middle">
-				<img class="slider-head__logo" src="img/logo-on-slider.png" alt="">
-				<h1 class="slideerRight">Профессиональное маркетинговое агенство в России и ОАЭ</h1>
-			</div>			
-		</div> -->
 		<div class="slider-head__item invideo" style="background-image: url('img/back-slider.png');">
 			<div class="row-half invideo__head">
-				<img class="slider-head__logo" src="img/logo-on-slider.png" alt="">
+				<img class="slider-head__logo" src="img/svg/ic_logo_teaser.svg" alt="">
 				<h1>Профессиональное маркетинговое агенство в России и ОАЭ</h1>	
 			</div>	
 			<div class="row-half invideo__media">
-				<div class="video">
-					<h1>Чем мы полезны вам?</h1>
-					<p>Посмотрите видео о том, чем мы занимаемся</p>
-					<img class="play" src="img/play.png" alt="">
+				<div class="video fullscreen-bg">
+					<div class="overlay">
+				        <h1>Чем мы полезны вам?</h1>
+						<p>Посмотрите видео о том, чем мы занимаемся</p>
+						<img class="play" src="img/play.png" alt="">
+				    </div>
+				    <video id="video-phone" autoplay="autoplay" loop="true" muted="true" playsinline="true" class="fullscreen-bg__video">
+						<source src="img/video/22.mp4" type="video/mp4">
+					</video>
 				</div>
 			</div>				
 		</div>
@@ -221,17 +220,26 @@
 			</div>			
 		</div>
 	</section>
+	<section class="mobile-tiser desktop-none">
+		<div class="video fullscreen-bg">
+			<div class="overlay">
+				<h1>Профессиональное маркетинговое агенство в России и ОАЭ</h1>	
+		    </div>
+		    <video id="video-phone" autoplay="autoplay" loop="true" muted="true" playsinline="true" class="fullscreen-bg__video">
+				<source src="img/video/22.mp4" type="video/mp4">
+			</video>
+		</div>
+	</section>
 	<section class="service">
 		<div class="row">
 			<div class="columns medium-4 service-item">
 				<div class="white-block large">
 					<h3>Брендирование и дизайн</h3>
-					<a href="">Айдентика</a>
 					<a href="">Фирменный стиль</a>
 					<a href="">Бизнес-презентации</a>
 					<a href="">Видеографика</a>
 					<a href="">Проектирование интерфейсов</a>
-					<a href="">Дизайн сайтов</a>
+					<a href="">Дизайн сайтов  (UI/UX)</a>
 					<p>Создать уникальный образ, который бы легко запомнился вашим клиентам и передал всю его философию - это задача, которую мы решаем.</p>
 				</div>
 			</div>
@@ -242,10 +250,10 @@
 					<a href="">Корпоративный сайт</a>
 					<a href="">Landing page</a>
 					<p>Интернет-магазины, корпораивные сайты и landing page для вас.</p>
-					<img id="gadget1" src="img/watch-slide1.png" alt="" class="wow fadeInRight">
+					<!-- <img id="gadget1" src="img/watch-slide1.png" alt="" class="wow fadeInRight">
 					<img id="gadget2" src="img/phone-slide1.png" alt="" class="wow fadeInRight" data-wow-delay="0.15s">
 					<img id="gadget3" src="img/ipad-slide1.png" alt="" class="wow fadeInRight" data-wow-delay="0.3s">
-					<img id="gadget4" src="img/mac-slide1.png" alt="" class="wow fadeInRight" data-wow-delay="0.45s"> 
+					<img id="gadget4" src="img/mac-slide1.png" alt="" class="wow fadeInRight" data-wow-delay="0.45s">  -->
 				</div>
 			</div>
 			<div class="columns medium-4 service-item">
@@ -323,7 +331,7 @@
 			</div>
 			<div class="slider-head__item  center-content" style="background-image: url('img/portf4.png');">
 				<div class="row align-self-middle">
-					<h3>Restamenu</h2>
+					<h3>Restamenu1</h2>
 					<p class="portfolio-slider-title">Электроное меню для ресторанов</p>
 					<p class="portfolio-slider-descr">Масштабный проект нашей компании для ОАЭ. Уникальное меню для заведений.</p>
 					<a class="portfolio-slider-link" href="#">Посмотреть кейс</a>
@@ -332,7 +340,7 @@
 			</div>
 			<div class="slider-head__item  center-content" style="background-image: url('img/slide1-portfolio.png');">
 				<div class="row align-self-middle">
-					<h3>Restamenu</h2>
+					<h3>Restamenu2</h2>
 					<p class="portfolio-slider-title">Электроное меню для ресторанов</p>
 					<p class="portfolio-slider-descr">Масштабный проект нашей компании для ОАЭ. Уникальное меню для заведений.</p>
 					<a class="portfolio-slider-link" href="#">Посмотреть кейс</a>
@@ -482,7 +490,7 @@
 	<section class="consultation">
 		<div class="row ">
 			<div class="columns medium-6 align-self-middle consultation__general">
-				<img src="img/red-logo.png" alt="">
+				<img src="img/svg/logo-footer.svg" alt="">
 				<p>Профессиональное маркетинговое агенство в России и ОАЭ</p>
 			</div>
 			<div class="column medium-3 align-self-middle consultation__order">
@@ -500,10 +508,10 @@
 				<h4>О компании</h4>
 				<p>Более 10 лет опыта, проекты федерального и международного уровня, полная автоматизация компаний и решения под ключ.</p>
 				<div class="social-wrap">
-					<a href="" class="social-link"><img src="img/svg/ic_fb_link.svg" alt=""></a>
-					<a href="" class="social-link"><img src="img/svg/ic_inst_link.svg" alt=""></a>
-					<a href="" class="social-link"><img src="img/svg/ic_vk_link.svg" alt=""></a>
-					<a href="" class="social-link"><img src="img/svg/ic_youtube_link.svg" alt=""></a>
+					<a href="" class="social-link"><img src="img/svg/ic_fb.svg" alt=""></a>
+					<a href="" class="social-link"><img src="img/svg/ic_insta.svg" alt=""></a>
+					<a href="" class="social-link"><img src="img/svg/ic_vk.svg" alt=""></a>
+					<a href="" class="social-link"><img src="img/svg/ic_youtube.svg" alt=""></a>
 				</div>	
 			</div>
 			<div class="columns medium-3">
@@ -538,9 +546,6 @@
 	<script
 	src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenLite.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/plugins/CSSPlugin.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <script type="" src="js/script.js"></script>
 
@@ -622,7 +627,7 @@
 	      settings: {
 	        slidesToShow: 3,
 			centerMode: true,
-			centerPadding: '40px',
+			centerPadding: '65px',
 			arrows: false
 	      }
 	    },
@@ -638,7 +643,7 @@
 		arrows: true,
 		dots: true,
 		infinite: true,
-		speed: 800,
+		speed: 500,
 		fade: true,
 		cssEase: 'linear',
 		responsive: [

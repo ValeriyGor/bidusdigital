@@ -1,3 +1,8 @@
+$( document ).ready(function() {
+  if ($(window).width() > '767'){
+        $('#video-phone').get(0).play();
+    }
+});
 
 (function($) {	
 var el = $(".invideo__head");
@@ -10,11 +15,23 @@ var el2 = $(".invideo__media");
 
 new WOW().init();
 
-$( "li.arrow-down" ).hover(function(e) {
-    if ($(window).width() > '1024'){
-        $(".curtain").slideToggle(0);
-        $(".curtain").toggleClass("open");}
-    $(this).children(".head-menu__dropdown").toggleClass("open");
+$( "li.arrow-down").hover(
+    function() {
+        if ($(window).width() > '1024'){
+                $(".curtain").fadeIn(300);
+                $(this).children(".head-menu__dropdown").stop().fadeTo(300, 1);
+            }
+    }, function() {
+        if ($(window).width() > '1024'){
+                $(".curtain").fadeOut(300);
+                $(this).children(".head-menu__dropdown").fadeOut(300);
+            }
+    }
+);
+
+$('.slider-head').on('afterChange', function(event, slick, currentSlide){
+  if (currentSlide == 0) {
+  }
 });
 
 $( ".curtain" ).click(function(e) {
@@ -22,8 +39,7 @@ $( ".curtain" ).click(function(e) {
 	$(".result-search").slideUp(0);
     $(".search").removeClass('active');    
 	$(".search input").attr("placeholder", "");
-    $(this).removeClass('open');
-    $(this).delay(300).slideUp(0);
+    $(this).fadeOut(300);
 	$(".search input").val('');
 });
 
@@ -31,8 +47,7 @@ $( ".close-input" ).click(function(e) {
     $(".fast-link").hide(0);
     $(".result-search").hide(0);
     $(".search").removeClass('active');    
-    $(".curtain").delay(300).slideUp(0);
-    $(".curtain").removeClass('open');
+    $(".curtain").fadeOut(300);
     $(".search input").val('');
     if ($(window).width() > '767'){
         $(".search input").attr("placeholder", "");
@@ -50,8 +65,8 @@ $( ".seen-all" ).click(function(e) {
     text == "Показать все услуги" ? "Скрыть" : "Показать все услуги");
 });
 $( ".mob-button" ).click(function(e) {
-    $(".head-menu").slideToggle(300);
-    $('.curtain').removeClass('open');
+    $(".head-menu").slideToggle(200);
+    $('.curtain').fadeOut(0);
     $('.search').removeClass('active');
     $('.fast-link.open, .result-search.open').hide(0);
     $(this).children('img').attr("src","img/close-menu.png");
@@ -63,8 +78,7 @@ $( ".mob-button" ).click(function(e) {
 
     $(this).parent().addClass('active');
 	$(".search input").attr("placeholder", "Поиск по сайту...");
-    $(".curtain").slideDown(0);
-    $(".curtain").addClass('open');
+    $(".curtain").fadeIn(300);
     $(".fast-link").delay(300).slideDown(0);
     $(".fast-link").addClass('open');
   });
@@ -80,7 +94,7 @@ var wnd = $(window);
 wnd.scroll(function(){
     if ($(window).width() <= '767'){
         var top = wnd.scrollTop(),
-            opacity = top > 500 ? 1 : top * 2 / 1000;
+            opacity = top > 200 ? 1 : top * 5 / 1000;
        $("header").css("background", "rgba(0, 0, 0, " + opacity + ")");
     }
 });

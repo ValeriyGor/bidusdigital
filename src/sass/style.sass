@@ -15,6 +15,12 @@ body
 
 header
 	background: #202020
+	position: fixed
+	top: 0
+	left: 0
+	position: fixed
+	width: 100%
+	z-index: 999
 
 h2
 	font-size: 48px
@@ -38,7 +44,7 @@ p
 	padding-right: 15px
 	padding-left: 15px
 .slider-head
-	height: calc(100vh - 45px)
+	height: 100vh
 	width: 100%
 	background-position: center
 	background-repeat: no-repeat 
@@ -51,7 +57,7 @@ p
 		margin: 20px auto 0
 		height: auto
 	&__item
-		height: calc(100vh - 45px)
+		height: 100vh
 		background-size: cover
 		padding-top: 92px
 		padding-bottom: 92px
@@ -86,15 +92,38 @@ p
 			background-repeat: no-repeat
 			background-position: center
 			background-color: #cd1829 
-			.video
-				background: url('../img/back-video.png') center no-repeat
-				background-size: cover
+			.fullscreen-bg
+				overflow: hidden
+				z-index: -100
+				position: relative
 				height: 100%
 				width: 100%
-				display: flex
-				flex-direction: column
-				align-items: center
-				justify-content: center
+				padding-top: 45%
+
+			.fullscreen-bg__video
+				position: absolute
+				top: 50%
+				left: 50%
+				min-height: 100%
+				min-width: 100%
+				transform: translateX(-50%) translateY(-50%)
+			.overlay 
+				background: rgba(0,0,0,0.5)
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				z-index: 4
+			.video
+				.overlay
+					text-align: center
+					height: 100%
+					display: flex
+					flex-direction: column
+					align-items: center
+					justify-content: center
+					width: 100%
 				p
 					max-width: 500px
 					margin-bottom: 25px
@@ -126,26 +155,7 @@ p
 				animation-timing-function: ease
 				animation-fill-mode: both
 				animation-delay: 3s
-			h2
-				animation-name: slideTop
-				animation-duration: 2s
-				animation-timing-function: ease-in-out
-				visibility: visible !important
-			p
-				animation-name: slideTop2
-				animation-duration: 2s
-				animation-timing-function: ease-in-out
-				visibility: visible !important
-			h1, .slider-head__logo				
-				animation-name: sleft
-				animation-duration: 2s
-				animation-timing-function: ease-in-out
-				visibility: visible !important
-			a
-				animation-name: sleft
-				animation-duration: 2s
-				animation-timing-function: ease-in-out
-				visibility: visible !important
+			 
 			.row-half
 				&.invideo__media
 					animation-name: show-right
@@ -178,7 +188,7 @@ p
 			transition: all 0.3s
 			border-radius: 3px
 			&:hover
-				background: #bc042b
+				background: #f70c3b
 	.slick-next
 		height: 100%
 		width: 120px
@@ -306,6 +316,20 @@ p
 		opacity: 1
 		background: #1a1a1a
 
+@keyframes show-active-tablet
+	0%
+		width: 8.3%
+		opacity: 0
+		background: transparent
+	10%
+		width: 70%
+		opacity: 0
+		background: #1a1a1a
+	100%
+		width: 77%
+		opacity: 1
+		background: #1a1a1a
+
 		
 
 .header .row	
@@ -335,21 +359,16 @@ p
 			&:hover
 				>a
 					color: #b7b7b7
-			&:hover .head-menu__dropdown
-				display: block
 	&__dropdown
 		position: absolute
 		display: none
-		transition: all 0.3s
 		top: 45px
 		left: -22px		
 		background-color: #fff
 		z-index: 399
 		border-bottom-left-radius: 3px
 		border-bottom-right-radius: 3px
-		opacity: 0
-		&.open
-			opacity: 1
+		opacity: 1
 		&:before
 			content: ""
 			top: -5px
@@ -361,7 +380,6 @@ p
 			border-bottom-width: 5px
 			border-top-width: 0
 			border-color: rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) rgba(255, 255, 255, 1) rgba(255, 255, 255, 0)
-
 		p
 			font-size: 14px
 			line-height: 24px
@@ -435,9 +453,7 @@ p
 	z-index: 399
 	display: none
 	transition: all 0.3s
-	opacity: 0
-	&.open
-		opacity: 1
+	opacity: 1
 
 
 
@@ -567,6 +583,7 @@ p
 		color: #fff
 		font-size: 14px
 		cursor: pointer
+		transition: background-image 0.3s, background-position 0s
 		&:focus
 			border: none
 			box-shadow: none
@@ -611,7 +628,9 @@ p
 	&.small
 		min-height: 135px
 		margin-bottom: 14px
-
+.gadgets-anim
+	background: #fff url("../img/gadgets.png") bottom right no-repeat
+	background-size: 758px
 #gadget1
 	position: absolute
 	top: 218px
@@ -657,7 +676,7 @@ p
 			&:before
 				display: inline-block
 				content: ""
-				width: 20px
+				width: 16px
 				height: 1px
 				background: #0070c9
 				margin-left: 2px
@@ -666,7 +685,7 @@ p
 				transition: all 0.3s
 			&:hover
 				&:before
-					width: 25px
+					width: 20px
 
 
 .portfolio
@@ -736,6 +755,8 @@ p
 		border-radius: 3px
 		>div
 			flex: 1
+			background-size: cover
+			background-position: center
 		&__text
 			padding: 28px 40px 28px 29px
 			position: relative
@@ -833,7 +854,7 @@ p
 		margin-top: 20px
 		transition: all 0.3s
 		&:hover
-			background: #b6092d
+			background: #f70c3b
 .title
 	text-align: center
 	color: #fff
@@ -981,6 +1002,8 @@ p
 				color: #0070c9
 			p 
 				color: #000
+			.blog-item__category
+				color: #000	
 		&__img
 			height: 240px
 			background-position: center
@@ -1003,6 +1026,8 @@ p
 				transition: all 0.3s
 		&__category
 			font-size: 13px
+			color: #737373
+			transition: all 0.3s
 		&__marker
 			display: inline-block
 			height: 8px
@@ -1119,36 +1144,38 @@ p
 			margin-top: 18px
 			justify-content: space-between
 			align-items: center
-	.social-link
-		width: 30px
-		height: 30px
-		display: flex
-		border-radius: 50%
-		transition: all 0.3s
-		color: #fff
-		img
-			margin: auto
-			width: 100%
-		&:nth-of-type(1)
-			&:hover
-				background: url("../img/svg/ic_fb_h.svg") center no-repeat
-				background-size: contain
-		&:nth-of-type(2)
-			&:hover
-				background: url("../img/svg/ic_inst_h.svg") center no-repeat
-				background-size: contain
-		&:nth-of-type(3)
-			&:hover
-				background: url("../img/svg/ic_vk_h.svg") center no-repeat
-				background-size: contain
-		&:nth-of-type(4)
-			&:hover
-				background: url("../img/svg/ic_youtube_h.svg") center no-repeat
-				background-size: contain
-		&:hover
+		&-link
+			width: 30px
+			height: 30px
+			display: flex
+			border-radius: 50%
+			transition: all 0.3s
+			color: #fff
+			background: #ccc
 			img
-				opacity: 0
-				transition: all 0.3s
+				margin: auto
+				width: 100%
+			&:nth-of-type(1)
+				img
+					width: 7px
+				&:hover
+					background: #4267b2
+			&:nth-of-type(2)
+				img
+					width: 14px
+				&:hover
+					background: #e21d44
+			&:nth-of-type(3)
+				img
+					width: 14px
+				&:hover
+					background: #507299
+			&:nth-of-type(4)
+				img
+					width: 14px
+				&:hover
+					background: #ff0000
+			&:hover
 
 @media screen and (min-width: 1025px) and (max-width: 1400px)
 	.blog .slick-next
@@ -1191,9 +1218,16 @@ p
 				background: transparent url(../img/svg/ic_search_link-gray.svg) center left 0 no-repeat
 				background-size: 12px
 		&.active
-			input, input:focus
-				background: transparent url(../img/svg/ic_search_link-gray.svg) center left 0 no-repeat
+			width: 77%
+			animation-name: show-active-tablet
+			animation-duration: 0.5s
+			animation-timing-function: ease
+			animation-fill-mode: both
+			input, input:focus, input:hover
+				background: transparent url(../img/svg/ic_search_link-gray.svg) center left 6px no-repeat
 				background-size: 12px
+			input
+				padding-left: 30px
 		.fast-link, .result-search
 			top: 40px
 			padding-top: 20px
@@ -1263,7 +1297,8 @@ p
 		&__logo
 			width: 173px
 
-
+	.gadgets-anim
+		background-size: 477px
 	.consultation
 		height: 70px
 		padding: 20px 0
@@ -1285,12 +1320,13 @@ p
 		&__contacts 
 			span
 				font-size: 16px
-				line-height: 16px
+				line-height: 20px
 				height: 18px
 				display: block
+				letter-spacing: -0.5px
 			p
-				font-size: 9px
-				line-height: 4px
+				font-size: 8px
+				line-height: 12px
 	.service
 		.row
 			padding: 0 19px
@@ -1502,7 +1538,7 @@ p
 		margin-bottom: 25px
 		padding-top: 20px
 		&__wrap
-			margin-top: 10px
+			margin-top: 14px
 		&-item
 			margin-right: 8px
 			margin-left: 8px
@@ -1518,18 +1554,20 @@ p
 				h3
 					font-size: 11px
 					line-height: 14px
-					margin-bottom: 4px
-					color: $link-color
+					margin-bottom: 6px
+					color: #000
 				p
-					font-size: 9px
-					line-height: 14px
-					max-height: 42px
+					font-size: 7.5px
+					line-height: 12px
+					max-height: 36px
 					overflow: hidden
-					margin-bottom: -5px
+					margin-bottom: 0px
+					color: #606060
 			&__category
-				font-size: 9px
+				font-size: 7px
+				color: #606060
 			&__datetime
-				font-size: 9px
+				font-size: 7px
 				margin-left: 2px
 	.medium-hide
 		display: block
@@ -1546,11 +1584,11 @@ p
 
 @media screen and (max-width: 767px)
 	h2
-		font-size: 23px
+		font-size: 26px
 	p
-		font-size: 10px
+		font-size: 12px
 	h3
-		font-size: 14px
+		font-size: 16px
 	header
 		position: fixed
 		top: 0
@@ -1561,11 +1599,58 @@ p
 		height: 36px
 		.row>.search
 			display: none
+	.mobile-tiser
+		width: 100%
+		height: 70vh
+		min-height: 320px
+		.fullscreen-bg
+			overflow: hidden
+			z-index: -100
+			position: relative
+			height: 100%
+			width: 100%
+			padding-top: 45%
+
+		.fullscreen-bg__video
+			position: absolute
+			top: 50%
+			left: 50%
+			min-height: 100%
+			min-width: 100%
+			transform: translateX(-50%) translateY(-50%)
+		.overlay 
+			background: rgba(0,0,0,0.5)
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			z-index: 4
+			h1
+				font-size: 23px
+				font-size: 7vw
+				line-height: 30px
+				line-height: 9.5vw
+				font-family: Open Sans
+				font-weight: $light
+				color: #fff
+				max-width: 85%
+		.video
+			.overlay
+				text-align: center
+				height: 100%
+				display: flex
+				flex-direction: column
+				align-items: center
+				justify-content: center
+				width: 100%
+
+
 	.head-menu
-		position: absolute
+		position: fixed
 		background: #000
 		width: 100%
-		height: 100vh
+		height: 110vh
 		top: 0
 		left: 0
 		padding: 60px 55px 0
@@ -1599,6 +1684,8 @@ p
 		min-height: auto
 		margin-bottom: 0
 		border-bottom: 1px solid #e6e6e6
+	.gadgets-anim
+		background: #fff
 	.service
 		.row
 			padding-left: 0
@@ -1616,20 +1703,21 @@ p
 				border-bottom: 0
 			.white-block
 				border-radius: 0
-				padding: 15px 20px 18px
+				padding: 18px 25px 20px
 				p
-					font-size: 10px
-					line-height: 16px
+					font-size: 12px
+					line-height: 18px
+					max-width: 90%
 				h3
 					color: #0070c9
 		.seen-all
 			display: block
-			height: 40px
+			height: 45px
 			width: 100%
 			color: #0070c9
 			line-height: 38px
 			text-align: center
-			font-size: 11px
+			font-size: 13px
 			background: #fff
 			&:after
 				border: 2px solid transparent
@@ -1650,6 +1738,9 @@ p
 			display: none
 	.slider-head
 		margin-bottom: 0
+		display: none
+	.portfolio .slider-head
+		display: block
 
 	.logo-wrap
 		position: absolute
@@ -1761,25 +1852,31 @@ p
 		display: none
 	.all-solution
 		margin-bottom: 18px
-		height: 150px
+		height: 175px
 		padding-bottom: 0
+		background-position: center right -45px
+		background-size: cover
+
 		span
-			font-size: 18px
-			line-height: 18px
+			font-size: 21px
+			line-height: 21px
 		p
-			font-size: 11px
-			line-height: 22px
-		a
-			width: 124px
-			height: 26px
+			font-size: 13px
 			line-height: 26px
-			font-size: 9px
-			margin-top: 5px
+		a
+			width: 146px
+			height: 30px
+			line-height: 28px
+			font-size: 10px
+			margin-top: 4px
+
 	.portfolio
 		margin-bottom: 30px
 		margin-top: 0
+		background: url("../img/portf4.png") center no-repeat
+		background-size: cover
 		.slider-head, .slider-head__item
-			height: 360px
+			height: 428px
 		.slider-head
 			.slick-dots 
 				bottom: 17px
@@ -1787,72 +1884,78 @@ p
 					margin: 0 6px
 					width: 30px
 			&__item
-				padding: 24px 20px 36px
+				padding: 18px 6px 36px
+				background: transparent!important
 				background-size: cover
 				background-position: center bottom
 				&.center-content 
 					.row
 						flex-direction: column
 			h3
-				font-size: 20px
-				line-height: 22px
+				font-size: 24px
+				line-height: 26px
 				font-weight: 700
+				padding-left: 8px
 			.portfolio-slider-title
-				font-size: 9px
+				font-size: 11px
 				line-height: 16px
-				padding-left: 5px
-				margin-bottom: 17px
+				padding-left: 8px
+				margin-bottom: 22px
 			.portfolio-slider-descr
-				font-size: 12px
-				padding-left: 5px
-				max-width: 205px
-				line-height: 18px
+				font-size: 14px
+				padding-left: 8px
+				max-width: 250px
+				line-height: 21px
 				margin-bottom: 24px
 			.portfolio-slider-link
-				font-size: 13px
-				padding-left: 5px
-				line-height: 22px
+				font-size: 15px
+				padding-left: 8px
+				line-height: 28px
 				height: auto
+				width: 200px
 				&:before
-					width: 12px
+					width: 15px
 					margin-right: 8px
 				&:hover:before
-					width: 15px
+					width: 18px
 		h2
 			&.head-block
-				top: 16px
+				top: 18px
+				font-size: 28px
 
 		
 	.specoffer 
 		h2
-			font-size: 19px
-			margin-bottom: 6px
+			font-size: 22px
+			margin-bottom: 7px
 			&.head-block
 				top: 16px
+		.small-12
+			padding: 0 17px
 	.specoffer-item
 		flex-direction: column-reverse
-		margin-bottom: 15px
+		margin-bottom: 20px
 		&__img
-			height: 136px
+			height: 158px
 		&__text
-			padding: 10px 20px 35px 21px
-			min-height: 121px
+			padding: 14px 20px 35px 21px
+			min-height: 140px
 			h3
-				font-size: 14px
-				margin-bottom: 2px
+				font-size: 16px
+				margin-bottom: 4px
 
 			p
-				line-height: 16px
+				line-height: 18px
 		&__price
 			bottom: 13px
 			left: 20px
 		&__price-actual
-			font-size: 18px
-		.profitable-price
+			font-size: 21px
+		.profitable-price, &__price-old
 			display: none
 	.blog
 		margin-bottom: 34px
-		padding-top: 52px
+		padding-top: 35px
 		&__wrap
 			margin-top: 10px
 		&-item
@@ -1862,25 +1965,25 @@ p
 				height: 5px
 				width: 5px
 			&__img
-				height: 141px
+				height: 167px
 			&__text
 				margin-bottom: 2px
 			&__descr
 				padding: 11px 18px 13px
 				h3
-					font-size: 14px
-					line-height: 17px
-					margin-bottom: 8px
+					font-size: 16px
+					line-height: 20px
+					margin-bottom: 10px
 				p
-					font-size: 10px
-					line-height: 15px
-					max-height: 45px
+					font-size: 12px
+					line-height: 18px
+					max-height: 54px
 					overflow: hidden
 			&__category
-				font-size: 9px
+				font-size: 10px
 			&__datetime
-				font-size: 9px
-				margin-left: 2px
+				font-size: 10px
+				margin-left: 3px
 	.title
 		margin: 0 auto 13px
 		max-width: 75%
@@ -1925,6 +2028,7 @@ p
 		&__general
 			padding-right: 0
 			flex: 1.5
+			text-align: center
 			img
 				width: 90%
 				margin-top: 5px
@@ -1933,7 +2037,7 @@ p
 		&__order
 			display: none
 		&__contacts 
-			text-align: right
+			text-align: center
 			span
 				font-size: 14px
 				line-height: 14px
@@ -2131,4 +2235,235 @@ p
 				animation: bottomBar_close $anim_time ease-in-out
 				animation-fill-mode: forwards
 			
-			
+@media screen and (max-width: 359px)
+	h3
+		font-size: 14px
+	h2
+		font-size: 23px
+	p
+		font-size: 10px
+	.service-item 
+		.white-block 
+			padding: 15px 20px 18px
+			p
+				font-size: 10px
+				line-height: 16px
+	.service 
+		.seen-all
+			font-size: 11px
+			height: 40px
+	.portfolio
+		margin-bottom: 30px
+		margin-top: 0
+		.slider-head, .slider-head__item
+			height: 360px
+		.slider-head
+			.slick-dots 
+				bottom: 17px
+				li
+					margin: 0 6px
+					width: 30px
+			&__item
+				padding: 24px 20px 36px
+				background-size: cover
+				background-position: center bottom
+				&.center-content 
+					.row
+						flex-direction: column
+			h3
+				font-size: 20px
+				line-height: 22px
+				font-weight: 700
+				padding-left: 5px
+			.portfolio-slider-title
+				font-size: 9px
+				line-height: 16px
+				padding-left: 5px
+				margin-bottom: 17px
+			.portfolio-slider-descr
+				font-size: 12px
+				padding-left: 5px
+				max-width: 205px
+				line-height: 18px
+				margin-bottom: 24px
+			.portfolio-slider-link
+				font-size: 13px
+				padding-left: 5px
+				line-height: 22px
+				height: auto
+				&:before
+					width: 12px
+					margin-right: 8px
+				&:hover:before
+					width: 15px
+	.portfolio
+		margin-bottom: 30px
+		margin-top: 0
+		background: url("../img/portf4.png") center no-repeat
+		background-size: cover
+		.slider-head, .slider-head__item
+			height: 428px
+		.slider-head
+			.slick-dots 
+				bottom: 17px
+				li
+					margin: 0 6px
+					width: 30px
+			&__item
+				padding: 18px 6px 36px
+				background: transparent!important
+				background-size: cover
+				background-position: center bottom
+				&.center-content 
+					.row
+						flex-direction: column
+			h3
+				font-size: 24px
+				line-height: 26px
+				font-weight: 700
+				padding-left: 8px
+			.portfolio-slider-title
+				font-size: 11px
+				line-height: 16px
+				padding-left: 8px
+				margin-bottom: 22px
+			.portfolio-slider-descr
+				font-size: 14px
+				padding-left: 8px
+				max-width: 250px
+				line-height: 21px
+				margin-bottom: 24px
+			.portfolio-slider-link
+				font-size: 15px
+				padding-left: 8px
+				line-height: 28px
+				height: auto
+				width: 200px
+				&:before
+					width: 15px
+					margin-right: 8px
+				&:hover:before
+					width: 18px
+		h2
+			&.head-block
+				top: 18px
+				font-size: 28px
+
+		
+	.specoffer 
+		h2
+			font-size: 20px
+			margin-bottom: 12px
+			&.head-block
+				top: 16px
+	.specoffer-item
+		flex-direction: column-reverse
+		margin-bottom: 15px
+		&__img
+			height: 136px
+		&__text
+			padding: 10px 20px 35px 21px
+			min-height: 121px
+			h3
+				font-size: 14px
+				margin-bottom: 2px
+
+			p
+				line-height: 16px
+		&__price
+			bottom: 13px
+			left: 20px
+		&__price-actual
+			font-size: 18px
+		.profitable-price
+			display: none
+	.blog
+		margin-bottom: 34px
+		padding-top: 30px
+		&__wrap
+			margin-top: 10px
+		&-item
+			margin-right: 8px
+			margin-left: 8px
+			&__marker
+				height: 5px
+				width: 5px
+			&__img
+				height: 141px
+			&__text
+				margin-bottom: 2px
+			&__descr
+				padding: 11px 18px 13px
+				h3
+					font-size: 14px
+					line-height: 17px
+					margin-bottom: 8px
+				p
+					font-size: 10px
+					line-height: 15px
+					max-height: 45px
+					overflow: hidden
+			&__category
+				font-size: 9px
+			&__datetime
+				font-size: 9px
+				margin-left: 2px
+	.title
+		margin: 0 auto 13px
+		max-width: 75%
+		font-size: 10px
+		line-height: 15px
+
+	.about 
+		padding-bottom: 25px
+		margin-top: 11px
+		padding-top: 10px
+		.slider-for
+			&__item
+				background-repeat: no-repeat
+				background-size: auto 235px
+				background-position: top right
+				padding: 250px 0 0 0 
+				height: 438px
+			.comment
+				font-size: 11px
+				margin-bottom: 35px
+				line-height: 18px
+				margin-bottom: 20px
+				color: #fff
+			.about__worker 
+				p
+					font-size: 9px
+					line-height: 14px
+					color: #fff
+				span
+					font-size: 8px
+					line-height: 12px
+					color: #fff
+				a
+					display: none
+		.slider-nav
+			margin-bottom: 11px
+			&__item
+				height: 60px
+	.consultation
+		padding: 6px
+		height: 52px
+		&__general
+			padding-right: 0
+			flex: 1.5
+			img
+				width: 90%
+				margin-top: 5px
+			p
+				display: none
+		&__order
+			display: none
+		&__contacts 
+			text-align: right
+			span
+				font-size: 14px
+				line-height: 14px
+			p
+				font-size: 7px
+				line-height: 4px
