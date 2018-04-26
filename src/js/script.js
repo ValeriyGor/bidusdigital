@@ -92,6 +92,7 @@ wnd.scroll(function(){
         $(".mobile-tiser h1").css("font-size", sizeText1 + "vw");
         $(".mobile-tiser h1").css("line-height", lineH + "vw");
         $(".mobile-tiser h1").css("max-width", maxWidth + "%");
+        $(".mobile-tiser h1").css("opacity", 1 - opacity);
     }
 });
 
