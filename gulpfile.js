@@ -104,7 +104,7 @@ gulp.task('build', ['clean', 'autoprefix', 'images'], function() {
 
 
     var buildJS = gulp.src('./src/js/*.js')
-        .pipe(uglyfly())
+        //.pipe(uglyfly())
         .pipe(gulp.dest('./build/js/'));
 
     var buildHtml = gulp.src('./src/*.html')

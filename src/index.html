@@ -178,7 +178,7 @@
 						<p>Посмотрите видео о том, чем мы занимаемся</p>
 						<img class="play" src="img/play.png" alt="">
 				    </div>
-				    <video id="video-phone" autoplay="autoplay" loop="true" muted="true" playsinline="true" class="fullscreen-bg__video">
+				    <video id="video-phone" autoplay="autoplay" loop="true" muted="true" playsinline="true" class="fullscreen-bg__video" poster="img/back-video.png">
 						<source src="img/video/22.mp4" type="video/mp4">
 					</video>
 				</div>
@@ -225,7 +225,7 @@
 			<div class="overlay">
 				<h1>Профессиональное маркетинговое агенство в России и ОАЭ</h1>	
 		    </div>
-		    <video id="video-phone" autoplay="autoplay" loop="true" muted="true" playsinline="true" class="fullscreen-bg__video">
+		    <video id="video-phone" autoplay="autoplay" loop="true" muted="true" playsinline="true" class="fullscreen-bg__video" poster="img/back-video.png">
 				<source src="img/video/22.mp4" type="video/mp4">
 			</video>
 		</div>
@@ -550,111 +550,7 @@
     <script type="" src="js/script.js"></script>
 
 <script>
-	 $('.slider-for').slick({
-	  slidesToShow: 1,
-	  slidesToScroll: 1,
-	  fade: true,
-	  asNavFor: '.slider-nav',
-	  responsive: [
-	    {
-	      breakpoint: 761,
-	      settings: {
-			arrows: false
-	      }
-	    },
-	    {
-	      breakpoint: 1025,
-	      settings: {
-			arrows: true
-	      }
-	    },
-	    {
-	      breakpoint: 1280,
-	      settings: {
-			arrows: false
-	      }
-	    }
-	  ]
-	});
-	$('.slider-nav').slick({
-	  slidesToShow: 5,
-	  slidesToScroll: 3,
-	  asNavFor: '.slider-for',
-	  arrows: false,
-      centerPadding: '80px',
-	  dots: false,
-	  centerMode: true,
-	  focusOnSelect: true,
-	  responsive: [
-	    {
-	      breakpoint: 761,
-	      settings: {
-	        slidesToShow: 2,
-			slidesToScroll: 1,
-			centerMode: true,
-			centerPadding: '35px',
-			arrows: false
-	      }
-	    },
-	    {
-	      breakpoint: 1024,
-	      settings: {
-	        slidesToShow: 4,
-			centerMode: true,
-			centerPadding: '60px',
-	      }
-	    }
-	  ]
-	});
 
-	$('.blog__wrap').slick({
-	  infinite: true,
-	  slidesToShow: 3,
-	  slidesToScroll: 1,
-	  dots: false,
-	  responsive: [
-	    {
-	      breakpoint: 761,
-	      settings: {
-	        slidesToShow: 1,
-			centerMode: true,
-			centerPadding: '35px',
-			arrows: false
-	      }
-	    },
-	    {
-	      breakpoint: 1024,
-	      settings: {
-	        slidesToShow: 3,
-			centerMode: true,
-			centerPadding: '65px',
-			arrows: false
-	      }
-	    },
-	    {
-	      breakpoint: 1280,
-	      settings: {
-			arrows: false
-	      }
-	    }
-	  ]
-	});
-	$('.slider-head').slick({
-		arrows: true,
-		dots: true,
-		infinite: true,
-		speed: 500,
-		fade: true,
-		cssEase: 'linear',
-		responsive: [
-		{
-		  breakpoint: 761,
-		  settings: {
-			arrows: false
-		  }
-		}
-		]
-	});
 
 </script>
 
