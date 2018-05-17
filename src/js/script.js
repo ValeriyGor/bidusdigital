@@ -136,7 +136,8 @@ wnd.scroll(function(){
             else if(topE<0){
               topE = 0;
             }
-            topN = 300 - topE;
+            var topN = 200 - topE;
+            var topE1 = topE - 50
             //sizeText = top > 400 ? 1 : top * 5 / 1000,
             //sizeText1 = 7 - sizeText*1.5,
             //lineH = 9.5 - sizeText*1.5,
@@ -147,9 +148,8 @@ wnd.scroll(function(){
         //$(".mobile-tiser h1").css("line-height", lineH + "vw");
         //$(".mobile-tiser h1").css("max-width", maxWidth + "%");
         $(".stack-line img:first-of-type").css("top", topE);
-        $(".stack-line img:nth-of-type(3)").css("top", topE);
+        $(".stack-line img:nth-of-type(3)").css("top", topE1);
         $(".stack-line img:nth-of-type(2)").css("top", topN);
-        console.log(topE);
     }
 });
 
@@ -328,11 +328,18 @@ $(document).ready(function() {
             ]
         });
     }
-  anim();
+    function func() {  
+      anim();
+    }
+    setTimeout(func, 3000);
   
   slider2.on('afterChange', function(event, slick, currentSlide) { 
     if (currentSlide === 0) {      
-      anim();
+      
+      function func() {  
+        anim();
+      }
+      setTimeout(func, 3000);
     }
     else if (currentSlide != 0) {
       $(".invideo__media").animate({"right":"-50%"}, 0);

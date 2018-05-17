@@ -69,7 +69,7 @@ p
 			line-height: 75px
 			text-align: center
 			color: #fff
-			max-width: 750px
+			max-width: 710px
 			margin: 20px auto
 		.h1
 			font-size: 45px
@@ -626,6 +626,10 @@ p
 			background: transparent url('../img/svg/ic_search_link-gray.svg') center left 20px no-repeat
 		input
 			padding-left: 46px
+		& ~ .head-menu
+			ul>li>a
+				font-size: 0
+				
 	input
 		margin: 0
 		padding: 0
@@ -684,7 +688,8 @@ p
 		min-height: 135px
 		margin-bottom: 14px
 .gadgets-anim
-	background: #fff url("../img/gadgets.png") bottom right no-repeat
+	background: #fff 
+	//url("../img/gadgets.png") bottom right no-repeat
 	background-size: 758px
 #gadget1
 	position: absolute
@@ -711,11 +716,12 @@ p
 		width: 156px
 		margin-left: 12px
 		position: relative
+		transition: all 0.15s
 		&:nth-of-type(1)
 			top: 382px
 		&:nth-of-type(3)
-			top: -275px
-
+			top: -200px
+	
 .service
 	.row
 		padding-left: 8px
@@ -743,6 +749,11 @@ p
 			color: $link-color
 			font-size: 14px
 			line-height: 30px
+		.mobile-transparent
+			position: absolute
+			top: 40px
+			right: 87px
+			width: 273px
 
 
 .portfolio
@@ -1279,6 +1290,10 @@ p
 		width: 22px
 		height: 22px
 		margin-left: 10px
+	.service-item .mobile-transparent
+		top: 20px
+		right: 51px
+		width: 170px
 	.search 
 		right: 9%
 		input
@@ -1719,13 +1734,13 @@ p
 			z-index: 4
 			h1, .h1
 				font-size: 23px
-				font-size: 7vw
+				font-size: 5vw
 				line-height: 30px
-				line-height: 9.5vw
+				line-height: 7.5vw
 				font-family: Open Sans
 				font-weight: $light
 				color: #fff
-				max-width: 85%
+				max-width: 60%
 				transition: all 0.1s
 		.video
 			.overlay
@@ -1835,7 +1850,9 @@ p
 		display: none
 	.portfolio .slider-head
 		display: block
-
+	.vismob a
+		line-height: 27px 
+		display: block
 	.logo-wrap
 		position: absolute
 		top: 6px
@@ -1974,6 +1991,7 @@ p
 		.slider-head
 			.slick-dots 
 				bottom: 25px
+				display: block!important
 				li
 					margin: 0 6px
 					width: 36px
@@ -2285,10 +2303,20 @@ p
 	.consultation
 		.row
 			justify-content: center
+		&__contacts
+			text-align: right
 		&__general
-			text-align: center
+			text-align: left
 			img
 				width: 75%
+	.mobile-tiser
+		.overlay 
+			h1, .h1
+				font-size: 23px
+				font-size: 7vw
+				line-height: 30px
+				line-height: 9.5vw
+				max-width: 85%
 
 
 @media screen and (max-width: 359px)
