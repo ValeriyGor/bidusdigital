@@ -100,6 +100,10 @@ $( ".mob-button" ).click(function(e) {
     $(".curtain").fadeIn(300);
     $(".fast-link").delay(300).slideDown(0);
     $(".fast-link").addClass('open');
+
+    if ($(window).width() <= '767'){
+      $('.head-menu').scrollTop();
+    }
   });
 
 
@@ -214,10 +218,13 @@ $(document).ready(function() {
             {
               breakpoint: 761,
               settings: {
-                slidesToShow: 4,
+                slidesToShow: 6,
                 slidesToScroll: 1,
+                centerMode: false,
+                focusOnSelect: false,
                 centerPadding: '0px',
-                arrows: false
+                arrows: false,
+                dots: false
               }
             },
             {
@@ -345,7 +352,6 @@ $(document).ready(function() {
       $(".invideo__media").animate({"right":"-50%"}, 0);
       $(".invideo__media").animate({opacity: "0"}, 0);
       $(".invideo__head").animate({"width": "100%"}, 0);
-      $(".invideo__head").animate({"width": "100%"}, 0);
       $(".invideo__head").removeClass("scaled");
       $(".invideo").removeClass("left-back");
     }
@@ -365,3 +371,33 @@ function anim(){
       $(".invideo__head").addClass("scaled");
       $(".invideo").addClass("left-back");
 }
+
+function setEqualHeight(columns)
+  {
+  var tallestcolumn = 0;
+  columns.each(
+  function()
+  {
+  currentHeight = $(this).height();
+  if(currentHeight > tallestcolumn)
+  {
+  tallestcolumn = currentHeight;
+  }
+  }
+  );
+  columns.height(tallestcolumn);
+  }
+
+document.onreadystatechange = function(){
+    if (document.readyState === "complete") {
+       setEqualHeight($(".blog__wrap .blog-item"));
+    }
+    else {
+       window.onload = function () {
+          setEqualHeight($(".blog__wrap .blog-item"));
+       };
+    };
+}
+$( window ).resize(function() {
+  setEqualHeight($(".blog__wrap .blog-item"));
+});

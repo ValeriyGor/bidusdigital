@@ -63,19 +63,22 @@ p
 		padding-bottom: 92px
 		.row
 			flex-direction: column
+			justify-content: center
+			height: 100%
 		h1, .h1
 			font-weight: $light
-			font-size: 60px
-			line-height: 75px
+			font-size: 50px
+			line-height: 65px
 			text-align: center
 			color: #fff
-			max-width: 710px
+			max-width: 600px
 			margin: 20px auto
 		.h1
-			font-size: 45px
-			line-height: 60px
+			max-width: 600px
+			font-size: 50px
+			line-height: 65px
 		h2
-			max-width: 365px
+			max-width: 60%
 			font-weight: 300
 			text-align: left
 			font-family: 'Open Sans'
@@ -155,6 +158,8 @@ p
 					h1, img
 						transform: scale(0.75)
 						transition: all 2s cubic-bezier(.02, .01, .47, 1); 
+					h1
+						margin-top: -15px
 					
 		&.center-content
 			.row
@@ -195,7 +200,7 @@ p
 			font-size: 18px
 			line-height: 30px
 			color: #fff
-			max-width: 365px
+			max-width: 60%
 			margin-bottom: 35px
 			visibility: visible !important
 		a
@@ -217,7 +222,7 @@ p
 		top: 0
 		right: 0
 		z-index: 299
-		background: url('../img/arrow-header.png') center no-repeat
+		background: url('../img/svg/arrow.svg') center no-repeat
 		background-size: 15px 30px
 		transform: rotate(180deg)
 	.slick-prev
@@ -226,7 +231,7 @@ p
 		top: 0
 		left: 0
 		z-index: 299
-		background: url('../img/arrow-header.png') center no-repeat
+		background: url('../img/svg/arrow.svg') center no-repeat
 		background-size: 15px 30px
 	.slick-dots
 		position: absolute
@@ -485,7 +490,7 @@ p
 					
 			img
 				margin-top: 3px
-				margin-bottom: 11px
+				margin-bottom: 0
 				width: 250px
 			span
 				font-size: 13px
@@ -991,8 +996,7 @@ p
 			z-index: 10	
 			transition: all 0.3s
 		.slick-current 
-			opacity: 0.8
-			filter: brightness(150%)
+			opacity: 0.5
 	.slider-for
 		position: relative
 		&__item
@@ -1162,9 +1166,11 @@ p
 			transition: all 0.3s 
 			font-size: 14px
 			background: #fff
+			margin: 0 auto
 			&:hover
 				background: #e6e6e6
 	&__contacts
+		text-align: right
 		p
 			font-size: 12px
 			line-height: 18px
@@ -1255,12 +1261,12 @@ p
 	.about .slick-prev
 		left: -65px
 	.slider-head__item h1
-		max-width: 500px
-		font-size: 42px
-		line-height: 60px
+		max-width: 600px
+		font-size: 50px
+		line-height: 65px
 	.slider-head__item .h1
-		font-size: 33px
-		line-height: 45px
+		font-size: 38px
+		line-height: 52px
 		max-width: 500px
 	.slider-head__logo
 		width: 200px
@@ -1269,6 +1275,12 @@ p
 		margin-bottom: 20px
 	.slider-head .slick-next, .slider-head .slick-prev
 		width: 60px
+
+
+@media screen and (min-width: 767px) and (max-width: 1025px)
+	.about .slick-prev:hover:after
+		border-color: rgba(255,255,255,0) #fff rgba(255,255,255,0) rgba(255,255,255,0)
+
 
 
 @media screen and (min-width: 767px) and (max-width: 1024px)
@@ -1358,21 +1370,24 @@ p
 				padding-left: 80px
 			h1, .h1
 				font-size: 30px
-				line-height: 35px
+				line-height: 38px
 				max-width: 360px
 				margin: 10px auto
 			h2
 				line-height: 40px
 				margin-bottom: 15px
+				max-width: 50%
 			p
 				font-size: 12px
 				line-height: 20px
 				margin-bottom: 20px
+				max-width: 50%
 			a
 				font-size: 12px
 				height: 35px
 				width: 160px
 				line-height: 33px
+			&.invideo .invideo__head.scaled h1
 			&.invideo 
 				.video 	
 					.h1
@@ -1383,7 +1398,7 @@ p
 				width: 48px
 		&__logo
 			width: 173px
-
+	
 	.gadgets-anim
 		background-size: 477px
 	.consultation
@@ -1405,6 +1420,8 @@ p
 				line-height: 23px
 				font-size: 9px
 		&__contacts 
+			text-align: right
+			
 			span
 				font-size: 16px
 				line-height: 20px
@@ -1510,7 +1527,8 @@ p
 
 		.slider-head, .slider-head__item
 			height: 450px
-
+	.about .slick-prev:hover:after
+		border-color: rgba(255,255,255,0) #fff rgba(255,255,255,0) rgba(255,255,255,0)
 	.specoffer
 		h2
 			margin-bottom: 16px
@@ -1667,13 +1685,44 @@ p
 		display: none
 
 
+@media screen and (min-width: 960px) and (max-width: 1024px)
+	.slider-head__item.invideo.left-back
+		background-position: center left -5%
+	.slider-head__item h2
+		max-width: 40%
+	.slider-head__item p
+		max-width: 40%
+@media screen and (min-width: 767px) and (max-width: 959px)
+	.slider-head__item.invideo.left-back
+		background-position: center left -50%
+
 @media screen and (min-width: 768px)
 	.service-item 
 		p 
 			display: none
 	.desktop-none
 		display: none
-
+@media screen and (min-width: 866px) and (max-width: 1024px)
+	#gadget1
+		top: 138px
+		left: auto
+		right: 444px
+		width: 17px
+	#gadget2
+		top: 92px
+		left: auto
+		right: 392px
+		width: 39px
+	#gadget3
+		top: 38px
+		left: auto
+		right: 285px
+		width: 92px
+	#gadget4
+		top: 12px
+		left: auto
+		right: 0
+		width: 316px
 @media screen and (max-width: 767px)
 	h2
 		font-size: 28px
@@ -1885,6 +1934,7 @@ p
 			input, input:focus, input:hover
 				background: transparent url(../img/svg/ic_search_link-gray.svg) center left 0 no-repeat
 				padding-left: 25px
+				padding-right: 45px
 		.fast-link.open, .result-search.open
 			background: #000
 			color: #fff
@@ -2295,9 +2345,18 @@ p
 	.about 
 		.slider-for
 			&__item
-				padding: 450px 0 38px 
+				padding: 0px
+				margin-bottom: 25px
+				background-size: cover
+				background-position: center right -100px
 			.comment
-				max-width: 100%
+				max-width: 50%
+				padding-right: 10px
+			.about__worker
+				max-width: 50%
+				padding-right: 10px
+				padding-bottom: 15px
+
 
 @media screen and (max-width: 450px)
 	.consultation
