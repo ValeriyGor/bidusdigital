@@ -44,6 +44,11 @@ $( ".close-input" ).click(function(e) {
     $(".curtain").fadeOut(300);
     $(".search input").val('');
     $(".search input").blur();
+    function func() {  
+      $('.head-menu').removeClass('fonthide');
+    }
+    setTimeout(func, 500);
+    
     if ($(window).width() > '767'){
         $(".search input").attr("placeholder", "");
     }
@@ -103,6 +108,9 @@ $( ".mob-button" ).click(function(e) {
 
     if ($(window).width() <= '767'){
       $('.head-menu').scrollTop();
+    } 
+    if ($(window).width() > '767'){
+      $('.head-menu').addClass('fonthide');
     }
   });
 

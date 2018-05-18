@@ -533,6 +533,9 @@ p {
   .head-menu ul > li:hover > a {
     color: #b7b7b7; }
 
+.head-menu.fonthide li a {
+  font-size: 0; }
+
 .head-menu__dropdown {
   position: absolute;
   display: none;
@@ -648,6 +651,9 @@ p {
   -o-transition: all 0.3s;
   transition: all 0.3s;
   opacity: 1; }
+
+.our-project a:hover ~ p a {
+  color: #0070c9; }
 
 .arrow-down > a {
   position: relative; }
@@ -864,23 +870,31 @@ p {
 
 #gadget1 {
   position: absolute;
-  top: 218px;
-  left: 123px; }
+  top: 0;
+  padding-top: 218px;
+  left: 123px;
+  z-index: 101; }
 
 #gadget2 {
   position: absolute;
-  top: 144px;
-  left: 176px; }
+  top: 0;
+  padding-top: 144px;
+  left: 176px;
+  z-index: 201; }
 
 #gadget3 {
   position: absolute;
-  top: 59px;
-  left: 262px; }
+  top: 0;
+  padding-top: 59px;
+  left: 262px;
+  z-index: 301; }
 
 #gadget4 {
   position: absolute;
-  top: 19px;
-  left: 362px; }
+  top: 0;
+  padding-top: 19px;
+  left: 362px;
+  z-index: 401; }
 
 .stack-line {
   position: absolute;
@@ -927,7 +941,9 @@ p {
   .service-item a {
     color: #0070c9;
     font-size: 14px;
-    line-height: 30px; }
+    line-height: 30px;
+    position: relative;
+    z-index: 100; }
   .service-item .mobile-transparent {
     position: absolute;
     top: 40px;
@@ -1486,8 +1502,8 @@ p {
     width: 60px; } }
 
 @media screen and (min-width: 767px) and (max-width: 1025px) {
-  .about .slick-prev:hover:after {
-    border-color: rgba(255, 255, 255, 0) #fff rgba(255, 255, 255, 0) rgba(255, 255, 255, 0); } }
+  .consultation__order a {
+    margin: 0 0 0 auto; } }
 
 @media screen and (min-width: 767px) and (max-width: 1024px) {
   h2 {
@@ -1500,6 +1516,8 @@ p {
     margin-right: 2px; }
   footer {
     display: none; }
+  .specoffer-item__price {
+    left: 18px; }
   .arrow-down > a:after {
     display: none; }
   .logo {
@@ -1651,19 +1669,23 @@ p {
     .stack-line img:nth-of-type(3) {
       top: -275px; }
   #gadget1 {
-    top: 138px;
+    top: 0;
+    padding-top: 138px;
     left: 77px;
     width: 17px; }
   #gadget2 {
-    top: 92px;
+    top: 0;
+    padding-top: 92px;
     left: 110px;
     width: 39px; }
   #gadget3 {
-    top: 38px;
+    top: 0;
+    padding-top: 38px;
     left: 164px;
     width: 92px; }
   #gadget4 {
-    top: 12px;
+    top: 0;
+    padding-top: 12px;
     left: 226px;
     width: 316px; }
   .white-block {
@@ -1886,25 +1908,35 @@ p {
 
 @media screen and (min-width: 866px) and (max-width: 1024px) {
   #gadget1 {
-    top: 138px;
+    padding-top: 138px;
     left: auto;
+    top: 0;
     right: 444px;
     width: 17px; }
   #gadget2 {
-    top: 92px;
+    padding-top: 92px;
     left: auto;
+    top: 0;
     right: 392px;
     width: 39px; }
   #gadget3 {
-    top: 38px;
+    padding-top: 38px;
     left: auto;
+    top: 0;
     right: 285px;
     width: 92px; }
   #gadget4 {
-    top: 12px;
+    padding-top: 12px;
     left: auto;
+    top: 0;
     right: 0;
     width: 316px; } }
+
+@media screen and (min-width: 767px) and (max-width: 1040px) {
+  .about .slick-prev:hover:after {
+    border-color: rgba(255, 255, 255, 0) #fff rgba(255, 255, 255, 0) rgba(255, 255, 255, 0); }
+  .about .slick-next:hover:after {
+    border-color: rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) #fff; } }
 
 @media screen and (max-width: 767px) {
   h2 {
@@ -2021,6 +2053,8 @@ p {
           padding-left: 0; }
         .head-menu ul li:hover .head-menu__dropdown {
           display: none; }
+    .head-menu.fonthide li a {
+      font-size: 0; }
   .mob-button {
     position: absolute;
     top: 14px;
@@ -2208,6 +2242,9 @@ p {
           display: none; }
   .slider-head {
     height: 325px; }
+  .slider-nav .slick-track {
+    -webkit-transform: translate3d(0, 0px, 0px) !important;
+    transform: translate3d(0, 0px, 0px) !important; }
   .arrow-down > a:after {
     display: none; }
   footer {
@@ -2299,7 +2336,7 @@ p {
     .specoffer-item__img {
       height: 158px; }
     .specoffer-item__text {
-      padding: 14px 20px 35px 21px;
+      padding: 14px 20px 55px 21px;
       min-height: 140px; }
       .specoffer-item__text h3 {
         font-size: 16px;
@@ -2307,7 +2344,7 @@ p {
       .specoffer-item__text p {
         line-height: 18px; }
     .specoffer-item__price {
-      bottom: 13px;
+      bottom: 16px;
       left: 20px; }
     .specoffer-item__price-actual {
       font-size: 21px; }
