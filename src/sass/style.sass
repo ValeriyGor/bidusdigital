@@ -457,23 +457,43 @@ p
 			width: calc(100% + 44px)
 			padding: 0 37px
 		&.service
-			padding: 0 37px 66px
-			background: #fff url('../img/brand.png') center right no-repeat
+			padding: 0 7px 0 37px
+			background: #fff
 			background-size: contain
+			.small-service
+				flex: 0 0 19%
+			.big-service
+				flex: 0 0 31%
+				max-width: 31%
+				background: #fff url('../img/brand.png') center right no-repeat
+				background-size: cover
+				position: relative
+				a
+					position: absolute
+					top: 0
+					left: 0
+					right: 0
+					bottom: 0
+
+
+			.medium-3
+				padding-bottom: 66px
 			&:before
 				left: 35%
-			.brand
-				font-size: 20px
-				font-weight: $semibold
-				color: #fff
-				margin-left: -40px
-				line-height: 30px
-				position: relative
-				bottom: -55px
-				transition: all 0.3s
-				&:hover
+			.brand 
+				span
+					font-size: 20px
+					font-weight: $semibold
+					color: #fff
+					margin-left: 30px
+					line-height: 30px
+					position: absolute
+					bottom: 25px
+					transition: all 0.3s
+				&:hover span
 					text-decoration: none
 					color: #e6e6e6
+
 			.columns:nth-of-type(4)
 				display: flex
 				align-items: flex-end
@@ -736,7 +756,9 @@ p
 		transition: all 0.15s
 		&:nth-of-type(1)
 			top: 382px
+			opacity: 0.7
 		&:nth-of-type(3)
+			opacity: 0.7
 			top: -200px
 	
 .service
@@ -767,7 +789,7 @@ p
 			font-size: 14px
 			line-height: 30px
 			position: relative
-			z-index: 100
+			z-index: 250
 		.mobile-transparent
 			position: absolute
 			top: 40px
@@ -1009,6 +1031,7 @@ p
 			position: relative
 			z-index: 10	
 			transition: all 0.3s
+			cursor: pointer
 		.slick-current 
 			opacity: 0.5
 	.slider-for
@@ -1447,7 +1470,7 @@ p
 				line-height: 12px
 	.service
 		.row
-			padding: 0 19px
+			padding: 0 0 0 19px
 		&-item 
 			padding: 0 6px
 			margin-bottom: 8px
@@ -2241,6 +2264,7 @@ p
 				height: 1px
 				background: #949595!important
 				margin: 0 6px
+				cursor: pointer
 	.slider-container
 		display: flex
 		flex-direction: column-reverse

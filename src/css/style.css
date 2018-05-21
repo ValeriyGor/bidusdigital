@@ -585,25 +585,45 @@ p {
     width: calc(100% + 44px);
     padding: 0 37px; }
   .head-menu__dropdown.service {
-    padding: 0 37px 66px;
-    background: #fff url("../img/brand.png") center right no-repeat;
+    padding: 0 7px 0 37px;
+    background: #fff;
     background-size: contain; }
+    .head-menu__dropdown.service .small-service {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 19%;
+      flex: 0 0 19%; }
+    .head-menu__dropdown.service .big-service {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 31%;
+      flex: 0 0 31%;
+      max-width: 31%;
+      background: #fff url("../img/brand.png") center right no-repeat;
+      background-size: cover;
+      position: relative; }
+      .head-menu__dropdown.service .big-service a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0; }
+    .head-menu__dropdown.service .medium-3 {
+      padding-bottom: 66px; }
     .head-menu__dropdown.service:before {
       left: 35%; }
-    .head-menu__dropdown.service .brand {
+    .head-menu__dropdown.service .brand span {
       font-size: 20px;
       font-weight: 600;
       color: #fff;
-      margin-left: -40px;
+      margin-left: 30px;
       line-height: 30px;
-      position: relative;
-      bottom: -55px;
+      position: absolute;
+      bottom: 25px;
       -webkit-transition: all 0.3s;
       -o-transition: all 0.3s;
       transition: all 0.3s; }
-      .head-menu__dropdown.service .brand:hover {
-        text-decoration: none;
-        color: #e6e6e6; }
+    .head-menu__dropdown.service .brand:hover span {
+      text-decoration: none;
+      color: #e6e6e6; }
     .head-menu__dropdown.service .columns:nth-of-type(4) {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -911,8 +931,10 @@ p {
     -o-transition: all 0.15s;
     transition: all 0.15s; }
     .stack-line img:nth-of-type(1) {
-      top: 382px; }
+      top: 382px;
+      opacity: 0.7; }
     .stack-line img:nth-of-type(3) {
+      opacity: 0.7;
       top: -200px; }
 
 .service .row {
@@ -943,7 +965,7 @@ p {
     font-size: 14px;
     line-height: 30px;
     position: relative;
-    z-index: 100; }
+    z-index: 250; }
   .service-item .mobile-transparent {
     position: absolute;
     top: 40px;
@@ -1214,7 +1236,8 @@ p {
       z-index: 10;
       -webkit-transition: all 0.3s;
       -o-transition: all 0.3s;
-      transition: all 0.3s; }
+      transition: all 0.3s;
+      cursor: pointer; }
     .about .slider-nav .slick-current {
       opacity: 0.5; }
   .about .slider-for {
@@ -1644,7 +1667,7 @@ p {
         font-size: 8px;
         line-height: 12px; }
   .service .row {
-    padding: 0 19px; }
+    padding: 0 0 0 19px; }
   .service-item {
     padding: 0 6px;
     margin-bottom: 8px; }
@@ -2438,7 +2461,8 @@ p {
       .about .slider-nav__item {
         height: 1px;
         background: #949595 !important;
-        margin: 0 6px; }
+        margin: 0 6px;
+        cursor: pointer; }
   .slider-container {
     display: -webkit-box;
     display: -ms-flexbox;
