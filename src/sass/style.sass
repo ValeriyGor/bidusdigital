@@ -1134,7 +1134,7 @@ p
 			background-position: center
 			background-size: cover
 		&__descr
-			padding: 20px 30px
+			padding: 20px 30px 44px
 			h3
 				line-height: 1.3em
 				margin-bottom: 12px
@@ -1149,6 +1149,10 @@ p
 				line-height: 1.75em
 				color: #737373
 				transition: all 0.3s
+			&>div
+				position: absolute
+				bottom: 20px
+
 		&__category
 			font-size: 13px
 			color: #737373
@@ -1717,7 +1721,9 @@ p
 			&__text
 				margin-bottom: 2px
 			&__descr
-				padding: 10px 15px 8px
+				padding: 10px 15px 32px
+				&>div
+					bottom: 8px
 				h3
 					font-size: 11px
 					line-height: 14px
@@ -2216,7 +2222,7 @@ p
 			&__text
 				margin-bottom: 2px
 			&__descr
-				padding: 15px 19px
+				padding: 15px 19px 39px
 				h3
 					font-size: 16px
 					line-height: 20px
@@ -2227,6 +2233,8 @@ p
 					max-height: 72px
 					overflow: hidden
 					margin-bottom: 5px
+				&>div
+					bottom: 15px
 			&__category
 				font-size: 11px
 			&__datetime
