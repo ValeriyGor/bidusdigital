@@ -132,7 +132,8 @@ p {
         z-index: 99;
         width: 100%;
         height: 100%;
-        display: none; }
+        display: none;
+        background: #000; }
       .slider-head__item.invideo .overlay {
         background: rgba(0, 0, 0, 0.5);
         position: absolute;
@@ -1093,7 +1094,7 @@ p {
     .specoffer-item__price-actual {
       font-size: 24px;
       color: #000;
-      font-weight: 600;
+      font-weight: 500;
       vertical-align: sub; }
       .specoffer-item__price-actual span {
         font-family: 'Roboto';

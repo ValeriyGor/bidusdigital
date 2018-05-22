@@ -315,7 +315,8 @@ $("#play-tiser").on('click', function(e){
     $('.slider-head__item.invideo .row-half:nth-of-type(2)').animate({width: "100%"}, 500);
     $('.close-video').fadeIn(500);
     $("#second-video").fadeIn(2000);
-    playsec();
+    $("#second-video").get(0).play();
+    $('#second-video').addClass('active'); 
 });
 $(".close-video").on('click', function(e){
     $(".slider-head .slick-dots").fadeIn(500);
@@ -327,9 +328,26 @@ $(".close-video").on('click', function(e){
     $("#second-video").fadeOut(500);
     $("iframe").each(function() {
     $(this)[0].contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*')});
+    $("#second-video").get(0).pause();
 });
 
+
+
 $(document).ready(function() {
+  var videoPlayer = document.getElementById('#second-video');
+   $('#second-video').on('click', function(){
+  var vid = document.getElementById("second-video");
+  if($('#second-video').hasClass('active')){
+   vid.pause();
+    $("#second-video").fadeOut(1000);     
+    $("#play-tiser").parent().fadeIn(500);
+   $('#second-video').removeClass('active');            
+  } else {
+   vid.play();
+   $('#second-video').addClass('active');            
+  }
+ });
+
   if($("div").is(".slider-head")){
         var slider2 = $('.slider-head').slick({
             arrows: true,
@@ -371,11 +389,8 @@ $(document).ready(function() {
   // });
 });
 
-function playsec(){
-  var $video = $('#second-video'),
-    src = $video.attr('src');
- 
-  $video.attr('src', src + '&autoplay=1');
+function playsec(){ 
+  $('#second-video').attr('autoplay', 'autoplay');
 }
 
 // $(function() { 
