@@ -547,7 +547,8 @@ p {
     color: #fff;
     font-family: "Open Sans";
     font-size: 14px;
-    line-height: 45px;
+    line-height: 43px;
+    padding-bottom: 2px;
     -webkit-transition: all 0.3s;
     -o-transition: all 0.3s;
     transition: all 0.3s;
