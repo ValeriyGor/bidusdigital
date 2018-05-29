@@ -30,7 +30,7 @@ gulp.task('mincss', ['sass'], function () {
         .pipe(concatCss("bundle.css"))
         .pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(rename("bundle.min.css"))
-        .pipe(cssnano())
+        //.pipe(cssnano())
     
     .pipe(gulp.dest('./src/css'));
 });
