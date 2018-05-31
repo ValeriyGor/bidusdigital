@@ -28,11 +28,12 @@ header
 	z-index: 999
 
 h2
-	font-size: 48px
+	font-size: 42px
 	text-align: center
 	font-weight: $semibold
 	letter-spacing: -1px
 	line-height: 1.7em
+	font-family: 'SFUIDisplay-Bold'
 h3
 	font-size: 20px
 	line-height: 1.7em
@@ -72,16 +73,17 @@ p
 			height: 100%
 		h1, .h1
 			font-weight: $light
-			font-size: 50px
-			line-height: 65px
+			font-size: 48px
+			line-height: 54px
 			text-align: center
+			font-family: 'SFUIDisplay-Bold'
 			color: #fff
 			max-width: 600px
 			margin: 20px auto
 		.h1
 			max-width: 600px
-			font-size: 50px
-			line-height: 65px
+			font-size: 48px
+			line-height: 54px
 		h2
 			max-width: 60%
 			font-weight: 300
@@ -740,7 +742,7 @@ p
 	&.large
 		min-height: 284px
 	&.medium
-		min-height: 200px
+		min-height: 232px
 	&.small
 		min-height: 135px
 		margin-bottom: 14px
@@ -754,23 +756,27 @@ p
 	padding-top: 218px 
 	left: 123px
 	z-index: 101
+	width: 27px
 #gadget2
 	position: absolute
 	top: 0
 	padding-top: 144px 
 	left: 176px
 	z-index: 201
+	width: 62px
 #gadget3
 	position: absolute
 	top: 0
 	padding-top: 59px 
 	left: 262px
 	z-index: 301
+	width: 146px
 #gadget4
 	position: absolute
 	top: 0
 	padding-top: 19px 
 	left: 362px
+	width: 502px
 	z-index: 401
 .stack-line
 	position: absolute
@@ -799,6 +805,7 @@ p
 		h3
 			display: inline-block
 			transition: all 0.2s
+			font-family: "SFUIDisplay-Semibold"
 		li
 			&:not(:first-child) 
 				a:before
@@ -837,23 +844,29 @@ p
 	h2.head-block
 		color: #fff
 		position: absolute
-		top: 45px
+		top: 62px
 		left: 0
 		z-index: 100
 		width: 100%
 	.slider-head
-		height: 700px
+		height: 850px
 		&__item
-			height: 700px
+			height: 850px
+			&.center-content
+			.row
+				padding-left: 16px
+			p 
+				margin-bottom: 25px
 
 		.portfolio-slider-link
 			font-size: 16px
 			color: #fff
 			font-weight: 400
+			font-family: 'SFUIDisplay-Bold'
 			background: none
 			text-align: left
-			padding-left: 5px
-			line-height: 38px
+			line-height: 35px
+			max-height: 35px
 			&:before
 				display: inline-block
 				content: ""
@@ -870,17 +883,18 @@ p
 		h3
 			font-size: 36px
 			font-weight: 300
+			line-height: 1.2em
 			color: #fff
+			font-family: 'SFUIDisplay-Bold'
 		.portfolio-slider-title
-			font-size: 14px
-			line-height: 16px
+			font-size: 13px
+			line-height: 24px
 			color: #fff
-			padding-left: 5px
-			margin-bottom: 48px
+			margin-bottom: 30px
 		.portfolio-slider-descr
-			font-size: 16px
+			font-size: 14px
 			color: #fff
-			padding-left: 5px
+			line-height: 26px
 			max-width: 275px
 	.slider-head .slick-dots li
 		border-top-width: 1px
@@ -889,7 +903,7 @@ p
 
 .specoffer
 	h2
-		margin-bottom: 28px
+		margin-bottom: 38px
 	&-item
 		display: flex
 		background: #fff
@@ -906,6 +920,7 @@ p
 			h3
 				line-height: 1.3em
 				margin-bottom: 7px
+				font-family: 'SFUIDisplay-Semibold'
 			p 
 				color: #737373
 				line-height: 24px
@@ -926,23 +941,27 @@ p
 		&__img
 			padding: 28px 35px
 			background-size: cover
+			transition: all 0.3s
+			&:hover
+				opacity: 0.8
 
 		&__price
 			position: absolute
 			bottom: 23px
-			left: 29px
+			left: 29px	
+			font-family: 'SFUIDisplay-Semibold'
 			&-actual
 				font-size: 24px
 				color: #000
-				font-weight: 500
+				font-weight: 600
 				vertical-align: sub
 				span
-					font-family: 'Roboto'
-					font-weight: $normal
+					font-family: 'SFUIDisplay-Semibold'
 			&-old
 				color: #a3a3a3	
 				margin-left: 15px
 				position: relative
+				font-family: 'SFUIDisplay-Semibold'
 				&:after
 					content: ""
 					height: 1px
@@ -1066,8 +1085,20 @@ p
 			z-index: 10	
 			transition: all 0.3s
 			cursor: pointer
+			&:after
+				content: ""
+				position: absolute
+				width: 100%
+				height: 100%
+				background: rgba(255, 255, 255, 0.5)
+				opacity: 0
+				transition: all 0.3s
+				z-index: 99
 		.slick-current 
-			opacity: 0.5
+			&:after
+				opacity: 1
+				
+
 	.slider-for
 		position: relative
 		&__item
@@ -1158,6 +1189,7 @@ p
 				margin-bottom: 12px
 				font-size: 20px
 				line-height: 26px
+				font-family: 'SFUIDisplay-Semibold'
 				color: #000
 				transition: all 0.3s
 				font-weight: $semibold
@@ -1209,45 +1241,142 @@ p
 			border-color: rgba(255,212,52,0) rgba(255,212,52,0) rgba(255,212,52,0) #000
 		&:hover:after
 			border-color: rgba(255,212,52,0) rgba(255,212,52,0) rgba(255,212,52,0) #0070c9 
-.cnt
-  text-align: center
 
-.cover
-	display: none
+#modal_form
+	width: 800px
+	height: 480px
+	background: #fff
 	position: fixed
-	top: 0
-	left: 0
+	top: 45%
+	left: 50%
+	margin-top: -240px
+	margin-left: -400px
+	display: none
+	opacity: 0
+	z-index: 5
+	.question
+		flex: 3
+		background: #de0a36
+		display: flex
+		flex-direction: column
+		justify-content: flex-end
+		padding: 20px
+		box-shadow: inset 0 -250px 125px -100px rgba(0,0,0,0.5)
+		h3
+			color: #fff
+			font-size: 16px
+			line-height: 20px
+			margin-bottom: 6px
+		p
+			color: #fff
+			font-size: 12px
+			line-height: 19px
+	.form_wrap
+		flex: 8
+		padding: 20px
+		h3
+			font-size: 29px
+			font-family: "SFUIDisplay-Bold"
+			&:before
+				content: ""
+				display: inline-block
+				vertical-align: middle
+				width: 60px
+				height: 36px
+				background: url('../img/logoform.png') center left 8px no-repeat
+				background-size: contain
+		form
+			padding: 17px 10px 5px
+			flex-wrap: wrap
+			display: flex
+			justify-content: space-between
+			input, select
+				width: 48%
+				height: 46px
+			textarea
+				width: 100%
+				height: 185px
+				padding-top: 8px
+				resize: none
+				line-height: 22px
+			input, select, textarea
+				border: 1px solid #e6e6e6
+				outline: none
+				border-radius: 3px
+				padding-left: 15px
+				font-size: 13px 
+				font-family: 'Open Sans'
+			.buttons-form
+				text-align: right
+				position: relative
+				width: 100%
+			.send_form
+				width: 203px
+				height: 42px
+				line-height: 42px
+				background: #de0a36
+				font-size: 15px
+				margin-left: 15px
+				font-family: "SFUIDisplay-Bold"
+				text-align: center
+				color: #fff
+				display: inline-block	
+				border-radius: 3px	
+				display: inline-block
+			.upload-file
+				background: #f5f5f5
+				color: #494949
+				border: 1px solid #e6e6e6
+				width: 175px
+				height: 42px
+				line-height: 40px
+				border-radius: 3px
+				text-align: center
+				cursor: pointer
+				display: inline-block
+			.success_send
+				background: #22b767
+				border-radius: 3px
+				text-align: center
+				position: absolute
+				font-family: "SFUIDisplay-Bold"
+				font-size: 15px
+				line-height: 42px
+				color: #fff
+				top: 0
+				left: 0
+				right: 0
+				height: 42px
+				width: 100%
+				display: none
+
+
+	#modal_close
+		width: 11px
+		height: 11px
+		position: absolute
+		top: 20px
+		right: 20px
+		cursor: pointer
+		transition: all 0.3s
+		display: block
+		&:hover
+			opacity: 0.8
+
+
+#overlay
+	z-index: 3
+	position: fixed
+	background-color: #000
+	opacity: 0.8
+	-moz-opacity: 0.8
+	filter: alpha(opacity = 80)
 	width: 100%
 	height: 100%
-	background: #000
-	opacity: 0.6
-	z-index: 100
-
-.modal
-	display: none
-	position: fixed
 	top: 0
-	right: 0
-	bottom: 0
 	left: 0
-	text-align: center
-	overflow-x: auto
-	overflow-y: scroll
-	padding: 20px
-	z-index: 200
-
-.content
-	display: none
-	width: 100%
-	min-width: 200px
-	width: 100%
-	position: relative
-	background-color: #FAFAFA
-	z-index: 300
-	padding: 50px 0
-
-.open-modal-btn
 	cursor: pointer
+	display: none
 	
 .consultation
 	height: 105px
@@ -1278,13 +1407,14 @@ p
 			width: 220px
 			text-align: center
 			transition: all 0.3s 
+			font-family: 'SFUIDisplay-Semibold'
 			font-size: 14px
 			background: #fff
 			margin: 0
 			&:hover
 				background: #e6e6e6
 	&__contacts
-		text-align: right
+		text-align: left
 		p
 			font-size: 12px
 			line-height: 18px
@@ -1292,6 +1422,7 @@ p
 		span
 			font-size: 24px
 			line-height: 24px 
+			font-family: 'SFUIDisplay-Bold'
 			font-weight: $semibold
 
 
@@ -1305,6 +1436,7 @@ p
 		line-height: 22px
 		font-weight: $semibold
 		margin-bottom: 4px
+		font-family: 'SFUIDisplay-Bold'
 	a
 		font-size: 13px
 		display: inline-block

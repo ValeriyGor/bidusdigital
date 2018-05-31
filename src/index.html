@@ -249,9 +249,9 @@
 						<li class="vismob"><a href="#"><h3>Брендирование и дизайн</h3></a></li>
 						<li><a href="">Фирменный стиль</a></li>
 						<li><a href="">Бизнес-презентации</a></li>
-						<li><a href="">Видеографика</a></li>
-						<li><a href="">Проектирование интерфейсов (UX)</a></li>
 						<li><a href="">Дизайн интерфейсов (UI)</a></li>
+						<li><a href="">Проектирование интерфейсов (UX)</a></li>
+						<li><a href="">Видеографика</a></li>
 					</ul>
 					
 					<p>Создать уникальный образ, который бы легко запомнился вашим клиентам и передал всю его философию - это задача, которую мы решаем.</p>
@@ -288,8 +288,8 @@
 					<ul>
 						<li class="vismob"><a href="#"><h3>IT-аудит и экспертиза</h3></a></li>
 						<li><a href="">Технический аудит сайта</a></li>
-						<li><a href="">SEO анализ сайта</a></li>
 						<li><a href="">Юзабилити аудит</a></li>
+						<li><a href="">SEO анализ сайта</a></li>
 						<li><a href="">Юридическая экспертиза</a></li>
 					</ul>
 					<p>Повысить лояльность клиентов всегда не просто, но для нас эта задача решаема, ведь мы задействуем лучшие методы.</p>
@@ -299,13 +299,11 @@
 				<div class="white-block medium">
 					<ul>
 						<li class="vismob"><a href="#"><h3>Автоматизация бизнеса</h3></a></li>
-						<li><a href="">Разработка CRM систем</a></li>
-						<li><a href="">Интеграция CRM и ERP</a></li>
-						<li><a href="">Платежные системы и терминалы</a></li>
-						<li><a href="">IP-телефония</a></li>
-						<!-- <li><a href="">Блокчейн</a></li>
+						<li><a href="">Разработка и внедрение CRM</a></li>
+						<li><a href="">Интернет вещей (IoT)</a></li>
 						<li><a href="">Облачные технологии</a></li>
-						<li><a href="">Интернет вещей (IoT)</a></li> -->
+						<li><a href="">Платежные системы</a></li>
+						<li><a href="">IP-телефония</a></li>
 					</ul>					
 					<p>Ваш сайт должен приносить доход без компромисов. Мы повышаем продажи, а вы будете платить только за результат.</p>
 				</div>
@@ -318,6 +316,8 @@
 						<li><a href="">SMM продвижение</a></li>
 						<li><a href="">Проработка маркетинга</a></li>
 						<li><a href="">Управление репутацией</a></li>
+						<li><a href="">Контекстная реклама</a></li>
+						<li><a href="">E-mail маркетинг</a></li>
 					</ul>
 					<div class="stack-line">
 						<img id="clients-line1" src="img/client-line3.png" alt="" class="" >
@@ -352,9 +352,18 @@
 	<section class="portfolio">
 		<h2 class="head-block">Портфолио</h2>
 		<div class="slider-head">		
+			<div class="slider-head__item  center-content" style="background-image: url('img/slide2-portfolio.png');">
+				<div class="row align-self-middle">
+					<h3>Hantel Art</h3>
+					<p class="portfolio-slider-title">Разработка сайта и бренда</p>
+					<p class="portfolio-slider-descr">Уникальный бренд компании, занимающейся художественной ковкой по металлу.</p>
+					<a class="portfolio-slider-link" href="#">Посмотреть кейс</a>
+					<a class="portfolio-slider-link" href="#">Все работы</a>
+				</div>
+			</div>
 			<div class="slider-head__item  center-content" style="background-image: url('img/slide1-portfolio.png');">
 				<div class="row align-self-middle">
-					<h3>Restamenu</h2>
+					<h3>Restamenu1</h3>
 					<p class="portfolio-slider-title">Электроное меню для ресторанов</p>
 					<p class="portfolio-slider-descr">Масштабный проект нашей компании для ОАЭ. Уникальное меню для заведений.</p>
 					<a class="portfolio-slider-link" href="#">Посмотреть кейс</a>
@@ -363,16 +372,7 @@
 			</div>
 			<div class="slider-head__item  center-content" style="background-image: url('img/portf4.png');">
 				<div class="row align-self-middle">
-					<h3>Restamenu1</h2>
-					<p class="portfolio-slider-title">Электроное меню для ресторанов</p>
-					<p class="portfolio-slider-descr">Масштабный проект нашей компании для ОАЭ. Уникальное меню для заведений.</p>
-					<a class="portfolio-slider-link" href="#">Посмотреть кейс</a>
-					<a class="portfolio-slider-link" href="#">Все работы</a>
-				</div>
-			</div>
-			<div class="slider-head__item  center-content" style="background-image: url('img/slide1-portfolio.png');">
-				<div class="row align-self-middle">
-					<h3>Restamenu2</h2>
+					<h3>Restamenu2</h3>
 					<p class="portfolio-slider-title">Электроное меню для ресторанов</p>
 					<p class="portfolio-slider-descr">Масштабный проект нашей компании для ОАЭ. Уникальное меню для заведений.</p>
 					<a class="portfolio-slider-link" href="#">Посмотреть кейс</a>
@@ -615,18 +615,35 @@
 			</div>
 		</div>
 	</footer>
-
-	<div class="cover"></div>
-	<div class="modal">
-		<div class="content">
-			<p>THIS IS CONTENT</p>
-			<form onsubmit="return false">
-			<input type="text" placeholder="test">
-			<input type="submit" />
-			</form>
-		</div>
+	<div id="modal_form"><!-- Сaмo oкнo --> 
+	      <img src="img/svg/ic_close_gray.svg" id="modal_close"> <!-- Кнoпкa зaкрыть --> 
+	      <div class="question">
+	      	<h3>Зачем нужна консультация?</h3>
+	      	<p>Наши сотрудники помогут вам советом в своей сфере, мы заинтересованы в том, чтобы вы имели полное представление о нашей работе.</p>
+	      </div>
+	      <div class="form_wrap">
+	      	<h3>Заказать консультацию</h3>
+	      	<form action="">
+	      		<input type="text" placeholder="Имя и фамилия">
+	      		<input type="text" placeholder="Номер телефона">
+	      		<input type="text" placeholder="Электронная почта">
+	      		<select name="" id="">
+	      			<option value="">Выберите тематику</option>
+	      			<option value="">1</option>
+	      			<option value="">2</option>
+	      			<option value="">3</option>
+	      			<textarea name="" id="" cols="30" rows="10" placeholder="Опишите вопросы, которые хотели бы обсудить с нашими специалистами и проконсультируем вас по ним в ближайшее время..."></textarea>
+	      			
+	      			<div class="buttons-form">
+	      				<label for="file" class="upload-file"><input style="display: none!important;" id="file" type="file">Прикрепить файл</label>
+	      				<button class="send_form">Отправить  заявку</button>
+	      				<p class="success_send">Ваша заявка успешно отправлена!</p>
+	      			</div>
+	      		</select>
+	      	</form>
+	      </div>
 	</div>
-
+	<div id="overlay"></div><!-- Пoдлoжкa -->
 	<!-- Latest compiled and minified JavaScript -->
 	<script
 	src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
