@@ -74,7 +74,7 @@ p
 		h1, .h1
 			font-weight: $light
 			font-size: 48px
-			line-height: 54px
+			line-height: 58px
 			text-align: center
 			font-family: 'SFUIDisplay-Bold'
 			color: #fff
@@ -82,8 +82,8 @@ p
 			margin: 20px auto
 		.h1
 			max-width: 600px
-			font-size: 48px
-			line-height: 54px
+			font-size: 46px
+			line-height: 58px
 		h2
 			max-width: 60%
 			font-weight: 300
@@ -723,6 +723,8 @@ p
 		font-size: 14px
 		color: #fff
 		padding-bottom: 2px
+		position: relative
+		bottom: 2px
 		&:before
 			content: ""
 			display: inline-block
@@ -955,6 +957,7 @@ p
 				color: #000
 				font-weight: 600
 				vertical-align: sub
+				font-family: 'SFUIDisplay-Semibold'
 				span
 					font-family: 'SFUIDisplay-Semibold'
 			&-old
@@ -1253,7 +1256,7 @@ p
 	margin-left: -400px
 	display: none
 	opacity: 0
-	z-index: 5
+	z-index: 999
 	.question
 		flex: 3
 		background: #de0a36
@@ -1290,7 +1293,7 @@ p
 			flex-wrap: wrap
 			display: flex
 			justify-content: space-between
-			input, select
+			input, select, div.fancy-select
 				width: 48%
 				height: 46px
 			textarea
@@ -1306,6 +1309,8 @@ p
 				padding-left: 15px
 				font-size: 13px 
 				font-family: 'Open Sans'
+				box-shadow: none
+				@include placeholder-color(#757575)
 			.buttons-form
 				text-align: right
 				position: relative
@@ -1323,6 +1328,7 @@ p
 				display: inline-block	
 				border-radius: 3px	
 				display: inline-block
+					
 			.upload-file
 				background: #f5f5f5
 				color: #494949
@@ -1334,6 +1340,21 @@ p
 				text-align: center
 				cursor: pointer
 				display: inline-block
+				transition: all 0.3s
+				&:hover
+					background: #fafafa
+
+				&:before
+					content: ""
+					width: 11px
+					height: 19px
+					display: inline-block
+					background: url("../img/skobka.png") center no-repeat
+					background-size: contain
+					vertical-align: middle
+					position: relative
+					top: -1px
+					margin-right: 4px
 			.success_send
 				background: #22b767
 				border-radius: 3px
@@ -1365,7 +1386,7 @@ p
 
 
 #overlay
-	z-index: 3
+	z-index: 899
 	position: fixed
 	background-color: #000
 	opacity: 0.8
@@ -1508,11 +1529,11 @@ p
 		left: -65px
 	.slider-head__item h1
 		max-width: 600px
-		font-size: 50px
-		line-height: 65px
+		font-size: 48px
+		line-height: 58px
 	.slider-head__item .h1
-		font-size: 38px
-		line-height: 52px
+		font-size: 36px
+		line-height: 50px
 		max-width: 500px
 	.slider-head__logo
 		width: 200px
@@ -1841,6 +1862,7 @@ p
 			padding: 0 70px
 			&__item
 				height: 53px
+				margin: 0 4px
 		.slider-for
 			&__item
 				height: 245px
@@ -1994,7 +2016,7 @@ p
 	h3
 		font-size: 16px
 	.open-mob
-		position: fixed
+		//position: fixed
 		overflow: hidden
 	.slider-head .slick-dots
 		display: none!important
@@ -2177,6 +2199,7 @@ p
 		transform: translate(-50%)
 	.phone span
 		font-size: 0
+		bottom: 0
 	.search
 		position: static
 		width: 100%
@@ -2359,7 +2382,7 @@ p
 	.specoffer 
 		h2
 			font-size: 22px
-			margin-bottom: 7px
+			margin-bottom: 15px
 			&.head-block
 				top: 16px
 		.small-12
@@ -2371,7 +2394,7 @@ p
 			height: 158px
 		&__text
 			padding: 14px 20px 55px 21px
-			min-height: 140px
+			min-height: 0px
 			h3
 				font-size: 16px
 				margin-bottom: 4px
@@ -2473,7 +2496,7 @@ p
 		.slider-nav
 			margin-bottom: 11px
 			margin: 0 auto
-			width: 58%
+			width: 83%
 			&__item
 				height: 1px
 				background: #949595!important

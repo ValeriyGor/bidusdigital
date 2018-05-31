@@ -21,21 +21,24 @@ $( "li.arrow-down").hover(
                 }
             }
     }, function() {
-        if ($(window).width() > '1024'){
-              $(".curtain").fadeOut(300);
+        if ($(window).width() > '1024'){               
               $(this).children(".head-menu__dropdown").fadeOut(300);
+                $(".curtain").fadeOut(300);
             }
     }
 );
 
 $( ".curtain" ).click(function(e) {
     $(".fast-link").slideUp(0);
-	$(".result-search").slideUp(0);
+  $(".result-search").slideUp(0);
     $(".search").removeClass('active');    
-	$(".search input").attr("placeholder", "");
+  $(".search input").attr("placeholder", "");
     $(this).fadeOut(300);
-	$(".search input").val('');
+  $(".search input").val('');
       $('.head-menu').removeClass('fonthide');
+});
+$( ".send_form" ).click(function(e) {
+    $(".success_send").fadeIn(0);
 });
 
 $( ".close-input" ).click(function(e) {
@@ -234,11 +237,11 @@ $(document).ready(function() {
               }
             },
             {
-              breakpoint: 1024,
+              breakpoint: 1025,
               settings: {
-                slidesToShow: 4,
+                slidesToShow: 5,
                 centerMode: true,
-                centerPadding: '60px',
+                centerPadding: '50px',
               }
             }
           ]
@@ -253,6 +256,15 @@ $(document).ready(function() {
           dots: false,
           adaptiveHeight: true,
           responsive: [
+          {
+              breakpoint: 1280,
+              settings: {
+                slidesToShow: 3,
+                centerMode: true,
+                centerPadding: '65px',
+                arrows: false
+              }
+            },
             {
               breakpoint: 761,
               settings: {
@@ -268,21 +280,6 @@ $(document).ready(function() {
                 slidesToShow: 1,
                 centerMode: true,
                 centerPadding: '45px',
-                arrows: false
-              }
-            },
-            {
-              breakpoint: 1024,
-              settings: {
-                slidesToShow: 3,
-                centerMode: true,
-                centerPadding: '65px',
-                arrows: false
-              }
-            },
-            {
-              breakpoint: 1280,
-              settings: {
                 arrows: false
               }
             }
@@ -468,10 +465,14 @@ function resizeItems(elements){
 
 $(window).resize(function() { 
   resizeItems('.blog__wrap .blog-item');
-  resizeItems('.specoffer-item');
+  if ($(window).width() > '639'){
+    resizeItems('.specoffer-item');
+  }
 });
 
 $(document).ready(function() {
   resizeItems('.blog__wrap .blog-item');
-  resizeItems('.specoffer-item');
+  if ($(window).width() > '639'){
+    resizeItems('.specoffer-item');
+  }
 });
