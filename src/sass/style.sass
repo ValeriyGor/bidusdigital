@@ -2124,10 +2124,25 @@ p
 				width: 26%
 				height: 100%
 				vertical-align: top
+				.with-defis
+					padding-top: 20px
+					&:before
+						display: inline-block
+						content: ""
+						width: 20px
+						height: 1px
+						background: #0070c9
+						margin-left: 2px
+						margin-right: 10px
+						margin-bottom: 4px
+						transition: all .2s
+					&:hover:before
+						width: 25px
 				h4
 					font-size: 20px
 					padding-top: 3px
 					margin-bottom: 5px
+					font-family: 'SFUIDisplay-Semibold'
 				p 
 					line-height: 24px
 					padding-right: 25px
@@ -2135,7 +2150,7 @@ p
 						font-weight: bold
 						font-family: 'SFUIDisplay-Semibold'
 						font-size: 16px
-						margin-top: 22px
+						margin-top: 20px
 						margin-bottom: 2px
 				a
 					font-size: 14px
@@ -2150,12 +2165,98 @@ p
 				height: 100%
 				vertical-align: top
 				height: 530px
+				.slider-text, .slick-list, .slick-track
+					height: 100%
 				.working
 					height: 100%
+					border-radius: 3px
+					padding-left: 23px
+					padding-bottom: 18px
+					background-size: cover
+					background-repeat: no-repeat
+					.content
+						height: 100%
+						display: flex
+						flex-direction: column
+						align-items: flex-start
+						justify-content: flex-end
+						p 
+							font-size: 14px
+							color: #fff
+				.map 
+					width: 100%
+					height: 100%
+					display: none
+					position: relative
+					.close
+						display: block
+						background: #fff url("../img/svg/ic_close_black.svg") center left 8px no-repeat
+						height: 40px
+						width: 45px
+						background-size: 11px
+						position: absolute
+						top: 50px
+						right: -1px
+						cursor: pointer
+						transition: all 0.2s
+						&:before
+							content: ""
+							width: 20px
+							height: 40px
+							border-bottom-left-radius: 20px
+							border-top-left-radius: 20px
+							position: absolute
+							top: 0
+							left: -20px
+							background: #fff
+						&:hover
+							opacity: 0.9
+					iframe
+						width: 100%
+						height: 100%
+				.requisites
+					padding: 28px 33px
+					display: none
+					.bold
+						font-weight: bold
+					h3
+						font-size: 36px
+						font-family: 'SFUIDisplay-Bold'
+					p 
+						line-height: 26px
+						margin-bottom: 16px
+						padding-left: 3px
+					.load-doc
+						display: inline-block
+						background: #de0a36
+						border-radius: 3px
+						line-height: 45px
+						color: #fff
+						margin: 7px 3px
+						padding: 0 25px
+						transition: all 0.2s
+						span
+							color: #ff8ba2
+						&:hover
+							background: #f70c3b
+					.close
+						display: block
+						background: url("../img/svg/ic_close_gray.svg") center no-repeat
+						height: 27px
+						width: 27px
+						background-size: 11px
+						position: absolute
+						top: 20px
+						right: 30px
+						cursor: pointer
+						transition: all 0.2s
+						&:hover
+							opacity: 0.8
+
+
 	.slick-dots
-		text-align: center    
-		padding-left: 22%
-    	margin-top: 17px
+		text-align: center
+		margin-top: 17px
 		li
 			display: inline-block
 			width: 68px

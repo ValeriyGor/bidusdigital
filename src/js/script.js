@@ -106,6 +106,31 @@ $( ".open-dropdown-filter" ).click(function(e) {
     $('.dropdown-filter').fadeToggle(300);
 });
 
+$( ".seen-map" ).click(function(e) {
+    e.preventDefault();
+    $(this).parent().next().children(".slider-text").hide(0);
+    $(this).parent().next().children(".requisites").hide(0);
+    $(this).parent().next().children(".map").show(0);
+});
+$( ".open-requisites" ).click(function(e) {
+    e.preventDefault();
+    $(this).parent().next().children(".slider-text").hide(0);
+    $(this).parent().next().children(".requisites").show(0);
+    $(this).parent().next().children(".map").hide(0);
+});
+$( ".requisites .close" ).click(function(e) {
+    e.preventDefault();
+    $(this).parent().hide(0);
+    $(this).parent().prevAll(".slider-text").show(0);
+    $(this).parent().prev().hide(0);
+});
+$( ".map .close" ).click(function(e) {
+    e.preventDefault();
+    $(this).parent().hide(0);
+    $(this).parent().prev().show(0);
+    $(this).parent().next().hide(0);
+});
+
 
 
  $( ".search input" ).focus(function() {     
