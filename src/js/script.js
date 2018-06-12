@@ -12,21 +12,23 @@ new WOW().init();
 $( "li.arrow-down").hover(
     function() {
         if ($(window).width() > '1024'){
-                $(".curtain").fadeIn(300);
+                $(".curtain").fadeIn(150);
                 if($('.head-menu__dropdown').is(":visible")){
                   $(this).children(".head-menu__dropdown").fadeTo(0, 1);
                 }
                 else{
-                  $(this).children(".head-menu__dropdown").fadeTo(300, 1);
+                  $(this).children(".head-menu__dropdown").fadeTo(150, 1);
                 }
             }
     }, function() {
         if ($(window).width() > '1024'){               
-              $(this).children(".head-menu__dropdown").fadeOut(300);
-                $(".curtain").fadeOut(300);
+              $(this).children(".head-menu__dropdown").fadeOut(150);
+                $(".curtain").fadeOut(150);
             }
     }
 );
+
+
 
 $( ".curtain" ).click(function(e) {
     $(".fast-link").slideUp(0);
@@ -224,7 +226,21 @@ wnd.scroll(function(){
         $(".stack-line img:first-of-type").css("top", topE);
         $(".stack-line img:nth-of-type(3)").css("top", topE1);
         $(".stack-line img:nth-of-type(2)").css("top", topN);
+
+      topS = top < 3000 && top > 5000  ? 1 : top * 5/20;
+      console.log(topS);
+      $("#partners-carousel").css("transform", "translateX(-"+topS/20+"%)");
     }
+});
+
+$(document).ready(function(){
+    $('.go_to').click( function(){ // ловим клик по ссылке с классом go_to
+  var scroll_el = $(this).attr('href'); // возьмем содержимое атрибута href, должен быть селектором, т.е. например начинаться с # или .
+        if ($(scroll_el).length != 0) { // проверим существование элемента чтобы избежать ошибки
+      $('html, body').animate({ scrollTop: $(scroll_el).offset().top - $('.header').height() - 20}, 300); // анимируем скроолинг к элементу scroll_el
+        }
+      return false; // выключаем стандартное действие
+    });
 });
 
 $(document).ready(function() {
@@ -544,3 +560,32 @@ $('input').change(function() {
     else
       $(this).removeClass('has_value');
 });
+
+function isVisible(tag) {
+    var t = $(tag);
+    var w = $(window);
+    var wt = w.scrollTop();
+    var tt = t.offset().top;
+    var tb = tt + t.height();
+    return ((tb <= wt + w.height()) && (tt >= wt));
+}
+
+// $(function () {
+//     $(window).scroll(function () {
+//         var b = $("#technology");
+//         if (isVisible(b)) {
+//             setput();
+//         }
+//     });
+// });
+
+// function setput(){
+//   $(window).bind('mousewheel DOMMouseScroll MozMousePixelScroll', function(event) {
+//     delta = parseInt(event.originalEvent.wheelDelta || -event.originalEvent.detail);
+//     if (delta >= 0) {
+//       $(".scroll-block").css("transform", "translateX(-"+delta+"%)");
+//     } else {
+//       $(".scroll-block").css("transform", "translateX(-"+(-1*delta)+"%)");
+//     }
+//   });
+// }

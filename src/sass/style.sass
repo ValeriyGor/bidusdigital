@@ -261,7 +261,7 @@ p
 			opacity: 0.75
 	.slick-dots
 		position: absolute
-		bottom: 50px
+		bottom: 35px
 		width: 100%
 		text-align: center
 		li
@@ -272,9 +272,13 @@ p
 			font-size: 0
 			margin: 0 15px
 			cursor: pointer
-			border-top: 2px solid rgba(255, 255, 255, 0.5)
-			&.slick-active
-				border-top: 2px solid #fff
+			padding: 15px 0
+			button
+				width: 100%
+				border-top: 2px solid rgba(255, 255, 255, 0.5)
+			&.slick-active 
+				button
+					border-top: 2px solid #fff
 .medium-hide
 	display: none
 
@@ -460,22 +464,24 @@ p
 			border-top-width: 0
 			border-color: rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) rgba(255, 255, 255, 1) rgba(255, 255, 255, 0)
 		p
-			font-size: 14px
-			line-height: 24px
-			margin-bottom: 6px
+			font-size: 16px
+			line-height: 26px
+			margin-bottom: 0px
 			margin-top: 30px
-			font-weight: $semibold
+			font-family: "SFUIDisplay-Semibold"
 			color: #000
 			a 
 				margin-bottom: 0
-				font-size: 14px
-				line-height: 24px
+				font-size: 16px
+				line-height: 26px
+				color: #000
+				font-family: "SFUIDisplay-Semibold"
 		span
 			display: block
 		a
 			font-size: 13px
-			line-height: 20px
-			margin-bottom: 8px
+			line-height: 2em
+			margin-bottom: 0
 			display: inline-block
 			color: #000
 			transition: all 0.15s
@@ -900,8 +906,11 @@ p
 			line-height: 26px
 			max-width: 275px
 	.slider-head .slick-dots li
-		border-top-width: 1px
 		width: 60px
+		padding: 15px 0
+		button
+			border-top-width: 1px
+
 
 
 .specoffer
@@ -912,6 +921,7 @@ p
 		background: #fff
 		margin-bottom: 30px
 		border-radius: 3px
+		overflow: hidden
 		>div
 			flex: 1
 			background-size: cover
@@ -941,12 +951,12 @@ p
 				color: #0070c9
 			p
 				color: #000
+			.specoffer-item__img
+				opacity: 0.8
 		&__img
 			padding: 28px 35px
 			background-size: cover
 			transition: all 0.3s
-			&:hover
-				opacity: 0.8
 
 		&__price
 			position: absolute
@@ -1001,23 +1011,25 @@ p
 	span
 		font-size: 36px
 		line-height: 54px
-		font-weight: $semibold
+		font-family: 'SFUIDisplay-Bold'
 		color: #fff
 	p
-		font-size: 18px
+		font-size: 16px
 		line-height: 28px
 		color: #fff
 	a
 		display: inline-block
-		font-size: 14px
+		font-size: 16px
+		font-family: 'SFUIDisplay-Bold'
 		color: #fff
 		text-align: center
-		width: 195px
+		width: auto
 		height: 40px
 		background: #de0a36
 		line-height: 38px
 		border-radius: 3px
 		margin-top: 20px
+		padding: 0 20px
 		transition: all 0.3s
 		&:hover
 			background: #f70c3b
@@ -1150,21 +1162,25 @@ p
 		background: #454547
 	.slick-prev
 		left: -115px
+		transition: all 0.3s
 		&:after
 			border-color: rgba(255,212,52,0) #fff rgba(255,212,52,0) rgba(255,212,52,0)
-		&:hover:after
-			border-color: rgba(255,212,52,0) #0070c9 rgba(255,212,52,0) rgba(255,212,52,0)
+		&:hover
+			background: #de0a36
+			// border-color: rgba(255,212,52,0) #0070c9 rgba(255,212,52,0) rgba(255,212,52,0)
 	.slick-next
 		right: -115px
+		transition: all 0.3s
 		&:after
 			border-color: rgba(255,212,52,0) rgba(255,212,52,0) rgba(255,212,52,0) #fff 
-		&:hover:after
-			border-color: rgba(255,212,52,0) rgba(255,212,52,0) rgba(255,212,52,0) #0070c9 
+		&:hover
+			background: #de0a36
 
 
 
 .blog
 	padding-top: 40px
+	position: relative
 	margin-bottom: 53px
 	&__wrap
 		margin-top: 19px
@@ -1182,10 +1198,13 @@ p
 				color: #000
 			.blog-item__category
 				color: #000	
+			.blog-item__img
+				opacity: 0.8
 		&__img
 			height: 240px
 			background-position: center
 			background-size: cover
+			transition: all 0.3s
 		&__descr
 			padding: 20px 30px 44px
 			h3
@@ -1238,13 +1257,13 @@ p
 		&:after
 			border-color: rgba(255,212,52,0) #000 rgba(255,212,52,0) rgba(255,212,52,0)
 		&:hover:after
-			border-color: rgba(255,212,52,0) #0070c9 rgba(255,212,52,0) rgba(255,212,52,0)
+			border-color: rgba(255,212,52,0) #de0a36 rgba(255,212,52,0) rgba(255,212,52,0)
 	.slick-next
 		right: -100px
 		&:after
 			border-color: rgba(255,212,52,0) rgba(255,212,52,0) rgba(255,212,52,0) #000
 		&:hover:after
-			border-color: rgba(255,212,52,0) rgba(255,212,52,0) rgba(255,212,52,0) #0070c9 
+			border-color: rgba(255,212,52,0) rgba(255,212,52,0) rgba(255,212,52,0) #de0a36 
 
 #modal_form
 	width: 800px
@@ -1552,6 +1571,8 @@ p
 			border-right: 0
 			margin-left: 17px
 			margin-right: 9px
+		&:hover
+			color: #0070c9
 	.ordered-consultation
 		height: 30px
 		background: #de0a36
@@ -1583,6 +1604,8 @@ p
 		text-align: center
 		font-size: 24px
 		font-family: 'SFUIDisplay-Medium'
+.logo-on-tiser
+	width: 400px
 
 .service-blocks
 	h2
@@ -2100,6 +2123,9 @@ p
 		margin-bottom: 21px
 
 .history
+	border-top: 1px solid #e5e5e5
+	margin-top: 66px
+	padding-top: 53px
 	h2 
 		text-align: center
 		display: block
@@ -2252,6 +2278,13 @@ p
 		max-width: 72%
 		text-align: left
 		padding-left: 34px
+		span
+			font-size: 48px
+			color: #fff
+			line-height: 54px
+			max-width: 100%
+			font-family: 'SFUIDisplay-Bold'	
+
 	&__text
 		padding-left: 34px
 		display: block
@@ -2261,7 +2294,8 @@ p
 		font-size: 24px
 		line-height: 60px
 	.seen-all
-		margin-top: 110px
+		margin-top: 125px
+		transition: all 0.3s
 		line-height: 50px
 
 .center-text
@@ -2283,6 +2317,7 @@ p
 .scroll-block
 	padding: 50px 0 50px 12px
 	width: 200%
+	transition: all ease-out 0.3s 
 	&__techno
 		font-size: 60px		
 		font-family: 'SFUIDisplay-Medium'
@@ -2394,19 +2429,43 @@ p
 			font-size: 13px	
 		&.active
 			border-left: 2px solid #0070c9
+			transition: all 0.2s
 			opacity: 1
 			padding-left: 24px	
 		&:hover
 			opacity: 1
 
+.video-block
+	margin-bottom: 24px
+	&__item
+		border-radius: 3px
+		overflow: hidden
+		position: relative
 
+	&__text	
+		position: absolute
+		bottom: 0
+		left: 0
+		padding: 0 0 25px 30px
+		h3
+			font-size: 24px
+			font-family: 'SFUIDisplay-Bold'
+			color: #fff
+			text-align: left
+			line-height: 30px
+		p
+			font-size: 13px
+			color: #fff
+			text-align: left
 
-		
+	&__iframe
+		width: 100%
+		height: 340px
 
 .vacancy-carousel
 	text-align: center
 	padding-top: 73px
-	&>div
+	&__item
 		padding: 0 25px
 	h3
 		font-family: 'SFUIDisplay-Bold'	
@@ -2419,6 +2478,50 @@ p
 		line-height: 20px
 	.slick-list
 		overflow: hidden
+	.slick-prev
+		left: -90px
+		top: 58%
+		background: rgba(255, 255, 255, 0.15)
+		transition: all 0.3s
+		&:hover
+			background: #de0a36
+		&:after
+			border: 5px solid transparent
+			border-right-color: #fff
+			content: ""
+			display: block
+			position: absolute
+			height: 0
+			width: 0
+			border-right-width: 8px
+			border-left-width: 0
+			top: 50%
+			right: 22px
+			transform: translateY(-50%)
+			transition: all .3s
+	.slick-next
+		right: -90px
+		top: 58%
+		background: rgba(255, 255, 255, 0.15)
+		transition: all 0.3s
+		&:hover
+			background: #de0a36
+		&:after
+			border: 5px solid transparent
+			border-left-color: #fff
+			content: ""
+			display: block
+			position: absolute
+			height: 0
+			width: 0
+			border-left-width: 8px
+			border-right-width: 0
+			top: 50%
+			left: 22px
+			transform: translateY(-50%)
+			transition: all .3s
+
+
 	span
 		font-size: 12px
 		line-height: 28px
@@ -2434,6 +2537,93 @@ p
 		&.stop
 			color: #fff
 			background: rgba(255, 255, 255, 0.11)
+
+.nav-write-request
+	.slick-track
+		transform: translate3d(0, 0px, 0px)!important 
+		display: flex!important
+		align-items: center
+		justify-content: center
+	.slick-slide
+		width: 80px!important
+		margin: 0 22px
+		float: none!important
+		&.slick-current
+
+
+
+	&__item
+		background: #000	
+		width: 80px
+		height: 80px
+		cursor: pointer
+		background: #f5f5f5
+		border-radius: 50%
+		transition: all 0.3s
+		line-height: 75px
+		text-align: center
+		svg
+			vertical-align: middle
+			
+		path
+			fill: #666
+			transition: all 0.3s
+		&:hover, &.slick-current
+			background: #de0a36
+			path
+				fill: #fff
+
+.request
+	&__block
+		width: 100%
+		display: flex
+		justify-content: space-between
+		align-items: flex-start
+		padding: 25px 50px 0
+	&__user
+		flex: 2
+		img
+			display: block
+			margin: 8px auto 22px
+		h4
+			font-size: 16px
+			font-family: 'SFUIDisplay-Bold'	
+			text-align: center
+			
+		p 
+			text-align: center
+			font-size: 13px
+			line-height: 2em
+			color: #999
+		a 
+			font-size: 13px
+			margin-bottom: 0
+			color: #0070c9
+
+	&__text
+		flex: 5
+		padding-left: 60px
+		border-left: 1px solid #d9d9d9	
+		h3
+			font-size: 18px
+			font-family: 'SFUIDisplay-Bold'	
+			text-align: left
+			line-height: 24px
+			max-width: 75%
+			margin-bottom: 18px
+		p 
+			font-size: 14px
+			line-height: 26px
+			max-width: 93%
+		.publication
+			margin-top: 18px
+
+			span
+				font-size: 12px
+				margin-right: 8px
+			a 
+				display: inline-block
+				margin-bottom: 0
 
 
 
@@ -3018,7 +3208,7 @@ p
 			width: 60px
 			background-size: 11px 22px
 		.slick-dots 
-			bottom: 25px
+			bottom: 20px
 			li
 				width: 34px
 				margin: 0 8px
@@ -3159,7 +3349,7 @@ p
 				width: 60px
 				background-size: 11px 22px
 			.slick-dots 
-				bottom: 25px
+				bottom: 20px
 				li
 					width: 34px
 					margin: 0 8px
@@ -3241,10 +3431,10 @@ p
 			font-size: 12px
 		a
 			height: 32px
-			width: 162px
 			font-size: 12px
 			line-height: 30px
 			margin-top: 5px
+			padding: 0 10px
 	.about
 		padding-bottom: 39px
 		padding-top: 15px
@@ -3634,7 +3824,7 @@ p
 
 	.slider-head
 		.slick-dots 
-			bottom: 17px
+			bottom: 2px
 			li
 				margin: 0 6px
 				width: 30px
@@ -3710,7 +3900,6 @@ p
 			font-size: 13px
 			line-height: 26px
 		a
-			width: 146px
 			height: 30px
 			line-height: 28px
 			font-size: 10px
@@ -3725,7 +3914,7 @@ p
 			height: 428px
 		.slider-head
 			.slick-dots 
-				bottom: 25px
+				bottom: 10px
 				display: block!important
 				li
 					margin: 0 6px
@@ -4090,7 +4279,7 @@ p
 			height: 360px
 		.slider-head
 			.slick-dots 
-				bottom: 17px
+				bottom: 2px
 				li
 					margin: 0 6px
 					width: 30px
@@ -4164,7 +4353,6 @@ p
 	.all-solution
 		height: 151px
 		a
-			width: 124px
 			height: 24px
 			line-height: 22px
 			font-size: 9px
