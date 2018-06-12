@@ -131,6 +131,33 @@ $( ".map .close" ).click(function(e) {
     $(this).parent().next().hide(0);
 });
 
+$(".conference-nav__item").click(function(e) {
+    var n = $(this).attr('data-for');
+    if (!$(this).hasClass('active')){
+      $('.conference-nav__item').removeClass('active');
+      $(this).addClass('active');
+    }
+    $(".slider-conf").each(function(i) {
+      if ($(this).attr("data-num") == n) {
+        $(this).show(0);
+        $(this).slick('unslick');
+        $(this).slick(getSliderSettings());
+      } 
+      else{
+        $(this).hide();
+      }
+    });
+});
+
+function getSliderSettings(){
+  return {
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    centerPadding: '0',
+    dots: true
+  }
+}
+
 
 
  $( ".search input" ).focus(function() {     
