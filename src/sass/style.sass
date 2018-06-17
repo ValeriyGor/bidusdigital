@@ -1,4 +1,4 @@
-﻿@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
 @import 'font-face'
 
 @include fontFace('SFUIDisplay-Bold', '../fonts/SFUIDisplay-Bold') 
@@ -18,6 +18,8 @@ $anim_time: 0.3s
 
 body
 	background: #f4f4f4 
+	&.white-body
+		background: #fff
 
 header
 	background: #202020
@@ -577,8 +579,10 @@ p
 	opacity: 1
 
 
-.our-project a:hover~p a
-	color: #0070c9
+.our-project 
+	margin-top: 8px
+	a:hover~p a
+		color: #0070c9
 
 .arrow-down
 	>a
@@ -593,7 +597,7 @@ p
 			border-color: #fff rgba(255,212,52,0) rgba(255,212,52,0)
 			border-top-width: 4px
 			border-bottom-width: 0
-			top: 47%
+			top: 42%
 			right: 16px
 			transition: all .3s
 			margin-top: 2px
@@ -1009,12 +1013,13 @@ p
 	padding-bottom: 15px
 	border-radius: 3px
 	margin-bottom: 50px
-	padding-right: 50%
+	padding-right: 56%
 	span
 		font-size: 36px
 		line-height: 54px
 		font-family: 'SFUIDisplay-Bold'
 		color: #fff
+		margin-bottom: 5px
 	p
 		font-size: 16px
 		line-height: 28px
@@ -1026,11 +1031,11 @@ p
 		color: #fff
 		text-align: center
 		width: auto
-		height: 40px
+		height: 45px
 		background: #de0a36
-		line-height: 38px
+		line-height: 43px
 		border-radius: 3px
-		margin-top: 20px
+		margin-top: 15px
 		padding: 0 20px
 		transition: all 0.3s
 		&:hover
@@ -1268,46 +1273,50 @@ p
 			border-color: rgba(255,212,52,0) rgba(255,212,52,0) rgba(255,212,52,0) #de0a36 
 
 #modal_form
-	width: 800px
-	height: 480px
+	width: 876px
+	height: 532px
 	background: #fff
 	position: fixed
 	top: 45%
 	left: 50%
-	margin-top: -240px
-	margin-left: -400px
+	margin-top: -266px
+	margin-left: -438px
 	display: none
 	opacity: 0
-	z-index: 999
+	z-index: 1009
 	.question
 		flex: 3
 		background: #de0a36
 		display: flex
 		flex-direction: column
 		justify-content: flex-end
-		padding: 20px
-		box-shadow: inset 0 -250px 125px -100px rgba(0,0,0,0.5)
+		padding: 23px 18px
+		background: url('../img/modal-back.png') center bottom no-repeat
+		background-size: cover
+		//box-shadow: inset 0 -250px 125px -100px rgba(0,0,0,0.5)
 		h3
 			color: #fff
-			font-size: 16px
-			line-height: 20px
-			margin-bottom: 6px
+			font-size: 18px
+			line-height: 22px
+			margin-bottom: 10px
 		p
 			color: #fff
-			font-size: 12px
-			line-height: 19px
+			font-size: 13px
+			line-height: 20px
 	.form_wrap
 		flex: 8
 		padding: 20px
 		h3
 			font-size: 29px
+			line-height: 58px
+			letter-spacing: 0.5px
 			font-family: "SFUIDisplay-Bold"
 			&:before
 				content: ""
 				display: inline-block
 				vertical-align: middle
-				width: 60px
-				height: 36px
+				width: 63px
+				height: 42px
 				background: url('../img/logoform.png') center left 8px no-repeat
 				background-size: contain
 		form
@@ -1317,10 +1326,11 @@ p
 			justify-content: space-between
 			input, select, div.fancy-select
 				width: 48%
-				height: 46px
+				height: 50px
+				margin-bottom: 20px
 			textarea
 				width: 100%
-				height: 185px
+				height: 200px
 				padding-top: 8px
 				resize: none
 				line-height: 22px
@@ -1353,10 +1363,11 @@ p
 					
 			.upload-file
 				background: #f5f5f5
-				color: #494949
+				color: #6f6f6f
 				border: 1px solid #e6e6e6
 				width: 175px
 				height: 42px
+				font-family: "SFUIDisplay-Semibold"
 				line-height: 40px
 				border-radius: 3px
 				text-align: center
@@ -1394,21 +1405,23 @@ p
 				display: none
 
 
+
 	#modal_close
 		width: 11px
 		height: 11px
 		position: absolute
-		top: 20px
-		right: 20px
+		top: 24px
+		right: 21px
 		cursor: pointer
+		fill: #989898
 		transition: all 0.3s
 		display: block
 		&:hover
-			opacity: 0.8
+			fill: #000
 
 
 #overlay
-	z-index: 899
+	z-index: 1000
 	position: fixed
 	background-color: #000
 	opacity: 0.8
@@ -1455,7 +1468,7 @@ p
 			background: #fff
 			margin: 0
 			&:hover
-				background: #e6e6e6
+				background: #f5f5f5
 	&__contacts
 		text-align: left
 		p
@@ -1666,6 +1679,8 @@ p
 		padding-right: 25px
 		padding-top: 6px
 		line-height: 28px
+	a
+		font-weight: 600
 
 .filter-block
 	&_container
@@ -1723,7 +1738,7 @@ p
 	line-height: 16px
 	padding: 10px
 	color: #fff
-	opacity: 0
+	opacity: 1
 	transform: translateX(50%)
 	transition: all 0.3s
 	&:after
@@ -1781,6 +1796,7 @@ p
 			line-height: 45px
 			display: inline-block
 			padding: 0 40px
+			font-family: 'SFUIDisplay-Bold'
 			background: #de0a36
 			border-radius: 3px
 			cursor: pointer
@@ -1852,9 +1868,10 @@ p
 		color: #fff
 		font-family: 'SFUIDisplay-Bold'
 	span
-		font-size: 23px
+		font-size: 24px
 		line-height: 40px
 		color: #fff
+		font-family: 'SFUIDisplay-Medium'
 	a
 		line-height: 50px
 		font-family: 'SFUIDisplay-Bold'
@@ -1922,28 +1939,27 @@ p
 	text-align: center
 	line-height: 60px
 	font-family: SFUIDisplay-Bold
-	padding: 74px 0 67px
+	padding: 74px 0
 .principe
 	.columns a
 		display: block
-		border-left: 1px solid #e5e5e5
+		border-left: 4px solid #de0a36
 		&:hover
 			h4
-				background: #de0a36
+				color: #de0a36
 	h4			
 		font-size: 24px
 		text-align: center
-		line-height: 40px
+		line-height: 30px
 		padding: 0 20px
-		background: #000
-		color: #fff
+		color: #000
 		display: inline-block	
 		transition: all 0.3s	
-		margin-left: -1px
+		margin-left: 0
 		font-family: 'SFUIDisplay-Bold'
 	p
 		font-size: 13px
-		padding: 13px 40px 13px 18px
+		padding: 16px 40px 6px 20px
 		color: #000
 		font-family: "Open Sans"
 
@@ -1953,6 +1969,8 @@ p
 	padding-left: 30px 
 .podcategory-item
 	padding: 56px 70px
+	display: block
+
 	h2
 		font-size: 36px
 		letter-spacing: 0
@@ -2008,11 +2026,16 @@ p
 			color: #fff
 	&.black-text
 		padding: 32px 50px
+		transition: all 0.3s
+		&:hover
+			opacity: 0.8
+
 		h2.small
 			max-width: 350px
 		h2
 			margin: 0 auto
-		a 
+			color: #000
+		span 
 			display: block
 			text-align: center
 			font-size: 16px
@@ -2050,6 +2073,9 @@ p
 			padding: 0 33px
 			margin: 30px 0 12px
 			border-radius: 3px
+			transition: all 0.3s
+			&:hover
+				background: #f70c3b
 		span
 			display: block
 			text-align: center
@@ -2136,6 +2162,7 @@ p
 		font-size: 23px
 		line-height: 26px
 		margin-bottom: 8px
+		font-family: 'SFUIDisplay-Bold'	
 	h4
 		font-size: 20px
 		font-family: 'SFUIDisplay-Semibold'	
@@ -2355,6 +2382,9 @@ p
 		padding-bottom: 10px
 		line-height: 80px
 		color: #fff
+		transition: all 0.3s
+		&:hover
+			color: #DE0A36
 		&:after
 			content: ""
 			display: inline-block
@@ -2425,6 +2455,8 @@ p
 		h3
 			font-size: 24px
 			font-family: 'SFUIDisplay-Medium'
+			font-weight: normal
+			
 		p 
 			font-size: 13px	
 		&.active
@@ -2432,6 +2464,9 @@ p
 			transition: all 0.2s
 			opacity: 1
 			padding-left: 24px	
+			h3
+				font-family: 'SFUIDisplay-Bold'
+
 		&:hover
 			opacity: 1
 
@@ -2465,8 +2500,11 @@ p
 .vacancy-carousel
 	text-align: center
 	padding-top: 73px
-	&__item
-		padding: 0 25px
+	&__item		
+		a 
+			display: block
+			padding: 0 25px
+			
 	h3
 		font-family: 'SFUIDisplay-Bold'	
 		color: #fff
@@ -2637,9 +2675,10 @@ p
 	color: #fff
 	padding: 0 30px
 	display: inline-block
+	transition: all 0.2s
 	background: #de0a36
 	&:hover
-		background: #e40f3b
+		background: #f70c3b
 		color: #fff
 	
 
@@ -2650,10 +2689,13 @@ p
 	padding: 30px 0
 	.columns
 		position: relative
-		&.prev-service
-			padding-right: 50px
+		&:nth-of-type(1)
 			border-right: 1px solid #f5f5f5
+		.prev-service
+			padding-right: 35px
 			text-align: right
+			display: block
+			
 			&:after
 				content: ""
 				width: 33px
@@ -2664,30 +2706,33 @@ p
 				position: absolute
 				top: 50%
 				left: 15px
+			&:hover .theme
+				color: #007de3
 
-		&.next-service
-			padding-left: 50px
+		.next-service
+			padding-left: 35px
+			display: block
 			&:after
 				content: ""
 				width: 33px
-				height: 15px
+				height: 15px				
 				background: url("../img/podcategory-page/arrow.png")
 				background-size: contain
 				position: absolute
 				top: 50%
 				right: 15px
+			&:hover .theme
+				color: #007de3
 			
 		span
 			color: #737373
 			font-size: 12px
 			display: block
-		a
+		.theme
 			font-size: 24px
 			font-family: 'SFUIDisplay-Bold'
 			color: #000
 			transition: all 0.2s
-			&:hover
-				color: #007de3
 			
 .print-version
 	color: #000
@@ -2703,6 +2748,15 @@ p
 		margin-right: 9px
 		background: url('../img/contacts-page/print-icon.png') center no-repeat
 		background-size: contain
+		opacity: 0.22
+		transition: all 0.2s
+	&:active
+		color: #000
+	&:hover
+		color: #000
+		&:before
+			opacity: 1
+
 .departament
 	padding-top: 50px
 	.small-right-padd
@@ -2762,8 +2816,9 @@ p
 			margin: 8px 7px
 			vertical-align: top
 			transition: all 0.3s
+			cursor: pointer
 			&:hover
-				opacity: 0.8
+				opacity: 0.7
 			&:nth-of-type(1)
 				line-height: 45px
 				img
@@ -2931,8 +2986,10 @@ p
 				.requisites
 					padding: 28px 33px
 					display: none
+					box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.1)
 					.bold
-						font-weight: bold
+						font-family: 'SFUIDisplay-Semibold'
+						font-size: 16px
 					h3
 						font-size: 36px
 						font-family: 'SFUIDisplay-Bold'
@@ -2947,6 +3004,7 @@ p
 						line-height: 45px
 						color: #fff
 						margin: 7px 3px
+						font-family: 'SFUIDisplay-Bold'
 						padding: 0 25px
 						transition: all 0.2s
 						span
@@ -2996,6 +3054,8 @@ p
 			border-bottom: 1px solid #d9d9d9
 			display: inline-block
 			float: none
+			h3
+				font-family: "SFUIDisplay-Semibold"
 			&.slick-current
 				border-bottom: 2px solid #0070c9
 				padding-bottom: 9px			
@@ -3101,6 +3161,7 @@ p
 		height: 54px
 		margin-top: 10px
 		border: none
+		cursor: pointer
 		border-bottom: 2px solid #636363
 		background: #1f1f1f
 		font-family: 'SFUIDisplay-Semibold'
@@ -3149,11 +3210,11 @@ p
 	.slider-head .slick-next, .slider-head .slick-prev
 		width: 60px
 
-@media screen and (min-width: 1025px) 
-	.filter-block
-		&_container
-			span:hover~.tooltip-block
-				opacity: 1
+// @media screen and (min-width: 1025px) 
+// 	.filter-block
+// 		&_container
+// 			span:hover~.tooltip-block
+// 				opacity: 1
 
 @media screen and (min-width: 767px) and (max-width: 1025px)
 	.consultation__order a
@@ -3875,11 +3936,12 @@ p
 		&-item
 			padding: 32px 44px
 			height: 316px
+			display: block
 			background-size: contain!important
 			margin-bottom: 38px
 			&.black-text
 				padding: 20px 50px
-				a
+				span
 					margin-top: 2px
 					font-size: 12px
 
@@ -3916,14 +3978,14 @@ p
 				font-size: 18px
 			span
 				font-size: 10px
-			&.next-service
-				padding-left: 30px
+			.next-service
+				padding-left: 15px
 				&:after
 					width: 20px
 					right: 32px
 					background-repeat: no-repeat
-			&.prev-service
-				padding-right: 30px
+			.prev-service
+				padding-right: 15px
 				&:after
 					width: 20px
 					left: 26px
@@ -4047,7 +4109,7 @@ p
 			padding-left: 0px
 	
 	.present-company
-		margin: 31px 0
+		margin: 31px 0 39px
 		padding: 101px 0
 		&__img
 			position: absolute
@@ -4077,6 +4139,294 @@ p
 	.logo-on-tiser
 		width: 250px
 
+	.our-command 
+		padding: 0 10px
+		.left-item
+			padding-right: 10px
+		.center-item
+			padding: 0 10px
+		.right-item
+			padding-left: 10px
+		h2
+			margin-bottom: 16px
+		&__item
+			height: 233px
+			margin-bottom: 18px
+			padding: 11px 10px 11px 13px
+			h4
+				margin-bottom: 10px
+				line-height: 24px
+				font-size: 22px
+			span
+				font-size: 9px
+				padding: 0 5px
+				line-height: 20px
+	.all-command
+		padding: 34px 0
+		margin-bottom: 41px
+		h3
+			font-size: 24px
+			line-height: 26px
+			margin-bottom: 8px
+		p
+			font-size: 11px
+			line-height: 13px
+			margin-bottom: 16px
+	.primary_link
+		font-size: 12px
+		line-height: 33px
+		padding: 0 17px
+	.technology
+		height: 100px
+		margin-bottom: 24px
+	.scroll-block
+		padding: 25px 0 25px 25px
+		&__head
+			font-size: 18px
+			line-height: 50px
+			margin-right: 23px
+		&__techno
+			font-size: 30px
+			line-height: 50px
+			&:after
+				width: 20px
+				height: 2px
+				margin-left: 14px
+				margin-right: 9px
+		&__link
+			font-size: 30px
+			padding-bottom: 10px
+			line-height: 30px
+			padding-top: 0
+			&:after
+				width: 28px
+				margin-left: 18px
+	.conferencies 
+		h2
+			margin-bottom: 14px
+		.medium-3
+			padding-left: 0
+			padding-right: 10px
+		.medium-9
+			padding-left: 25px
+			padding-right: 20px
+	.conference-nav
+		&__item 
+			padding-left: 14px
+			padding-bottom: 10px
+			padding-top: 5px
+			h3
+				font-size: 16px
+			p
+				font-size: 9px
+				max-height: 42px
+				overflow: hidden
+			&.active
+				padding-left: 13px
+	.slider-conf
+		&__item
+			height: 320px
+			.content
+				padding: 13px 17px
+			p
+				font-size: 10px
+	.slider-conf 
+		.slick-dots 
+			li
+				width: 42px
+				padding: 6px 0
+				margin: 0 10px
+	.history
+		margin-top: 50px
+		padding-top: 43px
+		&__text
+			padding-left: 26px
+			padding-right: 80px
+		h2
+			margin-bottom: 35px
+		h3
+			font-size: 18px
+			line-height: 20px
+			letter-spacing: -0.5px
+			margin-bottom: 4px
+		h4
+			font-size: 15px
+			margin-bottom: 0
+		p 
+			font-size: 11px
+			line-height: 23px
+			margin-bottom: 25px
+		.navigation
+			padding-left: 0
+			a
+				font-size: 12px
+				line-height: 20px
+				&:before
+					width: 15px
+					margin-left: 0
+					margin-right: 7px
+			li
+				line-height: 24px
+	.quest
+		padding: 62px 69px
+		&__text
+			max-width: 255px
+			h3
+				margin-bottom: 0
+				font-size: 24px
+			p 
+				margin-bottom: 10px
+				font-size: 12px
+	.filials
+		&.reviews
+			padding-top: 40px
+			.slick-slider
+				margin-top: 19px
+				margin-bottom: 15px
+				.seen_all_reviews
+					font-size: 12px
+			.slider-nav 
+				.slick-slide
+					padding: 2px 12px 8px
+					h3
+						font-size: 12px
+					&.slick-current
+						padding-bottom: 7px
+		.medium-3
+			padding: 0 10px
+		.slider-for
+			padding: 0 15px
+	.reviews 
+		h3
+			font-size: 10px
+		a 
+			font-size: 10px
+			margin-bottom: 30px
+
+	.letter
+		margin-bottom: 8px
+		&.vertical
+			height: 200px
+		&.horizontal
+			height: 115px
+
+	.video-block__iframe
+		height: 190px
+
+	.video-block
+		padding: 0 10px
+		margin-bottom: 12px
+		&__text
+			padding: 0 0 15px 15px
+			p 
+				font-size: 11px
+			h3
+				line-height: 12px
+				font-size: 9px
+	
+	.nav-write-request
+		.slick-slide
+			margin: 0 14px
+		&__item
+			height: 60px
+			max-width: 60px
+			line-height: 58px
+			svg, img
+				witdh: 50%
+	.partners 
+		.scroll-block
+			padding: 12px 0 15px 24px
+			&__logo
+				line-height: 50px
+				margin-bottom: 5px
+				&:after
+					height: 42px
+					margin: 0 30px 0 35px
+				img
+					max-height: 24px
+					max-width: 84px
+			&__head
+				margin-right: 40px
+
+
+	.request
+		&__user
+			padding: 0 13px
+			img
+				width: 125px
+		&__block
+			padding: 26px 0 0
+		&__text
+			padding-left: 26px
+			padding-top: 2px
+			.publication
+				margin-top: 9px
+				line-height: 14px
+				span
+					font-size: 9px
+					display: block
+					
+			p 
+				font-size: 11px
+				line-height: 21px
+				max-width: 100%
+			h3
+				max-width: 100%
+				font-size: 12px
+				line-height: 19px
+				margin-bottom: 8px
+	.carousel
+		padding-top: 34px
+		h2
+			font-size: 32px
+			line-height: 38px
+			padding-left: 22px
+			span
+				font-size: 32px
+				line-height: 38px
+		&__text
+			font-size: 18px
+			line-height: 40px
+			padding-left: 24px
+
+	.vacancy-carousel
+		padding: 26px 50px 0
+		h3
+			font-size: 18px
+		p 
+			font-size: 11px
+			margin-bottom: 10px
+			margin-top: 3px 
+			line-height: 18px
+		span
+			font-size: 9px
+			line-height: 20px
+			padding: 0 13px
+			border-radius: 10px
+		.slick-next
+			right: 10px
+			top: 39%
+			&:after
+				left: 14px
+				border: 3.5px solid transparent
+				border-left-width: 6px
+				border-left-color: #fff
+		.slick-prev
+			left: 10px
+			top: 39%
+			&:after
+				right: 14px
+				border: 3.5px solid transparent
+				border-right-width: 6px
+				border-right-color: #fff
+		.slick-arrow
+			height: 33px
+			width: 33px
+	.carousel 
+		padding-bottom: 32px
+		.seen-all
+			margin-top: 30px
+			line-height: 32px
 
 @media screen and (min-width: 960px) and (max-width: 1024px)
 	.slider-head__item.invideo.left-back
@@ -5136,7 +5486,7 @@ p
 			margin-bottom: 25px
 			&.black-text
 				padding: 25px 49px
-				a
+				span
 					font-size: 12px
 					margin-top: 0
 

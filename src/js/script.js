@@ -35,7 +35,7 @@ $( ".curtain" ).click(function(e) {
   $(".result-search").slideUp(0);
     $(".dropdown-filter").removeClass("open");
     $(".breadscrumb-wrap").removeClass("open");
-    $('.dropdown-filter').fadeOut(300);
+    $('.dropdown-filter').slideUp(300);
     $(".search").removeClass('active');    
   $(".search input").attr("placeholder", "");
     $(this).fadeOut(300);
@@ -105,7 +105,7 @@ $( ".open-dropdown-filter" ).click(function(e) {
     $(".dropdown-filter").toggleClass("open");
     $(".breadscrumb-wrap").toggleClass("open");
     $('.curtain').fadeToggle(300);
-    $('.dropdown-filter').fadeToggle(300);
+    $('.dropdown-filter').slideToggle(300);
 });
 
 $( ".seen-map" ).click(function(e) {
@@ -232,7 +232,15 @@ wnd.scroll(function(){
     }
 });
 
+
+
+
 $(document).ready(function(){
+    var tooltip = $(".tooltip-block")
+    if ($(tooltip).length != 0) { // проверим существование элемента чтобы избежать ошибки
+        $(tooltip).delay(2500).fadeOut(300);
+      }
+  
     $('.go_to').click( function(){ // ловим клик по ссылке с классом go_to
   var scroll_el = $(this).attr('href'); // возьмем содержимое атрибута href, должен быть селектором, т.е. например начинаться с # или .
         if ($(scroll_el).length != 0) { // проверим существование элемента чтобы избежать ошибки
