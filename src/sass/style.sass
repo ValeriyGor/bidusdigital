@@ -27,6 +27,8 @@ header
 	position: fixed
 	width: 100%
 	z-index: 999
+	&.no-transparent
+		background: rgba(0, 0, 0, 1)!important
 
 h2
 	font-size: 42px
@@ -1670,8 +1672,6 @@ p
 		position: relative
 		display: inline-block
 		cursor: pointer
-		span:hover~.tooltip-block
-			opacity: 1
 		
 
 
@@ -2795,6 +2795,10 @@ p
 		font-size: 48px
 		line-height: 54px
 		letter-spacing: 0
+	h2
+		.br
+			display: block
+			
 .typed-cursor
 	opacity: 1
 	-webkit-animation: blink 0.7s infinite
@@ -2816,6 +2820,8 @@ p
 		background: #fff
 		height: auto
 		margin-bottom: 40px
+	.slick-list
+		overflow: visible
 	.slider-for 
 		.item
 			padding: 0 15px
@@ -2849,6 +2855,9 @@ p
 				p 
 					line-height: 24px
 					padding-right: 25px
+					span
+						display: block
+						
 					&.bold
 						font-weight: bold
 						font-family: 'SFUIDisplay-Semibold'
@@ -2862,6 +2871,8 @@ p
 					display: inline-block
 				.light-gray
 					color: #a6a6a6
+					display: inline-block
+					
 
 			.img	
 				width: 74%
@@ -3045,13 +3056,43 @@ p
 		&:hover
 			color: #de0a36
 
+.form-item
 
+.form-input
+	width: 100%
+	height: 40px
+	padding: 5px 15px
+
+.form-label
+	position: absolute
+	pointer-events: none
+	left: 15px
+	top: 0
+	line-height: 40px
+	transition: .3s
+
+.form-input
+	&:focus
+		background: #1f1f1f
+		box-shadow: none
+		border: none
+		border-bottom: 2px solid #bcbcbc
+	&:focus ~ .form-label
+		font-size: 11px
+		top: -3px
+		left: 0px
+		color: #fff
+	&:valid ~ .form-label
+		font-size: 11px
+		top: -3px
+		left: 0px
 .input_block
 	margin: 0 26px 25px 0
 	width: 23%
 	height: 64px
 	position: relative
 	display: inline-block
+	vertical-align: middle
 	
 	input
 		display: block
@@ -3067,38 +3108,21 @@ p
 		color: #fff
 		box-shadow: none
 		outline: none
-		&:focus
-			background: #1f1f1f
-			box-shadow: none
-			border: none
-			border-bottom: 2px solid #bcbcbc
+		
 	label
 		display: block
 		width: 100%
 		height: 64px
 		position: absolute
-		top: 0
+		font-family: 'SFUIDisplay-Semibold'
+		transition: all 0.3s ease
+		font-size: 20px
+		line-height: 24px
+		color: #636363
+		position: absolute
+		top: 21px
 		left: 0
-		span
-			display: block
-			height: 20px
-			font-family: 'SFUIDisplay-Semibold'
-			transition: all 0.3s ease
-			font-size: 20px
-			line-height: 24px
-			color: #636363
-			position: absolute
-			top: 21px
-			left: 0
-	input:focus + label span
-		font-size: 11px
-		top: -3px
-		left: 0px
-
-.has_value + label span
-	font-size: 11px
-	top: -3px
-	left: 0px
+	
 
 @media screen and (min-width: 1025px) and (max-width: 1400px)
 	.blog .slick-next
@@ -3125,6 +3149,11 @@ p
 	.slider-head .slick-next, .slider-head .slick-prev
 		width: 60px
 
+@media screen and (min-width: 1025px) 
+	.filter-block
+		&_container
+			span:hover~.tooltip-block
+				opacity: 1
 
 @media screen and (min-width: 767px) and (max-width: 1025px)
 	.consultation__order a
@@ -3539,6 +3568,514 @@ p
 		display: block
 	.medium-show
 		display: none
+	.service-blocks 
+		.columns
+			padding: 0 25px
+			margin-bottom: 20px
+			&.one-for-row
+				.white-block
+					background-size: 61%
+			&.two-for-row
+				&:nth-of-type(2n+1)
+					padding-left: 10px
+				&:nth-of-type(2n)
+					padding-right: 10px
+				.white-block
+					background-size: contain
+					padding-bottom: 20px
+					min-height: 238px
+			&.three-for-row
+				.white-block
+					min-height: 248px
+			&.three-for-row
+				padding: 0 12px
+			&.three-for-row:nth-of-type(3n+2)
+				padding: 0 25px 0 5px
+			&.three-for-row:nth-of-type(3n)
+				padding: 0 5px 0 25px
+		.white-block
+			padding: 14px 15px 10px 24px
+			min-height: 226px
+		p 
+			font-size: 9px
+			max-width: 218px
+			padding-top: 2px
+			padding-left: 3px
+			margin-bottom: 2px
+			line-height: 15px
+		h2
+			font-size: 18px
+			padding-top: 4px
+			padding-bottom: 5px
+			line-height: 22px
+		li 
+			display: block
+			
+			a
+				font-size: 12px
+				line-height: 20px
+				&:before
+					margin-left: 3px
+					margin-right: 7px
+					width: 12px
+
+	.head-without-image
+		padding-top: 37px
+		padding-bottom: 37px
+		h1
+			font-size: 38px
+			line-height: 38px
+		span
+			font-size: 18px
+	.breadscrumb-wrap
+		margin-top: 40px
+		padding-left: 5px
+		.ordered-consultation
+			padding: 0 15px
+			font-size: 10px
+			line-height: 20px
+			height: 22px
+			border-radius: 11px
+		.text-right.no-tablet
+			display: none
+		.breadscrumb 
+			a
+				font-size: 10px
+				padding-left: 5px
+				line-height: 40px
+				&:after
+					margin-left: 11px
+					margin-right: 0px
+		span
+			font-size: 10px
+			padding-left: 7px
+	.head-with-image
+		height: 375px
+		padding-top: 40px
+		h1
+			font-size: 36px
+		span
+			font-size: 18px
+			line-height: 18px
+	.departament
+		padding-top: 32px
+		.small-left-padd
+			padding-left: 0
+			padding-right: 25px
+		.small-right-padd
+			padding-right: 0
+			padding-left: 25px
+		&-item
+			padding: 10px 20px 
+			height: 218px
+			margin-bottom: 7px
+			h3
+				font-size: 15px
+				margin-bottom: 0
+				line-height: 30px
+			p 
+				font-size: 9px
+				line-height: 14px
+				margin-bottom: 0
+			.info 
+				span
+					&:first-child
+						font-size: 9px
+					&:nth-of-type(2)
+						font-size: 13px
+						line-height: 13px
+						margin-bottom: 1px
+	.social-contact 
+		padding-top: 28px
+		padding-bottom: 18px
+		margin-bottom: 3px
+		padding-left: 0
+		&-wrap
+			padding-left: 25px
+			padding-right: 25px
+		p
+			font-size: 9px
+		span
+			font-size: 21px
+		.soc-item
+			margin: 4px
+			width: 30px
+			height: 30px
+			&:nth-of-type(1)
+				line-height: 30px
+				img
+					width: 7px
+			&:nth-of-type(2)
+				line-height: 32px
+				img
+					width: 14px
+			&:nth-of-type(3)
+				line-height: 27px
+				img
+					width: 15px
+			&:nth-of-type(4)
+				line-height: 28px
+				img
+					width: 14px
+			&:nth-of-type(5)
+				line-height: 28px
+				img
+					width: 14px
+	.filials
+		padding-top: 26px
+		padding-bottom: 35px
+		h2
+			line-height: 40px
+		&_text
+			max-width: 470px
+			font-size: 11px
+			margin-bottom: 30px
+		.slick-slider
+			margin-bottom: 28px
+		.slick-dots
+			margin-top: 6px
+			li
+				width: 43px
+				margin: 0 10px
+		.slider-for
+			padding: 0 10px
+			.item 
+				.text 
+					width: 26%
+					h4
+						font-size: 12px
+						padding-top: 0
+						margin-bottom: 2px
+					p
+						font-size: 9px
+						line-height: 15px
+						&.bold
+							font-size: 10px
+							margin-top: 15px
+							margin-bottom: 0
+						span
+							font-size: 9px
+					a
+						font-size: 9px
+						line-height: 14px
+						padding-top: 2px
+						display: block
+					.with-defis
+						padding-top: 12px
+						font-size: 12px
+						&:before
+							width: 10px
+							margin-left: 0
+							margin-right: 4px
+							margin-bottom: 3px
+
+						
+				.img
+					width: 74%
+					height: 330px
+					.requisites
+						font-size: 18px
+						padding: 14px 17px
+						h3
+							font-size: 18px
+						p 
+							line-height: 16px
+							font-size: 10px
+							margin-bottom: 12px
+							padding-left: 1px
+						.load-doc
+							line-height: 30px
+							font-size: 12px
+							margin: 3px 1px
+							padding: 0 12px 
+						.close
+							top: 10px
+							right: 10px
+					.working 
+						padding-left: 14px
+						padding-bottom: 9px
+						.content 
+							p
+								font-size: 9px
+		.slider-nav 
+			.slick-slide
+				padding: 0 17px 7px
+				&.slick-current
+					padding-bottom: 6px
+	.form-call 
+		padding: 65px 8px 57px
+		h2, span
+			font-size: 30px
+			line-height: 40px
+		form
+			margin-top: 30px
+		button
+			display: block
+			margin: 0 0 0 auto
+			font-size: 23px
+			&:after
+				width: 29px
+				margin-left: 12px
+
+	.input_block 
+		margin-right: 32px
+		margin-bottom: 30px
+		width: 29%
+		&:nth-of-type(3)
+			margin-right: 0 
+		input
+			height: 50px
+			font-size: 18px
+		label
+			font-size: 18px
+	.find_text
+		.columns
+			padding: 0 25px
+	.help-block
+		margin-bottom: 30px
+		padding: 26px 50px 25px 60px
+		span
+			width: 51%
+			font-size: 24px
+			line-height: 33px
+		p 
+			width: 49%
+			font-size: 11px
+			padding-left: 25px
+			line-height: 18px
+			padding-top: 8px
+			padding-right: 0
+	.second-menu 
+		padding-right: 5px
+		padding-left: 0
+		ul 
+			li 
+				a
+					font-size: 10px
+					padding: 0 15px
+					line-height: 38px
+	.head-with-image 
+		a
+			line-height: 34px
+			padding: 0 20px
+			font-size: 11px
+			margin-top: 18px
+	.description 
+		p
+			font-size: 31px
+			line-height: 40px
+			padding: 52px 0
+	.podcategory
+		.columns
+			padding: 0 25px
+		.right-big-padd
+			padding-right: 18px
+		.left-big-padd
+			padding-left: 18px
+		&-item
+			padding: 32px 44px
+			height: 316px
+			background-size: contain!important
+			margin-bottom: 38px
+			&.black-text
+				padding: 20px 50px
+				a
+					margin-top: 2px
+					font-size: 12px
+
+
+			h2
+				font-size: 24px
+				line-height: 30px
+				margin-bottom: 4px
+			p 
+				max-width: 270px
+				font-size: 12px
+				line-height: 18px
+			ul
+				margin-top: 2px
+				li 
+					a
+						font-size: 12px
+						line-height: 18px
+						&:before
+							width: 13px
+							margin-left: 1px
+							margin-right: 6px
+			a.details-link
+				margin-top: 14px
+				font-size: 12px
+				padding: 0 18px
+				line-height: 30px
+				border-width: 1px
+	.pagination-service
+		margin-top: 2px 
+		padding: 16px 0
+		.columns 
+			a
+				font-size: 18px
+			span
+				font-size: 10px
+			&.next-service
+				padding-left: 30px
+				&:after
+					width: 20px
+					right: 32px
+					background-repeat: no-repeat
+			&.prev-service
+				padding-right: 30px
+				&:after
+					width: 20px
+					left: 26px
+					background-repeat: no-repeat
+	.filter-block
+		&_container
+			padding-right: 12px
+	.breadscrumb-wrap 
+		.filter-block 
+			span
+				font-size: 10px
+				line-height: 40px
+				&:after
+					margin-left: 7px
+	.dropdown-filter
+		top: 40px
+		padding-top: 15px
+
+		ul
+			li 
+				a
+					font-size: 10px
+					line-height: 26px
+			&.two-col 
+				li
+					width: 100%
+		span
+			font-size: 14px
+			padding-left: 0
+			line-height: 28px
+		.border-left
+			border-left: 0
+			padding-left: 0
+		.column:nth-of-type(1)
+			padding-left: 25px
+		.column:nth-of-type(3)
+			padding-left: 10px
+		.column:nth-of-type(4)
+			padding-left: 0px
+	.portfolio
+		&-item
+			height: 314px
+			margin-bottom: 20px
+			padding: 12px 18px
+			p 
+				font-size: 10px
+				bottom: -70px
+			h3
+				font-size: 24px
+				line-height: 26px
+				bottom: -70px
+			a
+				display: table
+				
+	.left-tablet-4
+		padding-left: 25px
+		padding-right: 4px
+	.right-tablet-8
+		padding-right: 25px
+	.left-tablet-8
+		padding-left: 25px
+	.right-tablet-4
+		padding-right: 25px
+		padding-left: 4px
+	.tablet-12
+		padding-left: 25px
+		padding-right: 25px
+	.portfolio-item-white
+		height: 313px
+		margin-bottom: 19px
+		padding-left: 62px
+		background-size: contain!important
+		img
+			margin: 7px 0 12px
+			width: 108px
+		span
+			margin-bottom: 7px
+			font-size: 30px
+			line-height: 30px
+		p
+			font-size: 11px
+			margin-bottom: 20px
+		a
+			padding: 0 28px
+			line-height: 33px
+			margin-bottom: 13px
+			font-size: 12px
+	.print-version
+		display: none
+	.breadscrumb-wrap 
+		.ordered-consultation
+			margin-right: 10px
+	.tiser-text 
+		padding-bottom: 5px
+		padding-right: 10px
+		.future 
+			span
+				font-size: 45px
+				line-height: 45px
+			&:before
+				width: 2px
+				top: 7px
+				margin: 0 40px 0 20px
+				height: 90px
+	.about-description 
+		p
+			font-size: 30px
+			line-height: 40px
+			padding: 37px 0
+	.principe 
+		h4
+			font-size: 15px
+			padding: 0 10px
+			line-height: 24px
+		p
+			font-size: 10px
+			padding: 6px 30px 13px 10px
+		.columns:nth-of-type(1)
+			padding-left: 26px
+		.columns:nth-of-type(3)
+			padding-left: 0px
+	
+	.present-company
+		margin: 31px 0
+		padding: 101px 0
+		&__img
+			position: absolute
+			right: -5px
+			top: -142px
+			img
+				width: 545px
+		&__text
+			padding-left: 10px
+			h3
+				font-size: 24px
+				line-height: 26px
+				margin-bottom: 11px
+			p 
+				font-size: 11px
+				padding-left: 2px
+				max-width: 80%
+			a
+				font-size: 11px
+				line-height: 30px
+				padding: 0 20px
+				margin: 22px 0 6px
+			span
+				font-size: 8px
+				padding-right: 90px
+
+	.logo-on-tiser
+		width: 250px
 
 
 @media screen and (min-width: 960px) and (max-width: 1024px)
@@ -3667,6 +4204,257 @@ p
 				align-items: center
 				justify-content: center
 				width: 100%
+
+	.breadscrumb-wrap
+		display: none
+	.head-with-image
+		height: 445px
+		h1
+			font-size: 28px
+		span
+			font-size: 14px
+			line-height: 18px
+	.social-contact-wrap
+		padding: 27px 0
+	.social-contact 
+		padding-top: 27px
+		padding-bottom: 18px
+		padding-left: 0
+		.row
+			margin: 0
+		.columns
+			padding-right: 0
+			margin-bottom: 0
+			padding-left: 0
+		p
+			font-size: 13px
+		span
+			font-size: 27px
+			line-height: 36px
+			margin-bottom: 10px
+			color: #3f6fc5
+		.soc-item
+			margin: 12px 9px 20px
+	.form-call h2, .form-call span
+		font-size: 20px
+		line-height: 32px
+	.filials
+		margin-top: 0
+		padding-top: 20px
+		padding-bottom: 0
+
+		&_text
+			padding: 0 20px
+			margin: 0 auto 30px
+		p 
+			font-size: 12px
+		h2
+			font-size: 26px
+			line-height: 38px
+		.slick-dots
+			margin-top: 4px
+			li 
+				width: 40px
+				height: 30px
+				margin: 0 8px
+
+		.slick-slider
+			margin-bottom: 0
+		.slider-for 
+			.item
+				flex-direction: column
+				padding: 0
+				.text, .img
+					width: 100%
+				.img
+					height: 235px
+					.requisites
+						background: #fafafa
+						padding: 15px 18px
+						position: relative
+						.close
+							right: 10px
+						.load-doc
+							margin: 3px
+							padding: 0 11px
+							font-size: 11px
+							line-height: 27px
+						h3
+							font-size: 15px
+							font-family: SFUIDisplay-Semibold
+						p
+							line-height: 16px
+							font-size: 10px
+							margin-bottom: 11px
+							padding-left: 0
+					.working 
+						border-radius: 0
+						padding-left: 18px
+						padding-bottom: 12px
+						.content 
+							p
+								font-size: 13px
+				.text
+					padding-left: 18px
+					margin-bottom: 33px
+					h4
+						padding-top: 0
+						margin-bottom: 0
+						font-size: 18px
+					p 
+						line-height: 22px
+						padding-right: 15px
+						font-size: 13px
+						&.bold
+							margin-top: 15px
+							font-size: 14px
+							margin-bottom: 2px
+						span
+							display: inline-block
+						.light-gray
+							margin-right: 2px
+							margin-top: 2px
+						&.mobile-text
+							color: #3f6fc5
+							line-height: 14px
+							span
+								font-size: 13px
+								margin-right: 16px
+						&.address-text
+							font-size: 13px
+							line-height: 16px
+						&.work-days							
+							font-size: 12px
+							line-height: 14px
+							margin-bottom: 4px
+					.with-defis
+						letter-spacing: 0.5px
+						padding-top: 18px
+						&:before							
+							width: 15px
+							margin-left: 0
+							margin-right: 7px
+					.open-modal-btn
+						display: none
+					a
+						padding-top: 0
+						font-size: 13px
+							
+
+		.slick-list 
+			padding: 0!important
+		// .slick-track
+		// 	width: 100%!important
+		.slider-nav 
+			.slick-slide
+				padding: 0 20px 9px
+				&.slick-current
+					padding-bottom: 8px
+		.colums
+			max-width: 100%
+
+	.form-call
+		padding: 30px 8px
+		button
+			font-size: 24px
+			margin: 15px auto 22px
+			display: block
+			&:after
+				margin-left: 10px
+				width: 25px
+		form
+			margin-top: 40px
+		h2
+			font-size: 24px
+			line-height: 30px
+			min-height: 90px
+			span
+				font-size: 26px
+				line-height: 32px
+			.br
+				display: inline
+	.input_block 
+		margin-bottom: 18px
+		input
+			font-size: 21px
+			&:focus+label span
+				font-size: 14px
+				color: #fff
+			&:not(:focus):valid + label span
+				font-size: 14px
+				color: #fff
+
+		label
+			span
+				top: 24px
+
+	.input_block
+		width: 100%
+		margin-right: 0
+	.departament
+		padding-top: 0
+		.columns
+			flex: 0 0 100%
+		.small-right-padd, .small-center-padd, .small-left-padd
+			padding-right: 0
+			padding-left: 0
+		&-item
+			padding: 0
+			height: auto
+			margin-bottom: 0
+			&.open
+				padding-bottom: 21px
+				border-bottom: 1px solid #e6e6e6
+				h3
+					&:after
+						transform: rotate(-45deg)
+					&:before
+						transform: rotate(-45deg)
+
+			h3
+				border-bottom: 1px solid #e6e6e6
+				margin-bottom: 0
+				font-size: 18px
+				padding: 10px 20px
+				position: relative
+				&:after
+					content: ""
+					display: block
+					width: 1px
+					height: 21px
+					background: #3f6fc5
+					position: absolute
+					right: 24px
+					transition: all 0.3s
+					top: 17px
+				&:before
+					content: ""
+					display: block
+					width: 21px
+					height: 1px
+					background: #3f6fc5
+					transition: all 0.3s
+					position: absolute
+					right: 14px
+					top: 27px
+
+			&>p, .info
+				display: none
+			p
+				font-size: 15px
+				padding: 13px 18px
+				line-height: 22px
+				margin-bottom: 0px
+			.info 
+				padding-left: 18px
+				padding-bottom: 7px
+				&:last-child
+					margin-bottom: 0
+				span:nth-of-type(2)
+					color: #3f6fc5
+					font-size: 18px
+					line-height: 24px
+					margin-bottom: 2px
 
 
 	.head-menu
@@ -4217,7 +5005,205 @@ p
 			&:after 
 				animation: bottomBar_close $anim_time ease-in-out
 				animation-fill-mode: forwards
-			
+
+	.help-block
+		padding: 15px 10px 15px 25px 
+		flex-direction: column
+		margin-bottom: 38px
+		span
+			font-size: 18px
+			line-height: 22px
+			width: 100%
+		p 
+			width: 100%
+			font-size: 12px
+			line-height: 22px
+			padding-left: 0
+			padding-right: 0
+
+	.head-without-image
+		padding-top: 75px
+		padding-bottom: 26px
+		h1
+			font-size: 30px
+			line-height: 38px
+		span
+			font-size: 14px
+	.find_text
+		.columns			
+			padding: 0 18px
+
+	.service-blocks 
+		.columns
+			padding: 0 18px
+			min-width: 100%
+			margin-bottom: 25px
+			.white-block
+				min-height: 0
+		.one-for-row
+			.white-block
+				padding-bottom: 200px
+				background-size: 390px
+				background-position: left 0px bottom
+		.two-for-row:nth-of-type(2)
+			.white-block
+				background-image: url("../img/service-page/bgitem2_mob.png")!important
+				background-repeat: no-repeat
+				background-size: 340px
+				background-position: center bottom
+				padding-bottom: 120px
+		.two-for-row:nth-of-type(3)
+			.white-block
+				background-image: url("../img/service-page/bgitem3_mob.png")!important
+				background-repeat: no-repeat
+				background-size: 340px
+				background-position: center bottom
+				padding-bottom: 120px
+		.two-for-row:nth-of-type(4)
+			.white-block
+				background-image: url("../img/service-page/bgitem4_mob.png")!important
+				background-repeat: no-repeat
+				background-size: contain
+				background-position: center right
+				padding-bottom: 55px
+		.two-for-row:nth-of-type(5)
+			.white-block
+				background-image: url("../img/service-page/bgitem5_mob.png")!important
+				background-repeat: no-repeat
+				background-size: contain
+				background-position: center right
+				padding-bottom: 28px
+				
+
+		.two-for-row
+			.white-block
+				padding-bottom: 121px
+				// background-size: 390px
+				// background-position: left 0px bottom
+
+		.white-block
+			padding: 14px 15px 20px 24px
+		h2
+			font-size: 19px
+			line-height: 30px
+		p 
+			line-height: 20px
+		li 
+			a 
+				line-height: 28px
+				letter-spacing: -0.5px
+				&:before
+					width: 20px
+	.head-with-image 
+		padding-top: 92px
+		height: 580px
+		h1
+			line-height: 30px
+			font-size: 28px
+			margin-bottom: 10px
+			text-align: center
+			&.thin
+				max-width: 60%
+
+		span
+			max-width: 65%
+			font-size: 14px
+			line-height: 20px
+			text-align: center 			
+		a
+			padding: 0 28px
+			margin-top: 20px
+			line-height: 35px
+			font-size: 14px
+	.description 
+		p
+			font-size: 16px
+			line-height: 25px
+			padding: 35px 0
+	.podcategory
+		.columns
+			max-width: 100%
+			padding: 0 18px
+			&:nth-of-type(1) .podcategory-item
+				background: #afbf86 url("../img/podcategory-page/back1_mob.png") center bottom -20px no-repeat!important
+				background-size: contain!important
+				height: 410px 
+			&:nth-of-type(4) .podcategory-item
+				background-position: center top
+		&-item
+			padding: 16px 22px
+			height: 293px
+			margin-bottom: 25px
+			&.black-text
+				padding: 25px 49px
+				a
+					font-size: 12px
+					margin-top: 0
+
+			&.left-text
+				h2
+					text-align: center
+			h2
+				text-align: center
+				line-height: 30px
+				font-size: 24px
+				margin-bottom: 5px
+				span
+					display: none
+					
+			p 
+				font-size: 12px
+				text-align: center
+				
+			ul
+				margin-top: 0
+				li 
+					a
+						font-size: 13px
+						line-height: 22px
+			a.details-link
+				display: none
+				
+	.pagination-service
+		display: none
+	.portfolio-item
+		height: 341px
+		margin-bottom: 23px
+		padding: 22px
+		h3
+			font-size: 26px
+			line-height: 32px
+		p
+			font-size: 11px
+	.portfolio-wrapper
+		.columns
+			padding: 0 18px
+	.portfolio-item-white
+		margin-bottom: 23px
+		align-items: center
+		padding: 27px 0
+		justify-content: flex-start
+		height: 384px
+		background-size: 360px!important
+		background-position: center bottom -90px!important
+		img
+			margin: 0 auto 8px
+			width: 88px
+		span
+			text-align: center
+			font-size: 24px
+			line-height: 26px
+			margin-bottom: 6px
+		p 
+			font-size: 10px
+			margin-bottom: 20px
+		a
+			line-height: 36px
+			width: 84%
+			text-align: center
+			font-size: 14px
+
+
 @media screen and (min-width: 450px) and (max-width: 767px)
 	.about 
 		.slider-for

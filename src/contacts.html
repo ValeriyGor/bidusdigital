@@ -14,7 +14,7 @@
     <link rel="stylesheet" type="text/css" href="css/bundle.min.css">
 </head>
 <body>
-	<header class="header">
+	<header class="header no-transparent">
 		<div class="row">
 			<div class="columns medium-1 large-2 align-self-middle">
 				<a class="logo-wrap" href="index.html">
@@ -178,7 +178,7 @@
 				<a href="#">Компания</a>
 				<span>Контакты</span>
 			</div>
-			<div class="columns medium-4 text-right">
+			<div class="columns medium-4 text-right no-tablet">
 				<a href="#" class="print-version">Версия для печати</a>
 				<a href="#" class="ordered-consultation">Обратный звонок</a>
 			</div>
@@ -352,12 +352,12 @@
 					</div>
 				</div>
 			</div>
-			<div class="columns medium-12">
+			<div class="columns medium-12 social-contact-wrap">
 				<div class="social-contact">
 					<div class="row">
 						<div class="columns medium-4">
 							<p>Бесплатно по всей России</p>
-							<span>8 800 640 10 00</span>
+							<span>8 800 1000 640 </span>
 						</div>
 						<div class="columns medium-4">
 							<p>Компания в соц. сетях</p>
@@ -381,7 +381,7 @@
 						</div>
 						<div class="columns medium-4">
 							<p>По вопросам сотрудничества</p>
-							<span>Info@bidus.ru</span>
+							<span>info@bidusdigital.ru</span>
 						</div>
 					</div>
 				</div>
@@ -412,15 +412,15 @@
 							<p>Наша компания была основана в г. Екатеринбурге, поэтому многие из разработчиков находятся именно в этом городе. Ждем в гости!</p>
 
 							<p class="bold">Адрес офиса:</p>
-							<p>ул. Шейнкмана, 9 - 51, <br>БЦ «Маршал»</p>
+							<p class="address-text"><span>ул. Шейнкмана, 9 - 51,</span> <span>БЦ «Маршал»</span></p>
  							<a href="" class="seen-map">Показать на карте</a>
 
 							<p class="bold">Телефон:</p>
-							<p>8 343 373 10 00 <br>8 343 373 10 02</p>
+							<p class="mobile-text"><span>8 343 373 10 00 </span><span>8 343 373 10 02</span></p>
  							<a href="" class="open-modal-btn">Обратный звонок</a>
 
 							<p class="bold">Режим работы:</p>
-							<p>Пн Вт Ср Чт Пт <span class="light-gray">Сб Вс</span> <br>9:30 - 18:00</p>
+							<p class="work-days"><span>Пн Вт Ср Чт Пт <span class="light-gray">Сб Вс</span></span> <span>9:30 - 18:00</span></p>
  							<a href="" class="with-defis open-requisites">Реквизиты филиала</a>
 						</div>
 						<div class="img">
@@ -457,7 +457,7 @@
 								Фактический адрес: 620014, г.Екатеринбург, ул.Шейнкмана, 9 - оф.51</p>
 
 								<p><span class="bold">Банковские реквизиты:</span> <br>
-								Р/С 40802810938190001085 в филиал "Екатеринбургский" ПАО "Альфа-Банк", <br>
+								Р/С 40802810938190001085 в филиал "Екатеринбургский" ПАО "Альфа-Банк",
 								БИК 046577964, К/С 30101810200000000593</p>
 								<a href="BD.docx" class="load-doc">Скачать карточку компании <span>.doc</span></a>
 							</div>
@@ -591,29 +591,22 @@
 	<section class="form-call">
 		<div class="row">
 			<div class="columns medium-12">
-				<h2>Свяжитесь с нами, чтобы мы <br>
+				<h2>Свяжитесь с нами, чтобы мы <span class="br"></span>
 				<span class="typed">скорее приступили к вашему проекту</span></h2>
 				<form action="#" method="post">    
-				    <div class="input_block">
-				        <input type="text" name="name" id="name_input">
-				        <label for="name_input">
-				            <span>Имя и фамилия</span>
-				        </label>
-				    </div>    
-				    <div class="input_block">
-				        <input type="text" name="phone" id="mail_input">
-				        <label for="mail_input">
-				            <span>Электронная почта</span>
-				        </label>
-				    </div>
-				    <div class="input_block">
-				        <input type="text" name="phone" id="phone_input">
-				        <label for="phone_input">
-				            <span>Номер телефона</span>
-				        </label>
-				    </div>
-				    <button>Отправить</button>
-				    
+					<div class="input_block form-item">
+						<input type="text" class="form-input" required>
+						<label class="form-label">Имя и фамилия</label>
+					</div>
+					<div class="input_block form-item">
+						<input type="text" class="form-input" required>
+						<label class="form-label">Электронная почта</label>
+					</div>
+					<div class="input_block form-item">
+						<input type="text" class="form-input" required>
+						<label class="form-label">Номер телефона</label>
+					</div>
+				    <button>Отправить</button>				    
 				</form>
 			</div>
 		</div>

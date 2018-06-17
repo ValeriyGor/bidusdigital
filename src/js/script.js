@@ -228,7 +228,6 @@ wnd.scroll(function(){
         $(".stack-line img:nth-of-type(2)").css("top", topN);
 
       topS = top < 3000 && top > 5000  ? 1 : top * 5/20;
-      console.log(topS);
       $("#partners-carousel").css("transform", "translateX(-"+topS/20+"%)");
     }
 });
@@ -248,7 +247,7 @@ $(document).ready(function() {
         $('.search').appendTo($(".head-menu"));
         $(".search input").attr("placeholder", "Поиск по сайту");
     }
-     if ($(window).width() > '767'){
+     if ($(window).width() > '767' && $('#video-phone').length > 0){
     // Show loading animation.
       var playPromise = $('#video-phone').get(0).play();
 
@@ -404,6 +403,13 @@ $(".close-video").on('click', function(e){
     $(this)[0].contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*')});
     $("#second-video").get(0).pause();
 });
+$(".departament-item h3").on('click', function(e){
+    var $not = $(this).parent();
+    $('.departament-item.open').not($not).children(':not(:first-child)').slideToggle();
+    $('.departament-item.open').not($not).removeClass('open');
+    $(this).nextAll().slideToggle();
+    $(this).parent().toggleClass('open');
+});
 
 
 
@@ -554,12 +560,12 @@ $(document).ready(function() {
   }
 });
 
-$('input').change(function() {
-  if($(this).val())
-      $(this).addClass('has_value');
-    else
-      $(this).removeClass('has_value');
-});
+// $('input').keyup(function() {
+//   if($(this).val())
+//       $(this).addClass('has_value');
+//     else
+//       $(this).removeClass('has_value');
+// });
 
 function isVisible(tag) {
     var t = $(tag);
