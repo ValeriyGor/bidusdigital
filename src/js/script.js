@@ -120,6 +120,14 @@ $( ".open-requisites" ).click(function(e) {
     $(this).parent().next().children(".requisites").show(0);
     $(this).parent().next().children(".map").hide(0);
 });
+$(".show-all-history").click(function(e) {
+    $('.will-be-hide').slideToggle(200);
+    $(this).toggleClass("opened");
+    var text = $(this).text();
+    $(this).text($(this).attr("data-hide"));
+    $(this).attr("data-hide", text);
+    
+});
 $( ".requisites .close" ).click(function(e) {
     e.preventDefault();
     $(this).parent().hide(0);
@@ -150,13 +158,26 @@ $(".conference-nav__item").click(function(e) {
       }
     });
 });
-
+      
 function getSliderSettings(){
   return {
     slidesToShow: 1,
     slidesToScroll: 1,
     centerPadding: '0',
     dots: true
+  }
+}
+
+function getSliderConfSettings(){
+  return {
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    speed: 150,
+    centerPadding: '52px',
+    centerMode: true,
+    adaptiveHeight: true,
+    dots: false
   }
 }
 
@@ -254,6 +275,7 @@ $(document).ready(function() {
     if ($(window).width() <= '767'){
         $('.search').appendTo($(".head-menu"));
         $(".search input").attr("placeholder", "Поиск по сайту");
+        $(".conference-nav").slick(getSliderConfSettings());
     }
      if ($(window).width() > '767' && $('#video-phone').length > 0){
     // Show loading animation.
@@ -558,6 +580,15 @@ $(window).resize(function() {
   resizeItems('.blog__wrap .blog-item');
   if ($(window).width() > '639'){
     resizeItems('.specoffer-item');
+  }
+
+  if ($(window).width() < '768'){
+    $(".reviews .slider-for").slick('unslick');
+    $(".conference-nav").slick('unslick');
+    $(".conference-nav").slick(getSliderConfSettings());
+  }
+  if ($(window).width() > '767'){
+    $(".conference-nav").slick('unslick');
   }
 });
 

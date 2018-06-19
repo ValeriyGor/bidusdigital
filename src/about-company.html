@@ -185,7 +185,8 @@
 	</section>
 	<section class="head-with-image" style="background-image: url('img/about-page/tiser-back.png');">
 		<div class="tiser-text">
-			<img class="logo-on-tiser" src="img/about-page/BD.png" alt="">
+			<img class="logo-on-tiser desktop-none" src="img/svg/ic_logo_white.svg" alt="">
+			<img class="logo-on-tiser mob-none" src="img/about-page/BD.png" alt="">
 			<div class="future"><span>Опережая <br>будущее</span></div>
 		</div>
 	</section>
@@ -430,16 +431,29 @@
 					<h3>Миссия</h3>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit.</p>
 				</div>
+				<div id="phylosophy" class="will-be-hide">
+					<h3>Философия</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit.</p>
+				</div>
+				<div id="work" class=" will-be-hide">
+					<h3>Начало работ</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit.</p>
+				</div>
+				<div id="task" class="will-be-hide">
+					<h3>Цели и задачи</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit.</p>
+				</div>				
 			</div>
+			<div class="desktop-none show-all-history" data-hide="Скрыть">Показать всю историю </div>
 			<div class="column medium-3 navigation">
 				<h4>Навигация по странице</h4>
 				<ul>
 					<li><a href="#idea" class="active go_to">Формирование идеи</a></li>
 					<li><a href="#create-company" class="go_to">Создание компании</a></li>
 					<li><a href="#mission" class="go_to">Миссия</a></li>
-					<li><a href="#">Философия</a></li>
-					<li><a href="#">Начало работ</a></li>
-					<li><a href="#">Цели и задачи</a></li>
+					<li><a href="#phylosophy">Философия</a></li>
+					<li><a href="#work">Начало работ</a></li>
+					<li><a href="#task">Цели и задачи</a></li>
 				</ul>
 			</div>
 		</div>		
@@ -739,7 +753,7 @@
 					</div>
 					<div class="item">
 						<div class="row">
-							<div class="columns medium-6 video-block">
+							<!-- <div class="columns medium-6 video-block">
 								<div class="video-block__item">
 									<iframe class="video-block__iframe" src="https://www.youtube.com/embed/mdrTQ6j9xvo?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 									<div class="video-block__text">
@@ -774,7 +788,7 @@
 										<p>Разработка корпоративного магазина</p>
 									</div>									
 								</div>
-							</div>
+							</div> -->
 							<div class="columns madium-12 seen_all">
 								<a href="#" class="seen_all_reviews primary_link">Смотреть все отзывы</a>
 							</div>
@@ -803,7 +817,7 @@
 	</section> 
 	<section class="carousel">
 		<div class="row">
-			<h2>Мы ждем вас в свою команду, <br>
+			<h2>Мы ждем вас в свою команду, 
 				<span class="typed">будем все вместе жечь напалмом!</span></h2>
 			<p class="carousel__text">Всего 22 открытые вакансии</p>
 			<div class="columns medium-12">
@@ -972,13 +986,15 @@
 			{
 			  breakpoint: 761,
 			  settings: {
-			    arrows: false
+				slidesToShow: 1,
+				slidesToScroll: 1,
+			    arrows: true
 			  }
 			},
 			{
 			  breakpoint: 1025,
 			  settings: {
-			  	slidesToShow: 2
+			  	slidesToShow: 2 
 			  }
 			}
 			]
@@ -987,20 +1003,20 @@
 		$('.slider-conf').slick({
 			slidesToShow: 1,
 			slidesToScroll: 1,
-			centerPadding: '0',
-			dots: true
-		});
-		$('.slider-for').slick({
-			slidesToShow: 1,
-			slidesToScroll: 1,
 			arrows: false,
-			speed: 150,
-			fade: true,
-			swipe: false,
-			dots: false,
-			adaptiveHeight: true,
-			asNavFor: '.slider-nav'
+			centerPadding: '0',
+			dots: true,
+			responsive: [
+			{
+			  breakpoint: 761,
+			  settings:{
+				dots: false,
+			  }
+			}
+			]
 		});
+		
+		
 		$('.slider-nav').slick({
 			slidesToShow: 4,
 			slidesToScroll: 1,
