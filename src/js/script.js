@@ -208,6 +208,8 @@ function getSliderConfSettings(){
 var wnd = $(window);
 
 wnd.scroll(function(){
+
+
     if ($(window).width() <= '767'){
         var top = wnd.scrollTop(),
             opacity = top > 200 ? 1 : top * 5 / 1000,
@@ -224,6 +226,16 @@ wnd.scroll(function(){
         $(".mobile-tiser h1").css("opacity", 1 - opacity);
     }
     if ($(window).width() > '767'){
+      if ($(".navigation").length != 0) { 
+        var scrollTop =  $('.navigation').offset().top - 50;
+        if($(this).scrollTop() > scrollTop){
+          var res = $(this).scrollTop() - scrollTop;
+          if (res < $('.history__text').height() - $('.navigation__container').height()){
+            $('.navigation').css('padding-top', res);
+          }          
+        }
+      }
+      
       if ($(".stack-line").length != 0) { // проверим существование элемента чтобы избежать ошибки
         var top = wnd.scrollTop(),
             topE = top > 2000 ? 1 : top * 5 / 20;
@@ -245,15 +257,7 @@ wnd.scroll(function(){
 
       }
 
-      if ($(".navigation").length != 0) { 
-        var scrollTop =  $('.navigation').offset().top - 50;
-        if($(this).scrollTop() > scrollTop){
-          var res = $(this).scrollTop() - scrollTop;
-          if (res < $('.history__text').height() - $('.navigation__container').height()){
-            $('.navigation').css('padding-top', res);
-          }          
-        }
-      }
+      
 
       if ($("#techno-carousel").length != 0) { 
         var scrollTop =  $('#techno-carousel').offset().top - $(window).height() + 100;
@@ -278,9 +282,6 @@ wnd.scroll(function(){
       }
     }
 });
-
-
-
 
 $(document).ready(function(){
     var tooltip = $(".tooltip-block")
@@ -381,7 +382,7 @@ $(document).ready(function() {
         });
     }
 
-    if($("div").is(".blog__wrap")){
+    if($("div").is(".blog__wrap") && $(window).width() > '767'){
         $('.blog__wrap').slick({
           infinite: true,
           slidesToShow: 3,
@@ -641,6 +642,7 @@ $(window).resize(function() {
   if ($(window).width() < '768'){
     $(".reviews .slider-for").slick('unslick');
     $(".conference-nav").slick('unslick');
+    $('.blog__wrap').slick('unslick');
     $(".conference-nav").slick(getSliderConfSettings());
   }
   if ($(window).width() > '767'){
