@@ -67,6 +67,13 @@ p
 		width: 262px
 		margin: 20px auto 0
 		height: auto
+	&__tag
+		font-size: 13px
+		font-family: 'SFUIDisplay-Semibold'
+		text-transform: uppercase
+		letter-spacing: 1px
+		margin-bottom: 18px
+		color: #fff
 	&__item
 		height: 100vh
 		background-size: cover
@@ -75,6 +82,7 @@ p
 		.row
 			flex-direction: column
 			justify-content: center
+			align-items: flex-start
 			height: 100%
 		h1, .h1
 			font-weight: $light
@@ -90,13 +98,14 @@ p
 			font-size: 46px
 			line-height: 58px
 		h2
-			max-width: 60%
 			font-weight: 300
 			text-align: left
-			font-family: 'Open Sans'
+			font-family: 'SFUIDisplay-Bold'
 			color: #fff
-			line-height: 60px
-			margin-bottom: 24px	
+			letter-spacing: 0
+			max-width: 45%
+			line-height: 48px
+			margin-bottom: 17px	
 		.play
 			width: 82px
 			cursor: pointer
@@ -221,11 +230,11 @@ p
 					// animation-delay: 0s
 
 		p
-			font-size: 18px
+			font-size: 16px
 			line-height: 30px
 			color: #fff
-			max-width: 60%
-			margin-bottom: 35px
+			max-width: 42%
+			margin-bottom: 27px
 			visibility: visible !important
 		a
 			color: #fff
@@ -234,10 +243,12 @@ p
 			background: #de0a36
 			line-height: 43px
 			height: 45px
-			width: 220px
+			width: auto
 			text-align: center
+			padding: 0 38px
 			transition: all 0.3s
 			border-radius: 3px
+			margin-bottom: 100px
 			&:hover
 				background: #f70c3b
 	.slick-next
@@ -796,11 +807,11 @@ p
 .stack-line
 	position: absolute
 	top: -357px
-	right: -74px
-	transform: rotate(24deg)
+	right: 45px
+	transform: rotate(31deg)
 	img
-		width: 156px
-		margin-left: 12px
+		width: 130px
+		margin-left: 30px
 		position: relative
 		transition: all 0.15s
 		&:nth-of-type(1)
@@ -847,9 +858,10 @@ p
 
 		.mobile-transparent
 			position: absolute
-			top: 40px
-			right: 87px
-			width: 273px
+			top: 20px
+			right: 118px
+			transform: rotate(30deg)
+			width: 220px
 
 
 .portfolio
@@ -869,7 +881,7 @@ p
 			height: 850px
 			&.center-content
 			.row
-				padding-left: 16px
+				padding-left: 50px
 			p 
 				margin-bottom: 25px
 
@@ -882,6 +894,8 @@ p
 			text-align: left
 			line-height: 35px
 			max-height: 35px
+			padding: 0
+			margin: 0
 			&:before
 				display: inline-block
 				content: ""
@@ -1108,6 +1122,7 @@ p
 			z-index: 10	
 			transition: all 0.3s
 			cursor: pointer
+			border-radius: 3
 			&:after
 				content: ""
 				position: absolute
@@ -1166,22 +1181,33 @@ p
 						width: 25px
 	.slick-arrow
 		top: 33%
-		background: #454547
+		background: url(../img/svg/arrow.svg) center no-repeat
+		background-size: 15px 30px
 	.slick-prev
 		left: -115px
 		transition: all 0.3s
-		&:after
-			border-color: rgba(255,212,52,0) #fff rgba(255,212,52,0) rgba(255,212,52,0)
-		&:hover
-			background: #de0a36
-			// border-color: rgba(255,212,52,0) #0070c9 rgba(255,212,52,0) rgba(255,212,52,0)
 	.slick-next
 		right: -115px
 		transition: all 0.3s
-		&:after
-			border-color: rgba(255,212,52,0) rgba(255,212,52,0) rgba(255,212,52,0) #fff 
-		&:hover
-			background: #de0a36
+		transform: scaleX(-1)
+	// .slick-arrow
+	// 	top: 33%
+	// 	background: url(../img/svg/arrow.svg) center no-repeat
+	// .slick-prev
+	// 	left: -115px
+	// 	transition: all 0.3s
+	// 	&:after
+	// 		border-color: rgba(255,212,52,0) #fff rgba(255,212,52,0) rgba(255,212,52,0)
+	// 	&:hover
+	// 		background: #de0a36
+	// 		// border-color: rgba(255,212,52,0) #0070c9 rgba(255,212,52,0) rgba(255,212,52,0)
+	// .slick-next
+	// 	right: -115px
+	// 	transition: all 0.3s
+	// 	&:after
+	// 		border-color: rgba(255,212,52,0) rgba(255,212,52,0) rgba(255,212,52,0) #fff 
+	// 	&:hover
+	// 		background: #de0a36
 
 
 
@@ -1293,7 +1319,7 @@ p
 		padding: 23px 18px
 		background: url('../img/modal-back.png') center bottom no-repeat
 		background-size: cover
-		box-shadow: inset 0 -250px 125px -100px rgba(0,0,0,0.5)
+		box-shadow: inset 0 -300px 125px -78px rgba(0,0,0,0.75)
 		h3
 			color: #fff
 			font-size: 18px
@@ -1406,19 +1432,80 @@ p
 
 
 
-	#modal_close
-		width: 11px
-		height: 11px
-		position: absolute
-		top: 24px
-		right: 21px
-		cursor: pointer
-		fill: #989898
-		transition: all 0.3s
-		display: block
-		&:hover
-			fill: #000
+.modal_close
+	width: 11px
+	height: 11px
+	position: absolute
+	top: 24px
+	right: 21px
+	cursor: pointer
+	fill: #989898
+	transition: all 0.3s
+	display: block
+	&:hover
+		fill: #000
+#call-back
+	width: 470px
+	height: 410px
+	background: #fff
+	position: fixed
+	top: 45%
+	left: 50%
+	margin-top: -205px
+	margin-left: -235px
+	display: none
+	opacity: 0
+	z-index: 1009
+	padding: 29px 55px
+	h3
+		font-size: 32px
+		font-family: "SFUIDisplay-Bold"
+		text-align: center
+	p
+		font-size: 14px
+		text-align: center
+		line-height: 22px
+		max-width: 90%
+		margin: 5px auto 24px
+	input
+		height: 50px
+		margin-bottom: 20px
+		font-size: 14px
+		padding-left: 40px	
+		outline: none
+		border-radius: 2px
+		border: 1px solid #e6e6e6 
+		@include placeholder-color(#757575)
+		box-shadow: none
+		&:first-child
+			background: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14px" height="18px"> <path fill-rule="evenodd"  opacity="1" fill="rgb(171, 171, 171)" d="M13.999,15.640 C14.000,15.358 14.001,15.599 13.999,15.640 ZM7.000,18.000 C1.031,18.000 0.001,15.969 0.001,15.969 C0.001,15.732 0.001,15.597 0.000,15.524 C0.001,15.563 0.004,15.545 0.011,15.208 C0.090,11.085 0.690,9.896 4.970,9.141 C4.970,9.141 5.580,9.900 7.000,9.900 C8.420,9.900 9.029,9.141 9.029,9.141 C13.357,9.905 13.922,11.111 13.991,15.346 C13.995,15.617 13.998,15.664 13.999,15.640 C13.999,15.711 13.998,15.817 13.998,15.969 C13.998,15.969 12.968,18.000 7.000,18.000 ZM7.000,8.803 C4.953,8.803 3.294,6.832 3.294,4.402 C3.294,1.970 3.839,-0.000 7.000,-0.000 C10.161,-0.000 10.705,1.970 10.705,4.402 C10.705,6.832 9.046,8.803 7.000,8.803 ZM0.000,15.524 C-0.001,15.482 -0.000,15.376 0.000,15.524 Z"/></svg>') center left 8px no-repeat
+			background-size: 17px
+			background-position: center left 13px
+			&:focus, &:valid
+				background: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14px" height="18px"> <path fill-rule="evenodd"  opacity="1" fill="rgb(247, 12, 59)" d="M13.999,15.640 C14.000,15.358 14.001,15.599 13.999,15.640 ZM7.000,18.000 C1.031,18.000 0.001,15.969 0.001,15.969 C0.001,15.732 0.001,15.597 0.000,15.524 C0.001,15.563 0.004,15.545 0.011,15.208 C0.090,11.085 0.690,9.896 4.970,9.141 C4.970,9.141 5.580,9.900 7.000,9.900 C8.420,9.900 9.029,9.141 9.029,9.141 C13.357,9.905 13.922,11.111 13.991,15.346 C13.995,15.617 13.998,15.664 13.999,15.640 C13.999,15.711 13.998,15.817 13.998,15.969 C13.998,15.969 12.968,18.000 7.000,18.000 ZM7.000,8.803 C4.953,8.803 3.294,6.832 3.294,4.402 C3.294,1.970 3.839,-0.000 7.000,-0.000 C10.161,-0.000 10.705,1.970 10.705,4.402 C10.705,6.832 9.046,8.803 7.000,8.803 ZM0.000,15.524 C-0.001,15.482 -0.000,15.376 0.000,15.524 Z"/></svg>') center left 8px no-repeat
+				background-size: 17px
+				background-position: center left 13px
+		&:nth-of-type(2)
+			background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16px" height="16px"> <path fill-rule="evenodd"  opacity="1" fill="rgb(171, 171, 171)" d="M15.992,12.627 C16.026,12.887 15.947,13.113 15.755,13.305 L13.502,15.542 C13.401,15.655 13.268,15.751 13.104,15.830 C12.940,15.909 12.779,15.960 12.621,15.983 C12.610,15.983 12.576,15.986 12.520,15.991 C12.463,15.997 12.390,16.000 12.300,16.000 C12.085,16.000 11.738,15.963 11.258,15.889 C10.778,15.816 10.191,15.635 9.496,15.347 C8.802,15.059 8.014,14.627 7.133,14.050 C6.253,13.474 5.315,12.683 4.322,11.678 C3.531,10.898 2.876,10.152 2.357,9.441 C1.838,8.728 1.420,8.070 1.104,7.466 C0.787,6.861 0.550,6.313 0.392,5.822 C0.234,5.330 0.127,4.907 0.070,4.550 C0.014,4.194 -0.009,3.915 0.003,3.711 C0.014,3.508 0.020,3.395 0.020,3.372 C0.042,3.214 0.093,3.053 0.172,2.889 C0.251,2.726 0.347,2.593 0.460,2.491 L2.713,0.237 C2.871,0.079 3.051,-0.000 3.255,-0.000 C3.401,-0.000 3.531,0.042 3.644,0.127 C3.757,0.212 3.853,0.316 3.932,0.440 L5.745,3.881 C5.846,4.062 5.874,4.260 5.829,4.474 C5.784,4.689 5.688,4.870 5.541,5.017 L4.711,5.847 C4.689,5.870 4.669,5.906 4.652,5.957 C4.635,6.008 4.627,6.050 4.627,6.084 C4.672,6.322 4.773,6.593 4.932,6.898 C5.067,7.169 5.276,7.499 5.558,7.890 C5.841,8.279 6.241,8.728 6.761,9.237 C7.269,9.757 7.721,10.160 8.116,10.449 C8.511,10.737 8.841,10.949 9.107,11.084 C9.372,11.220 9.575,11.302 9.716,11.330 L9.928,11.372 C9.951,11.372 9.988,11.364 10.038,11.347 C10.089,11.330 10.126,11.310 10.148,11.288 L11.114,10.304 C11.317,10.124 11.554,10.033 11.825,10.033 C12.017,10.033 12.170,10.067 12.283,10.135 L12.300,10.135 L15.569,12.067 C15.806,12.214 15.947,12.401 15.992,12.627 Z"/></svg>') center left 8px no-repeat
+			background-size: 17px
+			background-position: center left 13px
+			&:focus, &:valid
+				background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16px" height="16px"> <path fill-rule="evenodd"  opacity="1" fill="rgb(247, 12, 59)" d="M15.992,12.627 C16.026,12.887 15.947,13.113 15.755,13.305 L13.502,15.542 C13.401,15.655 13.268,15.751 13.104,15.830 C12.940,15.909 12.779,15.960 12.621,15.983 C12.610,15.983 12.576,15.986 12.520,15.991 C12.463,15.997 12.390,16.000 12.300,16.000 C12.085,16.000 11.738,15.963 11.258,15.889 C10.778,15.816 10.191,15.635 9.496,15.347 C8.802,15.059 8.014,14.627 7.133,14.050 C6.253,13.474 5.315,12.683 4.322,11.678 C3.531,10.898 2.876,10.152 2.357,9.441 C1.838,8.728 1.420,8.070 1.104,7.466 C0.787,6.861 0.550,6.313 0.392,5.822 C0.234,5.330 0.127,4.907 0.070,4.550 C0.014,4.194 -0.009,3.915 0.003,3.711 C0.014,3.508 0.020,3.395 0.020,3.372 C0.042,3.214 0.093,3.053 0.172,2.889 C0.251,2.726 0.347,2.593 0.460,2.491 L2.713,0.237 C2.871,0.079 3.051,-0.000 3.255,-0.000 C3.401,-0.000 3.531,0.042 3.644,0.127 C3.757,0.212 3.853,0.316 3.932,0.440 L5.745,3.881 C5.846,4.062 5.874,4.260 5.829,4.474 C5.784,4.689 5.688,4.870 5.541,5.017 L4.711,5.847 C4.689,5.870 4.669,5.906 4.652,5.957 C4.635,6.008 4.627,6.050 4.627,6.084 C4.672,6.322 4.773,6.593 4.932,6.898 C5.067,7.169 5.276,7.499 5.558,7.890 C5.841,8.279 6.241,8.728 6.761,9.237 C7.269,9.757 7.721,10.160 8.116,10.449 C8.511,10.737 8.841,10.949 9.107,11.084 C9.372,11.220 9.575,11.302 9.716,11.330 L9.928,11.372 C9.951,11.372 9.988,11.364 10.038,11.347 C10.089,11.330 10.126,11.310 10.148,11.288 L11.114,10.304 C11.317,10.124 11.554,10.033 11.825,10.033 C12.017,10.033 12.170,10.067 12.283,10.135 L12.300,10.135 L15.569,12.067 C15.806,12.214 15.947,12.401 15.992,12.627 Z"/></svg>') center left 8px no-repeat
+				background-size: 17px
+				background-position: center left 13px
 
+
+	.send_form
+		width: 100%
+		border-radius: 2px
+		outline: none
+		border: none
+		background: #de0a36
+		color: #fff
+		font-size: 16px
+		text-align: center
+		height: 45px
+		font-family: "SFUIDisplay-Bold"
 
 #overlay
 	z-index: 1000
@@ -1598,7 +1685,8 @@ p
 		color: #fff
 		text-align: center
 		vertical-align: top
-		margin-top: 10px
+		margin-top: 9px
+		margin-bottom: 9px
 		display: inline-block
 	span
 		font-size: 12px
@@ -1639,18 +1727,26 @@ p
 		background-position: right bottom
 		background-repeat: no-repeat
 	li
+		padding-left: 28px
+		a			
+			transition: all 0.2s
 		a:before
 			display: inline-block
 			content: ""
 			width: 16px
+			position: absolute
+			top: 10px
+			left: -28px
 			height: 1px
 			background: #0070c9
 			margin-left: 2px
 			margin-right: 10px
 			margin-bottom: 4px
 			transition: all 0.2s
-		a:hover:before
-			width: 20px
+		a:hover
+			padding-left: 4px
+			&:before
+				width: 20px
 		a 
 			color: $link-color
 			font-size: 16px
@@ -1738,9 +1834,9 @@ p
 	line-height: 16px
 	padding: 10px
 	color: #fff
-	opacity: 1
+	opacity: 1 
 	transform: translateX(50%)
-	transition: all 0.3s
+	display: none
 	&:after
 		content: ""
 		position: absolute
@@ -1764,13 +1860,29 @@ p
 	transition: all 0.3s
 	cursor: pointer
 	overflow: hidden
+	position: relative
+	&:after
+		content: ""
+		display: block
+		position: absolute
+		width: 100%
+		height: 100%
+		background: rgba(0, 0, 0, 0.3)
+		z-index: 3
+		left: 0
+		top: 0
+		opacity: 0
+		transition: all 0.3s
 	&:hover
-		box-shadow: inset 0px 0px 150px 200px rgba(0,0,0,0.2)
+		&:after
+			opacity: 1 
 		.link-box
 			top: 0
 			opacity: 1
 		h3, p
 			bottom: 0
+			z-index: 99
+			position: relative
 	&-white
 		height: 500px
 		padding-left: 95px
@@ -1812,6 +1924,8 @@ p
 		top: 55px
 		transition: all 0.3s
 		opacity: 0
+		position: relative
+		z-index: 99
 	h3
 		font-size: 36px
 		line-height: 38px
@@ -1959,7 +2073,7 @@ p
 		font-family: 'SFUIDisplay-Bold'
 	p
 		font-size: 13px
-		padding: 16px 40px 6px 20px
+		padding: 8px 40px 6px 20px
 		color: #000
 		font-family: "Open Sans"
 
@@ -1998,7 +2112,7 @@ p
 	ul 
 		margin-top: 25px
 		li 
-			a 
+			span 
 				font-size: 16px
 				font-family: 'SFUIDisplay-Bold'
 				color: #fff
@@ -2013,9 +2127,6 @@ p
 					margin-right: 10px
 					margin-bottom: 4px
 					transition: all .2s
-				&:hover
-					&:before
-						width: 25px
 
 	&.left-text
 		h2
@@ -2177,28 +2288,31 @@ p
 		padding-left: 117px
 		padding-right: 100px
 		margin-bottom: 15px
-	.navigation a 
-		color: #0070c9
-		font-size: 16px
-		font-family: 'SFUIDisplay-Semibold'	
-		line-height: 30px
-		transition: all 0.2s
-		&:before
-			display: inline-block
-			content: ""
-			width: 20px
-			height: 1px
-			background: #0070c9
-			margin-left: 2px
-			margin-right: 10px
-			margin-bottom: 4px
-			transition: all .2s
-		&:hover
-			font-family: 'SFUIDisplay-Bold'	
-			color: #1588e4
+	.navigation 
+		position: relative
+		transition: all 0.3s
+		a 
+			color: #0070c9
+			font-size: 16px
+			font-family: 'SFUIDisplay-Semibold'	
+			line-height: 30px
+			transition: all 0.2s
 			&:before
-				background: #1588e4
-				width: 25px
+				display: inline-block
+				content: ""
+				width: 20px
+				height: 1px
+				background: #0070c9
+				margin-left: 2px
+				margin-right: 10px
+				margin-bottom: 4px
+				transition: all .2s
+			&:hover
+				font-family: 'SFUIDisplay-Bold'	
+				color: #1588e4
+				&:before
+					background: #1588e4
+					width: 25px
 
 .reviews
 	.row
@@ -2700,14 +2814,19 @@ p
 				content: ""
 				width: 33px
 				height: 15px
-				background: url("../img/podcategory-page/arrow.png")
+				background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="33px" height="15px"> <path fill-rule="evenodd"  opacity="0.102" fill="rgb(0, 0, 0)" d="M32.806,6.993 L25.474,0.156 C25.270,-0.013 25.047,-0.045 24.806,0.059 C24.564,0.163 24.443,0.352 24.443,0.625 L24.443,5.001 L0.614,5.001 C0.436,5.001 0.289,5.059 0.175,5.177 C0.061,5.294 0.003,5.444 0.003,5.626 L0.003,9.377 C0.003,9.559 0.060,9.709 0.175,9.826 C0.290,9.943 0.436,10.001 0.614,10.001 L24.443,10.001 L24.443,14.377 C24.443,14.638 24.564,14.826 24.806,14.944 C25.048,15.048 25.271,15.008 25.475,14.826 L32.806,7.911 C32.934,7.781 32.997,7.625 32.997,7.442 C32.997,7.273 32.933,7.124 32.806,6.993 Z"/></svg>') center no-repeat;
 				background-size: contain
 				transform: scaleX(-1)
 				position: absolute
 				top: 50%
 				left: 15px
-			&:hover .theme
-				color: #007de3
+				transition: all 0.2s
+			&:hover 
+				.theme
+					color: #DE0A36
+				&:after
+					background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="33px" height="15px"> <path fill-rule="evenodd"  opacity="1" fill="rgb(222, 10, 54)" d="M32.806,6.993 L25.474,0.156 C25.270,-0.013 25.047,-0.045 24.806,0.059 C24.564,0.163 24.443,0.352 24.443,0.625 L24.443,5.001 L0.614,5.001 C0.436,5.001 0.289,5.059 0.175,5.177 C0.061,5.294 0.003,5.444 0.003,5.626 L0.003,9.377 C0.003,9.559 0.060,9.709 0.175,9.826 C0.290,9.943 0.436,10.001 0.614,10.001 L24.443,10.001 L24.443,14.377 C24.443,14.638 24.564,14.826 24.806,14.944 C25.048,15.048 25.271,15.008 25.475,14.826 L32.806,7.911 C32.934,7.781 32.997,7.625 32.997,7.442 C32.997,7.273 32.933,7.124 32.806,6.993 Z"/></svg>') center no-repeat;
+					background-size: contain
 
 		.next-service
 			padding-left: 35px
@@ -2716,13 +2835,19 @@ p
 				content: ""
 				width: 33px
 				height: 15px				
-				background: url("../img/podcategory-page/arrow.png")
+				background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="33px" height="15px"> <path fill-rule="evenodd"  opacity="0.102" fill="rgb(0, 0, 0)" d="M32.806,6.993 L25.474,0.156 C25.270,-0.013 25.047,-0.045 24.806,0.059 C24.564,0.163 24.443,0.352 24.443,0.625 L24.443,5.001 L0.614,5.001 C0.436,5.001 0.289,5.059 0.175,5.177 C0.061,5.294 0.003,5.444 0.003,5.626 L0.003,9.377 C0.003,9.559 0.060,9.709 0.175,9.826 C0.290,9.943 0.436,10.001 0.614,10.001 L24.443,10.001 L24.443,14.377 C24.443,14.638 24.564,14.826 24.806,14.944 C25.048,15.048 25.271,15.008 25.475,14.826 L32.806,7.911 C32.934,7.781 32.997,7.625 32.997,7.442 C32.997,7.273 32.933,7.124 32.806,6.993 Z"/></svg>') center no-repeat;
 				background-size: contain
 				position: absolute
 				top: 50%
 				right: 15px
-			&:hover .theme
-				color: #007de3
+				transition: all 0.2s
+			&:hover 
+				.theme
+					color: #DE0A36
+				&:after
+					background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="33px" height="15px"> <path fill-rule="evenodd"  opacity="1" fill="rgb(222, 10, 54)" d="M32.806,6.993 L25.474,0.156 C25.270,-0.013 25.047,-0.045 24.806,0.059 C24.564,0.163 24.443,0.352 24.443,0.625 L24.443,5.001 L0.614,5.001 C0.436,5.001 0.289,5.059 0.175,5.177 C0.061,5.294 0.003,5.444 0.003,5.626 L0.003,9.377 C0.003,9.559 0.060,9.709 0.175,9.826 C0.290,9.943 0.436,10.001 0.614,10.001 L24.443,10.001 L24.443,14.377 C24.443,14.638 24.564,14.826 24.806,14.944 C25.048,15.048 25.271,15.008 25.475,14.826 L32.806,7.911 C32.934,7.781 32.997,7.625 32.997,7.442 C32.997,7.273 32.933,7.124 32.806,6.993 Z"/></svg>') center no-repeat;
+					background-size: contain
+				
 			
 		span
 			color: #737373
@@ -3159,11 +3284,11 @@ p
 		display: block
 		padding: 0
 		width: 100%
-		height: 54px
+		height: 55px
 		margin-top: 10px
 		border: none
 		cursor: pointer
-		border-bottom: 2px solid #636363
+		border-bottom: 1px solid #636363
 		background: #1f1f1f
 		font-family: 'SFUIDisplay-Semibold'
 		font-size: 20px
@@ -3221,7 +3346,76 @@ p
 	.consultation__order a
 		margin: 0 0 0 auto
 
+@media screen and (min-width: 767px) and (max-width: 1250px)
+	.tooltip-block
+		right: 60px
+		&:after
+			left: 70%
+
 @media screen and (min-width: 767px) and (max-width: 1024px)
+	#modal_form
+		width: 718px
+		height: 444px
+		margin-top: -222px
+		margin-left: -359px
+		.question
+			padding: 30px 18px
+			p 
+				font-size: 10px
+				line-height: 16px
+		.form_wrap 
+			h3
+				font-size: 25px
+				line-height: 40px
+				&:before
+					width: 52px
+					height: 32px
+					background-position: top left 8px
+			form 
+				input, div.fancy-select, select, textarea
+					font-size: 11px
+				textarea
+					line-height: 18px
+					height: 165px
+				input, div.fancy-select, select
+					height: 42px
+					margin-bottom: 15px
+				div.fancy-select 
+					div.trigger
+						line-height: 40px
+						font-size: 11px
+						&:after
+							top: 17px
+				.send_form
+					width: auto
+					padding: 0 28px
+					height: 36px
+					line-height: 34px
+					font-size: 14px
+					margin-left: 12px
+				.upload-file
+					width: 150px
+					height: 36px
+					line-height: 34px
+					font-size: 14px
+					&:before
+						width: 10px
+						height: 16px
+						margin-right: 4px
+				.success_send
+					height: 36px
+					line-height: 36px
+					font-size: 14px
+
+
+	div.fancy-select ul.options.open
+		top: 42px
+
+	.modal_close
+		width: 11px
+		height: 11px
+		top: 18px
+		right: 16px
 	h2
 		font-size: 30px
 	h3
@@ -3243,9 +3437,9 @@ p
 		height: 22px
 		margin-left: 10px
 	.service-item .mobile-transparent
-		top: 20px
-		right: 51px
-		width: 170px
+		top: 21px
+		right: 56px
+		width: 135px
 	.search 
 		right: 9%
 		input
@@ -3303,6 +3497,9 @@ p
 			li
 				width: 34px
 				margin: 0 8px
+		&__tag
+			font-size: 9px
+			margin-bottom: 8px
 		&__item
 			height: 450px
 			.row
@@ -3311,22 +3508,23 @@ p
 			h1, .h1
 				font-size: 30px
 				line-height: 38px
-				max-width: 360px
+				max-width: 400px
 				margin: 10px auto
 			h2
-				line-height: 40px
-				margin-bottom: 15px
-				max-width: 50%
+				line-height: 35px
+				margin-bottom: 5px
+				max-width: 60%
 			p
 				font-size: 12px
-				line-height: 20px
-				margin-bottom: 20px
-				max-width: 50%
+				line-height: 22px
+				margin-bottom: 14px
+				max-width: 60%
 			a
 				font-size: 12px
-				height: 35px
-				width: 160px
+				height: 34px
+				padding: 0 25px
 				line-height: 33px
+				margin-bottom: 40px
 			&.invideo .invideo__head.scaled h1
 			&.invideo 
 				.video 	
@@ -3354,13 +3552,16 @@ p
 				font-size: 8px
 				width: 165px
 		&__order
+			padding-left: 4px
 			a
 				width: 138px
 				height: 25px
 				line-height: 23px
 				font-size: 9px
+				margin: 0
 		&__contacts 
-			text-align: right
+			text-align: left
+			padding-left: 0
 			
 			span
 				font-size: 16px
@@ -3378,7 +3579,7 @@ p
 			padding: 0 6px
 			margin-bottom: 8px
 			li
-				line-height: 14px
+				line-height: 18px
 				&:not(:first-child)
 					a:before
 						width: 10px
@@ -3392,10 +3593,10 @@ p
 				
 	.stack-line 
 		top: -227px
-		right: -50px
+		right: 8px
 		img
-			width: 100px
-			margin-left: 6px
+			width: 80px
+			margin-left: 15px
 		img:first-of-type
 			top: 243px
 		img:nth-of-type(3)
@@ -3423,9 +3624,9 @@ p
 	.white-block
 		padding: 13px 19px 
 		&.large
-			min-height: 179px
+			min-height: 186px
 		&.medium
-			min-height: 125px
+			min-height: 155px
 		&.small
 			min-height: 85px
 			margin-bottom: 9px
@@ -3435,7 +3636,8 @@ p
 		h2.head-block
 			top: 20px
 		.slider-head
-			margin-bottom: 20px
+			margin-bottom: 25px
+
 			.slick-next, .slick-prev
 				width: 60px
 				background-size: 11px 22px
@@ -3446,6 +3648,9 @@ p
 					margin: 0 8px
 			&__item
 				padding: 8px 3px 48px
+				.row
+					padding-left: 83px
+					padding-right: 83px
 			h3
 				font-size: 32px
 				line-height: 38px
@@ -3515,6 +3720,7 @@ p
 		margin-bottom: 15px
 		height: 182px
 		padding-bottom: 0
+		background-size: contain
 		span
 			font-size: 24px
 			line-height: 30px
@@ -3566,18 +3772,16 @@ p
 						width: 13px
 		.slick-next
 			right: 12px
+			background-size: 11px 22px
 			&:after
-				border: 3px solid transparent
-				border-color: rgba(255,212,52,0) rgba(255,212,52,0) rgba(255,212,52,0) #fff
-				border-left-width: 4px
-				left: 11px
+			 	border: none
+			 	border-color: rgba(255,212,52,0) rgba(255,212,52,0) rgba(255,212,52,0) rgba(255,212,52,0)
 		.slick-prev
 			left: 12px
+			background-size: 11px 22px
 			&:after
-				border: 3px solid transparent
-				border-color: rgba(255,212,52,0) #fff rgba(255,212,52,0) rgba(255,212,52,0)
-				border-right-width: 4px
-				right: 11px
+			 	border: none
+			 	border-color: rgba(255,212,52,0) rgba(255,212,52,0) rgba(255,212,52,0) rgba(255,212,52,0)
 		.slick-arrow
 			width: 25px
 			height: 25px
@@ -3672,13 +3876,18 @@ p
 			line-height: 22px
 		li 
 			display: block
-			
+			padding-left: 22px			
+			line-height: 15px
+			padding-top: 4px 
+			padding-bottom: 4px
 			a
 				font-size: 12px
-				line-height: 20px
+				line-height: 15px
 				&:before
 					margin-left: 3px
 					margin-right: 7px
+					top: 7px
+					left: -22px
 					width: 12px
 
 	.head-without-image
@@ -3719,6 +3928,7 @@ p
 		span
 			font-size: 18px
 			line-height: 18px
+			margin-top: 4px
 	.departament
 		padding-top: 32px
 		.small-left-padd
@@ -3853,7 +4063,8 @@ p
 							padding: 0 12px 
 						.close
 							top: 10px
-							right: 10px
+							right: 25px
+							background-size: 9px
 					.working 
 						padding-left: 14px
 						padding-bottom: 9px
@@ -3889,6 +4100,8 @@ p
 		input
 			height: 50px
 			font-size: 18px
+			&:focus
+				height: 49px
 		label
 			font-size: 18px
 	.find_text
@@ -3952,6 +4165,11 @@ p
 				font-size: 24px
 				line-height: 30px
 				margin-bottom: 4px
+			&.videograph 
+				h2
+					margin-bottom: 13px
+				a.details-link
+					margin-top: 18px
 			p 
 				max-width: 270px
 				font-size: 12px
@@ -3959,7 +4177,7 @@ p
 			ul
 				margin-top: 2px
 				li 
-					a
+					span
 						font-size: 12px
 						line-height: 18px
 						&:before
@@ -3976,7 +4194,7 @@ p
 		margin-top: 2px 
 		padding: 16px 0
 		.columns 
-			a
+			.theme
 				font-size: 18px
 			span
 				font-size: 10px
@@ -3985,12 +4203,14 @@ p
 				&:after
 					width: 20px
 					right: 32px
+					top: 15px
 					background-repeat: no-repeat
 			.prev-service
 				padding-right: 15px
 				&:after
 					width: 20px
 					left: 26px
+					top: 15px
 					background-repeat: no-repeat
 	.filter-block
 		&_container
@@ -4038,6 +4258,7 @@ p
 			h3
 				font-size: 24px
 				line-height: 26px
+				padding-bottom: 4px
 				bottom: -70px
 			a
 				display: table
@@ -4429,14 +4650,19 @@ p
 		.seen-all
 			margin-top: 30px
 			line-height: 32px
+	.principe 
+		.columns 
+			a
+				border-left-width: 2px
+
 
 @media screen and (min-width: 960px) and (max-width: 1024px)
 	.slider-head__item.invideo.left-back
 		background-position: center left -5%
 	.slider-head__item h2
-		max-width: 40%
+		max-width: 42%
 	.slider-head__item p
-		max-width: 40%
+		max-width: 42%
 @media screen and (min-width: 767px) and (max-width: 959px)
 	.slider-head__item.invideo.left-back
 		background-position: center left -50%
@@ -5071,6 +5297,7 @@ p
 				&.center-content 
 					.row
 						flex-direction: column
+						padding-left: 16px
 			h3
 				font-size: 24px
 				line-height: 26px
@@ -5514,7 +5741,7 @@ p
 			ul
 				margin-top: 0
 				li 
-					a
+					span
 						font-size: 13px
 						line-height: 22px
 			a.details-link
@@ -5531,9 +5758,18 @@ p
 			line-height: 32px
 		p
 			font-size: 11px
+		a 
+			font-size: 10px
+			padding: 0 6px
+			margin-right: 5px
+			&:last-child
+				margin-right: 0
+
+
 	.portfolio-wrapper
 		.columns
 			padding: 0 18px
+			max-width: 100%
 	.portfolio-item-white
 		margin-bottom: 23px
 		align-items: center
@@ -5903,6 +6139,23 @@ p
 			padding: 0 25px
 			a
 				padding: 0
+
+	.partners 
+		.scroll-block
+			padding: 20px 0 25px 17px
+			&__head
+				margin-right: 27px
+				font-size: 21px
+				line-height: 45px
+			&__logo
+				line-height: 40px
+				margin-bottom: 5px
+				&:after
+					height: 35px
+					margin: 0 24px 0 28px
+				img
+					max-width: 80px
+					max-height: 26px
 
 
 

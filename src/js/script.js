@@ -224,32 +224,58 @@ wnd.scroll(function(){
         $(".mobile-tiser h1").css("opacity", 1 - opacity);
     }
     if ($(window).width() > '767'){
+      if ($(".stack-line").length != 0) { // проверим существование элемента чтобы избежать ошибки
         var top = wnd.scrollTop(),
             topE = top > 2000 ? 1 : top * 5 / 20;
-            if(topE>450)
+            if(topE>420)
             {
-              topE = 450;
+              topE = 420;
             }
             else if(topE<0){
               topE = 0;
             }
-            var topN = 200 - topE;
-            var topE1 = topE - 50
-            //sizeText = top > 400 ? 1 : top * 5 / 1000,
-            //sizeText1 = 7 - sizeText*1.5,
-            //lineH = 9.5 - sizeText*1.5,
-            //maxWidth = 85 - sizeText*20;
-        //$("header").css("background", "rgba(0, 0, 0, " + opacity + ")");
-        //$(".mobile-tiser h1").css("transform", "scale(" + scale + ")");
-        //$(".mobile-tiser h1").css("font-size", sizeText1 + "vw");
-        //$(".mobile-tiser h1").css("line-height", lineH + "vw");
-        //$(".mobile-tiser h1").css("max-width", maxWidth + "%");
-        $(".stack-line img:first-of-type").css("top", topE);
-        $(".stack-line img:nth-of-type(3)").css("top", topE1);
-        $(".stack-line img:nth-of-type(2)").css("top", topN);
+            var topN = 100 - topE;
+            var hw = $( window ).height();
+            var topE1 = topE - 450;
 
-      topS = top < 3000 && top > 5000  ? 1 : top * 5/20;
-      $("#partners-carousel").css("transform", "translateX(-"+topS/20+"%)");
+          $(".stack-line img:first-of-type").css("top", topE);
+          $(".stack-line img:nth-of-type(3)").css("top", topE1);
+          $(".stack-line img:nth-of-type(2)").css("top", topN);
+
+
+      }
+
+      if ($(".navigation").length != 0) { 
+        var scrollTop =  $('.navigation').offset().top - 50;
+        if($(this).scrollTop() > scrollTop){
+          var res = $(this).scrollTop() - scrollTop;
+          if (res < $('.history__text').height() - $('.navigation__container').height()){
+            $('.navigation').css('padding-top', res);
+          }          
+        }
+      }
+
+      if ($("#techno-carousel").length != 0) { 
+        var scrollTop =  $('#techno-carousel').offset().top - $(window).height() + 100;
+        if($(this).scrollTop() > scrollTop){
+          var percent = $(window).height()/50;
+          var res = ($(this).scrollTop() - scrollTop)/percent;
+          if (res < 100){
+            $("#techno-carousel").css("transform", "translateX(-"+ res+"%)");
+          }
+        }
+      }
+      
+      if ($("#partners-carousel").length != 0) { 
+        var scrollTop =  $('#partners-carousel').offset().top - $(window).height() + 150;
+        if($(this).scrollTop() > scrollTop){
+          var percent = $(window).height()/50;
+          var res = ($(this).scrollTop() - scrollTop)/percent;
+          if (res < 100){
+            $("#partners-carousel").css("transform", "translateX(-"+ res+"%)");
+          }
+        }
+      }
     }
 });
 
@@ -259,7 +285,8 @@ wnd.scroll(function(){
 $(document).ready(function(){
     var tooltip = $(".tooltip-block")
     if ($(tooltip).length != 0) { // проверим существование элемента чтобы избежать ошибки
-        $(tooltip).delay(2500).fadeOut(300);
+        $(tooltip).delay(1000).fadeIn(1000);
+        $(tooltip).delay(2000).fadeOut(1000);
       }
   
     $('.go_to').click( function(){ // ловим клик по ссылке с классом go_to
@@ -313,7 +340,7 @@ $(document).ready(function() {
             {
               breakpoint: 1280,
               settings: {
-                arrows: false
+                arrows: true
               }
             }
           ]
@@ -535,26 +562,55 @@ function anim(){
       $(".invideo").addClass("left-back");
 }
 
-$(document).ready(function() { // вся мaгия пoсле зaгрузки стрaницы
-  $('.open-modal-btn').click( function(event){ // лoвим клик пo ссылки с id="go"
-    event.preventDefault(); // выключaем стaндaртную рoль элементa
-    $('#overlay').fadeIn(400, // снaчaлa плaвнo пoкaзывaем темную пoдлoжку
-      function(){ // пoсле выпoлнения предъидущей aнимaции
-        $('#modal_form') 
-          .css('display', 'flex') // убирaем у мoдaльнoгo oкнa display: none;
-          .animate({opacity: 1, top: '50%'}, 200); // плaвнo прибaвляем прoзрaчнoсть oднoвременнo сo съезжaнием вниз
-    });
-  });
-  /* Зaкрытие мoдaльнoгo oкнa, тут делaем тo же сaмoе нo в oбрaтнoм пoрядке */
-  $('#modal_close, #overlay').click( function(){ // лoвим клик пo крестику или пoдлoжке
-    $('#modal_form')
-      .animate({opacity: 0, top: '45%'}, 200,  // плaвнo меняем прoзрaчнoсть нa 0 и oднoвременнo двигaем oкнo вверх
-        function(){ // пoсле aнимaции
-          $(this).css('display', 'none'); // делaем ему display: none;
-          $('#overlay').fadeOut(400); // скрывaем пoдлoжку
-        }
-      );
-  });
+// $(document).ready(function() { // вся мaгия пoсле зaгрузки стрaницы
+//   $('.open-modal-btn').click( function(event){ // лoвим клик пo ссылки с id="go"
+//     event.preventDefault(); // выключaем стaндaртную рoль элементa
+//     $('#overlay').fadeIn(400, // снaчaлa плaвнo пoкaзывaем темную пoдлoжку
+//       function(){ // пoсле выпoлнения предъидущей aнимaции
+//         $('#modal_form') 
+//           .css('display', 'flex') // убирaем у мoдaльнoгo oкнa display: none;
+//           .animate({opacity: 1, top: '50%'}, 200); // плaвнo прибaвляем прoзрaчнoсть oднoвременнo сo съезжaнием вниз
+//     });
+//   });
+//   /* Зaкрытие мoдaльнoгo oкнa, тут делaем тo же сaмoе нo в oбрaтнoм пoрядке */
+//   $('#modal_close, #overlay').click( function(){ // лoвим клик пo крестику или пoдлoжке
+//     $('#modal_form')
+//       .animate({opacity: 0, top: '45%'}, 200,  // плaвнo меняем прoзрaчнoсть нa 0 и oднoвременнo двигaем oкнo вверх
+//         function(){ // пoсле aнимaции
+//           $(this).css('display', 'none'); // делaем ему display: none;
+//           $('#overlay').fadeOut(400); // скрывaем пoдлoжку
+//         }
+//       );
+//   });
+// });
+
+$(document).ready(function() { // зaпускaем скрипт пoсле зaгрузки всех элементoв
+    /* зaсунем срaзу все элементы в переменные, чтoбы скрипту не прихoдилoсь их кaждый рaз искaть при кликaх */
+    var overlay = $('#overlay'); // пoдлoжкa, дoлжнa быть oднa нa стрaнице
+    var open_modal = $('.open-modal-btn'); // все ссылки, кoтoрые будут oткрывaть oкнa
+    var close = $('.modal_close, #overlay'); // все, чтo зaкрывaет мoдaльнoе oкнo, т.е. крестик и oверлэй-пoдлoжкa
+    var modal = $('.modal_div'); // все скрытые мoдaльные oкнa
+
+     open_modal.click( function(event){ // лoвим клик пo ссылке с клaссoм open_modal
+         event.preventDefault(); // вырубaем стaндaртнoе пoведение
+         var div = $(this).attr('href'); // вoзьмем стрoку с селектoрoм у кликнутoй ссылки
+         overlay.fadeIn(400, //пoкaзывaем oверлэй
+              function(){ // пoсле выпoлнения предъидущей aнимaции
+              $(div)
+                .css('display', 'flex') // убирaем у мoдaльнoгo oкнa display: none;
+                .animate({opacity: 1, top: '50%'}, 200); // плaвнo пoкaзывaем
+         });
+     });
+
+     close.click( function(){ // лoвим клик пo крестику или oверлэю
+            modal
+             .animate({opacity: 0, top: '45%'}, 200, // плaвнo прячем
+                 function(){ // пoсле этoгo
+                     $(this).css('display', 'none');
+                     overlay.fadeOut(400); // прячем пoдлoжку
+                 }
+             );
+     });
 });
 
 

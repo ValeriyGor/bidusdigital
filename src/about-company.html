@@ -285,7 +285,7 @@
 	</section>
 	<section class="technology" id="technology">
 		<div class="row">
-			<div class="scroll-block"  id="partners-carousel">
+			<div class="scroll-block"  id="techno-carousel">
 				<span class="scroll-block__head">
 					Технологии:
 				</span>
@@ -446,15 +446,17 @@
 			</div>
 			<div class="desktop-none show-all-history" data-hide="Скрыть">Показать всю историю </div>
 			<div class="column medium-3 navigation">
-				<h4>Навигация по странице</h4>
-				<ul>
-					<li><a href="#idea" class="active go_to">Формирование идеи</a></li>
-					<li><a href="#create-company" class="go_to">Создание компании</a></li>
-					<li><a href="#mission" class="go_to">Миссия</a></li>
-					<li><a href="#phylosophy">Философия</a></li>
-					<li><a href="#work">Начало работ</a></li>
-					<li><a href="#task">Цели и задачи</a></li>
-				</ul>
+				<div class="navigation__container">
+					<h4>Навигация по странице</h4>
+					<ul>
+						<li><a href="#idea" class="active go_to">Формирование идеи</a></li>
+						<li><a href="#create-company" class="go_to">Создание компании</a></li>
+						<li><a href="#mission" class="go_to">Миссия</a></li>
+						<li><a href="#phylosophy" class="go_to">Философия</a></li>
+						<li><a href="#work" class="go_to">Начало работ</a></li>
+						<li><a href="#task" class="go_to">Цели и задачи</a></li>
+					</ul>
+				</div>
 			</div>
 		</div>		
 	</section>
@@ -753,7 +755,7 @@
 					</div>
 					<div class="item">
 						<div class="row">
-							<!-- <div class="columns medium-6 video-block">
+							<div class="columns medium-6 video-block">
 								<div class="video-block__item">
 									<iframe class="video-block__iframe" src="https://www.youtube.com/embed/mdrTQ6j9xvo?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 									<div class="video-block__text">
@@ -788,7 +790,7 @@
 										<p>Разработка корпоративного магазина</p>
 									</div>									
 								</div>
-							</div> -->
+							</div>
 							<div class="columns madium-12 seen_all">
 								<a href="#" class="seen_all_reviews primary_link">Смотреть все отзывы</a>
 							</div>
@@ -804,7 +806,7 @@
 	</section>
 	<section class="partners">
 		<div class="row">
-			<div class="scroll-block">
+			<div class="scroll-block" id="partners-carousel">
 				<span class="scroll-block__head">
 					Наши партнеры:
 				</span>
@@ -880,7 +882,7 @@
 				<p>Профессиональное маркетинговое агенство в России и ОАЭ</p>
 			</div>
 			<div class="column medium-3 align-self-middle consultation__order">
-				<a href="#" class="open-modal-btn">Заказать консультацию</a>
+				<a href="#modal_form" class="open-modal-btn">Заказать консультацию</a>
 			</div>
 			<div class="column medium-3 align-self-middle consultation__contacts">
 				<span>8 800 1000 759</span>
@@ -934,8 +936,10 @@
 			</div>
 		</div>
 	</footer>
-	<div id="modal_form"><!-- Сaмo oкнo --> 
-	      <img src="img/svg/ic_close_gray.svg" id="modal_close"> <!-- Кнoпкa зaкрыть --> 
+	<div id="modal_form" class="modal_div"><!-- Сaмo oкнo --> 
+	    <svg id="modal_close" class="modal_close" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10">
+		  <path id="ic_close_gray" class="cls-1" d="M460.678,215l4.181-4.182a0.479,0.479,0,1,0-.678-0.678L460,214.321l-4.182-4.18a0.479,0.479,0,0,0-.678.678L459.321,215l-4.18,4.181a0.48,0.48,0,0,0,.339.819,0.473,0.473,0,0,0,.338-0.141L460,215.678l4.181,4.181a0.479,0.479,0,1,0,.677-0.678Z" transform="translate(-455 -210)"/>
+		</svg>
 	      <div class="question">
 	      	<h3>Зачем нужна консультация?</h3>
 	      	<p>Наши сотрудники помогут вам советом в своей сфере, мы заинтересованы в том, чтобы вы имели полное представление о нашей работе.</p>

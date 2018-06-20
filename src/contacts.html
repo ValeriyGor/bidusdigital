@@ -180,7 +180,7 @@
 			</div>
 			<div class="columns medium-4 text-right no-tablet">
 				<a href="#" class="print-version">Версия для печати</a>
-				<a href="#" class="ordered-consultation">Обратный звонок</a>
+				<a href="#call-back" class="ordered-consultation open-modal-btn">Обратный звонок</a>
 			</div>
 		</div>
 	</section>
@@ -618,7 +618,7 @@
 				<p>Профессиональное маркетинговое агенство в России и ОАЭ</p>
 			</div>
 			<div class="column medium-3 align-self-middle consultation__order">
-				<a href="#" class="open-modal-btn">Заказать консультацию</a>
+				<a href="#modal_form" class="open-modal-btn">Заказать консультацию</a>
 			</div>
 			<div class="column medium-3 align-self-middle consultation__contacts">
 				<span>8 800 1000 759</span>
@@ -672,8 +672,8 @@
 			</div>
 		</div>
 	</footer>
-	<div id="modal_form"><!-- Сaмo oкнo --> 
-	      <svg id="modal_close" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10">
+	<div id="modal_form" class="modal_div"><!-- Сaмo oкнo --> 
+	    <svg class="modal_close" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10">
 		  <path id="ic_close_gray" class="cls-1" d="M460.678,215l4.181-4.182a0.479,0.479,0,1,0-.678-0.678L460,214.321l-4.182-4.18a0.479,0.479,0,0,0-.678.678L459.321,215l-4.18,4.181a0.48,0.48,0,0,0,.339.819,0.473,0.473,0,0,0,.338-0.141L460,215.678l4.181,4.181a0.479,0.479,0,1,0,.677-0.678Z" transform="translate(-455 -210)"/>
 		</svg>
 	      <div class="question">
@@ -699,6 +699,20 @@
       				<button class="send_form">Отправить  заявку</button>
       				<p class="success_send">Ваша заявка успешно отправлена!</p>
       			</div>
+	      	</form>
+	      </div>
+	</div>
+	<div id="call-back" class="modal_div"><!-- Сaмo oкнo --> 
+	    <svg class="modal_close" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10">
+		  <path id="ic_close_gray" class="cls-1" d="M460.678,215l4.181-4.182a0.479,0.479,0,1,0-.678-0.678L460,214.321l-4.182-4.18a0.479,0.479,0,0,0-.678.678L459.321,215l-4.18,4.181a0.48,0.48,0,0,0,.339.819,0.473,0.473,0,0,0,.338-0.141L460,215.678l4.181,4.181a0.479,0.479,0,1,0,.677-0.678Z" transform="translate(-455 -210)"/>
+		</svg>
+	      <div class="form_wrap">
+	      	<h3>Обратный звонок</h3>
+	      	<p>Если у вас возникли вопросы или предложения, оставьте свои данные и мы свяжемся с вами в ближайшее время!</p>
+	      	<form action="#">
+	      		<input type="text" placeholder="Имя и фамилия" required>
+	      		<input type="text" placeholder="Номер телефона" required>  
+      			<button class="send_form">Жду звонка</button>
 	      	</form>
 	      </div>
 	</div>
