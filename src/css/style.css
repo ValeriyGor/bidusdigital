@@ -2620,7 +2620,7 @@ p {
     padding-right: 100px;
     margin-bottom: 15px; }
   .history .navigation {
-    position: relative; }
+    position: static; }
     .history .navigation a {
       color: #0070c9;
       font-size: 16px;
@@ -2676,7 +2676,11 @@ p {
         font-size: 16px;
         margin-bottom: 0; }
   .filials.reviews .slider-for .item {
-    padding: 0; }
+    padding: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
   .filials.reviews h2 {
     letter-spacing: 0; }
   .filials.reviews .slider-nav .slick-slide {
@@ -2693,7 +2697,7 @@ p {
   .partners .row {
     display: block; }
   .partners .scroll-block {
-    width: 200%;
+    width: 100%;
     padding: 32px 0 32px 10px; }
     .partners .scroll-block__head {
       color: #000;
@@ -2792,7 +2796,7 @@ p {
 
 .scroll-block {
   padding: 50px 0 50px 12px;
-  width: 200%;
+  width: 100%;
   -webkit-transition: all ease-out 0.3s;
   -o-transition: all ease-out 0.3s;
   transition: all ease-out 0.3s; }
@@ -2908,14 +2912,14 @@ p {
     font-weight: normal; }
   .conference-nav__item p {
     font-size: 13px; }
-  .conference-nav__item.active {
+  .conference-nav__item.active, .conference-nav__item.slick-current {
     border-left: 2px solid #0070c9;
     -webkit-transition: all 0.2s;
     -o-transition: all 0.2s;
     transition: all 0.2s;
     opacity: 1;
     padding-left: 24px; }
-    .conference-nav__item.active h3 {
+    .conference-nav__item.active h3, .conference-nav__item.slick-current h3 {
       font-family: 'SFUIDisplay-Bold'; }
   .conference-nav__item:hover {
     opacity: 1; }
@@ -3149,6 +3153,10 @@ p {
   .primary_link:hover {
     background: #f70c3b;
     color: #fff; }
+  .primary_link:focus {
+    background: #cd1829;
+    color: #fff;
+    font-family: 'SFUIDisplay-Bold'; }
 
 .pagination-service {
   background: #fff;
@@ -3358,7 +3366,7 @@ p {
     height: auto;
     margin-bottom: 40px; }
   .filials .slick-list {
-    overflow: visible; }
+    overflow: hidden; }
   .filials .slider-for .item {
     padding: 0 15px;
     display: -webkit-box;
@@ -4732,7 +4740,7 @@ p {
       font-size: 9px;
       max-height: 42px;
       overflow: hidden; }
-    .conference-nav__item.active {
+    .conference-nav__item.active, .conference-nav__item.slick-current {
       padding-left: 13px; }
   .slider-conf__item {
     height: 320px; }
@@ -4978,6 +4986,10 @@ p {
 @media screen and (max-width: 767px) {
   body {
     background: #e6e6e6; }
+    body.back-f5 {
+      background: #f5f5f5; }
+    body.back-f4 {
+      background: #f4f4f4; }
   h2 {
     font-size: 26px; }
   p {
@@ -6058,7 +6070,7 @@ p {
   .service-blocks .two-for-row .white-block {
     padding-bottom: 121px; }
   .service-blocks .white-block {
-    padding: 14px 15px 20px 21px; }
+    padding: 14px 10px 20px 21px; }
   .service-blocks h2 {
     font-size: 19px;
     line-height: 30px; }
@@ -6116,7 +6128,7 @@ p {
       padding: 25px 49px; }
       .podcategory-item.black-text span {
         font-size: 12px;
-        margin-top: 0; }
+        margin-top: 6px; }
     .podcategory-item.left-text h2 {
       text-align: center; }
     .podcategory-item h2 {
@@ -6192,7 +6204,8 @@ p {
   .portfolio-item {
     height: 291px;
     margin-bottom: 20px;
-    padding: 19px; }
+    padding: 19px;
+    background-size: cover; }
     .portfolio-item h3 {
       font-size: 22px;
       line-height: 22px;
@@ -6340,8 +6353,8 @@ p {
     -webkit-box-shadow: inset 24px -40px 101px rgba(0, 0, 0, 0.5);
     box-shadow: inset 24px -40px 101px rgba(0, 0, 0, 0.5); }
     .our-command__item span {
-      font-size: 10px;
-      line-height: 20px;
+      font-size: 9px;
+      line-height: 16px;
       background: none;
       padding: 0; }
     .our-command__item h4 {
@@ -6354,7 +6367,9 @@ p {
     padding: 20px 0 30px;
     -webkit-box-shadow: inset 0px 229px 0 rgba(0, 0, 0, 0.33);
     box-shadow: inset 0px 229px 0 rgba(0, 0, 0, 0.33);
-    margin-bottom: 45px; }
+    margin-bottom: 45px;
+    background-image: url("../img/about-page/all-work_mob.png") !important;
+    background-size: cover; }
     .all-command_text {
       max-width: 82%;
       margin: 0 auto; }
@@ -6375,8 +6390,8 @@ p {
     height: 89px;
     margin-bottom: 29px; }
   .scroll-block {
-    padding: 23px 0 20px 17px;
-    width: 400%; }
+    padding: 23px 300px 20px 17px;
+    width: 100%; }
     .scroll-block__head {
       margin-right: 12px;
       font-size: 19px;
@@ -6430,11 +6445,11 @@ p {
       border-top: 1px solid #e5e5e5; }
       .conference-nav__item h3 {
         font-size: 21px; }
-      .conference-nav__item.active {
+      .conference-nav__item.active, .conference-nav__item.slick-current {
         border-left: 3px;
         padding-left: 15px;
         padding-right: 15px; }
-        .conference-nav__item.active:before {
+        .conference-nav__item.active:before, .conference-nav__item.slick-current:before {
           content: "";
           width: 100px;
           height: 2px;
@@ -6442,6 +6457,14 @@ p {
           top: -2px;
           left: 16px;
           background: #3f6fc5; }
+    .conference-nav .slick-prev {
+      display: none !important; }
+    .conference-nav .slick-next {
+      position: absolute;
+      height: 100%;
+      width: 25%;
+      top: 0;
+      right: 0; }
   .carousel .columns {
     max-width: 100%; }
   .history {
@@ -6471,7 +6494,8 @@ p {
     font-size: 14px;
     line-height: 46px;
     text-align: center;
-    border-top: 1px solid #e6e6e6; }
+    border-top: 1px solid #e6e6e6;
+    font-family: "SFUIDisplay-Semibold"; }
     .show-all-history.opened:after {
       -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
@@ -6490,7 +6514,9 @@ p {
   .will-be-hide {
     display: none; }
   .quest {
-    padding: 77px 0 69px; }
+    padding: 77px 0 69px;
+    background: url("../img/about-page/quest_mob.png") center right no-repeat;
+    background-size: cover; }
     .quest__text {
       max-width: 100%;
       text-align: center; }
@@ -6507,6 +6533,8 @@ p {
     display: none; }
   .filials.reviews {
     padding-top: 35px; }
+  .filials .filials-rev-nav {
+    display: none !important; }
   .carousel {
     padding-top: 40px;
     padding-bottom: 44px; }
@@ -6597,7 +6625,7 @@ p {
   .mobile-left {
     text-align: left; }
   .partners .scroll-block {
-    padding: 20px 0 25px 17px; }
+    padding: 20px 300px 25px 17px; }
     .partners .scroll-block__head {
       margin-right: 27px;
       font-size: 21px;
@@ -6610,7 +6638,73 @@ p {
         margin: 0 24px 0 28px; }
       .partners .scroll-block__logo img {
         max-width: 80px;
-        max-height: 26px; } }
+        max-height: 26px; }
+  .reviews .columns {
+    padding: 0; }
+  .reviews a {
+    font-size: 14px;
+    color: #fff; }
+  .reviews .row {
+    display: block; }
+  .mobile-accord .row {
+    display: none; }
+    .mobile-accord .row.thanks-letters {
+      display: block; }
+  .mobile-accord {
+    margin-top: 18px; }
+    .mobile-accord .tabs {
+      padding: 0;
+      height: auto;
+      border: 0;
+      border-top: 1px solid #e6e6e6;
+      margin-bottom: 0;
+      padding: 14px 20px;
+      font-size: 19px;
+      font-family: "SFUIDisplay-Bold";
+      margin-bottom: 0;
+      font-size: 18px;
+      padding: 10px 20px;
+      position: relative; }
+      .mobile-accord .tabs.open {
+        border: 0;
+        border-top: 1px solid #e6e6e6;
+        border-bottom: 1px solid #e6e6e6; }
+        .mobile-accord .tabs.open:after {
+          -webkit-transform: rotate(-45deg);
+          -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+          background: #c7c7c7; }
+        .mobile-accord .tabs.open:before {
+          -webkit-transform: rotate(-45deg);
+          -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+          background: #c7c7c7; }
+      .mobile-accord .tabs:after {
+        content: "";
+        display: block;
+        width: 1px;
+        height: 21px;
+        background: #3f6fc5;
+        position: absolute;
+        right: 24px;
+        -webkit-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        top: 19px; }
+      .mobile-accord .tabs:before {
+        content: "";
+        display: block;
+        width: 21px;
+        height: 1px;
+        background: #3f6fc5;
+        -webkit-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        position: absolute;
+        right: 14px;
+        top: 29px; }
+      .mobile-accord .tabs .seen_all {
+        text-align: center; } }
 
 @media screen and (min-width: 450px) and (max-width: 767px) {
   .about .slider-for__item {
@@ -6736,7 +6830,7 @@ p {
       padding: 21px 38px; }
       .podcategory-item.black-text span {
         font-size: 10px;
-        margin-top: 6px; }
+        margin-top: 8px; }
     .podcategory-item.videograph p {
       margin-top: 12px;
       margin: 12px auto; }
@@ -7185,7 +7279,7 @@ p {
       font-size: 15px;
       margin-bottom: 1px; }
     .our-command__item span {
-      font-size: 10px; }
+      font-size: 8px; }
   .all-command {
     padding: 20px 0 25px;
     margin-bottom: 39px; }
@@ -7207,7 +7301,7 @@ p {
     height: 76px;
     margin-bottom: 23px; }
   .scroll-block {
-    padding: 21px 0 24px 15px; }
+    padding: 21px 300px 24px 15px; }
     .scroll-block__head {
       font-size: 16px;
       line-height: 30px; }
@@ -7237,7 +7331,7 @@ p {
   .conference-nav__item {
     padding-right: 0;
     padding-left: 13px; }
-    .conference-nav__item.active {
+    .conference-nav__item.active, .conference-nav__item.slick-current {
       padding-right: 0;
       padding-left: 13px; }
     .conference-nav__item h3 {
@@ -7263,7 +7357,8 @@ p {
     line-height: 40px; }
     .show-all-history:after {
       border: 3px solid transparent;
-      border-top: 4px solid #0070c9; }
+      border-top: 4px solid #0070c9;
+      border-bottom: 0; }
   .quest {
     padding: 64px 0 59px; }
     .quest__text h3 {
@@ -7280,7 +7375,7 @@ p {
       font-size: 21px;
       line-height: 25px; }
   .partners .scroll-block {
-    padding: 15px 0 17px 14px; }
+    padding: 15px 250px 17px 14px; }
     .partners .scroll-block__head {
       margin-right: 22px;
       font-size: 18px;

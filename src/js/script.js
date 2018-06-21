@@ -1,3 +1,6 @@
+var fixNavOutLeft = 0;
+var fixNavOutTop = 0;
+
 (function($) {	
 var el = $(".invideo__head");
 var el2 = $(".invideo__media");
@@ -183,9 +186,9 @@ $( ".map .close" ).click(function(e) {
 
 $(".conference-nav__item").click(function(e) {
     var n = $(this).attr('data-for');
-    if (!$(this).hasClass('active')){
-      $('.conference-nav__item').removeClass('active');
-      $(this).addClass('active');
+    if (!$(this).hasClass('slick-current')){
+      $('.conference-nav__item').removeClass('slick-current');
+      $(this).addClass('slick-current');
     }
     $(".slider-conf").each(function(i) {
       if ($(this).attr("data-num") == n) {
@@ -213,6 +216,7 @@ function getSliderConfSettings(){
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
+    focusOnSelect: true,
     speed: 150,
     centerPadding: '52px',
     centerMode: true,
@@ -267,13 +271,18 @@ wnd.scroll(function(){
     }
     if ($(window).width() > '767'){
       if ($(".navigation").length != 0) { 
-        var scrollTop =  $('.navigation').offset().top - 50;
+        var scrollTop =  fixNavOutTop - 70;
         if($(this).scrollTop() > scrollTop){
           var res = $(this).scrollTop() - scrollTop;
           if (res < $('.history__text').height() - $('.navigation__container').height()){
-            $('.navigation').css('padding-top', res);
+            $('.navigation').css('position', 'fixed');
+            $('.navigation').css('top', '70px');
           }          
+          else
+            $('.navigation').css('position', 'static');
         }
+        else
+          $('.navigation').css('position', 'static');
       }
       
       if ($(".stack-line").length != 0) { // проверим существование элемента чтобы избежать ошибки
@@ -296,9 +305,7 @@ wnd.scroll(function(){
 
 
       }
-
-      
-
+    }
       if ($("#techno-carousel").length != 0) { 
         var scrollTop =  $('#techno-carousel').offset().top - $(window).height() + 100;
         if($(this).scrollTop() > scrollTop){
@@ -320,7 +327,6 @@ wnd.scroll(function(){
           }
         }
       }
-    }
 });
 
 $(document).ready(function(){
@@ -344,6 +350,16 @@ $(document).ready(function() {
         $('.search').appendTo($(".head-menu"));
         $(".search input").attr("placeholder", "Поиск по сайту");
         $(".conference-nav").slick(getSliderConfSettings());
+
+        
+      $('.thanks-letters').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        speed: 150,
+        dots: false,
+        adaptiveHeight: true
+      });
     }
      if ($(window).width() > '767' && $('#video-phone').length > 0){
     // Show loading animation.
@@ -359,8 +375,39 @@ $(document).ready(function() {
       }
   }
 
-    if($("div").is(".slider-for")){
-        $('.slider-for').slick({
+    if($("div").is(".contacts-filia .slider-for")){
+        $('.contacts-filia .slider-for').slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          fade: true,
+          adaptiveHeight: true,
+          infinite: true,
+          asNavFor: '.slider-nav',
+          responsive: [
+            {
+              breakpoint: 761,
+              settings: {
+                arrows: false
+              }
+            },
+            {
+              breakpoint: 1025,
+              settings: {
+                arrows: true
+              }
+            },
+            {
+              breakpoint: 1280,
+              settings: {
+                arrows: true
+              }
+            }
+          ]
+        });
+    } 
+
+    if($("div").is(".reviews .slider-for") && $(window).width() > '767'){
+        $('.reviews .slider-for').slick({
           slidesToShow: 1,
           slidesToScroll: 1,
           fade: true,
@@ -395,10 +442,11 @@ $(document).ready(function() {
           slidesToScroll: 3,
           asNavFor: '.slider-for',
           arrows: false,
-          centerPadding: '80px',
+          centerPadding: '',
           dots: false,
           centerMode: true,
           focusOnSelect: true,
+          adaptiveHeight: true,
           responsive: [
             {
               breakpoint: 761,
@@ -417,7 +465,7 @@ $(document).ready(function() {
               settings: {
                 slidesToShow: 5,
                 centerMode: true,
-                centerPadding: '50px',
+                centerPadding: '0',
               }
             }
           ]
@@ -462,6 +510,19 @@ $(document).ready(function() {
           ]
         });
         resizeItems('.blog__wrap .blog-item');
+
+        if($("div").is(".thanks-letters") && $(window).width() < '768'){
+          $('.thanks-letters').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: true,
+            centerPadding: '',
+            dots: true,
+            centerMode: true,
+            focusOnSelect: true,
+            adaptiveHeight: true
+          });
+      }
     }    
     
 });
@@ -510,6 +571,15 @@ $(".departament-item h3").on('click', function(e){
       $('.departament-item.open').not($not).removeClass('open');
       $(this).nextAll().slideToggle();
       $(this).parent().toggleClass('open');
+    }
+});
+$(".mobile-accord .tabs").on('click', function(e){
+  if($(window).width() < '768'){
+      var $not = $(this);
+      $('.mobile-accord .item .open').not($not).next().slideToggle();
+      $('.mobile-accord .item .open').not($not).removeClass('open');
+      $(this).next().slideToggle();
+      $(this).toggleClass('open');
     }
 });
 
@@ -635,7 +705,12 @@ $(document).ready(function() { // зaпускaем скрипт пoсле зaг�
     var open_modal = $('.open-modal-btn'); // все ссылки, кoтoрые будут oткрывaть oкнa
     var close = $('.modal_close, #overlay'); // все, чтo зaкрывaет мoдaльнoе oкнo, т.е. крестик и oверлэй-пoдлoжкa
     var modal = $('.modal_div'); // все скрытые мoдaльные oкнa
+    
+    
 
+
+    setWidthScrollblock();
+    
      open_modal.click( function(event){ // лoвим клик пo ссылке с клaссoм open_modal
          event.preventDefault(); // вырубaем стaндaртнoе пoведение
          var div = $(this).attr('href'); // вoзьмем стрoку с селектoрoм у кликнутoй ссылки
@@ -658,6 +733,18 @@ $(document).ready(function() { // зaпускaем скрипт пoсле зaг�
      });
 });
 
+function setWidthScrollblock(){
+  $('.scroll-block').each(function(){
+      var width = 0;
+      $(this).children().each(function () {
+        width += $(this).outerWidth(true);
+      });
+      width += parseInt($(this).css('padding-left'));
+      width += parseInt($(this).css('padding-right'));
+      $(this).width(width + 20);
+    });
+}
+
 
 function resizeItems(elements){
   var maxHeight = 0; 
@@ -669,6 +756,7 @@ function resizeItems(elements){
       maxHeight = $(this).height();
     }
     });
+
   $(elements).each(function(){
   if($(this).height() != maxHeight) 
   {
@@ -682,15 +770,23 @@ $(window).resize(function() {
   if ($(window).width() > '639'){
     resizeItems('.specoffer-item');
   }
+  setWidthScrollblock();
 
   if ($(window).width() < '768'){
-    $(".reviews .slider-for").slick('unslick');
-    $(".conference-nav").slick('unslick');
-    $('.blog__wrap').slick('unslick');
-    $(".conference-nav").slick(getSliderConfSettings());
+    $(".reviews .slider-for.slick-slider").slick('unslick');
+    // $(".conference-nav").slick('unslick');
+    $('.blog__wrap.slick-slider').slick('unslick');
+    //$(".conference-nav").slick(getSliderConfSettings());
   }
   if ($(window).width() > '767'){
-    $(".conference-nav").slick('unslick');
+    if($('.navigation').length != 0){
+      fixNavOutLeft = $('.navigation').offset().left;
+      fixNavOutTop = $('.navigation').offset().top;
+      $('.navigation').css('left', fixNavOutLeft);
+    }
+    $(".conference-nav.slick-slider").slick('unslick');
+    $(".filials .slider-for.slick-slider").slick('unslick');
+    
   }
 });
 
@@ -698,6 +794,12 @@ $(document).ready(function() {
   resizeItems('.blog__wrap .blog-item');
   if ($(window).width() > '639'){
     resizeItems('.specoffer-item');
+  }
+  
+  if($('.navigation').length != 0){
+      fixNavOutLeft = $('.navigation').offset().left;
+      fixNavOutTop = $('.navigation').offset().top;
+      $('.navigation').css('left', fixNavOutLeft);
   }
 });
 

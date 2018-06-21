@@ -2297,7 +2297,7 @@ p
 		padding-right: 100px
 		margin-bottom: 15px
 	.navigation 
-		position: relative
+		position: static
 		a 
 			color: #0070c9
 			font-size: 16px
@@ -2351,6 +2351,7 @@ p
 			
 	.slider-for .item
 		padding: 0
+		flex-direction: column
 	h2
 		letter-spacing: 0
 	.slider-nav .slick-slide
@@ -2367,7 +2368,7 @@ p
 		display: block
 		
 	.scroll-block
-		width: 200%
+		width: 100%
 		padding: 32px 0 32px 10px
 		&__head
 			color: #000
@@ -2468,7 +2469,7 @@ p
 		
 .scroll-block
 	padding: 50px 0 50px 12px
-	width: 200%
+	width: 100%
 	transition: all ease-out 0.3s 
 	&__techno
 		font-size: 60px		
@@ -2584,7 +2585,7 @@ p
 			
 		p 
 			font-size: 13px	
-		&.active
+		&.active, &.slick-current
 			border-left: 2px solid #0070c9
 			transition: all 0.2s
 			opacity: 1
@@ -2805,6 +2806,10 @@ p
 	&:hover
 		background: #f70c3b
 		color: #fff
+	&:focus
+		background: #cd1829
+		color: #fff
+		font-family: 'SFUIDisplay-Bold'	
 	
 
 .pagination-service
@@ -3012,7 +3017,7 @@ p
 		height: auto
 		margin-bottom: 40px
 	.slick-list
-		overflow: visible
+		overflow: hidden
 	.slider-for 
 		.item
 			padding: 0 15px
@@ -4457,7 +4462,7 @@ p
 				font-size: 9px
 				max-height: 42px
 				overflow: hidden
-			&.active
+			&.active, &.slick-current
 				padding-left: 13px
 	.slider-conf
 		&__item
@@ -4723,6 +4728,10 @@ p
 @media screen and (max-width: 767px)
 	body
 		background: #e6e6e6
+		&.back-f5
+			background: #f5f5f5
+		&.back-f4
+			background: #f4f4f4
 	h2
 		font-size: 26px
 	p
@@ -5744,7 +5753,7 @@ p
 				// background-position: left 0px bottom
 
 		.white-block
-			padding: 14px 15px 20px 21px
+			padding: 14px 10px 20px 21px
 		h2
 			font-size: 19px
 			line-height: 30px
@@ -5806,7 +5815,7 @@ p
 				padding: 25px 49px
 				span
 					font-size: 12px
-					margin-top: 0
+					margin-top: 6px
 
 			&.left-text
 				h2
@@ -5891,6 +5900,7 @@ p
 			height: 291px
 			margin-bottom: 20px
 			padding: 19px
+			background-size: cover
 			h3
 				font-size: 22px
 				line-height: 22px
@@ -6028,8 +6038,8 @@ p
 			padding: 10px 14px
 			box-shadow: inset 24px -40px 101px rgba(0, 0, 0, 0.5)
 			span
-				font-size: 10px
-				line-height: 20px
+				font-size: 9px
+				line-height: 16px
 				background: none
 				padding: 0
 			h4
@@ -6042,6 +6052,8 @@ p
 		padding: 20px 0 30px
 		box-shadow: inset 0px 229px 0 rgba(0, 0, 0, 0.33)
 		margin-bottom: 45px
+		background-image: url('../img/about-page/all-work_mob.png')!important
+		background-size: cover
 		&_text
 			max-width: 82%
 			margin: 0 auto
@@ -6062,8 +6074,8 @@ p
 		height: 89px
 		margin-bottom: 29px
 	.scroll-block
-		padding: 23px 0 20px 17px
-		width: 400%
+		padding: 23px 300px 20px 17px
+		width: 100%
 		&__head
 			margin-right: 12px
 			font-size: 19px
@@ -6118,7 +6130,7 @@ p
 			border-top: 1px solid #e5e5e5
 			h3
 				font-size: 21px
-			&.active
+			&.active, &.slick-current
 				border-left: 3px
 				padding-left: 15px
 				padding-right: 15px
@@ -6130,6 +6142,16 @@ p
 					top: -2px
 					left: 16px
 					background: #3f6fc5
+		.slick-prev
+			display: none!important
+		.slick-next
+			position: absolute
+			height: 100%
+			width: 25%
+			top: 0
+			right: 0
+
+				
 
 	.carousel
 		.columns
@@ -6163,6 +6185,7 @@ p
 		line-height: 46px
 		text-align: center
 		border-top: 1px solid #e6e6e6
+		font-family: "SFUIDisplay-Semibold"
 		&.opened
 			&:after
 				transform: rotate(180deg)
@@ -6182,6 +6205,8 @@ p
 		display: none
 	.quest
 		padding: 77px 0 69px
+		background: url('../img/about-page/quest_mob.png') center right no-repeat
+		background-size: cover
 		&__text
 			max-width: 100%
 			text-align: center
@@ -6199,6 +6224,8 @@ p
 			display: none
 		&.reviews
 			padding-top: 35px
+		.filials-rev-nav
+			display: none!important
 
 	.carousel
 		padding-top: 40px
@@ -6292,7 +6319,7 @@ p
 
 	.partners 
 		.scroll-block
-			padding: 20px 0 25px 17px
+			padding: 20px 300px 25px 17px
 			&__head
 				margin-right: 27px
 				font-size: 21px
@@ -6306,7 +6333,72 @@ p
 				img
 					max-width: 80px
 					max-height: 26px
+	
+	.reviews
+		.columns
+			padding: 0
+		a
+			font-size: 14px
+			color: #fff
+		.row
+			display: block
+	
+	.mobile-accord
+		.row
+			display: none
+			&.thanks-letters
+				display: block
+				
+	.mobile-accord
+		margin-top: 18px
+		.tabs
+			padding: 0
+			height: auto
+			border: 0
+			border-top: 1px solid #e6e6e6
+			margin-bottom: 0
+			padding: 14px 20px
+			font-size: 19px
+			font-family: "SFUIDisplay-Bold"
+			&.open
+				border: 0
+				border-top: 1px solid #e6e6e6
+				border-bottom: 1px solid #e6e6e6
 
+				&:after
+					transform: rotate(-45deg)
+					background: #c7c7c7
+				&:before
+					transform: rotate(-45deg)
+					background: #c7c7c7
+			margin-bottom: 0
+			font-size: 18px
+			padding: 10px 20px
+			position: relative
+			&:after
+				content: ""
+				display: block
+				width: 1px
+				height: 21px
+				background: #3f6fc5
+				position: absolute
+				right: 24px
+				transition: all 0.3s
+				top: 19px
+			&:before
+				content: ""
+				display: block
+				width: 21px
+				height: 1px
+				background: #3f6fc5
+				transition: all 0.3s
+				position: absolute
+				right: 14px
+				top: 29px
+			.seen_all
+				text-align: center
+					
+	
 
 
 @media screen and (min-width: 450px) and (max-width: 767px)
@@ -6449,7 +6541,7 @@ p
 				padding: 21px 38px
 				span
 					font-size: 10px
-					margin-top: 6px
+					margin-top: 8px
 			&.videograph
 				p 
 					margin-top: 12px
@@ -6918,7 +7010,7 @@ p
 				font-size: 15px
 				margin-bottom: 1px
 			span
-				font-size: 10px
+				font-size: 8px
 	.all-command 
 		padding: 20px 0 25px
 		margin-bottom: 39px
@@ -6940,7 +7032,7 @@ p
 		height: 76px
 		margin-bottom: 23px
 	.scroll-block
-		padding: 21px 0 24px 15px
+		padding: 21px 300px 24px 15px
 		&__head
 			font-size: 16px
 			line-height: 30px
@@ -6974,7 +7066,7 @@ p
 			&__item 
 				padding-right: 0
 				padding-left: 13px
-				&.active
+				&.active, &.slick-current
 					padding-right: 0
 					padding-left: 13px
 				h3
@@ -7001,6 +7093,7 @@ p
 		&:after
 			border: 3px solid transparent
 			border-top: 4px solid #0070c9
+			border-bottom: 0
 	.quest
 		padding: 64px 0 59px
 		&__text 
@@ -7019,7 +7112,7 @@ p
 			line-height: 25px
 	.partners 
 		.scroll-block
-			padding: 15px 0 17px 14px
+			padding: 15px 250px 17px 14px
 			&__head
 				margin-right: 22px
 				font-size: 18px
