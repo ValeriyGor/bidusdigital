@@ -12,18 +12,25 @@ new WOW().init();
 $( "li.arrow-down").hover(
     function() {
         if ($(window).width() > '1024'){
-                $(".curtain").fadeIn(150);
+                if(!$('.curtain').is(":visible")){
+                  $(".curtain").fadeIn(150);
+                }                
                 if($('.head-menu__dropdown').is(":visible")){
                   $(this).children(".head-menu__dropdown").fadeTo(0, 1);
                 }
                 else{
                   $(this).children(".head-menu__dropdown").fadeTo(150, 1);
                 }
+                $(this).children(".head-menu__dropdown").addClass('open');
             }
-    }, function() {
-        if ($(window).width() > '1024'){               
-              $(this).children(".head-menu__dropdown").fadeOut(150);
-                $(".curtain").fadeOut(150);
+    }, function(e) {
+        if ($(window).width() > '1024'){  
+              if (!$('li.arrow-down>a').is(e.target)){                
+                $(".curtain").delay(100).fadeOut(150);
+              }
+              if(!$('li.arrow-down').is(e.target)){
+                $(this).children(".head-menu__dropdown").fadeOut(150);
+              }        
             }
     }
 );
@@ -94,6 +101,13 @@ $( ".seen-all").click(function(e) {
     
 });
 
+$('.form-call input').focus(function(){
+  $('.form-call').addClass('focused');
+});
+$('.form-call input').blur(function(){
+  $('.form-call').removeClass('focused');
+});
+
 $( ".mob-button" ).click(function(e) {
     $(".head-menu").slideToggle(200);
     $('.curtain').fadeOut(0);
@@ -112,7 +126,7 @@ $( ".seen-map" ).click(function(e) {
     e.preventDefault();
     if($(this).hasClass('open')){
       $(this).parent().next().children(".slider-text").show(0);
-      $(this).parent().next().children(".requisites").show(0);
+      $(this).parent().next().children(".requisites").hide(0);
       $(this).parent().next().children(".map").hide(0);
       $(this).removeClass('open');
       }
@@ -132,7 +146,7 @@ $( ".open-requisites" ).click(function(e) {
     if($(this).hasClass('open')){
       $(this).parent().next().children(".slider-text").show(0);
       $(this).parent().next().children(".requisites").hide(0);
-      $(this).parent().next().children(".map").show(0);
+      $(this).parent().next().children(".map").hide(0);
       $(this).removeClass('open');
     }
     else{

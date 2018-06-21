@@ -747,9 +747,6 @@ p {
   height: 100vh;
   z-index: 399;
   display: none;
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
   opacity: 1; }
 
 .our-project {
@@ -3796,7 +3793,8 @@ p {
     right: 56px;
     width: 135px; }
   .search {
-    right: 9%; }
+    right: 12%;
+    width: 5%; }
     .search input {
       height: 40px;
       background-size: 12px;
