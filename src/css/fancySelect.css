@@ -29,6 +29,7 @@ div.fancy-select {
     -webkit-box-shadow: none;
     box-shadow: none;
     width: 100%;
+    color: #000;
     height: 100%; }
     div.fancy-select div.trigger:after {
       content: "";

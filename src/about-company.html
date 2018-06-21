@@ -162,7 +162,7 @@
 					<a href="#">Автоматизация бизнеса</a>
 				</div>
 			</div>
-			<div class="columns medium-2 large-3 align-self-middle phone">
+			<div class="columns medium-offset-1 medium-1 large-2 align-self-middle phone">
 				<a href="tel:+88001000759"><span class="">8 800 1000 759</span></a>
 			</div>
 			<div id="menu-btn" class="mob-button desktop-none">
@@ -198,22 +198,22 @@
 	<section>
 		<div class="row principe">
 			<div class="columns medium-4">
-				<a href="#">
+				<div>
 					<h4>Внимание деталям</h4>
 					<p>К любой работы мы подходим со всей ответственностью, поэтому к каждому проекту мы проводим анализ сферы деятельности, чтобы знать и понимать все его детали.</p>
-				</a>
+				</div>
 			</div>
 			<div class="columns medium-4">
-				<a href="#">
+				<div>
 					<h4>Принцип качества</h4>
 					<p>Основным ориентиром для нашей работы является принцип качества, при котором специалист вовлечен в то, что он делает, у него хватает опыта и желания выполнять свою работу, а также, это отвечает современным стандартам.</p>
-				</a>
+				</div>
 			</div>
 			<div class="columns medium-4">
-				<a href="#">
+				<div>
 					<h4>Работа на результат</h4>
 					<p>Мы стремимся к тому, чтобы предоставить клиенту результат, а не временное решение или полумеры.</p>
-				</a>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -797,6 +797,9 @@
 						</div>
 					</div>
 					<div class="item">
+							<div class="columns madium-12 seen_all">
+								<a href="#" class="seen_all_reviews primary_link">Смотреть все отзывы</a>
+							</div>
 						
 					</div>
 				</div>
@@ -819,7 +822,7 @@
 	</section> 
 	<section class="carousel">
 		<div class="row">
-			<h2>Мы ждем вас в свою команду, 
+			<h2>Мы ждем вас в свою команду, <span class="br"></span>
 				<span class="typed">будем все вместе жечь напалмом!</span></h2>
 			<p class="carousel__text">Всего 22 открытые вакансии</p>
 			<div class="columns medium-12">
@@ -827,7 +830,7 @@
 					<div class="vacancy-carousel__item">
 						<a href="#">
 							<h3>Account-менеджер1</h3>
-							<p>Активное взаимодействие с действующими клиентами компанииАктивное взаимодействие с действующими клиентами компании</p>
+							<p>Активное одействие с действующими клиентами компанииАктивноеействие с действующими клиентами компании</p>
 							<span class="limit">Прием до 31 мая</span>
 						</a>
 					</div>
@@ -994,11 +997,12 @@
 			focusOnSelect: true,
 			responsive: [
 			{
-			  breakpoint: 761,
+			  breakpoint: 767,
 			  settings: {
 				slidesToShow: 1,
 				slidesToScroll: 1,
-			    arrows: true
+			    arrows: true,
+			    dots: true
 			  }
 			},
 			{
@@ -1027,14 +1031,14 @@
 		});
 		
 		
-		$('.slider-nav').slick({
-			slidesToShow: 4,
-			slidesToScroll: 1,
-			asNavFor: '.slider-for',
-			//dots: true,
-			centerMode: true,
-			focusOnSelect: true
-		});
+		// $('.slider-nav').slick({
+		// 	slidesToShow: 4,
+		// 	slidesToScroll: 1,
+		// 	asNavFor: '.slider-for',
+		// 	//dots: true,
+		// 	centerMode: true,
+		// 	focusOnSelect: true
+		// });
 		$('.content-write-request').slick({
 			slidesToShow: 1,
 			slidesToScroll: 1,

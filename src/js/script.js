@@ -110,15 +110,41 @@ $( ".open-dropdown-filter" ).click(function(e) {
 
 $( ".seen-map" ).click(function(e) {
     e.preventDefault();
-    $(this).parent().next().children(".slider-text").hide(0);
-    $(this).parent().next().children(".requisites").hide(0);
-    $(this).parent().next().children(".map").show(0);
+    if($(this).hasClass('open')){
+      $(this).parent().next().children(".slider-text").show(0);
+      $(this).parent().next().children(".requisites").show(0);
+      $(this).parent().next().children(".map").hide(0);
+      $(this).removeClass('open');
+      }
+    else{
+      $(this).parent().next().children(".slider-text").hide(0);
+      $(this).parent().next().children(".requisites").hide(0);
+      $(this).parent().next().children(".map").show(0);
+      $(this).addClass('open');
+    }
+
+    var text = $(this).attr('data-close');
+    $(this).attr('data-close', $(this).text());
+    $(this).text(text);
 });
 $( ".open-requisites" ).click(function(e) {
     e.preventDefault();
-    $(this).parent().next().children(".slider-text").hide(0);
-    $(this).parent().next().children(".requisites").show(0);
-    $(this).parent().next().children(".map").hide(0);
+    if($(this).hasClass('open')){
+      $(this).parent().next().children(".slider-text").show(0);
+      $(this).parent().next().children(".requisites").hide(0);
+      $(this).parent().next().children(".map").show(0);
+      $(this).removeClass('open');
+    }
+    else{
+      $(this).parent().next().children(".slider-text").hide(0);
+      $(this).parent().next().children(".requisites").show(0);
+      $(this).parent().next().children(".map").hide(0);
+      $(this).addClass('open');
+    }
+    var text = $(this).attr('data-close');
+    $(this).attr('data-close', $(this).text());
+    $(this).text(text);
+    
 });
 $(".show-all-history").click(function(e) {
     $('.will-be-hide').slideToggle(200);
@@ -324,6 +350,8 @@ $(document).ready(function() {
           slidesToShow: 1,
           slidesToScroll: 1,
           fade: true,
+          adaptiveHeight: true,
+          infinite: true,
           asNavFor: '.slider-nav',
           responsive: [
             {
@@ -462,11 +490,13 @@ $(".close-video").on('click', function(e){
     $("#second-video").get(0).pause();
 });
 $(".departament-item h3").on('click', function(e){
-    var $not = $(this).parent();
-    $('.departament-item.open').not($not).children(':not(:first-child)').slideToggle();
-    $('.departament-item.open').not($not).removeClass('open');
-    $(this).nextAll().slideToggle();
-    $(this).parent().toggleClass('open');
+  if($(window).width() < '768'){
+      var $not = $(this).parent();
+      $('.departament-item.open').not($not).children(':not(:first-child)').slideToggle();
+      $('.departament-item.open').not($not).removeClass('open');
+      $(this).nextAll().slideToggle();
+      $(this).parent().toggleClass('open');
+    }
 });
 
 
