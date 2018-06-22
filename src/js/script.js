@@ -19,17 +19,17 @@ $( "li.arrow-down").hover(
                   $(".curtain").fadeIn(150);
                 }                
                 if($('.head-menu__dropdown').is(":visible")){
-                  $(this).children(".head-menu__dropdown").fadeTo(0, 1);
+                  $(this).children(".head-menu__dropdown").stop().fadeTo(0, 1);
                 }
                 else{
-                  $(this).children(".head-menu__dropdown").fadeTo(150, 1);
+                  $(this).children(".head-menu__dropdown").stop().fadeTo(150, 1);
                 }
                 $(this).children(".head-menu__dropdown").addClass('open');
             }
     }, function(e) {
         if ($(window).width() > '1024'){  
               if (!$('li.arrow-down>a').is(e.target)){                
-                $(".curtain").delay(100).fadeOut(150);
+                $(".curtain").fadeOut(150);
               }
               if(!$('li.arrow-down').is(e.target)){
                 $(this).children(".head-menu__dropdown").fadeOut(150);
@@ -38,6 +38,28 @@ $( "li.arrow-down").hover(
     }
 );
 
+
+//выход курсора мышки за предел окна браузера
+function addEvent(obj, evt, fn) {
+    if (obj.addEventListener) {
+        obj.addEventListener(evt, fn, false);
+    }
+    else if (obj.attachEvent) {
+        obj.attachEvent("on" + evt, fn);
+    }
+}
+
+addEvent(document, "mouseout", function(e) {
+    e = e ? e : window.event;
+    var from = e.relatedTarget || e.toElement;
+    if (!from || from.nodeName == "HTML") {
+        // stop your drag event here
+        // for now we can just use an alert
+        if ($('li.arrow-down>a').is(e.target)){                
+          $(".curtain").fadeOut(150);
+        }
+    }
+});
 
 
 $( ".curtain" ).click(function(e) {
@@ -355,9 +377,9 @@ $(document).ready(function() {
       $('.thanks-letters').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
-        arrows: false,
+        arrows: true,
         speed: 150,
-        dots: false,
+        dots: true,
         adaptiveHeight: true
       });
     }
@@ -375,8 +397,8 @@ $(document).ready(function() {
       }
   }
 
-    if($("div").is(".contacts-filia .slider-for")){
-        $('.contacts-filia .slider-for').slick({
+    if($("div").is(".slider-for")){
+        $('.slider-for').not('.reviews .slider-for').slick({
           slidesToShow: 1,
           slidesToScroll: 1,
           fade: true,
@@ -576,9 +598,24 @@ $(".departament-item h3").on('click', function(e){
 $(".mobile-accord .tabs").on('click', function(e){
   if($(window).width() < '768'){
       var $not = $(this);
-      $('.mobile-accord .item .open').not($not).next().slideToggle();
+      $('.mobile-accord .item .open').not($not).nextAll().slideToggle();
       $('.mobile-accord .item .open').not($not).removeClass('open');
-      $(this).next().slideToggle();
+      if(!$(this).hasClass('open') && $(this).attr('data-slick')){
+        var dslick = $(this).attr('data-slick');
+        $('.'+dslick+'.slick-slider').slick('unslick');
+        $('.'+dslick).slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: true,
+          speed: 150,
+          dots: true,
+          adaptiveHeight: true
+        });
+        $(this).nextAll().slideToggle();
+      }
+      else{
+        $(this).nextAll().slideToggle();
+      }      
       $(this).toggleClass('open');
     }
 });
@@ -785,7 +822,7 @@ $(window).resize(function() {
       $('.navigation').css('left', fixNavOutLeft);
     }
     $(".conference-nav.slick-slider").slick('unslick');
-    $(".filials .slider-for.slick-slider").slick('unslick');
+   // $(".filials .slider-for.slick-slider").slick('unslick');
     
   }
 });
