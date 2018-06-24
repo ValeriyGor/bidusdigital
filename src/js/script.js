@@ -128,9 +128,11 @@ $( ".seen-all").click(function(e) {
 
 $('.form-call input').focus(function(){
   $('.form-call').addClass('focused');
+  typed.stop();
 });
 $('.form-call input').blur(function(){
   $('.form-call').removeClass('focused');
+  typed.start();
 });
 
 $( ".mob-button" ).click(function(e) {
@@ -191,6 +193,14 @@ $(".show-all-history").click(function(e) {
     var text = $(this).text();
     $(this).text($(this).attr("data-hide"));
     $(this).attr("data-hide", text);
+    
+});
+
+$(".show-all").click(function(e) {
+    var text = $(this).text();
+    $(this).text($(this).attr('data-hide'));
+    $(this).attr('data-hide', text);
+    $(this).prevAll('.request__text-descr').toggleClass('open');
     
 });
 $( ".requisites .close" ).click(function(e) {
@@ -603,14 +613,27 @@ $(".mobile-accord .tabs").on('click', function(e){
       if(!$(this).hasClass('open') && $(this).attr('data-slick')){
         var dslick = $(this).attr('data-slick');
         $('.'+dslick+'.slick-slider').slick('unslick');
-        $('.'+dslick).slick({
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          arrows: true,
-          speed: 150,
-          dots: true,
-          adaptiveHeight: true
-        });
+
+        if($(this).hasClass('noAdaptHeight')){
+          $('.'+dslick).slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: true,
+            speed: 150,
+            dots: true
+          });
+        }          
+        else{
+          $('.'+dslick).slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: true,
+            speed: 150,
+            dots: true,
+            adaptiveHeight: true
+          });
+        }
+        
         $(this).nextAll().slideToggle();
       }
       else{

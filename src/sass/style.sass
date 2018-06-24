@@ -6397,13 +6397,9 @@ p
 			width: 25px
 		.slick-prev
 			left: -15%
-			background: url('../img/svg/arrow-gray.svg') center no-repeat
-			background-size: 10px
 			z-index: 999
 		.slick-next
 			right: -15%
-			background: url('../img/svg/arrow-gray.svg') center no-repeat
-			background-size: 10px
 			transform: rotate(180deg)
 			z-index: 999
 		.slick-dots
@@ -6417,13 +6413,17 @@ p
 		.arrows-in
 			.slick-prev
 				left: 0
-				background: url('../img/svg/arrow.svg') center no-repeat
-				background-size: 10px
 			.slick-next
 				right: 0
-				background: url('../img/svg/arrow.svg') center no-repeat
-				background-size: 10px
 
+
+		.arrows-in-top
+			.slick-prev
+				left: 26px
+				top: 68px
+			.slick-next
+				right: 26px
+				top: 68px
 		.tabs
 			padding: 0
 			height: auto
@@ -6479,6 +6479,82 @@ p
 				font-size: 21px
 			p 
 				font-size: 11px
+
+	.request
+		&__block
+			flex-direction: column
+			padding: 15px 15px 0
+			align-items: center
+		&__user
+			margin-bottom: 17px
+			img
+				max-width: 120px
+				max-height: 120px
+				margin: 15px auto 18px
+			h4
+				font-size: 13px
+			p
+				font-size: 11px
+			&-img
+				position: relative
+				
+			&-logo
+				width: 46px
+				height: 46px
+				border-radius: 50%
+				position: absolute
+				bottom: 0
+				right: 16px
+				display: flex
+				align-items: center
+				justify-content: center
+				background: #DD0A36
+				svg 
+					fill: #fff
+					max-width: 22px
+					max-height: 22px
+		&__text
+			padding-left: 0
+			border-left: 0
+			&-descr
+				max-height: 105px
+				&.open
+					max-height: none
+			h3
+				max-width: 85%
+				margin-bottom: 9px
+			p 
+				max-width: 100%
+				line-height: 21px
+				overflow: hidden
+				
+			.publication
+				display: none
+	.show-all
+		color: #3f6fc5
+		font-size: 12px
+		line-height: 15px
+		margin-top: 3px
+
+	.gray-butt		
+		.slick-prev
+			background: url('../img/svg/arrow-gray.svg') center no-repeat
+			background-size: 10px
+			z-index: 999
+		.slick-next
+			background: url('../img/svg/arrow-gray.svg') center no-repeat
+			background-size: 10px
+			transform: rotate(180deg)
+
+	.white-butt
+		.slick-prev
+			background: url('../img/svg/arrow.svg') center no-repeat
+			background-size: 10px
+		.slick-next
+			background: url('../img/svg/arrow.svg') center no-repeat
+			background-size: 10px
+
+		
 	
 
 
@@ -7262,3 +7338,78 @@ p
 			img
 				max-width: 13px
 				max-height: 12px
+	.mobile-accord 
+		.tabs
+			font-size: 16px
+			padding: 10px 16px
+			&:before
+				width: 17px
+				right: 15px
+				top: 26px
+			&:after
+				right: 23px
+				height: 17px
+				top: 18px
+	.reviews 
+		h3
+			font-size: 15px
+			line-height: 21px
+		a
+			font-size: 12px
+	.filials 
+		.slick-dots 
+			margin-top: -15px
+			margin-bottom: 6px
+			li
+				height: 12px
+		p 
+			font-size: 9px
+	.request
+		&-block
+			padding: 10px 15px 0
+		&__user 
+			img
+				max-width: 100px
+				max-height: 100px
+				margin: 12px auto
+			&-logo
+				width: 40px
+				height: 40px
+				svg
+					max-width: 18px
+					max-height: 18px
+			h4
+				font-size: 11px
+			p 
+				font-size: 9px
+		&__text
+			p 
+				font-size: 10px
+				line-height: 18px
+			h3
+				margin-bottom: 5px
+				font-size: 15px
+				line-height: 21px
+			&-descr
+				max-height: 90px
+	.mobile-accord 
+		.slick-slide
+			a
+				font-size: 9px
+				line-height: 9px
+		.arrows-in-top 
+			.slick-next
+				right: 21px
+				top: 50px
+			.slick-prev
+				left: 21px
+				top: 50px
+	.gray-butt 
+		.slick-next
+			background-size: 7px
+		.slick-prev
+			background-size: 7px
+	.show-all
+		font-size: 10px
+	.filials .slick-dots
+		margin-top: -6px

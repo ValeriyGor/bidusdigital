@@ -592,7 +592,7 @@
 		<div class="row">
 			<div class="columns medium-12">
 				<h2>Свяжитесь с нами, чтобы мы <span class="br"></span>
-				<span class="typed">скорее приступили к вашему проекту</span></h2>
+				<span class="typed"></span></h2>
 				<form action="#" method="post">    
 					<div class="input_block form-item">
 						<input type="text" class="form-input" required>
@@ -758,14 +758,25 @@
 			centerMode: true,
 			focusOnSelect: true
 		});
-    	$(".typed").typed({
-                        strings: ["скорее начали творить магию", "скорее начали новое сотрудничество", "скорее приступили к вашему проекту"], 
-                        typeSpeed: 80, // typing speed
-                        backDelay: 1000, // pause before backspacing
-                        loop: true, // loop on or off (true or false)
-                        loopCount: false, // number of loops, false = infinite
-                        callback: function(){ } // call function after typing is done
-                    });
+
+		var typed = new Typed(".typed", {
+		    strings: ["скорее начали творить магию", "скорее начали новое сотрудничество", "скорее приступили к вашему проекту"], 
+            typeSpeed: 80,
+		    backSpeed: 7,
+		    backDelay: 500,
+		    startDelay: 1000,
+		    loop: true,
+		    // onComplete: function(self) { prettyLog('onCmplete ' + self) },
+		    // preStringTyped: function(pos, self) { prettyLog('preStringTyped ' + pos + ' ' + self); },
+		    // onStringTyped: function(pos, self) { prettyLog('onStringTyped ' + pos + ' ' + self) },
+		    // onLastStringBackspaced: function(self) { prettyLog('onLastStringBackspaced ' + self) },
+		    // onTypingPaused: function(pos, self) { prettyLog('onTypingPaused ' + pos + ' ' + self) },
+		    // onTypingResumed: function(pos, self) { prettyLog('onTypingResumed ' + pos + ' ' + self) },
+		    // onReset: function(self) { prettyLog('onReset ' + self) },
+		    onStop: function(pos, self) { prettyLog('onStop ' + pos + ' ' + self) },
+		    onStart: function(pos, self) { prettyLog('onStart ' + pos + ' ' + self) },
+		    // onDestroy: function(self) { prettyLog('onDestroy ' + self) }
+		  });
 
     </script>
 
