@@ -1,13 +1,13 @@
 var fixNavOutLeft = 0;
 var fixNavOutTop = 0;
 
-(function($) {	
+(function($) { 
 var el = $(".invideo__head");
 var el2 = $(".invideo__media");
 
 //Set The Tween Width
-	// TweenMax.to(el, 2, {width:"-=50%", delay:3, ease:Power2.easeOut});
-	// TweenLite.to(el2, 2, {css: {right:"0"}, delay:3, ease:Power2.easeOut});
+ // TweenMax.to(el, 2, {width:"-=50%", delay:3, ease:Power2.easeOut});
+ // TweenLite.to(el2, 2, {css: {right:"0"}, delay:3, ease:Power2.easeOut});
 })(jQuery);
 
 new WOW().init();
@@ -68,7 +68,9 @@ $( ".curtain" ).click(function(e) {
     $(".dropdown-filter").removeClass("open");
     $(".breadscrumb-wrap").removeClass("open");
     $('.dropdown-filter').slideUp(300);
-    $(".search").removeClass('active');    
+    $(".search").removeClass('active');
+    $('.close-input').fadeOut(300);
+    AnimateRotate($('.close-input'), -90)
   $(".search input").attr("placeholder", "");
     $(this).fadeOut(300);
   $(".search input").val('');
@@ -81,7 +83,24 @@ $( ".send_form" ).click(function(e) {
 $( ".close-input" ).click(function(e) {
     $(".fast-link").hide(0);
     $(".result-search").hide(0);
-    $(".search").removeClass('active');    
+    $(".search").removeClass('active');
+    if($(this).hasClass('not-visible')){
+      $(this).removeClass('not-visible');
+      $(this).addClass('visible');
+      $(this).fadeIn(300);
+      console.log('удалили ');
+      AnimateRotate($('.close-input'), 90);
+      // $(this).fadeIn(300);
+    } 
+    else{
+      $(this).removeClass('visible');
+      $(this).addClass('not-visible');
+      $('.search input').css('background-image', 'none');
+      $('.search input').delay(1500).css('background-image', 'url(../img/svg/ic_search_link.svg)');
+      $(this).fadeOut(300);
+      // $(this).fadeOut(300);
+      AnimateRotate($('.close-input'), -90);
+    } 
     $(".curtain").fadeOut(300);
     $(".search input").val('');
     $(".search input").blur();
@@ -94,6 +113,17 @@ $( ".close-input" ).click(function(e) {
         $(".search input").attr("placeholder", "Поиск по сайту");
     }
 });
+
+function AnimateRotate(elem,d){
+    $({deg: 0}).animate({deg: d}, {
+        duration: 300,
+        step: function(now){
+            elem.css({
+                 transform: "rotate(" + now + "deg)"
+            });
+        }
+    });
+}
 
 $(document).keydown(function(e) {
     if( e.keyCode === 27 ) {
@@ -262,7 +292,11 @@ function getSliderConfSettings(){
  $( ".search input" ).focus(function() {     
 
     $(this).parent().addClass('active');
-	$(".search input").attr("placeholder", "Поиск по сайту...");
+    $('.close-input').removeClass('not-visible');
+    $('.close-input').addClass('visible');
+    $('.close-input').fadeIn(300);
+    AnimateRotate($('.close-input'), 90);
+ $(".search input").attr("placeholder", "Поиск по сайту...");
     $(".curtain").fadeIn(300);
     $(".fast-link").delay(300).slideDown(0);
     $(".fast-link").addClass('open');
@@ -276,10 +310,10 @@ function getSliderConfSettings(){
   });
 
 
-	$( ".search input" ).keyup(function() {    
-		$(".result-search").slideDown(0);
-    	$(".result-search").addClass('open');
-	});
+ $( ".search input" ).keyup(function() {    
+  $(".result-search").slideDown(0);
+     $(".result-search").addClass('open');
+ });
 
 var wnd = $(window);
 
@@ -304,17 +338,42 @@ wnd.scroll(function(){
     if ($(window).width() > '767'){
       if ($(".navigation").length != 0) { 
         var scrollTop =  fixNavOutTop - 70;
+        var hbox = "15px";
+
         if($(this).scrollTop() > scrollTop){
           var res = $(this).scrollTop() - scrollTop;
-          if (res < $('.history__text').height() - $('.navigation__container').height()){
+          hbox = $('.history__text').innerHeight() - $('.navigation__container').innerHeight();
+          if (res < hbox){
             $('.navigation').css('position', 'fixed');
             $('.navigation').css('top', '70px');
+            $('.navigation').css('padding-top', "15px");
+
+            var top = 0;
+            $( ".history__text .history__item" ).each(function( index ){
+              // console.log("Do bloka" + $(this).offset().top);
+              // console.log("Do okna" + wnd.scrollTop());
+              // console.log("Vysota" + $(this).outerHeight(true));
+              if($(this).offset().top - 200 < wnd.scrollTop()   && $(this).offset().top + $(this).outerHeight(true) -200 > wnd.scrollTop()  )
+              {
+                
+                var href = $("a[href*=\"#" + $(this).attr('id') + '\"]');
+                $('.navigation__container a.active').not(this).removeClass('active');
+                $(href).addClass('active');
+                console.log($(this).attr('id'));
+                return false;
+              }
+            });
+            
           }          
-          else
+          else{
             $('.navigation').css('position', 'static');
+            $('.navigation').css('padding-top', hbox + 15);
+          }
         }
-        else
+        else{
           $('.navigation').css('position', 'static');
+           $('.navigation').css('padding-top', "15px");
+        }
       }
       
       if ($(".stack-line").length != 0) { // проверим существование элемента чтобы избежать ошибки
