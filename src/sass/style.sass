@@ -248,8 +248,6 @@ p
 			transition: all 0.3s
 			border-radius: 3px
 			margin-bottom: 100px
-			&:hover
-				background: #f70c3b
 	.slick-next
 		height: 100%
 		width: 120px
@@ -260,8 +258,6 @@ p
 		background-size: 15px 30px
 		transform: rotate(180deg)
 		transition: all 0.2s
-		&:hover
-			opacity: 0.75
 	.slick-prev
 		height: 100%
 		width: 120px
@@ -271,8 +267,7 @@ p
 		background: url('../img/svg/arrow.svg') center no-repeat
 		background-size: 15px 30px
 		transition: all 0.2s
-		&:hover
-			opacity: 0.75
+		
 	.slick-dots
 		position: absolute
 		bottom: 35px
@@ -427,8 +422,6 @@ p
 	display: none
 	transition: all 0.3s
 	cursor: pointer
-	&:hover
-		opacity: 0.75
 	img
 		width: 22px
 		height: 22px
@@ -458,9 +451,6 @@ p
 				display: block
 				padding-right: 28px
 				padding-left: 35px
-			&:hover
-				>a
-					color: #b7b7b7
 	
 	&.fonthide li a
 		// font-size: 0
@@ -508,8 +498,6 @@ p
 			display: inline-block
 			color: #000
 			transition: all 0.15s
-			&:hover
-				color: $link-color
 		.our-project
 			a
 				margin-bottom: 13px
@@ -550,9 +538,6 @@ p
 					position: absolute
 					bottom: 25px
 					transition: all 0.3s
-				&:hover span
-					text-decoration: none
-					color: #e6e6e6
 
 			.columns:nth-of-type(4)
 				display: flex
@@ -585,6 +570,7 @@ p
 			padding-bottom: 19px
 			padding-left: 35px
 			left: 564px
+
 .curtain
 	position: fixed
 	top: 0
@@ -599,8 +585,6 @@ p
 
 .our-project 
 	margin-top: 8px
-	a:hover~p a
-		color: #0070c9
 
 .arrow-down
 	>a
@@ -620,13 +604,45 @@ p
 			transition: all .3s
 			margin-top: 2px
 
-		&:hover:after
-			border-color: #909090 rgba(255,212,52,0) rgba(255,212,52,0)
 
 @keyframes ac-gn-searchresults-items-show
 	0%
 		opacity: 0
 		transform: translateX(100px)
+
+
+@media screen and (min-width: 1024px)
+	.video .close-video
+		&:hover
+			opacity: 0.75
+	.head-menu
+		ul>li
+			&:hover
+				&>a
+					color: #b7b7b7
+		&__dropdown
+			a
+				&:hover
+					color: $link-color
+			&.service
+				.brand 
+					&:hover span
+						text-decoration: none
+						color: #e6e6e6
+	
+	.our-project 
+		a:hover~p a
+			color: #0070c9
+	.arrow-down
+		&>a
+			&:hover:after
+				border-color: #909090 rgba(255,212,52,0) rgba(255,212,52,0)
+	.search
+		.fast-link, .result-search
+			a 		
+				&:hover
+					color: #0070c9
+
 
 .search
 	position: absolute
@@ -666,8 +682,6 @@ p
 			animation-duration: 0.3s
 			animation-timing-function: ease
 			animation-fill-mode: both
-			&:hover
-				color: #0070c9
 			&:nth-of-type(2)
 				animation-delay: 40ms
 			&:nth-of-type(3)
@@ -688,33 +702,17 @@ p
 	.close-input
 		height: 45px
 		width: 45px
-		opacity: 0
 		position: absolute
 		display: none
 		top: 0
-		right: 50px
-		background-image: url('../img/svg/ic_close_gray.svg') 
-		background-position: center 
-		background-repeat: no-repeat
+		right: 51px
+		background: url('../img/svg/ic_close_gray.svg') center no-repeat
 		background-size: 14px
 		&.visible
-			background-image: url('../img/svg/ic_close_gray.svg') 
-			background-position: center 
-			background-repeat: no-repeat
+			background: url('../img/svg/ic_close_gray.svg') center no-repeat
 			background-size: 14px
 			position: absolute
 			cursor: pointer
-			opacity: 1
-			// transform: rotate(90deg)
-			// animation-name: spin
-			// animation-duration: 300ms
-			// animation-timing-function: linear
-		&.not-visible
-			opacity: 1
-			// transform: rotate(0)
-			// animation-name: spin2
-			// animation-duration: 300ms
-			// animation-timing-function: linear
 
 	&.active
 		width: 63%
@@ -740,10 +738,7 @@ p
 		padding: 0
 		border: none
 		outline: none
-		background-image: url('../img/svg/ic_search_link.svg')
-		background-color: transparent
-		background-position: center left 0px
-		background-repeat: no-repeat
+		background: transparent url('../img/svg/ic_search_link.svg') center left 0px no-repeat
 		width: 100%
 		height: 45px
 		color: #fff
@@ -754,10 +749,7 @@ p
 			border: none
 			box-shadow: none
 		&:hover, &:focus
-			background-image: url('../img/svg/ic_search_link-gray.svg')
-			background-color: transparent
-			background-position: center left 0px
-			background-repeat: no-repeat
+			background: transparent url('../img/svg/ic_search_link-gray.svg') center left 0px  no-repeat
 			cursor: pointer
 		&::-webkit-input-placeholder 
 			color: #808080
@@ -848,7 +840,7 @@ p
 		&:nth-of-type(3)
 			opacity: 0.7
 			top: -200px
-	
+
 .service
 	.row
 		padding-left: 8px
@@ -872,17 +864,13 @@ p
 					margin-right: 10px
 					margin-bottom: 4px
 					transition: all 0.2s
-				a:hover:before
-					width: 20px
+				
 		a 
 			color: $link-color
 			font-size: 14px
 			line-height: 30px
 			position: relative
 			z-index: 250
-			&:hover 
-				h3
-					color: $link-color
 
 		.mobile-transparent
 			position: absolute
@@ -934,9 +922,6 @@ p
 				margin-right: 10px
 				margin-bottom: 4px
 				transition: all 0.3s
-			&:hover
-				&:before
-					width: 25px
 		h3
 			font-size: 36px
 			font-weight: 300
@@ -958,8 +943,6 @@ p
 		padding: 15px 0
 		button
 			border-top-width: 1px
-
-
 
 .specoffer
 	h2
@@ -993,13 +976,6 @@ p
 				display: block
 				color: #000
 				transition: all 0.3s
-		&:hover
-			h3
-				color: #0070c9
-			p
-				color: #000
-			.specoffer-item__img
-				opacity: 0.8
 		&__img
 			padding: 28px 35px
 			background-size: cover
@@ -1077,8 +1053,6 @@ p
 		margin-top: 15px
 		padding: 0 20px
 		transition: all 0.3s
-		&:hover
-			background: #f70c3b
 .title
 	text-align: center
 	color: #fff
@@ -1203,9 +1177,9 @@ p
 					margin-right: 10px
 					margin-bottom: 4px
 					transition: all 0.3s
-				&:hover
-					&:before
-						width: 25px
+				// &:hover
+				// 	&:before
+				// 		width: 25px
 	.slick-arrow
 		top: 33%
 		background: url(../img/svg/arrow.svg) center no-repeat
@@ -1251,15 +1225,15 @@ p
 		border-radius: 3px
 		overflow: hidden
 		display: block
-		&:hover
-			h3
-				color: #0070c9
-			p 
-				color: #000
-			.blog-item__category
-				color: #000 
-			.blog-item__img
-				opacity: 0.8
+		// &:hover
+		// 	h3
+		// 		color: #0070c9
+		// 	p 
+		// 		color: #000
+		// 	.blog-item__category
+		// 		color: #000 
+		// 	.blog-item__img
+		// 		opacity: 0.8
 		&__img
 			height: 240px
 			background-position: center
@@ -1315,14 +1289,14 @@ p
 		left: -100px
 		&:after
 			border-color: rgba(255,212,52,0) #000 rgba(255,212,52,0) rgba(255,212,52,0)
-		&:hover:after
-			border-color: rgba(255,212,52,0) #de0a36 rgba(255,212,52,0) rgba(255,212,52,0)
+		// &:hover:after
+		// 	border-color: rgba(255,212,52,0) #de0a36 rgba(255,212,52,0) rgba(255,212,52,0)
 	.slick-next
 		right: -100px
 		&:after
 			border-color: rgba(255,212,52,0) rgba(255,212,52,0) rgba(255,212,52,0) #000
-		&:hover:after
-			border-color: rgba(255,212,52,0) rgba(255,212,52,0) rgba(255,212,52,0) #de0a36 
+		// &:hover:after
+		// 	border-color: rgba(255,212,52,0) rgba(255,212,52,0) rgba(255,212,52,0) #de0a36 
 
 #modal_form
 	width: 876px
@@ -1435,7 +1409,7 @@ p
 					width: 11px
 					height: 19px
 					display: inline-block
-					background: url("../img/skobka.png") center no-repeat
+					background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17px" height="30px"><path fill-rule="evenodd"  opacity="0.439" fill="rgb(0, 0, 0)" d="M16.090,17.518 L16.090,8.858 C16.090,3.841 12.803,0.199 8.275,0.199 C3.747,0.199 0.461,3.841 0.461,8.858 L0.462,21.381 L0.462,21.863 C0.462,22.660 1.118,23.306 1.928,23.306 C2.737,23.306 3.393,22.660 3.393,21.863 L3.393,8.873 C3.393,6.092 4.858,3.085 8.275,3.085 C11.692,3.085 13.161,6.092 13.161,8.873 L13.161,20.420 C13.161,20.526 13.175,20.628 13.199,20.728 L13.161,23.306 C13.161,24.898 11.841,26.178 10.223,26.178 C8.605,26.178 7.290,24.884 7.290,23.292 L7.290,17.518 L7.300,11.759 C7.300,11.361 7.570,10.797 8.277,10.797 C8.922,10.797 9.253,11.343 9.253,11.759 L9.253,14.646 C9.253,14.779 9.258,14.901 9.265,15.017 C9.262,15.054 9.253,15.089 9.253,15.127 L9.253,17.052 C9.253,17.849 9.909,18.495 10.719,18.495 C11.528,18.495 12.184,17.849 12.184,17.052 L12.184,15.127 C12.184,15.081 12.174,15.038 12.170,14.994 C12.178,14.885 12.184,14.771 12.184,14.646 L12.184,11.759 C12.184,9.675 10.433,7.911 8.277,7.911 C6.120,7.911 4.370,9.590 4.370,11.759 L4.366,13.090 C4.364,13.124 4.357,13.155 4.357,13.189 L4.357,23.292 C4.357,26.475 6.988,29.065 10.223,29.065 C13.458,29.065 16.091,26.489 16.091,23.306 L16.090,17.518 Z"/></svg>') center no-repeat;
 					background-size: contain
 					vertical-align: middle
 					position: relative
@@ -1469,8 +1443,7 @@ p
 	fill: #989898
 	transition: all 0.3s
 	display: block
-	&:hover
-		fill: #000
+
 #call-back
 	width: 470px
 	height: 410px
@@ -1534,8 +1507,8 @@ p
 		height: 45px
 		font-family: "SFUIDisplay-Bold"
 		transition: all 0.2s
-		&:hover
-			background: #f70c3b
+		// &:hover
+		// 	background: #f70c3b
 
 #overlay
 	z-index: 1000
@@ -1584,8 +1557,8 @@ p
 			font-size: 14px
 			background: #fff
 			margin: 0
-			&:hover
-				background: #f5f5f5
+			// &:hover
+			// 	background: #f5f5f5
 	&__contacts
 		text-align: left
 		p
@@ -1614,8 +1587,6 @@ p
 		line-height: 28px
 		color: #737373
 		transition: all 0.3s 
-		&:hover
-			color: #0070c9
 	p
 		font-size: 13px
 		color: #737373
@@ -1649,24 +1620,24 @@ p
 			&:nth-of-type(1)
 				img
 					width: 7px
-				&:hover
-					background: #4267b2
+				// &:hover
+				// 	background: #4267b2
 			&:nth-of-type(2)
 				img
 					width: 14px
-				&:hover
-					background: #e21d44
+				// &:hover
+				// 	background: #e21d44
 			&:nth-of-type(3)
 				img
 					width: 14px
-				&:hover
-					background: #507299
+				// &:hover
+				// 	background: #507299
 			&:nth-of-type(4)
 				img
 					width: 14px
-				&:hover
-					background: #ff0000
-			&:hover
+				// &:hover
+				// 	background: #ff0000
+		
 
 //uslugi page
 .breadscrumb-wrap
@@ -1701,8 +1672,8 @@ p
 			border-right: 0
 			margin-left: 17px
 			margin-right: 9px
-		&:hover
-			color: #0070c9
+		// &:hover
+		// 	color: #0070c9
 	.ordered-consultation
 		height: 30px
 		background: #de0a36
@@ -1776,10 +1747,10 @@ p
 			margin-right: 10px
 			margin-bottom: 4px
 			transition: all 0.2s
-		a:hover
-			padding-left: 4px
-			&:before
-				width: 20px
+		// a:hover
+		// 	padding-left: 4px
+		// 	&:before
+		// 		width: 20px
 		a 
 			color: $link-color
 			font-size: 16px
@@ -1787,9 +1758,9 @@ p
 			position: relative
 			z-index: 250
 			font-family: 'SFUIDisplay-Bold'
-			&:hover 
-				h3
-					color: $link-color
+			// &:hover 
+			// 	h3
+			// 		color: $link-color
 .help-block
 	display: flex
 	background: #fff
@@ -1842,8 +1813,8 @@ p
 				font-size: 13px
 				line-height: 28px
 				color: #000
-				&:hover
-					color: #007de3
+				// &:hover
+				// 	color: #007de3
 		&.two-col
 			li
 				width: 49%
@@ -1907,16 +1878,16 @@ p
 		top: 0
 		opacity: 0
 		transition: all 0.3s
-	&:hover
-		&:after
-			opacity: 1 
-		.link-box
-			top: 0
-			opacity: 1
-		h3, p
-			bottom: 0
-			z-index: 99
-			position: relative
+	// &:hover
+	// 	&:after
+	// 		opacity: 1 
+	// 	.link-box
+	// 		top: 0
+	// 		opacity: 1
+	// 	h3, p
+	// 		bottom: 0
+	// 		z-index: 99
+	// 		position: relative
 	&-white
 		height: 500px
 		padding-left: 95px
@@ -1947,11 +1918,11 @@ p
 			border-radius: 3px
 			cursor: pointer
 			transition: all 0.3s
-			&:hover
-				background: #f70c3b
+		// 	&:hover
+		// 		background: #f70c3b
 
-		&:hover 
-			box-shadow: none
+		// &:hover 
+		// 	box-shadow: none
 
 	.link-box
 		position: relative
@@ -2030,8 +2001,7 @@ p
 		background: #de0a36
 		margin-top: 25px
 		transition: all 0.15s
-		&:hover
-			background: #f70c3b
+
 .second-menu
 	ul
 		text-align: center
@@ -2045,8 +2015,8 @@ p
 				display: block
 				line-height: 50px
 				transition: all 0.15s
-				&:hover
-					color: #007de3
+				// &:hover
+				// 	color: #007de3
 			&:first-child a
 				padding-left: 0
 			&:last-child a
@@ -2136,9 +2106,9 @@ p
 		color: #fff
 		margin-top: 28px
 		transition: all 0.2s 
-		&:hover
-			background: #fff
-			color: #000
+		// &:hover
+		// 	background: #fff
+		// 	color: #000
 
 
 	ul 
@@ -2170,8 +2140,8 @@ p
 	&.black-text
 		padding: 32px 50px
 		transition: all 0.3s
-		&:hover
-			opacity: 0.8
+		// &:hover
+		// 	opacity: 0.8
 
 		h2.small
 			max-width: 350px
@@ -2217,8 +2187,8 @@ p
 			margin: 30px 0 12px
 			border-radius: 3px
 			transition: all 0.3s
-			&:hover
-				background: #f70c3b
+			// &:hover
+			// 	background: #f70c3b
 		span
 			display: block
 			text-align: center
@@ -2246,9 +2216,9 @@ p
 		justify-content: flex-end
 		text-decoration: none
 		padding: 17px 20px
-		&:hover
-			span
-				background: #de0a36
+		// &:hover
+		// 	span
+		// 		background: #de0a36
 
 		h4
 			line-height: 32px
@@ -2340,12 +2310,12 @@ p
 				margin-right: 10px
 				margin-bottom: 4px
 				transition: all .2s
-			&:hover
-				font-family: 'SFUIDisplay-Bold' 
-				color: #1588e4
-				&:before
-					background: #1588e4
-					width: 20px
+			// &:hover
+			// 	font-family: 'SFUIDisplay-Bold' 
+			// 	color: #1588e4
+			// 	&:before
+			// 		background: #1588e4
+			// 		width: 20px
 		&__container
 			padding-bottom: 55px
 			padding-top: 15px
@@ -2540,8 +2510,8 @@ p
 		line-height: 80px
 		color: #fff
 		transition: all 0.3s
-		&:hover
-			color: #DE0A36
+		// &:hover
+		// 	color: #DE0A36
 		&:after
 			content: ""
 			display: inline-block
@@ -2624,8 +2594,8 @@ p
 			h3
 				font-family: 'SFUIDisplay-Bold'
 
-		&:hover
-			opacity: 1
+		// &:hover
+		// 	opacity: 1
 
 .video-block
 	margin-bottom: 24px
@@ -2678,8 +2648,8 @@ p
 		top: 58%
 		background: rgba(255, 255, 255, 0.15)
 		transition: all 0.3s
-		&:hover
-			background: #de0a36
+		// &:hover
+		// 	background: #de0a36
 		&:after
 			border: 5px solid transparent
 			border-right-color: #fff
@@ -2699,8 +2669,8 @@ p
 		top: 58%
 		background: rgba(255, 255, 255, 0.15)
 		transition: all 0.3s
-		&:hover
-			background: #de0a36
+		// &:hover
+		// 	background: #de0a36
 		&:after
 			border: 5px solid transparent
 			border-left-color: #fff
@@ -2763,7 +2733,7 @@ p
 		path
 			fill: #666
 			transition: all 0.3s
-		&:hover, &.slick-current
+		&.slick-current
 			background: #de0a36
 			path
 				fill: #fff
@@ -2834,9 +2804,6 @@ p
 	display: inline-block
 	transition: all 0.2s
 	background: #de0a36
-	&:hover
-		background: #f70c3b
-		color: #fff
 	&:focus
 		background: #cd1829
 		color: #fff
@@ -2855,8 +2822,7 @@ p
 		.prev-service
 			padding-right: 35px
 			text-align: right
-			display: block
-			
+			display: block			
 			&:after
 				content: ""
 				width: 33px
@@ -2868,12 +2834,12 @@ p
 				top: 50%
 				left: 15px
 				transition: all 0.2s
-			&:hover 
-				.theme
-					color: #DE0A36
-				&:after
-					background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="33px" height="15px"> <path fill-rule="evenodd"  opacity="1" fill="rgb(222, 10, 54)" d="M32.806,6.993 L25.474,0.156 C25.270,-0.013 25.047,-0.045 24.806,0.059 C24.564,0.163 24.443,0.352 24.443,0.625 L24.443,5.001 L0.614,5.001 C0.436,5.001 0.289,5.059 0.175,5.177 C0.061,5.294 0.003,5.444 0.003,5.626 L0.003,9.377 C0.003,9.559 0.060,9.709 0.175,9.826 C0.290,9.943 0.436,10.001 0.614,10.001 L24.443,10.001 L24.443,14.377 C24.443,14.638 24.564,14.826 24.806,14.944 C25.048,15.048 25.271,15.008 25.475,14.826 L32.806,7.911 C32.934,7.781 32.997,7.625 32.997,7.442 C32.997,7.273 32.933,7.124 32.806,6.993 Z"/></svg>') center no-repeat;
-					background-size: contain
+			// &:hover 
+			// 	.theme
+			// 		color: #DE0A36
+			// 	&:after
+			// 		background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="33px" height="15px"> <path fill-rule="evenodd"  opacity="1" fill="rgb(222, 10, 54)" d="M32.806,6.993 L25.474,0.156 C25.270,-0.013 25.047,-0.045 24.806,0.059 C24.564,0.163 24.443,0.352 24.443,0.625 L24.443,5.001 L0.614,5.001 C0.436,5.001 0.289,5.059 0.175,5.177 C0.061,5.294 0.003,5.444 0.003,5.626 L0.003,9.377 C0.003,9.559 0.060,9.709 0.175,9.826 C0.290,9.943 0.436,10.001 0.614,10.001 L24.443,10.001 L24.443,14.377 C24.443,14.638 24.564,14.826 24.806,14.944 C25.048,15.048 25.271,15.008 25.475,14.826 L32.806,7.911 C32.934,7.781 32.997,7.625 32.997,7.442 C32.997,7.273 32.933,7.124 32.806,6.993 Z"/></svg>') center no-repeat;
+			// 		background-size: contain
 
 		.next-service
 			padding-left: 35px
@@ -2888,12 +2854,12 @@ p
 				top: 50%
 				right: 15px
 				transition: all 0.2s
-			&:hover 
-				.theme
-					color: #DE0A36
-				&:after
-					background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="33px" height="15px"> <path fill-rule="evenodd"  opacity="1" fill="rgb(222, 10, 54)" d="M32.806,6.993 L25.474,0.156 C25.270,-0.013 25.047,-0.045 24.806,0.059 C24.564,0.163 24.443,0.352 24.443,0.625 L24.443,5.001 L0.614,5.001 C0.436,5.001 0.289,5.059 0.175,5.177 C0.061,5.294 0.003,5.444 0.003,5.626 L0.003,9.377 C0.003,9.559 0.060,9.709 0.175,9.826 C0.290,9.943 0.436,10.001 0.614,10.001 L24.443,10.001 L24.443,14.377 C24.443,14.638 24.564,14.826 24.806,14.944 C25.048,15.048 25.271,15.008 25.475,14.826 L32.806,7.911 C32.934,7.781 32.997,7.625 32.997,7.442 C32.997,7.273 32.933,7.124 32.806,6.993 Z"/></svg>') center no-repeat;
-					background-size: contain
+			// &:hover 
+			// 	.theme
+			// 		color: #DE0A36
+			// 	&:after
+			// 		background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="33px" height="15px"> <path fill-rule="evenodd"  opacity="1" fill="rgb(222, 10, 54)" d="M32.806,6.993 L25.474,0.156 C25.270,-0.013 25.047,-0.045 24.806,0.059 C24.564,0.163 24.443,0.352 24.443,0.625 L24.443,5.001 L0.614,5.001 C0.436,5.001 0.289,5.059 0.175,5.177 C0.061,5.294 0.003,5.444 0.003,5.626 L0.003,9.377 C0.003,9.559 0.060,9.709 0.175,9.826 C0.290,9.943 0.436,10.001 0.614,10.001 L24.443,10.001 L24.443,14.377 C24.443,14.638 24.564,14.826 24.806,14.944 C25.048,15.048 25.271,15.008 25.475,14.826 L32.806,7.911 C32.934,7.781 32.997,7.625 32.997,7.442 C32.997,7.273 32.933,7.124 32.806,6.993 Z"/></svg>') center no-repeat;
+			// 		background-size: contain
 				
 			
 		span
@@ -2924,10 +2890,7 @@ p
 		transition: all 0.2s
 	&:active
 		color: #000
-	&:hover
-		color: #000
-		&:before
-			opacity: 1
+	
 
 .departament
 	padding-top: 50px
@@ -2989,8 +2952,8 @@ p
 			vertical-align: top
 			transition: all 0.3s
 			cursor: pointer
-			&:hover
-				opacity: 0.7
+			// &:hover
+			// 	opacity: 0.7
 			&:nth-of-type(1)
 				line-height: 45px
 				img
@@ -3072,8 +3035,8 @@ p
 						margin-right: 10px
 						margin-bottom: 4px
 						transition: all .2s
-					&:hover:before
-						width: 25px
+					// &:hover:before
+					// 	width: 25px
 				h4
 					font-size: 20px
 					padding-top: 3px
@@ -3150,8 +3113,8 @@ p
 							top: 0
 							left: -20px
 							background: #fff
-						&:hover
-							opacity: 0.9
+						// &:hover
+						// 	opacity: 0.9
 					iframe
 						width: 100%
 						height: 100%
@@ -3183,8 +3146,6 @@ p
 						transition: all 0.2s
 						span
 							color: #ff8ba2
-						&:hover
-							background: #f70c3b
 					.close
 						display: block
 						background: url("../img/svg/ic_close_gray.svg") center no-repeat
@@ -3196,8 +3157,6 @@ p
 						right: 30px
 						cursor: pointer
 						transition: all 0.2s
-						&:hover
-							opacity: 0.8
 
 
 	.slick-dots
@@ -3287,8 +3246,6 @@ p
 			background: url('../img/arrow-form.png') center no-repeat
 			background-size: contain
 			margin-left: 17px
-		&:hover
-			color: #de0a36
 
 .form-item
 
@@ -3358,6 +3315,280 @@ p
 		top: 21px
 		left: 0
 	
+@media screen and (min-width: 1024px)
+	.service
+		&-item
+			li
+				&:not(:first-child) 
+					a:hover:before
+						width: 20px
+			a 
+				&:hover 
+					h3
+						color: $link-color
+	.portfolio
+		.slider-head
+			.portfolio-slider-link
+				&:hover
+					&:before
+						width: 25px
+	.specoffer
+	h2
+		margin-bottom: 38px
+		&-item
+			&:hover
+				h3
+					color: #0070c9
+				p
+					color: #000
+				.specoffer-item__img
+					opacity: 0.8
+	.all-solution
+		a 
+			&:hover
+				background: #f70c3b
+	.slider-head
+	&__item
+		.play
+			&:hover
+				opacity: 0.8
+		a		
+			&:hover
+				background: #f70c3b
+	.slick-next
+		&:hover
+			opacity: 0.75
+	.slick-prev
+		&:hover
+			opacity: 0.75
+
+
+	.about
+		.slider-for
+			.about__worker
+				a
+					&:hover
+						&:before
+							width: 25px
+	.blog
+		&-item
+			&:hover
+				h3
+					color: #0070c9
+				p 
+					color: #000
+				.blog-item__category
+					color: #000 
+				.blog-item__img
+					opacity: 0.8
+		.slick-prev
+			&:hover:after
+				border-color: rgba(255,212,52,0) #de0a36 rgba(255,212,52,0) rgba(255,212,52,0)
+		.slick-next
+			&:hover:after
+				border-color: rgba(255,212,52,0) rgba(255,212,52,0) rgba(255,212,52,0) #de0a36 
+
+	.modal_close
+		&:hover
+			fill: #000
+
+	#call-back
+		.send_form
+			&:hover
+				background: #f70c3b
+
+	.consultation
+		&__order
+			a
+				&:hover
+					background: #f5f5f5
+
+	.footer
+		a
+			&:hover
+				color: #0070c9
+
+		.social
+			&-link
+				&:nth-of-type(1)
+					&:hover
+						background: #4267b2
+				&:nth-of-type(2)
+					&:hover
+						background: #e21d44
+				&:nth-of-type(3)
+					&:hover
+						background: #507299
+				&:nth-of-type(4)
+					&:hover
+						background: #ff0000
+
+	.breadscrumb-wrap
+		.breadscrumb a
+			&:hover
+				color: #0070c9
+		.ordered-consultation
+			&:hover
+				background: #f70c3b
+
+	.service-blocks
+		li
+			a:hover
+				padding-left: 4px
+				&:before
+					width: 20px
+				h3
+					color: $link-color
+
+	.dropdown-filter
+		ul
+			li
+				a
+					&:hover
+						color: #007de3
+
+	.portfolio-item
+		&:hover
+			&:after
+				opacity: 1 
+			.link-box
+				top: 0
+				opacity: 1
+			h3, p
+				bottom: 0
+				z-index: 99
+				position: relative
+		&-white
+			a
+				&:hover
+					background: #f70c3b
+			&:hover 
+				box-shadow: none
+		a
+			&:hover
+				background: #de0a36
+				color: #fff
+	.podcategory-item
+		a.details-link
+			&:hover
+				background: #fff
+				color: #000
+		&.black-text
+			&:hover
+				opacity: 0.8
+
+	.head-with-image
+		a
+			&:hover
+				background: #f70c3b
+
+	.second-menu
+		ul
+			li
+				a
+					&:hover
+						color: #007de3
+
+	.present-company
+		&__text
+			a 
+				&:hover
+					background: #f70c3b
+	.our-command
+		&__item
+			&:hover
+				span
+					background: #de0a36
+
+	.history
+		.navigation 
+			a 
+				&:hover
+					font-family: 'SFUIDisplay-Bold' 
+					color: #1588e4
+					&:before
+						background: #1588e4
+						width: 20px
+			
+	.scroll-block
+		&__link
+			&:hover
+				color: #DE0A36
+	.conference-nav
+		&__item
+			&:hover
+				opacity: 1
+
+	.vacancy-carousel
+		.slick-prev, .slick-next
+			&:hover
+				background: #de0a36
+
+	.nav-write-request
+		&__item
+			&:hover
+				background: #de0a36
+				path
+					fill: #fff
+
+	.primary_link
+		&:hover
+			background: #f70c3b
+			color: #fff
+
+	.pagination-service
+		.columns
+			.prev-service
+				&:hover 
+					.theme
+						color: #DE0A36
+					&:after
+						background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="33px" height="15px"> <path fill-rule="evenodd"  opacity="1" fill="rgb(222, 10, 54)" d="M32.806,6.993 L25.474,0.156 C25.270,-0.013 25.047,-0.045 24.806,0.059 C24.564,0.163 24.443,0.352 24.443,0.625 L24.443,5.001 L0.614,5.001 C0.436,5.001 0.289,5.059 0.175,5.177 C0.061,5.294 0.003,5.444 0.003,5.626 L0.003,9.377 C0.003,9.559 0.060,9.709 0.175,9.826 C0.290,9.943 0.436,10.001 0.614,10.001 L24.443,10.001 L24.443,14.377 C24.443,14.638 24.564,14.826 24.806,14.944 C25.048,15.048 25.271,15.008 25.475,14.826 L32.806,7.911 C32.934,7.781 32.997,7.625 32.997,7.442 C32.997,7.273 32.933,7.124 32.806,6.993 Z"/></svg>') center no-repeat;
+						background-size: contain
+			.next-service
+				&:hover 
+					.theme
+						color: #DE0A36
+					&:after
+						background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="33px" height="15px"> <path fill-rule="evenodd"  opacity="1" fill="rgb(222, 10, 54)" d="M32.806,6.993 L25.474,0.156 C25.270,-0.013 25.047,-0.045 24.806,0.059 C24.564,0.163 24.443,0.352 24.443,0.625 L24.443,5.001 L0.614,5.001 C0.436,5.001 0.289,5.059 0.175,5.177 C0.061,5.294 0.003,5.444 0.003,5.626 L0.003,9.377 C0.003,9.559 0.060,9.709 0.175,9.826 C0.290,9.943 0.436,10.001 0.614,10.001 L24.443,10.001 L24.443,14.377 C24.443,14.638 24.564,14.826 24.806,14.944 C25.048,15.048 25.271,15.008 25.475,14.826 L32.806,7.911 C32.934,7.781 32.997,7.625 32.997,7.442 C32.997,7.273 32.933,7.124 32.806,6.993 Z"/></svg>') center no-repeat;
+						background-size: contain
+
+	.print-version
+		&:hover
+			color: #000
+			&:before
+				opacity: 1
+
+	.social-contact 
+		.soc
+			&-item
+				&:hover
+					opacity: 0.7
+
+	.filials
+		.slider-for 
+			.item
+				.text
+					.with-defis
+						&:hover:before
+							width: 25px	
+				.img
+					.map 
+						.close
+							&:hover
+								opacity: 0.9
+					.requisites
+						.load-doc
+							&:hover
+								background: #f70c3b
+						.close						
+							&:hover
+								opacity: 0.8
+
+	.form-call
+		button		
+			&:hover
+				color: #de0a36
 
 @media screen and (min-width: 1025px) and (max-width: 1400px)
 	.blog .slick-next
@@ -3519,9 +3750,12 @@ p
 				font-size: 14px
 				line-height: 34px
 		.close-input
-			right: 30px
+			right: -3px
 			height: 40px
 			width: 40px
+			&.visible
+				background: url(../img/svg/ic_close_gray.svg) center no-repeat;
+				background-size: 11px
 
 	.head-menu
 		ul
@@ -3773,8 +4007,10 @@ p
 		span
 			font-size: 24px
 			line-height: 30px
+			margin-bottom: 0
 		p
 			font-size: 12px
+			line-height: 24px
 		a
 			height: 32px
 			font-size: 12px
@@ -3854,31 +4090,31 @@ p
 				height: 5px
 				width: 5px
 			&__img
-				height: 125px
+				height: 20vw
 			&__text
 				margin-bottom: 2px
 			&__descr
-				padding: 10px 15px 32px
+				padding: 13px 17px 32px
 				&>div
 					bottom: 8px
 				h3
-					font-size: 11px
-					line-height: 14px
-					margin-bottom: 6px
+					font-size: 13px
+					line-height: 16px
+					margin-bottom: 8px
 					color: #000
 				p
-					font-size: 7.5px
-					line-height: 12px
-					max-height: 36px
+					font-size: 9px
+					line-height: 15px
+					max-height: 45px
 					overflow: hidden
 					margin-bottom: 0px
 					color: #606060
 			&__category
-				font-size: 7px
+				font-size: 8px
 				color: #606060
 			&__datetime
-				font-size: 7px
-				margin-left: 2px
+				font-size: 8px
+				margin-left: 4px
 	.medium-hide
 		display: block
 	.medium-show
@@ -4374,7 +4610,7 @@ p
 			line-height: 24px
 		p
 			font-size: 10px
-			padding: 6px 30px 13px 10px
+			padding: 6px 30px 6px 10px
 		.columns:nth-of-type(1)
 			padding-left: 26px
 		.columns:nth-of-type(3)
@@ -4906,6 +5142,7 @@ p
 			.item
 				flex-direction: column
 				padding: 0
+				padding-bottom: 85px
 				.text, .img
 					width: 100%
 				.img
@@ -4972,7 +5209,7 @@ p
 							line-height: 14px
 							margin-bottom: 4px
 					.with-defis
-						letter-spacing: 0.5px
+						letter-spacing: 0px
 						padding-top: 18px
 						&:before       
 							width: 15px
@@ -5430,11 +5667,11 @@ p
 		&__price-actual
 			font-size: 21px
 		.profitable-price
-			height: 16px
-			line-height: 16px
-			font-size: 7px
-			border-radius: 8px
-			width: 80px
+			height: 20px
+			line-height: 20px
+			font-size: 9px
+			border-radius: 10px
+			width: 100px
 		&__price-old
 			margin-left: 10px
 			&:after
@@ -5590,7 +5827,7 @@ p
 				display: flex
 				align-items: center
 				justify-content: center
-				margin-top: 4px
+				margin-top: 5px
 
 			.social-wrap
 				display: flex
@@ -6105,7 +6342,7 @@ p
 		height: 89px
 		margin-bottom: 29px
 	.scroll-block
-		padding: 23px 300px 20px 17px
+		padding: 23px 18px 20px 17px
 		width: 100%
 		&__head
 			margin-right: 12px
@@ -6350,7 +6587,7 @@ p
 
 	.partners 
 		.scroll-block
-			padding: 20px 300px 25px 17px
+			padding: 20px 18px 25px 17px
 			&__head
 				margin-right: 27px
 				font-size: 21px
@@ -6582,6 +6819,18 @@ p
 		.slick-next
 			background: url('../img/svg/arrow.svg') center no-repeat
 			background-size: 10px
+	.big-butt
+		.slick-prev
+			width: 75px
+			top: 0
+			height: 90%
+			background-position: center left 15px
+		.slick-next
+			width: 75px
+			top: 0
+			height: 90%
+			background-position: center left 15px
+
 
 		
 	
@@ -6992,11 +7241,11 @@ p
 		&__price-actual
 			font-size: 18px
 		.profitable-price
-			height: 16px
-			line-height: 16px
-			font-size: 7px
-			width: 75px
-			border-radius: 8px
+			height: 18px
+			line-height: 18px
+			font-size: 9px
+			width: 82px
+			border-radius: 9px
 	.all-solution
 		height: 151px
 		padding-bottom: 5px
@@ -7218,7 +7467,7 @@ p
 		height: 76px
 		margin-bottom: 23px
 	.scroll-block
-		padding: 21px 300px 24px 15px
+		padding: 21px 15px 24px 15px
 		&__head
 			font-size: 16px
 			line-height: 30px
@@ -7298,7 +7547,7 @@ p
 			line-height: 25px
 	.partners 
 		.scroll-block
-			padding: 15px 250px 17px 14px
+			padding: 15px 15px 17px 14px
 			&__head
 				margin-right: 22px
 				font-size: 18px

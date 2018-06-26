@@ -88,15 +88,17 @@ $( ".close-input" ).click(function(e) {
       $(this).removeClass('not-visible');
       $(this).addClass('visible');
       $(this).fadeIn(300);
-      console.log('удалили ');
       AnimateRotate($('.close-input'), 90);
       // $(this).fadeIn(300);
     } 
     else{
       $(this).removeClass('visible');
       $(this).addClass('not-visible');
-      $('.search input').css('background-image', 'none');
-      $('.search input').delay(1500).css('background-image', 'url(../img/svg/ic_search_link.svg)');
+      $('.search input').hide(0);
+      $('.search input').delay(100).fadeIn(200);
+
+
+
       $(this).fadeOut(300);
       // $(this).fadeOut(300);
       AnimateRotate($('.close-input'), -90);
@@ -169,6 +171,7 @@ $( ".mob-button" ).click(function(e) {
     $(".head-menu").slideToggle(200);
     $('.curtain').fadeOut(0);
     $('.search').removeClass('active');
+    $('.phone').fadeToggle(200);
     $('.fast-link.open, .result-search.open').hide(0);
     $(this).children('img').attr("src","img/close-menu.png");
 });
@@ -219,6 +222,15 @@ $( ".open-requisites" ).click(function(e) {
 });
 $(".show-all-history").click(function(e) {
     $('.will-be-hide').slideToggle(200);
+    if($(this).hasClass('opened')){
+     var id  = ".history",
+
+    //узнаем высоту от начала страницы до блока на который ссылается якорь
+      top = $(id).offset().top - 100;
+    
+    //анимируем переход на расстояние - top за 1500 мс
+    $('body,html').animate({scrollTop: top}, 600);
+    }
     $(this).toggleClass("opened");
     var text = $(this).text();
     $(this).text($(this).attr("data-hide"));
@@ -350,16 +362,12 @@ wnd.scroll(function(){
 
             var top = 0;
             $( ".history__text .history__item" ).each(function( index ){
-              // console.log("Do bloka" + $(this).offset().top);
-              // console.log("Do okna" + wnd.scrollTop());
-              // console.log("Vysota" + $(this).outerHeight(true));
               if($(this).offset().top - 200 < wnd.scrollTop()   && $(this).offset().top + $(this).outerHeight(true) -200 > wnd.scrollTop()  )
               {
                 
                 var href = $("a[href*=\"#" + $(this).attr('id') + '\"]');
                 $('.navigation__container a.active').not(this).removeClass('active');
                 $(href).addClass('active');
-                console.log($(this).attr('id'));
                 return false;
               }
             });
@@ -400,9 +408,17 @@ wnd.scroll(function(){
       if ($("#techno-carousel").length != 0) { 
         var scrollTop =  $('#techno-carousel').offset().top - $(window).height() + 100;
         if($(this).scrollTop() > scrollTop){
-          var percent = $(window).height()/50;
+          if($(window).width() > '767'){
+            var percent = $(window).height()/80;
+          }
+          else{
+            var percent = $(window).height()/100;
+          }
           var res = ($(this).scrollTop() - scrollTop)/percent;
-          if (res < 100){
+          var wdth = $('#techno-carousel').width();
+          var percWidth = $(".row").width()/wdth * 100;
+          var max = 100 - percWidth;
+          if (res < max){
             $("#techno-carousel").css("transform", "translateX(-"+ res+"%)");
           }
         }
@@ -411,9 +427,17 @@ wnd.scroll(function(){
       if ($("#partners-carousel").length != 0) { 
         var scrollTop =  $('#partners-carousel').offset().top - $(window).height() + 150;
         if($(this).scrollTop() > scrollTop){
-          var percent = $(window).height()/50;
+          if($(window).width() > '767'){
+            var percent = $(window).height()/50;
+          }
+          else{
+            var percent = $(window).height()/70;
+          }
           var res = ($(this).scrollTop() - scrollTop)/percent;
-          if (res < 100){
+          var wdth = $('#partners-carousel').width();
+          var percWidth = $(".row").width()/wdth * 100;
+          var max = 100 - percWidth;
+          if (res < max){
             $("#partners-carousel").css("transform", "translateX(-"+ res+"%)");
           }
         }
@@ -430,7 +454,7 @@ $(document).ready(function(){
     $('.go_to').click( function(){ // ловим клик по ссылке с классом go_to
   var scroll_el = $(this).attr('href'); // возьмем содержимое атрибута href, должен быть селектором, т.е. например начинаться с # или .
         if ($(scroll_el).length != 0) { // проверим существование элемента чтобы избежать ошибки
-      $('html, body').animate({ scrollTop: $(scroll_el).offset().top - $('.header').height() - 20}, 300); // анимируем скроолинг к элементу scroll_el
+      $('html, body').animate({ scrollTop: $(scroll_el).offset().top - $('.header').height() - 20}, 600, 'swing'); // анимируем скроолинг к элементу scroll_el
         }
       return false; // выключаем стандартное действие
     });
@@ -576,7 +600,7 @@ $(document).ready(function() {
               settings: {
                 slidesToShow: 3,
                 centerMode: true,
-                centerPadding: '65px',
+                centerPadding: '25px',
                 arrows: false
               }
             },
@@ -698,6 +722,13 @@ $(".mobile-accord .tabs").on('click', function(e){
       else{
         $(this).nextAll().slideToggle();
       }      
+       var id  = ".mobile-accord",
+
+      //узнаем высоту от начала страницы до блока на который ссылается якорь
+        top = $(id).offset().top - 40;
+      
+      //анимируем переход на расстояние - top за 1500 мс
+      $('body,html').animate({scrollTop: top}, 300);
       $(this).toggleClass('open');
     }
 });
