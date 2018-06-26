@@ -68,6 +68,12 @@ p {
   padding-right: 15px;
   padding-left: 15px; }
 
+.slick-slider {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text; }
+
 .slider-head {
   height: 100vh;
   width: 100%;
@@ -92,19 +98,21 @@ p {
     height: 100vh;
     background-size: cover;
     padding-top: 92px;
-    padding-bottom: 92px; }
+    padding-bottom: 92px;
+    background-color: #000; }
     .slider-head__item .row {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
       flex-direction: column;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      justify-content: center;
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
       -webkit-box-align: start;
       -ms-flex-align: start;
       align-items: flex-start;
-      height: 100%; }
+      height: 100%;
+      padding-top: 6vh; }
     .slider-head__item h1, .slider-head__item .h1 {
       font-weight: 300;
       font-size: 48px;
@@ -897,7 +905,7 @@ p {
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both; }
     .search.active input, .search.active input:hover, .search.active input:focus {
-      background: url("../img/svg/ic_search_link-gray.svg");
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><defs><style>.cls-1 {fill-rule: evenodd; fill: #848484;}</style></defs><path id="ic_search_link" class="cls-1" d="M423.806,221.866l-3.847-3.847a6.745,6.745,0,1,0-.944.943l3.848,3.844A0.666,0.666,0,0,0,423.806,221.866Zm-9.062-2.721a5.4,5.4,0,1,1,5.4-5.4A5.408,5.408,0,0,1,414.744,219.145Z" transform="translate(-408 -207)"/></svg>');
       background-color: transparent;
       background-position: center left 20px;
       background-repeat: no-repeat; }
@@ -910,7 +918,7 @@ p {
     padding: 0;
     border: none;
     outline: none;
-    background: transparent url("../img/svg/ic_search_link.svg") center left 0px no-repeat;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><defs><style>.cls-1 {fill-rule: evenodd; fill: #fff;}</style></defs><path id="ic_search_link" class="cls-1" d="M423.806,221.866l-3.847-3.847a6.745,6.745,0,1,0-.944.943l3.848,3.844A0.666,0.666,0,0,0,423.806,221.866Zm-9.062-2.721a5.4,5.4,0,1,1,5.4-5.4A5.408,5.408,0,0,1,414.744,219.145Z" transform="translate(-408 -207)"/></svg>') center left 0px no-repeat;
     width: 100%;
     height: 45px;
     color: #fff;
@@ -924,7 +932,7 @@ p {
       -webkit-box-shadow: none;
       box-shadow: none; }
     .search input:hover, .search input:focus {
-      background: transparent url("../img/svg/ic_search_link-gray.svg") center left 0px no-repeat;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><defs><style>.cls-1 {fill-rule: evenodd; fill: #848484;}</style></defs><path id="ic_search_link" class="cls-1" d="M423.806,221.866l-3.847-3.847a6.745,6.745,0,1,0-.944.943l3.848,3.844A0.666,0.666,0,0,0,423.806,221.866Zm-9.062-2.721a5.4,5.4,0,1,1,5.4-5.4A5.408,5.408,0,0,1,414.744,219.145Z" transform="translate(-408 -207)"/></svg>') center left 0px no-repeat;
       cursor: pointer; }
     .search input::-webkit-input-placeholder {
       color: #808080; }
@@ -1550,7 +1558,7 @@ p {
         vertical-align: middle;
         width: 63px;
         height: 42px;
-        background: url("../img/logoform.png") center left 8px no-repeat;
+        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="42px" height="41px"><path fill-rule="evenodd"  fill="rgb(222, 10, 54)" d="M41.911,22.674 C41.612,26.172 40.380,29.571 38.434,32.476 C35.327,37.113 30.294,40.555 24.685,40.989 C27.854,39.722 30.909,37.129 31.880,33.728 C29.726,36.524 26.858,38.657 23.485,39.680 C20.016,40.731 16.237,40.472 12.869,39.176 C9.334,37.815 6.223,35.353 4.030,32.245 C5.462,33.173 7.068,33.789 8.698,34.260 C9.486,34.487 10.340,34.655 11.171,34.767 C11.628,34.829 12.086,34.869 12.546,34.877 C12.797,34.882 13.049,34.877 13.300,34.860 C13.432,34.851 13.554,34.817 13.674,34.887 C13.635,34.873 13.599,34.846 13.562,34.828 C13.944,34.757 14.320,34.649 14.681,34.499 C9.279,33.976 3.603,30.971 1.682,25.553 C0.712,22.920 0.824,20.011 1.445,17.310 C1.594,18.834 2.027,20.338 2.770,21.676 C3.520,23.026 4.623,24.336 6.123,24.834 C6.052,24.699 6.001,24.554 5.977,24.404 C5.968,24.432 5.943,24.455 5.932,24.482 C4.028,21.766 2.560,18.579 2.632,15.187 C2.699,12.011 4.210,9.124 6.417,6.922 C6.207,8.126 6.076,9.353 6.143,10.576 C6.204,11.698 6.356,13.046 7.238,13.841 C6.459,10.401 7.198,6.771 9.578,4.126 C11.859,1.590 15.209,0.365 18.513,-0.013 C17.341,0.497 16.148,0.988 15.083,1.708 C14.559,2.061 14.070,2.473 13.661,2.959 C13.446,3.214 13.254,3.490 13.091,3.783 C12.885,4.156 12.799,4.541 12.701,4.954 C13.317,4.228 13.937,3.566 14.739,3.046 C15.513,2.544 16.360,2.174 17.233,1.885 C19.135,1.255 21.139,0.993 23.134,0.933 C25.114,0.873 27.014,1.145 28.889,1.802 C30.666,2.426 32.376,3.296 33.898,4.417 C34.733,5.032 35.464,5.753 36.215,6.466 C36.062,6.325 35.911,6.184 35.757,6.044 C35.918,6.213 36.077,6.385 36.228,6.564 C33.522,3.881 29.887,2.290 26.090,2.187 C22.237,2.082 18.447,3.435 15.553,6.014 C12.183,9.018 10.272,13.427 10.394,17.965 C10.876,16.527 11.652,15.195 12.598,14.018 C12.891,13.653 13.201,13.303 13.530,12.972 C13.660,12.842 13.794,12.672 13.971,12.604 C13.571,12.543 13.147,12.524 12.747,12.599 C13.745,10.916 15.659,9.584 17.447,9.016 C17.922,8.867 18.235,8.776 18.443,8.718 C17.096,8.241 15.113,8.631 17.146,8.008 C19.010,7.437 20.578,7.318 21.889,7.434 C21.034,5.491 17.850,4.908 20.441,5.625 C27.305,7.527 31.416,15.515 31.416,15.515 L31.362,15.494 C32.302,17.197 33.071,18.998 33.716,20.834 C33.879,21.299 34.031,21.768 34.165,22.242 C34.230,22.474 34.292,22.707 34.347,22.941 C34.392,23.135 34.511,23.410 34.375,23.585 C33.825,24.289 33.220,25.022 32.356,25.333 C31.438,25.664 30.562,25.271 29.681,25.013 C28.679,24.720 27.690,24.391 26.714,24.022 C25.821,23.683 24.892,23.377 24.064,22.894 C23.289,22.441 22.595,21.845 21.992,21.178 C20.802,19.860 19.810,18.148 19.513,16.372 C19.453,16.015 19.425,15.650 19.445,15.287 C18.945,18.384 19.796,21.595 21.771,24.018 C23.601,26.262 26.289,27.711 29.159,27.974 C32.172,28.251 35.208,27.222 37.445,25.166 C38.531,24.166 39.416,22.945 40.025,21.595 C40.361,20.850 40.610,20.099 40.703,19.286 C40.703,19.286 41.254,14.630 39.795,11.899 C39.795,11.899 40.421,12.994 40.725,13.892 C41.049,14.848 41.349,15.814 41.556,16.802 C41.959,18.730 42.079,20.712 41.911,22.674 ZM28.765,16.710 C28.721,17.062 28.715,17.672 29.093,17.853 C29.230,17.918 29.388,17.908 29.531,17.872 C29.623,17.808 29.668,17.832 29.668,17.945 C29.700,18.047 29.728,18.152 29.748,18.257 C29.822,18.636 29.800,19.047 29.589,19.379 C30.325,18.687 30.065,17.447 29.719,16.637 C29.387,15.858 28.730,14.956 27.789,15.018 C28.337,15.382 28.824,16.014 28.765,16.710 ZM28.765,16.710 C28.824,16.021 28.764,16.711 28.765,16.710 ZM1.682,25.553 C2.847,28.841 0.711,22.917 1.682,25.553 Z"/></svg>') center no-repeat;
         background-size: contain; }
     #modal_form .form_wrap form {
       padding: 17px 10px 5px;
@@ -1936,7 +1944,7 @@ p {
   letter-spacing: 0; }
 
 .service-blocks p {
-  max-width: 330px;
+  max-width: 335px;
   line-height: 24px;
   margin-bottom: 11px; }
 
@@ -3136,9 +3144,9 @@ p {
     height: 14px;
     vertical-align: sub;
     margin-right: 9px;
-    background: url("../img/contacts-page/print-icon.png") center no-repeat;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" viewBox="0 0 16 14"><defs><style>.cls-1 {fill-rule: evenodd; fill: #BCBDBD}</style></defs><path id="Forma_1" data-name="Forma 1" class="cls-1" d="M1210,63h8v2h-8V63Zm11,3h-14a1,1,0,0,0-1,1v5a1,1,0,0,0,1,1h3v4h8V73h3a1,1,0,0,0,1-1V67A1,1,0,0,0,1221,66Zm-4,10h-6V71h6v5Zm4.22-8.5a0.721,0.721,0,0,1-.72.725,0.725,0.725,0,1,1,0-1.45A0.721,0.721,0,0,1,1221.22,67.5Z" transform="translate(-1206 -63)"/></svg>') center no-repeat;
     background-size: contain;
-    opacity: 0.22;
+    opacity: 1;
     -webkit-transition: all 0.2s;
     -o-transition: all 0.2s;
     transition: all 0.2s; }
@@ -3699,7 +3707,7 @@ p {
   .print-version:hover {
     color: #000; }
     .print-version:hover:before {
-      opacity: 1; }
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" viewBox="0 0 16 14"><defs><style>.cls-1 {fill-rule: evenodd; fill: #000}</style></defs><path id="Forma_1" data-name="Forma 1" class="cls-1" d="M1210,63h8v2h-8V63Zm11,3h-14a1,1,0,0,0-1,1v5a1,1,0,0,0,1,1h3v4h8V73h3a1,1,0,0,0,1-1V67A1,1,0,0,0,1221,66Zm-4,10h-6V71h6v5Zm4.22-8.5a0.721,0.721,0,0,1-.72.725,0.725,0.725,0,1,1,0-1.45A0.721,0.721,0,0,1,1221.22,67.5Z" transform="translate(-1206 -63)"/></svg>') center no-repeat; }
   .social-contact .soc-item:hover {
     opacity: 0.7; }
   .filials .slider-for .item .text .with-defis:hover:before {
@@ -3836,7 +3844,7 @@ p {
       background-size: 12px;
       padding-left: 30px; }
       .search input:hover, .search input:focus {
-        background: transparent url(../img/svg/ic_search_link-gray.svg) center left 0 no-repeat;
+        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><defs><style>.cls-1 {fill-rule: evenodd; fill: #848484;}</style></defs><path id="ic_search_link" class="cls-1" d="M423.806,221.866l-3.847-3.847a6.745,6.745,0,1,0-.944.943l3.848,3.844A0.666,0.666,0,0,0,423.806,221.866Zm-9.062-2.721a5.4,5.4,0,1,1,5.4-5.4A5.408,5.408,0,0,1,414.744,219.145Z" transform="translate(-408 -207)"/></svg>') center left 0px no-repeat;
         background-size: 12px; }
     .search.active {
       width: 77%;
@@ -3849,7 +3857,7 @@ p {
       -webkit-animation-fill-mode: both;
       animation-fill-mode: both; }
       .search.active input, .search.active input:focus, .search.active input:hover {
-        background: transparent url(../img/svg/ic_search_link-gray.svg) center left 6px no-repeat;
+        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><defs><style>.cls-1 {fill-rule: evenodd; fill: #848484;}</style></defs><path id="ic_search_link" class="cls-1" d="M423.806,221.866l-3.847-3.847a6.745,6.745,0,1,0-.944.943l3.848,3.844A0.666,0.666,0,0,0,423.806,221.866Zm-9.062-2.721a5.4,5.4,0,1,1,5.4-5.4A5.408,5.408,0,0,1,414.744,219.145Z" transform="translate(-408 -207)"/></svg>') center left 6px no-repeat;
         background-size: 12px; }
       .search.active input {
         padding-left: 30px; }
@@ -3893,7 +3901,8 @@ p {
       height: 450px; }
       .slider-head__item .row {
         padding-right: 50px;
-        padding-left: 80px; }
+        padding-left: 80px;
+        padding-top: 3vh; }
       .slider-head__item h1, .slider-head__item .h1 {
         font-size: 29px;
         line-height: 38px;
@@ -5181,11 +5190,13 @@ p {
         width: 100%; }
       .filials .slider-for .item .img {
         height: 235px; }
+        .filials .slider-for .item .img .map {
+          height: 262px; }
         .filials .slider-for .item .img .requisites {
           background: #fafafa;
           padding: 15px 18px;
           position: relative;
-          height: 235px;
+          height: 262px;
           -webkit-box-shadow: none;
           box-shadow: none; }
           .filials .slider-for .item .img .requisites .close {
@@ -5521,7 +5532,7 @@ p {
       animation: none;
       padding-right: 0; }
       .search.active input, .search.active input:focus, .search.active input:hover {
-        background: transparent url(../img/svg/ic_search_link-gray.svg) center left 0 no-repeat;
+        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><defs><style>.cls-1 {fill-rule: evenodd; fill: #848484;}</style></defs><path id="ic_search_link" class="cls-1" d="M423.806,221.866l-3.847-3.847a6.745,6.745,0,1,0-.944.943l3.848,3.844A0.666,0.666,0,0,0,423.806,221.866Zm-9.062-2.721a5.4,5.4,0,1,1,5.4-5.4A5.408,5.408,0,0,1,414.744,219.145Z" transform="translate(-408 -207)"/></svg>') center left 0px no-repeat;
         padding-left: 25px;
         padding-right: 45px; }
     .search .fast-link.open, .search .result-search.open {
@@ -6117,9 +6128,9 @@ p {
       width: 20px; }
   .head-with-image {
     padding-top: 87px;
-    height: 580px; }
+    height: 80vh; }
     .head-with-image.contacts-box {
-      height: 443px;
+      height: 80vh;
       background-image: url("../img/contacts-page/back-tiser-mob.png") !important;
       background-repeat: no-repeat;
       background-position: center top 45px;
@@ -6451,7 +6462,8 @@ p {
     font-size: 26px; }
   .conferencies .columns {
     padding: 0 18px;
-    max-width: 100%; }
+    max-width: 100%;
+    position: relative; }
     .conferencies .columns.medium-9 {
       padding-bottom: 26px; }
     .conferencies .columns.medium-3 {
@@ -6467,6 +6479,25 @@ p {
   .conference-nav {
     margin-top: 0;
     max-width: 100%; }
+    .conference-nav__line {
+      content: "";
+      width: 31%;
+      height: 2px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 99;
+      background: #3f6fc5;
+      -webkit-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s; }
+      .conference-nav__line-block {
+        position: absolute;
+        top: 1px;
+        left: 16px;
+        right: 16px;
+        height: 2px;
+        z-index: 99; }
     .conference-nav__item {
       border-left: 0;
       padding-left: 15px;
@@ -6483,14 +6514,6 @@ p {
         border-left: 3px;
         padding-left: 15px;
         padding-right: 15px; }
-        .conference-nav__item.active:before, .conference-nav__item.slick-current:before {
-          content: "";
-          width: 100px;
-          height: 2px;
-          position: absolute;
-          top: -2px;
-          left: 16px;
-          background: #3f6fc5; }
     .conference-nav .slick-prev {
       display: none !important; }
     .conference-nav .slick-next {
@@ -6890,17 +6913,7 @@ p {
     background-size: 10px; }
   .white-butt .slick-next {
     background: url("../img/svg/arrow.svg") center no-repeat;
-    background-size: 10px; }
-  .big-butt .slick-prev {
-    width: 75px;
-    top: 0;
-    height: 90%;
-    background-position: center left 15px; }
-  .big-butt .slick-next {
-    width: 75px;
-    top: 0;
-    height: 90%;
-    background-position: center left 15px; } }
+    background-size: 10px; } }
 
 @media screen and (min-width: 450px) and (max-width: 767px) {
   .about .slider-for__item {
@@ -6949,9 +6962,9 @@ p {
   .vismob a {
     line-height: 23px; }
   .head-with-image {
-    height: 503px; }
+    height: 80vh; }
     .head-with-image.contacts-box {
-      height: 385px; }
+      height: 80vh; }
     .head-with-image span {
       font-size: 12px;
       line-height: 20px; }
@@ -7145,9 +7158,11 @@ p {
         margin-right: 5px; }
   .filials .slider-for .item .img {
     height: 203px; }
+    .filials .slider-for .item .img .map {
+      height: 225px; }
     .filials .slider-for .item .img .requisites {
       padding: 6px 16px;
-      height: 203px; }
+      height: 225px; }
       .filials .slider-for .item .img .requisites h3 {
         font-size: 13px; }
       .filials .slider-for .item .img .requisites p {
