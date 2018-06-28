@@ -56,6 +56,8 @@ p
 	user-select: text
 .slider-head
 	height: 100vh
+	height: calc(100vh - 45px)
+	margin-top: 45px
 	width: 100%
 	background-position: center
 	background-repeat: no-repeat 
@@ -76,6 +78,7 @@ p
 		color: #fff
 	&__item
 		height: 100vh
+		height: calc(100vh - 45px)
 		background-size: cover
 		padding-top: 92px
 		padding-bottom: 92px
@@ -885,11 +888,13 @@ p
 		width: 100%
 	.slider-head
 		height: 850px
+		margin-top: 0
 		&__item
 			height: 850px
-			&.center-content
+			background-color: #292a2b
 			.row
 				padding-left: 50px
+				padding-top: 0
 			p 
 				margin-bottom: 25px
 
@@ -1504,7 +1509,25 @@ p
 	left: 0
 	cursor: pointer
 	display: none
-	
+
+.secondary-button
+	border: 1px solid #e6e6e6
+	border-radius: 3px
+	line-height: 36px
+	height: 40px
+	padding: 0 29px
+	display: inline-block
+	text-align: center
+	transition: all 0.3s 
+	font-family: 'SFUIDisplay-Semibold'
+	font-size: 14px
+	background: #fff
+	&:focus
+		font-family: 'SFUIDisplay-Semibold'
+	&.white-text
+		color: #fff
+	&.black-text
+		color: #000
 .consultation
 	height: 105px
 	background: #fff
@@ -1525,21 +1548,7 @@ p
 			color: #999
 	&__order
 		a
-			border: 1px solid #e6e6e6
-			border-radius: 3px
-			color: #000
-			line-height: 36px
-			height: 40px
-			display: block
-			width: 220px
-			text-align: center
-			transition: all 0.3s 
-			font-family: 'SFUIDisplay-Semibold'
-			font-size: 14px
-			background: #fff
 			margin: 0
-			// &:hover
-			// 	background: #f5f5f5
 	&__contacts
 		text-align: left
 		p
@@ -3051,10 +3060,15 @@ p
 				height: 100%
 				vertical-align: top
 				height: 530px
+				position: relative
+				&.hide-dots
+					.slick-dots
+						display: none
 				.slider-text, .slick-list, .slick-track
 					height: 100%
 				.working
 					height: 100%
+					width: 100%
 					border-radius: 3px
 					padding-left: 23px
 					padding-bottom: 18px
@@ -3073,7 +3087,11 @@ p
 					width: 100%
 					height: 100%
 					display: none
-					position: relative
+					position: absolute
+					top: 0
+					left: 0
+					right: 0
+					background-color: #fff
 					.close
 						display: block
 						background: #fff url("../img/svg/ic_close_black.svg") center left 8px no-repeat
@@ -3103,8 +3121,13 @@ p
 				.requisites
 					padding: 28px 33px
 					display: none
+					position: absolute
+					top: 0
+					left: 0
+					right: 0
 					height: 530px
 					border-radius: 3px
+					background: #fff
 					box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.1)
 					.bold
 						font-family: 'SFUIDisplay-Semibold'
@@ -3376,11 +3399,9 @@ p
 			&:hover
 				background: #f70c3b
 
-	.consultation
-		&__order
-			a
-				&:hover
-					background: #f5f5f5
+	.secondary-button
+		&:hover
+			background: #f5f5f5
 
 	.footer
 		a
@@ -3615,6 +3636,9 @@ p
 			left: 70%
 
 @media screen and (min-width: 767px) and (max-width: 1024px)
+	.blog .slick-arrow
+		display: none!important
+		
 	#modal_form
 		width: 718px
 		height: 444px
@@ -3811,6 +3835,11 @@ p
 	
 	.gadgets-anim
 		background-size: 477px
+	.secondary-button
+		padding: 0 17px
+		height: 25px
+		line-height: 23px
+		font-size: 9px
 	.consultation
 		height: 70px
 		padding: 20px 0
@@ -3825,12 +3854,6 @@ p
 				width: 165px
 		&__order
 			padding-left: 4px
-			a
-				width: 138px
-				height: 25px
-				line-height: 23px
-				font-size: 9px
-				margin: 0
 		&__contacts 
 			text-align: left
 			padding-left: 0
@@ -4083,10 +4106,10 @@ p
 				.white-block
 					background-size: contain
 					padding-bottom: 20px
-					min-height: 238px
+					min-height: 240px
 			&.three-for-row
 				.white-block
-					min-height: 248px
+					min-height: 250px
 			&.three-for-row
 				padding: 0 12px
 			&.three-for-row:nth-of-type(3n+2)
@@ -5179,7 +5202,6 @@ p
 					.requisites
 						background: #fafafa
 						padding: 15px 18px
-						position: relative
 						height: 262px
 						box-shadow: none
 						.close
