@@ -27,25 +27,22 @@ gulp.task('sass', ['clean-css'], function () {
 
 gulp.task('mincss', ['sass'], function () {
     return gulp.src('./src/css/**/*.css')
-        .pipe(concatCss("bundle.css"))
+        //.pipe(concatCss("bundle.css"))
         .pipe(cleanCSS({compatibility: 'ie8'}))
-        .pipe(rename("bundle.min.css"))
-        //.pipe(cssnano())
-    
+        //.pipe(rename("bundle.min.css"))
+        //.pipe(cssnano())    
     .pipe(gulp.dest('./src/css'));
 });
 
 //Проставление префиксов для кроссбраузерности 
 gulp.task('autoprefix', ['mincss'], function () {
-    return gulp.src('./src/css/**/*.css')
-    
+    return gulp.src('./src/css/**/*.css')    
         .pipe(sourcemaps.init({loadMaps: true}))
         .pipe(autoprefixer({
             browsers: ['last 5 versions'],
             cascade: false
-        }))
-    
-        .pipe(sourcemaps.write('.'))
+        }))    
+        //.pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('./src/css'));
 });
 

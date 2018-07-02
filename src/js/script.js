@@ -2,12 +2,8 @@ var fixNavOutLeft = 0;
 var fixNavOutTop = 0;
 
 (function($) { 
-var el = $(".invideo__head");
-var el2 = $(".invideo__media");
-
-//Set The Tween Width
- // TweenMax.to(el, 2, {width:"-=50%", delay:3, ease:Power2.easeOut});
- // TweenLite.to(el2, 2, {css: {right:"0"}, delay:3, ease:Power2.easeOut});
+  var el = $(".invideo__head");
+  var el2 = $(".invideo__media");
 })(jQuery);
 
 new WOW().init();
@@ -53,8 +49,6 @@ addEvent(document, "mouseout", function(e) {
     e = e ? e : window.event;
     var from = e.relatedTarget || e.toElement;
     if (!from || from.nodeName == "HTML") {
-        // stop your drag event here
-        // for now we can just use an alert
         if ($('li.arrow-down>a').is(e.target)){                
           $(".curtain").fadeOut(150);
         }
@@ -405,15 +399,8 @@ wnd.scroll(function(){
         var top = wnd.scrollTop(),
             opacity = top > 200 ? 1 : top * 5 / 1000,
             scale = 1 - (top > 200 ? 1 : top * 2 / 1000);
-            //sizeText = top > 400 ? 1 : top * 5 / 1000,
-            //sizeText1 = 7 - sizeText*1.5,
-            //lineH = 9.5 - sizeText*1.5,
-            //maxWidth = 85 - sizeText*20;
         $("header").css("background", "rgba(0, 0, 0, " + opacity + ")");
         $(".mobile-tiser h1").css("transform", "scale(" + scale + ")");
-        //$(".mobile-tiser h1").css("font-size", sizeText1 + "vw");
-        //$(".mobile-tiser h1").css("line-height", lineH + "vw");
-        //$(".mobile-tiser h1").css("max-width", maxWidth + "%");
         $(".mobile-tiser h1").css("opacity", 1 - opacity);
     }
     if ($(window).width() > '767'){
@@ -792,12 +779,8 @@ $(".mobile-accord .tabs").on('click', function(e){
       else{
         $(this).nextAll().slideToggle();
       }      
-       var id  = ".mobile-accord",
-
-      //узнаем высоту от начала страницы до блока на который ссылается якорь
-        top = $(id).offset().top - 40;
-      
-      //анимируем переход на расстояние - top за 1500 мс
+      var id  = ".mobile-accord",
+      top = $(id).offset().top - 40;
       $('body,html').animate({scrollTop: top}, 300);
       $(this).toggleClass('open');
     }
@@ -842,46 +825,11 @@ $(document).ready(function() {
       anim();
     }
     setTimeout(func, 3000);
-  
-  // slider2.on('afterChange', function(event, slick, currentSlide) { 
-  //   if (currentSlide === 0) {      
-      
-  //     function func() {  
-  //       anim();
-  //     }
-  //     setTimeout(func, 3000);
-  //   }
-  //   else if (currentSlide != 0) {
-  //     $(".invideo__media").animate({"right":"-50%"}, 0);
-  //     $(".invideo__media").animate({opacity: "0"}, 0);
-  //     $(".invideo__head").animate({"width": "100%"}, 0);
-  //     $(".invideo__head").removeClass("scaled");
-  //     $(".invideo").removeClass("left-back");
-  //   }
-  // });
 });
 
 function playsec(){ 
   $('#second-video').attr('autoplay', 'autoplay');
 }
-
-// $(function() { 
-//     var videos  = $("#second-video");
-
-//         videos.on("click", function(){
-//             var elm = $(this),
-//                 conts   = elm.contents(),
-//                 le      = conts.length,
-//                 ifr     = null;
-
-//             for(var i = 0; i<le; i++){
-//               if(conts[i].nodeType == 8) ifr = conts[i].textContent;
-//             }
-
-//             elm.addClass("player").html(ifr);
-//             elm.off("click");
-//         });
-// });
 
 function anim(){
   $(".invideo__media").stop(true, true).delay(3000).animate({
@@ -897,27 +845,7 @@ function anim(){
       $(".invideo").addClass("left-back");
 }
 
-// $(document).ready(function() { // вся мaгия пoсле зaгрузки стрaницы
-//   $('.open-modal-btn').click( function(event){ // лoвим клик пo ссылки с id="go"
-//     event.preventDefault(); // выключaем стaндaртную рoль элементa
-//     $('#overlay').fadeIn(400, // снaчaлa плaвнo пoкaзывaем темную пoдлoжку
-//       function(){ // пoсле выпoлнения предъидущей aнимaции
-//         $('#modal_form') 
-//           .css('display', 'flex') // убирaем у мoдaльнoгo oкнa display: none;
-//           .animate({opacity: 1, top: '50%'}, 200); // плaвнo прибaвляем прoзрaчнoсть oднoвременнo сo съезжaнием вниз
-//     });
-//   });
-//   /* Зaкрытие мoдaльнoгo oкнa, тут делaем тo же сaмoе нo в oбрaтнoм пoрядке */
-//   $('#modal_close, #overlay').click( function(){ // лoвим клик пo крестику или пoдлoжке
-//     $('#modal_form')
-//       .animate({opacity: 0, top: '45%'}, 200,  // плaвнo меняем прoзрaчнoсть нa 0 и oднoвременнo двигaем oкнo вверх
-//         function(){ // пoсле aнимaции
-//           $(this).css('display', 'none'); // делaем ему display: none;
-//           $('#overlay').fadeOut(400); // скрывaем пoдлoжку
-//         }
-//       );
-//   });
-// });
+
 
 $(document).ready(function() { // зaпускaем скрипт пoсле зaгрузки всех элементoв
     /* зaсунем срaзу все элементы в переменные, чтoбы скрипту не прихoдилoсь их кaждый рaз искaть при кликaх */
@@ -1038,13 +966,6 @@ $(document).ready(function() {
   }
 });
 
-// $('input').keyup(function() {
-//   if($(this).val())
-//       $(this).addClass('has_value');
-//     else
-//       $(this).removeClass('has_value');
-// });
-
 function isVisible(tag) {
     var t = $(tag);
     var w = $(window);
@@ -1053,23 +974,3 @@ function isVisible(tag) {
     var tb = tt + t.height();
     return ((tb <= wt + w.height()) && (tt >= wt));
 }
-
-// $(function () {
-//     $(window).scroll(function () {
-//         var b = $("#technology");
-//         if (isVisible(b)) {
-//             setput();
-//         }
-//     });
-// });
-
-// function setput(){
-//   $(window).bind('mousewheel DOMMouseScroll MozMousePixelScroll', function(event) {
-//     delta = parseInt(event.originalEvent.wheelDelta || -event.originalEvent.detail);
-//     if (delta >= 0) {
-//       $(".scroll-block").css("transform", "translateX(-"+delta+"%)");
-//     } else {
-//       $(".scroll-block").css("transform", "translateX(-"+(-1*delta)+"%)");
-//     }
-//   });
-// }
