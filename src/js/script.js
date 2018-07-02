@@ -158,22 +158,7 @@ $( ".seen-all").click(function(e) {
     
 });
 
-$('.form-call input').focus(function(){
-  $('.form-call').addClass('focused');
-  var refreshId = setInterval(function(){
-    if($('.typed-cursor').hasClass('typed-cursor--blink'))
-    {      
-      clearInterval(refreshId);
-      $('.typed-cursor').hide(0);
-      typed.stop();
-    }
-  }, 95);
-});
-$('.form-call input').blur(function(){
-  $('.form-call').removeClass('focused');
-  $('.typed-cursor').show(0);
-  typed.start();
-});
+
 
 $( ".mob-button" ).click(function(e) {
     $(".head-menu").slideToggle(200);
@@ -501,6 +486,7 @@ wnd.scroll(function(){
 });
 
 $(document).ready(function(){
+    $('.subjects').fancySelect();
     var tooltip = $(".tooltip-block")
     if ($(tooltip).length != 0) { // проверим существование элемента чтобы избежать ошибки
         $(tooltip).delay(1000).fadeIn(1000);
@@ -546,8 +532,40 @@ $(document).ready(function() {
       }
   }
 
-    if($("div").is(".slider-for")){
+    if($("div").is(".filials .slider-for")){
         $('.slider-for').not('.reviews .slider-for').slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          fade: true,
+          adaptiveHeight: true,
+          infinite: true,
+          swipe: false,
+          draggable: false,
+          asNavFor: '.slider-nav',
+          responsive: [
+            {
+              breakpoint: 761,
+              settings: {
+                arrows: false
+              }
+            },
+            {
+              breakpoint: 1025,
+              settings: {
+                arrows: true
+              }
+            },
+            {
+              breakpoint: 1280,
+              settings: {
+                arrows: true
+              }
+            }
+          ]
+        });
+    } 
+    if($("div").is(".default.slider-for")){
+        $('.slider-for').slick({
           slidesToShow: 1,
           slidesToScroll: 1,
           fade: true,
@@ -620,6 +638,14 @@ $(document).ready(function() {
           adaptiveHeight: true,
           responsive: [
             {
+              breakpoint: 1025,
+              settings: {
+                slidesToShow: 5,
+                centerMode: true,
+                centerPadding: '0',
+              }
+            },            
+            {
               breakpoint: 761,
               settings: {
                 slidesToShow: 6,
@@ -630,18 +656,119 @@ $(document).ready(function() {
                 arrows: false,
                 dots: false
               }
-            },
-            {
-              breakpoint: 1025,
-              settings: {
-                slidesToShow: 5,
-                centerMode: true,
-                centerPadding: '0',
-              }
             }
           ]
         });
     }
+
+    $('.vacancy-carousel').slick({
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      centerPadding: '0',
+      speed: 300,
+      arrows: true,
+      centerMode: true,
+      focusOnSelect: true,
+      responsive: [
+      {
+        breakpoint: 767,
+        settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+          arrows: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 1025,
+        settings: {
+          slidesToShow: 2 
+        }
+      }
+      ]
+    });
+
+    $('.slider-conf').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      centerPadding: '0',
+      dots: true,
+      responsive: [
+      {
+        breakpoint: 761,
+        settings:{
+        dots: false,
+        }
+      }
+      ]
+    });
+    
+    $('.content-write-request').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      speed: 150,
+      fade: true,
+      dots: false,
+      adaptiveHeight: true,
+      asNavFor: '.nav-write-request'
+    });
+    $('.nav-write-request').slick({
+      slidesToShow: 8,
+      slidesToScroll: 1,
+      asNavFor: '.content-write-request',
+      focusOnSelect: true
+    });
+
+    $('.slider-text').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      fade: true,
+      dots: true
+    });
+    
+    if($("span").is(".about-company-typed")){
+      var typed = new Typed(".about-company-typed", {
+        strings: ['будем все вместе жечь напалмом!'], 
+        typeSpeed: 100,
+        backSpeed: 15,
+        backDelay: 500,
+        startDelay: 1000,
+        loop: true,
+        onStop: function(pos, self) { prettyLog('onStop ' + pos + ' ' + self) },
+        onStart: function(pos, self) { prettyLog('onStart ' + pos + ' ' + self) }
+      });
+    }
+
+    if($("span").is(".contacts-typed")){
+      var typed = new Typed(".contacts-typed", {
+        strings: ["скорее начали творить магию", "скорее начали новое сотрудничество", "скорее приступили к вашему проекту"], 
+            typeSpeed: 100,
+        backSpeed: 15,
+        backDelay: 500,
+        startDelay: 1000,
+        loop: true
+      });
+    }
+
+    $('.form-call input').focus(function(){
+      $('.form-call').addClass('focused');
+      var refreshId = setInterval(function(){
+        if($('.typed-cursor').hasClass('typed-cursor--blink'))
+        {      
+          clearInterval(refreshId);
+          $('.typed-cursor').hide(0);
+          typed.stop();
+        }
+      }, 95);
+    });
+    $('.form-call input').blur(function(){
+      $('.form-call').removeClass('focused');
+      $('.typed-cursor').show(0);
+      typed.start();
+    });
 
     if($("div").is(".blog__wrap") && $(window).width() > '767'){
         $('.blog__wrap').slick({

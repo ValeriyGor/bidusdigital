@@ -11,7 +11,10 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation-flex.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <link rel="stylesheet" type="text/css" href="static/css/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="css/bundle.min.css">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/fancySelect.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/content.css">
 </head>
 <body class="white-body">
 	<header class="header">
@@ -236,37 +239,37 @@
 		<h2>Наша команда</h2>
 		<div class="row">
 			<div class="columns medium-6 left-item">
-				<a href="#" class="our-command__item" style="background-image: url('img/about-page/serg.png');">
+				<a href="#" class="our-command__item light-gray-default-back" style="background-image: url('img/about-page/serg.png');">
 					<h4>Сергей <br>Бидус</h4>
 					<span>Руководитель компании</span>
 				</a>				
 			</div>
 			<div class="columns medium-3 center-item">
-				<a href="#" class="our-command__item" style="background-image: url('img/about-page/mohammed.png');">
+				<a href="#" class="our-command__item light-gray-default-back" style="background-image: url('img/about-page/mohammed.png');">
 					<h4>Mohamed <br>El-Sharkawy</h4>
 					<span>Руководитель филиала в ОАЭ</span>
 				</a>
 			</div>
 			<div class="columns medium-3 right-item">
-				<a href="#" class="our-command__item" style="background-image: url('img/about-page/rudova.png');">
+				<a href="#" class="our-command__item light-gray-default-back" style="background-image: url('img/about-page/rudova.png');">
 					<h4>Виолетта <br>Рудова</h4>
 					<span>Frontend-разработчик</span>
 				</a>
 			</div>
 			<div class="columns medium-3 left-item">
-				<a href='#' class="our-command__item" style="background-image: url('img/about-page/den.png');">
+				<a href='#' class="our-command__item light-gray-default-back" style="background-image: url('img/about-page/den.png');">
 					<h4>Денис <br>Захаров</h4>
 					<span>UI/UX-дизайнер</span>
 				</a>
 			</div>
 			<div class="columns medium-3 center-item">
-				<a href="#" class="our-command__item" style="background-image: url('img/about-page/ksenia.png');">
+				<a href="#" class="our-command__item light-gray-default-back" style="background-image: url('img/about-page/ksenia.png');">
 					<h4>Ксения <br>Бидус</h4>
 					<span>Руководитель проектов</span>
 				</a>
 			</div>
 			<div class="columns medium-6 right-item">
-				<a href="#" class="our-command__item"  style="background-image: url('img/about-page/elvira.png');">
+				<a href="#" class="our-command__item light-gray-default-back"  style="background-image: url('img/about-page/elvira.png');">
 					<h4>Эльвира <br>Фетучини</h4>
 					<span>Клиент-менеджер</span>
 				</a>
@@ -902,7 +905,7 @@
 	<section class="carousel">
 		<div class="row">
 			<h2>Мы ждем вас в свою команду, <span class="br"></span>
-				<span class="typed"></span></h2>
+				<span class="typed about-company-typed"></span></h2>
 			<p class="carousel__text">Всего 22 открытые вакансии</p>
 			<div class="columns medium-12">
 				<div class="vacancy-carousel">
@@ -1063,103 +1066,5 @@
     <script type="" src="js/fancySelect.js"></script>
     <script src="js/typed.js"></script>
     <script type="" src="js/script.js"></script>
-    <script>
-    	$('.subjects').fancySelect();
-
-		$('.vacancy-carousel').slick({
-			slidesToShow: 3,
-			slidesToScroll: 1,
-			centerPadding: '0',
-			speed: 300,
-			arrows: true,
-			centerMode: true,
-			focusOnSelect: true,
-			responsive: [
-			{
-			  breakpoint: 767,
-			  settings: {
-				slidesToShow: 1,
-				slidesToScroll: 1,
-			    arrows: true,
-			    dots: true
-			  }
-			},
-			{
-			  breakpoint: 1025,
-			  settings: {
-			  	slidesToShow: 2 
-			  }
-			}
-			]
-		});
-
-		$('.slider-conf').slick({
-			slidesToShow: 1,
-			slidesToScroll: 1,
-			arrows: false,
-			centerPadding: '0',
-			dots: true,
-			responsive: [
-			{
-			  breakpoint: 761,
-			  settings:{
-				dots: false,
-			  }
-			}
-			]
-		});
-		
-		
-		// $('.slider-nav').slick({
-		// 	slidesToShow: 4,
-		// 	slidesToScroll: 1,
-		// 	asNavFor: '.slider-for',
-		// 	//dots: true,
-		// 	centerMode: true,
-		// 	focusOnSelect: true
-		// });
-		$('.content-write-request').slick({
-			slidesToShow: 1,
-			slidesToScroll: 1,
-			arrows: false,
-			speed: 150,
-			fade: true,
-			dots: false,
-			adaptiveHeight: true,
-			asNavFor: '.nav-write-request'
-		});
-		$('.nav-write-request').slick({
-			slidesToShow: 8,
-			slidesToScroll: 1,
-			asNavFor: '.content-write-request',
-			//dots: true,
-			// centerMode: true,
-			focusOnSelect: true
-		});
-		var typed = new Typed(".typed", {
-		    strings: ['будем все вместе жечь напалмом!'], 
-		    typeSpeed: 100,
-		    backSpeed: 15,
-		    backDelay: 500,
-		    startDelay: 1000,
-		    loop: true,
-		    // onComplete: function(self) { prettyLog('onCmplete ' + self) },
-		    // preStringTyped: function(pos, self) { prettyLog('preStringTyped ' + pos + ' ' + self); },
-		    // onStringTyped: function(pos, self) { prettyLog('onStringTyped ' + pos + ' ' + self) },
-		    // onLastStringBackspaced: function(self) { prettyLog('onLastStringBackspaced ' + self) },
-		    // onTypingPaused: function(pos, self) { prettyLog('onTypingPaused ' + pos + ' ' + self) },
-		    // onTypingResumed: function(pos, self) { prettyLog('onTypingResumed ' + pos + ' ' + self) },
-		    // onReset: function(self) { prettyLog('onReset ' + self) },
-		    onStop: function(pos, self) { prettyLog('onStop ' + pos + ' ' + self) },
-		    onStart: function(pos, self) { prettyLog('onStart ' + pos + ' ' + self) },
-		    // onDestroy: function(self) { prettyLog('onDestroy ' + self) }
-		  });
-    </script>
-
-<script>
-
-
-</script>
-
 </body>
 </html>

@@ -11,7 +11,10 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation-flex.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <link rel="stylesheet" type="text/css" href="static/css/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="css/bundle.min.css">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/fancySelect.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/content.css">
 </head>
 <body>
 	<header class="header no-transparent">
@@ -592,7 +595,7 @@
 		<div class="row">
 			<div class="columns medium-12">
 				<h2>Свяжитесь с нами, чтобы мы <span class="br"></span>
-				<span class="typed"></span></h2>
+				<span class="typed contacts-typed"></span></h2>
 				<form action="#" method="post">    
 					<div class="input_block form-item">
 						<input type="text" class="form-input" required>
@@ -731,60 +734,5 @@
     <script src="js/typed.js"></script>
     <script type="" src="js/fancySelect.js"></script>
     <script type="" src="js/script.js"></script>
-    <script>
-    	$('.subjects').fancySelect();
-    	$('.slider-text').slick({
-			slidesToShow: 1,
-			slidesToScroll: 1,
-			arrows: false,
-			fade: true,
-			dots: true
-		});
-    	$('.slider-for').slick({
-			slidesToShow: 1,
-			slidesToScroll: 1,
-			arrows: false,
-			speed: 150,
-			fade: true,
-			swipe: false,
-			draggable: false,
-			dots: false,
-			asNavFor: '.slider-nav'
-		});
-		$('.slider-nav').slick({
-			slidesToShow: 3,
-			slidesToScroll: 1,
-			asNavFor: '.slider-for',
-			//dots: true,
-			centerMode: true,
-			focusOnSelect: true
-		});
-
-		var typed = new Typed(".typed", {
-		    strings: ["скорее начали творить магию", "скорее начали новое сотрудничество", "скорее приступили к вашему проекту"], 
-            typeSpeed: 100,
-		    backSpeed: 15,
-		    backDelay: 500,
-		    startDelay: 1000,
-		    loop: true,
-		    // onComplete: function(self) { prettyLog('onCmplete ' + self) },
-		    // preStringTyped: function(pos, self) { prettyLog('preStringTyped ' + pos + ' ' + self); },
-		    // onStringTyped: function(pos, self) { prettyLog('onStringTyped ' + pos + ' ' + self) },
-		    // onLastStringBackspaced: function(self) { prettyLog('onLastStringBackspaced ' + self) },
-		    // onTypingPaused: function(pos, self) { prettyLog('onTypingPaused ' + pos + ' ' + self) },
-		    // onTypingResumed: function(pos, self) { prettyLog('onTypingResumed ' + pos + ' ' + self) },
-		    // onReset: function(self) { prettyLog('onReset ' + self) },
-		    onStop: function(pos, self) { prettyLog('onStop ' + pos + ' ' + self) },
-		    onStart: function(pos, self) { prettyLog('onStart ' + pos + ' ' + self) },
-		    // onDestroy: function(self) { prettyLog('onDestroy ' + self) }
-		  });
-
-    </script>
-
-<script>
-
-
-</script>
-
 </body>
 </html>

@@ -217,6 +217,7 @@ p
 			max-width: 42%
 			margin-bottom: 27px
 			visibility: visible !important
+.slider-default
 	.slick-next
 		height: 100%
 		width: 120px
@@ -573,6 +574,93 @@ p
 			transition: all .3s
 			margin-top: 2px
 
+.portfolio-item
+	height: 500px
+	margin-bottom: 30px
+	background-size: cover
+	background-repeat: no-repeat
+	border-radius: 3px
+	display: flex
+	padding: 25px 28px
+	flex-direction: column
+	justify-content: flex-end
+	transition: all 0.3s
+	cursor: pointer
+	overflow: hidden
+	position: relative
+	box-shadow: inset 0px -85px 111px -44px rgba(0,0,0,0.5)
+	&:after
+		content: ""
+		display: block
+		position: absolute
+		width: 100%
+		height: 100%
+		background: rgba(0, 0, 0, 0.3)
+		z-index: 3
+		left: 0
+		top: 0
+		opacity: 0
+		transition: all 0.3s
+	&-white
+		height: 500px
+		padding-left: 95px
+		margin-bottom: 30px
+		border-radius: 3px
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: flex-start
+		span
+			font-size: 42px
+			line-height: 43px
+			font-family: 'SFUIDisplay-Bold'
+			width: 325px
+			margin-bottom: 15px
+		img
+			margin: 15px 0
+		p 
+			font-size: 16px
+			margin-bottom: 30px
+		a
+			padding: 0 40px
+
+	.link-box
+		position: relative
+		top: 55px
+		transition: all 0.3s
+		opacity: 0
+		position: relative
+		z-index: 99
+	h3
+		font-size: 36px
+		line-height: 38px
+		font-family: 'SFUIDisplay-Bold'
+		color: #fff
+		position: relative
+		bottom: -36px
+		transition: all 0.3s
+
+	p 
+		font-size: 13px
+		color: #fff
+		position: relative
+		bottom: -36px
+		transition: all 0.3s
+	a
+		color: #000
+		background: #fff
+		transition: all 0.3s
+		padding: 0 10px
+		font-size: 11px 
+		line-height: 26px
+		display: inline-block
+		margin-right: 12px
+		border-radius: 3px
+		margin-top: 10px
+		&:hover
+			background: #de0a36
+			color: #fff
+
 
 @keyframes ac-gn-searchresults-items-show
 	0%
@@ -810,11 +898,13 @@ p
 			color: #fff
 			line-height: 26px
 			max-width: 275px
-	.slider-head .slick-dots li
-		width: 60px
-		padding: 15px 0
-		button
-			border-top-width: 1px
+.slider-default
+	&.portfolio-slider
+		.slick-dots li
+			width: 60px
+			padding: 15px 0
+			button
+				border-top-width: 1px
 
 
 .title
@@ -941,9 +1031,7 @@ p
 					margin-right: 10px
 					margin-bottom: 4px
 					transition: all 0.3s
-				// &:hover
-				// 	&:before
-				// 		width: 25px
+.slider-about
 	.slick-arrow
 		top: 33%
 		background: url(../img/svg/arrow.svg) center no-repeat
@@ -968,7 +1056,8 @@ p
 		right: -100px
 		&:after
 			border-color: rgba(255,212,52,0) rgba(255,212,52,0) rgba(255,212,52,0) #000
-
+.light-gray-default-back
+	background-color: #E4E4E4
 #modal_form
 	width: 876px
 	height: 532px
@@ -983,12 +1072,11 @@ p
 	z-index: 1009
 	.question
 		flex: 3
-		background: #de0a36
 		display: flex
 		flex-direction: column
 		justify-content: flex-end
 		padding: 23px 18px
-		background: url('../img/modal-back.png') center bottom no-repeat
+		background: #de0a36 url('../img/modal-back.png') center bottom no-repeat
 		background-size: cover
 		box-shadow: inset 0 -300px 125px -78px rgba(0,0,0,0.3)
 		h3
@@ -1604,225 +1692,13 @@ p
 		transition: all 0.2s
 	&:active
 		color: #000
-	
-
-.filials
-	padding-bottom: 50px 
-	margin-top: 35px
-	background: #fff
-	padding-top: 45px
-	overflow: hidden
-	&_text
-		font-size: 16px
-		max-width: 700px
-		margin: 0 auto 50px
-		text-align: center
-	.slick-slider
-		background: #fff
-		height: auto
-		margin-bottom: 40px
-	.slick-list
-		overflow: visible
-	.slider-for 
-		.item
-			padding: 0 15px
-			display: flex
-			justify-content: center
-			align-items: space-between
-			cursor: auto
-			.text
-				width: 26%
-				height: 100%
-				vertical-align: top
-				.with-defis
-					padding-top: 20px
-					&:before
-						display: inline-block
-						content: ""
-						width: 20px
-						height: 1px
-						background: #0070c9
-						margin-left: 2px
-						margin-right: 10px
-						margin-bottom: 4px
-						transition: all .2s
-					// &:hover:before
-					// 	width: 25px
-				h4
-					font-size: 20px
-					padding-top: 3px
-					margin-bottom: 5px
-					font-family: 'SFUIDisplay-Semibold'
-				p 
-					line-height: 24px
-					padding-right: 25px
-					span
-						display: block
-						
-					&.bold
-						font-weight: bold
-						font-family: 'SFUIDisplay-Semibold'
-						font-size: 16px
-						margin-top: 20px
-						margin-bottom: 2px
-				a
-					font-size: 14px
-					line-height: 14px
-					padding-top: 10px
-					display: inline-block
-				.light-gray
-					color: #a6a6a6
-					display: inline-block
-					
-
-			.img 
-				width: 74%
-				height: 100%
-				vertical-align: top
-				height: 530px
-				position: relative
-				&.hide-dots
-					.slick-dots
-						display: none
-				.slider-text, .slick-list, .slick-track
-					height: 100%
-				.working
-					height: 100%
-					width: 100%
-					border-radius: 3px
-					padding-left: 23px
-					padding-bottom: 18px
-					background-size: cover
-					background-repeat: no-repeat
-					.content
-						height: 100%
-						display: flex
-						flex-direction: column
-						align-items: flex-start
-						justify-content: flex-end
-						p 
-							font-size: 14px
-							color: #fff
-				.map 
-					width: 100%
-					height: 100%
-					display: none
-					position: absolute
-					top: 0
-					left: 0
-					right: 0
-					background-color: #fff
-					.close
-						display: block
-						background: #fff url("../img/svg/ic_close_black.svg") center left 8px no-repeat
-						height: 40px
-						width: 45px
-						background-size: 11px
-						position: absolute
-						top: 50px
-						right: -1px
-						cursor: pointer
-						transition: all 0.2s
-						&:before
-							content: ""
-							width: 20px
-							height: 40px
-							border-bottom-left-radius: 20px
-							border-top-left-radius: 20px
-							position: absolute
-							top: 0
-							left: -20px
-							background: #fff
-						// &:hover
-						// 	opacity: 0.9
-					iframe
-						width: 100%
-						height: 100%
-				.requisites
-					padding: 28px 33px
-					display: none
-					position: absolute
-					top: 0
-					left: 0
-					right: 0
-					height: 530px
-					border-radius: 3px
-					background: #fff
-					box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.1)
-					.bold
-						font-family: 'SFUIDisplay-Semibold'
-						font-size: 16px
-					h3
-						font-size: 36px
-						font-family: 'SFUIDisplay-Bold'
-					p 
-						line-height: 26px
-						margin-bottom: 16px
-						padding-left: 3px
-					.load-doc
-						display: inline-block
-						background: #de0a36
-						border-radius: 3px
-						line-height: 45px
-						color: #fff
-						margin: 7px 3px
-						font-family: 'SFUIDisplay-Bold'
-						padding: 0 25px
-						transition: all 0.2s
-						span
-							color: #ff8ba2
-					.close
-						display: block
-						background: url("../img/svg/ic_close_gray.svg") center no-repeat
-						height: 27px
-						width: 27px
-						background-size: 11px
-						position: absolute
-						top: 20px
-						right: 30px
-						cursor: pointer
-						transition: all 0.2s
-
-
-	.slick-dots
-		text-align: center
-		margin-top: 17px
-		li
-			display: inline-block
-			width: 68px
-			height: 40px
-			margin: 0 15px
-			cursor: pointer
-			button
-				height: 2px
-				font-size: 0
-				width: 100%
-				background: #e3e3e3
-				transition: all 0.3s
-			&.slick-active 
-				button
-					background: #000
-	.slider-nav
-		.slick-track
-			transform: translate3d(0, 0, 0)!important
-			text-align: center
-		.slick-slide
-			width: auto!important
-			padding: 0 22px 10px 
-			border-bottom: 1px solid #d9d9d9
-			display: inline-block
-			float: none
-			h3
-				font-family: "SFUIDisplay-Semibold"
-			&.slick-current
-				border-bottom: 2px solid #0070c9
-				padding-bottom: 9px   
-
 
 .slick-list
 	overflow: hidden
 
 .form-call
+	background: #1f1f1f
+	padding: 115px 0 125px
 	form
 		margin-top: 74px
 	button
@@ -1840,6 +1716,16 @@ p
 			background: url('../img/arrow-form.png') center no-repeat
 			background-size: contain
 			margin-left: 17px
+	h2, span
+		text-align: left
+		color: #fff
+		font-family: 'SFUIDisplay-Bold'
+		font-size: 48px
+		line-height: 54px
+		letter-spacing: 0
+	h2
+		.br
+			display: block
 .form-input
 	width: 100%
 	height: 40px
@@ -2073,32 +1959,6 @@ p
 				background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" viewBox="0 0 16 14"><defs><style>.cls-1 {fill-rule: evenodd; fill: #000}</style></defs><path id="Forma_1" data-name="Forma 1" class="cls-1" d="M1210,63h8v2h-8V63Zm11,3h-14a1,1,0,0,0-1,1v5a1,1,0,0,0,1,1h3v4h8V73h3a1,1,0,0,0,1-1V67A1,1,0,0,0,1221,66Zm-4,10h-6V71h6v5Zm4.22-8.5a0.721,0.721,0,0,1-.72.725,0.725,0.725,0,1,1,0-1.45A0.721,0.721,0,0,1,1221.22,67.5Z" transform="translate(-1206 -63)"/></svg>') center no-repeat
 		
 
-	.social-contact 
-		.soc
-			&-item
-				&:hover
-					opacity: 0.7
-
-	.filials
-		.slider-for 
-			.item
-				.text
-					.with-defis
-						&:hover:before
-							width: 25px	
-				.img
-					.map 
-						.close
-							&:hover
-								opacity: 0.9
-					.requisites
-						.load-doc
-							&:hover
-								background: #f70c3b
-						.close						
-							&:hover
-								opacity: 0.8
-
 	.form-call
 		button		
 			&:hover
@@ -2109,10 +1969,11 @@ p
 		right: -50px
 	.blog .slick-prev
 		left: -50px
-	.about .slick-next
-		right: -65px
-	.about .slick-prev
-		left: -65px
+	.slider-about
+		.slick-next
+			right: -65px
+		.slick-prev
+			left: -65px
 	.slider-head__item h1
 		max-width: 600px
 		font-size: 48px
@@ -2129,7 +1990,7 @@ p
 	.slider-head__item.invideo .video p
 		font-size: 16px
 		margin-bottom: 20px
-	.slider-head .slick-next, .slider-head .slick-prev
+	.slider-default .slick-next, .slider-default .slick-prev
 		width: 60px
 
 
@@ -2227,10 +2088,6 @@ p
 		width: 22px
 		height: 22px
 		margin-left: 10px
-	.service-item .mobile-transparent
-		top: 21px
-		right: 56px
-		width: 135px
 	.search 
 		right: 12%
 		width: 5%
@@ -2281,10 +2138,7 @@ p
 				&:hover .head-menu__dropdown
 					display: none
 
-
-	.slider-head
-		height: 450px
-		margin-top: 40px
+	.slider-default
 		.slick-next, .slick-prev
 			width: 60px
 			background-size: 11px 22px
@@ -2293,6 +2147,10 @@ p
 			li
 				width: 34px
 				margin: 0 8px
+
+	.slider-head
+		height: 450px
+		margin-top: 40px
 		&__logo
 			margin-top: 0
 		&__tag
@@ -2337,106 +2195,15 @@ p
 		&__logo
 			width: 173px
 	
-	.gadgets-anim
-		background-size: 477px
+	
 	.secondary-button
 		padding: 0 17px
 		height: 25px
 		line-height: 23px
 		font-size: 9px
-	.consultation
-		height: 70px
-		padding: 20px 0
-		&__general 
-			img
-				width: 140px
-				margin-left: 10px
-			p
-				margin-left: 18px
-				padding-left: 16px
-				font-size: 8px
-				width: 165px
-		&__order
-			padding-left: 4px
-		&__contacts 
-			text-align: left
-			padding-left: 0
-			
-			span
-				font-size: 16px
-				line-height: 20px
-				height: 18px
-				display: block
-				letter-spacing: -0.5px
-			p
-				font-size: 8px
-				line-height: 12px
-	.service
-		.row
-			padding: 0 0 0 19px
-		&-item 
-			padding: 0 6px
-			margin-bottom: 8px
-			li
-				line-height: 18px
-				&:not(:first-child)
-					a:before
-						width: 10px
-						margin-right: 5px
-					a:hover:before
-						width: 14px
 
-			a
-				font-size: 10px
-				line-height: 19px
-				
-	.stack-line 
-		top: -227px
-		right: 8px
-		img
-			width: 80px
-			margin-left: 15px
-		img:first-of-type
-			top: 243px
-		img:nth-of-type(3)
-			top: -275px
-	#gadget1
-		top: 0
-		padding-top: 138px
-		left: 77px
-		width: 17px
-	#gadget2
-		top: 0
-		padding-top: 92px
-		left: 110px
-		width: 39px
-	#gadget3
-		top: 0
-		padding-top: 38px
-		left: 164px
-		width: 92px
-	#gadget4
-		top: 0
-		padding-top: 12px
-		left: 226px
-		width: 316px
-	.white-block
-		padding: 13px 19px 
-		&.large
-			min-height: 186px
-		&.medium
-			min-height: 155px
-		&.small
-			min-height: 85px
-			margin-bottom: 9px
-	.portfolio 
-		margin-bottom: 20px
-		margin-top: 12px
-		h2.head-block
-			top: 20px
-		.slider-head
-			margin-bottom: 25px
-
+	.slider-default
+		&.portfolio-slider
 			.slick-next, .slick-prev
 				width: 60px
 				background-size: 11px 22px
@@ -2445,6 +2212,13 @@ p
 				li
 					width: 34px
 					margin: 0 8px
+	.portfolio 
+		margin-bottom: 20px
+		margin-top: 12px
+		h2.head-block
+			top: 20px
+		.slider-head
+			margin-bottom: 25px			
 			&__item
 				padding: 8px 3px 48px
 				.row
@@ -2475,60 +2249,11 @@ p
 
 		.slider-head, .slider-head__item
 			height: 450px
-	.about .slick-prev:hover:after
-		border-color: rgba(255,255,255,0) #fff rgba(255,255,255,0) rgba(255,255,255,0)
-	.specoffer
-		h2
-			margin-bottom: 16px
-		.medium-6
-			&:nth-of-type(2n+1)
-				padding-right: 8px
-			&:nth-of-type(2n)
-				padding-left: 8px
-		&-item
-			margin-bottom: 17px
-
-			&__text
-				min-height: 182px
-				padding: 16px 25px 18px 18px
-				h3
-					font-size: 12px
-				p
-					font-size: 9px
-					line-height: 15px
-			&__img
-				padding: 28px 25px
-			&__price
-				bottom: 21px
-				span
-					font-size: 15px
-					&.specoffer-item__price-old
-						font-size: 10px
-						margin-left: 5px
-						&:after
-							width: 30px
-							top: 7px
-							left: 15%
-			.profitable-price
-				height: 15px
-				width: 67px
-				line-height: 15px
-				font-size: 7px
-				margin-left: 5px
-	.all-solution
-		margin-bottom: 15px
-		height: 182px
-		padding-bottom: 0
-		background-size: contain
-		span
-			font-size: 24px
-			line-height: 30px
-			margin-bottom: 0
-		p
-			font-size: 12px
-			line-height: 24px
-		a
-			margin-top: 5px
+	
+	.slider-about
+		.slick-prev:hover:after
+			border-color: rgba(255,255,255,0) #fff rgba(255,255,255,0) rgba(255,255,255,0)
+	
 	.about
 		padding-bottom: 39px
 		padding-top: 15px
@@ -2567,6 +2292,8 @@ p
 						margin-right: 5px
 					&:hover:before
 						width: 13px
+
+	.slider-about
 		.slick-next
 			right: 12px
 			background-size: 11px 22px
@@ -2595,61 +2322,7 @@ p
 		display: block
 	.medium-show
 		display: none
-	.service-blocks 
-		.columns
-			padding: 0 25px
-			margin-bottom: 20px
-			&.one-for-row
-				.white-block
-					background-size: 61%
-			&.two-for-row
-				&:nth-of-type(2n+1)
-					padding-left: 10px
-				&:nth-of-type(2n)
-					padding-right: 10px
-				.white-block
-					background-size: contain
-					padding-bottom: 20px
-					min-height: 240px
-			&.three-for-row
-				.white-block
-					min-height: 250px
-			&.three-for-row
-				padding: 0 12px
-			&.three-for-row:nth-of-type(3n+2)
-				padding: 0 25px 0 5px
-			&.three-for-row:nth-of-type(3n)
-				padding: 0 5px 0 25px
-		.white-block
-			padding: 14px 15px 10px 24px
-			min-height: 226px
-		p 
-			font-size: 9px
-			max-width: 218px
-			padding-top: 2px
-			padding-left: 3px
-			margin-bottom: 2px
-			line-height: 15px
-		h2
-			font-size: 18px
-			padding-top: 4px
-			padding-bottom: 5px
-			line-height: 22px
-		li 
-			display: block
-			padding-left: 22px   
-			line-height: 15px
-			padding-top: 4px 
-			padding-bottom: 4px
-			a
-				font-size: 12px
-				line-height: 15px
-				&:before
-					margin-left: 3px
-					margin-right: 7px
-					top: 7px
-					left: -22px
-					width: 12px
+	
 
 	.head-without-image
 		padding-top: 37px
@@ -2690,153 +2363,7 @@ p
 			font-size: 18px
 			line-height: 18px
 			margin-top: 4px
-	.departament
-		padding-top: 32px
-		.small-left-padd
-			padding-left: 0
-			padding-right: 25px
-		.small-right-padd
-			padding-right: 0
-			padding-left: 25px
-		&-item
-			padding: 10px 20px 
-			height: 218px
-			margin-bottom: 7px
-			h3
-				font-size: 15px
-				margin-bottom: 0
-				line-height: 30px
-			p 
-				font-size: 9px
-				line-height: 14px
-				margin-bottom: 0
-			.info 
-				span
-					&:first-child
-						font-size: 9px
-					&:nth-of-type(2)
-						font-size: 13px
-						line-height: 13px
-						margin-bottom: 1px
-	.social-contact 
-		padding-top: 28px
-		padding-bottom: 18px
-		margin-bottom: 3px
-		padding-left: 0
-		&-wrap
-			padding-left: 25px
-			padding-right: 25px
-		p
-			font-size: 9px
-		span
-			font-size: 21px
-		.soc-item
-			margin: 4px
-			width: 30px
-			height: 30px
-			&:nth-of-type(1)
-				line-height: 30px
-				img
-					width: 7px
-			&:nth-of-type(2)
-				line-height: 32px
-				img
-					width: 14px
-			&:nth-of-type(3)
-				line-height: 27px
-				img
-					width: 15px
-			&:nth-of-type(4)
-				line-height: 28px
-				img
-					width: 14px
-			&:nth-of-type(5)
-				line-height: 28px
-				img
-					width: 14px
-	.filials
-		padding-top: 26px
-		padding-bottom: 35px
-		h2
-			line-height: 40px
-		&_text
-			max-width: 470px
-			font-size: 11px
-			margin-bottom: 30px
-		.slick-slider
-			margin-bottom: 28px
-		.slick-dots
-			margin-top: 6px
-			li
-				width: 43px
-				margin: 0 10px
-		.slider-for
-			padding: 0 10px
-			.item 
-				.text 
-					width: 26%
-					h4
-						font-size: 12px
-						padding-top: 0
-						margin-bottom: 2px
-					p
-						font-size: 9px
-						line-height: 15px
-						&.bold
-							font-size: 10px
-							margin-top: 15px
-							margin-bottom: 0
-						span
-							font-size: 9px
-					a
-						font-size: 9px
-						line-height: 14px
-						padding-top: 2px
-						display: block
-					.with-defis
-						padding-top: 12px
-						font-size: 12px
-						&:before
-							width: 10px
-							margin-left: 0
-							margin-right: 4px
-							margin-bottom: 3px
-
-						
-				.img
-					width: 74%
-					height: 330px
-					.requisites
-						font-size: 18px
-						padding: 14px 17px
-						height: 330px
-						h3
-							font-size: 18px
-						p 
-							line-height: 16px
-							font-size: 10px
-							margin-bottom: 12px
-							padding-left: 1px
-						.load-doc
-							line-height: 30px
-							font-size: 12px
-							margin: 3px 1px
-							padding: 0 12px 
-						.close
-							top: 10px
-							right: 25px
-							background-size: 9px
-					.working 
-						padding-left: 14px
-						padding-bottom: 9px
-						.content 
-							p
-								font-size: 9px
-		.slider-nav 
-			.slick-slide
-				padding: 0 17px 7px
-				&.slick-current
-					padding-bottom: 6px
+	
 	.form-call 
 		padding: 65px 8px 57px
 		h2, span
@@ -2894,86 +2421,7 @@ p
 	.head-with-image 
 		a
 			margin-top: 18px
-	.description 
-		p
-			font-size: 31px
-			line-height: 40px
-			padding: 52px 0
-	.podcategory
-		.columns
-			padding: 0 25px
-		.right-big-padd
-			padding-right: 18px
-		.left-big-padd
-			padding-left: 18px
-		&-item
-			padding: 32px 44px
-			height: 316px
-			display: block
-			background-size: contain!important
-			margin-bottom: 38px
-			&.black-text
-				padding: 20px 50px
-				span
-					margin-top: 2px
-					font-size: 12px
-
-
-			h2
-				font-size: 24px
-				line-height: 30px
-				margin-bottom: 4px
-			&.videograph 
-				h2
-					margin-bottom: 13px
-				a.details-link
-					margin-top: 18px
-			p 
-				max-width: 270px
-				font-size: 12px
-				line-height: 18px
-			ul
-				margin-top: 2px
-				li 
-					span
-						font-size: 12px
-						line-height: 18px
-						&:before
-							width: 13px
-							margin-left: 1px
-							margin-right: 6px
-			a.details-link
-				margin-top: 14px
-	.button-white-border		
-		font-size: 12px
-		padding: 0 18px
-		line-height: 30px
-		border-width: 1px
-	.pagination-service
-		margin-top: 2px 
-		padding: 16px 0
-		.columns 
-			.theme
-				font-size: 18px
-			span
-				font-size: 10px
-			.next-service
-				padding-left: 15px
-				&:after
-					width: 20px
-					right: 32px
-					top: 15px
-					background-repeat: no-repeat
-			.prev-service
-				padding-right: 15px
-				&:after
-					width: 20px
-					left: 26px
-					top: 15px
-					background-repeat: no-repeat
-	.filter-block
-		&_container
-			padding-right: 12px
+	
 	.breadscrumb-wrap 
 		.filter-block 
 			span
@@ -3035,276 +2483,18 @@ p
 	.tablet-12
 		padding-left: 25px
 		padding-right: 25px
-	.portfolio-item-white
-		height: 313px
-		margin-bottom: 19px
-		padding-left: 62px
-		background-size: contain!important
-		img
-			margin: 7px 0 12px
-			width: 108px
-		span
-			margin-bottom: 7px
-			font-size: 30px
-			line-height: 30px
-		p
-			font-size: 11px
-			margin-bottom: 20px
-		a
-			padding: 0 28px
-			// line-height: 33px
-			margin-bottom: 13px
-			//font-size: 12px
+
 	.print-version
 		display: none
 	.breadscrumb-wrap 
 		.ordered-consultation
 			margin-right: 10px
-	.tiser-text 
-		padding-bottom: 5px
-		padding-right: 10px
-		.future 
-			span
-				font-size: 45px
-				line-height: 45px
-			&:before
-				width: 2px
-				top: 7px
-				margin: 0 40px 0 20px
-				height: 90px
-	.about-description 
-		p
-			font-size: 30px
-			line-height: 40px
-			padding: 37px 0
-	.principe 
-		h4
-			font-size: 15px
-			padding: 0 10px
-			line-height: 24px
-		p
-			font-size: 10px
-			padding: 6px 30px 6px 10px
-		.columns:nth-of-type(1)
-			padding-left: 26px
-		.columns:nth-of-type(3)
-			padding-left: 0px
 	
-	.present-company
-		margin: 31px 0 39px
-		padding: 101px 0
-		&__img
-			position: absolute
-			right: -5px
-			top: -142px
-			img
-				width: 545px
-		&__text
-			padding-left: 10px
-			h3
-				font-size: 24px
-				line-height: 26px
-				margin-bottom: 11px
-			p 
-				font-size: 11px
-				padding-left: 2px
-				max-width: 80%
-			a
-				// font-size: 11px
-				// line-height: 30px
-				// padding: 0 20px
-				margin: 22px 0 6px
-			span
-				font-size: 8px
-				padding-right: 90px
-
-	.logo-on-tiser
-		width: 250px
-
-	.our-command 
-		padding: 0 10px
-		.left-item
-			padding-right: 10px
-		.center-item
-			padding: 0 10px
-		.right-item
-			padding-left: 10px
-		h2
-			margin-bottom: 16px
-		&__item
-			height: 233px
-			margin-bottom: 18px
-			padding: 11px 10px 11px 13px
-			h4
-				margin-bottom: 10px
-				line-height: 24px
-				font-size: 22px
-			span
-				font-size: 9px
-				padding: 0 5px
-				line-height: 20px
-	.all-command
-		padding: 34px 0
-		margin-bottom: 41px
-		h3
-			font-size: 24px
-			line-height: 26px
-			margin-bottom: 8px
-		p
-			font-size: 11px
-			line-height: 13px
-			margin-bottom: 16px
 	.primary_link
 		font-size: 12px
 		line-height: 33px
 		padding: 0 17px
-	.technology
-		height: 100px
-		margin-bottom: 24px
-	.scroll-block
-		padding: 25px 40px 25px 25px
-		&__head
-			font-size: 18px
-			line-height: 50px
-			margin-right: 23px
-		&__techno
-			font-size: 30px
-			line-height: 50px
-			&:after
-				width: 20px
-				height: 2px
-				margin-left: 14px
-				margin-right: 9px
-		&__link
-			font-size: 30px
-			padding-bottom: 10px
-			line-height: 30px
-			padding-top: 0
-			&:after
-				width: 28px
-				margin-left: 18px
-	.conferencies 
-		h2
-			margin-bottom: 14px
-		.medium-3
-			padding-left: 0
-			padding-right: 10px
-		.medium-9
-			padding-left: 25px
-			padding-right: 20px
-	.conference-nav
-		&__item 
-			padding-left: 14px
-			padding-bottom: 10px
-			padding-top: 5px
-			h3
-				font-size: 16px
-			p
-				font-size: 9px
-				max-height: 42px
-				overflow: hidden
-			&.active, &.slick-current
-				padding-left: 13px
-	.slider-conf
-		&__item
-			height: 320px
-			.content
-				padding: 13px 17px
-			p
-				font-size: 10px
-	.slider-conf 
-		.slick-dots 
-			li
-				width: 42px
-				padding: 6px 0
-				margin: 0 10px
-	.history
-		margin-top: 50px
-		padding-top: 43px
-		&__text
-			padding-left: 26px
-			padding-right: 80px
-		h2
-			margin-bottom: 35px
-		h3
-			font-size: 18px
-			line-height: 20px
-			letter-spacing: -0.5px
-			margin-bottom: 4px
-		h4
-			font-size: 15px
-			margin-bottom: 0
-		p 
-			font-size: 11px
-			line-height: 23px
-			margin-bottom: 25px
-		.navigation
-			padding-left: 0
-			a
-				font-size: 12px
-				line-height: 20px
-				&:before
-					width: 15px
-					margin-left: 0
-					margin-right: 7px
-			li
-				line-height: 24px
-	.quest
-		padding: 62px 69px
-		&__text
-			max-width: 255px
-			h3
-				margin-bottom: 0
-				font-size: 24px
-			p 
-				margin-bottom: 10px
-				font-size: 12px
-	.filials
-		&.reviews
-			padding-top: 40px
-			.slick-slider
-				margin-top: 19px
-				margin-bottom: 15px
-				.seen_all_reviews
-					font-size: 12px
-			.slider-nav 
-				.slick-slide
-					padding: 2px 12px 8px
-					h3
-						font-size: 12px
-					&.slick-current
-						padding-bottom: 7px
-		.medium-3
-			padding: 0 10px
-		.slider-for
-			padding: 0 15px
-	.reviews 
-		h3
-			font-size: 10px
-		a 
-			font-size: 10px
-			margin-bottom: 30px
-
-	.letter
-		margin-bottom: 8px
-		&.vertical
-			height: 200px
-		&.horizontal
-			height: 115px
-
-	.video-block__iframe
-		height: 190px
-
-	.video-block
-		padding: 0 10px
-		margin-bottom: 12px
-		&__text
-			padding: 0 0 15px 15px
-			p 
-				font-size: 11px
-			h3
-				line-height: 12px
-				font-size: 9px
+	
 	
 	.nav-write-request
 		.slick-slide
@@ -3315,105 +2505,8 @@ p
 			line-height: 58px
 			svg, img
 				witdh: 50%
-	.partners 
-		.scroll-block
-			padding: 12px 40px 15px 24px
-			&__logo
-				line-height: 50px
-				margin-bottom: 5px
-				&:after
-					height: 42px
-					margin: 0 30px 0 35px
-				img
-					max-height: 24px
-					max-width: 84px
-			&__head
-				margin-right: 40px
-
-
-	.request
-		&__user
-			padding: 0 13px
-			img
-				width: 125px
-		&__block
-			padding: 26px 0 0
-		&__text
-			padding-left: 26px
-			padding-top: 2px
-			.publication
-				margin-top: 9px
-				line-height: 14px
-				span
-					font-size: 9px
-					display: block
-					
-			p 
-				font-size: 11px
-				line-height: 21px
-				max-width: 100%
-			h3
-				max-width: 100%
-				font-size: 12px
-				line-height: 19px
-				margin-bottom: 8px
-	.carousel
-		padding-top: 34px
-		h2
-			font-size: 32px
-			line-height: 38px
-			padding-left: 22px
-			min-height: 80px
-			span
-				font-size: 32px
-				line-height: 38px
-		&__text
-			font-size: 18px
-			line-height: 40px
-			padding-left: 24px
-
-	.vacancy-carousel
-		padding: 26px 50px 0
-		h3
-			font-size: 18px
-		p 
-			font-size: 11px
-			margin-bottom: 10px
-			margin-top: 3px 
-			line-height: 18px
-		span
-			font-size: 9px
-			line-height: 20px
-			padding: 0 13px
-			border-radius: 10px
-		.slick-next
-			right: 10px
-			top: 39%
-			&:after
-				left: 14px
-				border: 3.5px solid transparent
-				border-left-width: 6px
-				border-left-color: #fff
-		.slick-prev
-			left: 10px
-			top: 39%
-			&:after
-				right: 14px
-				border: 3.5px solid transparent
-				border-right-width: 6px
-				border-right-color: #fff
-		.slick-arrow
-			height: 33px
-			width: 33px
-	.carousel 
-		padding-bottom: 32px
-		.seen-all
-			margin-top: 30px
-			line-height: 32px
-	.principe 
-		.columns 
-			&>div
-				border-left-width: 2px
+	
+	
 
 
 @media screen and (min-width: 960px) and (max-width: 1024px)
@@ -3423,128 +2516,26 @@ p
 		max-width: 42%
 	.slider-head__item p
 		max-width: 42%
+
 @media screen and (min-width: 767px) and (max-width: 959px)
 	.slider-head__item.invideo.left-back
 		background-position: center left -50%
 
 @media screen and (min-width: 768px)
-
 	.service-item 
 		p 
 			display: none
 	.desktop-none
 		display: none
-@media screen and (min-width: 866px) and (max-width: 1024px)
-	#gadget1
-		padding-top: 138px
-		left: auto
-		top: 0
-		right: 444px
-		width: 17px
-	#gadget2
-		padding-top: 92px
-		left: auto
-		top: 0
-		right: 392px
-		width: 39px
-	#gadget3
-		padding-top: 38px
-		left: auto
-		top: 0
-		right: 285px
-		width: 92px
-	#gadget4
-		padding-top: 12px
-		left: auto
-		top: 0
-		right: 0
-		width: 316px
 
-@media screen and (min-width: 767px) and (max-width: 991px)
-	.blog
-		margin-bottom: 25px
-		padding-top: 20px
-		&__wrap
-			margin-top: 14px
-		&-item
-			margin-right: 8px
-			margin-left: 8px
-			&__marker
-				height: 5px
-				width: 5px
-			&__img
-				height: 20vw
-			&__text
-				margin-bottom: 2px
-			&__descr
-				padding: 13px 17px 32px
-				&>div
-					bottom: 8px
-				h3
-					font-size: 13px
-					line-height: 16px
-					margin-bottom: 8px
-					color: #000
-				p
-					font-size: 9px
-					line-height: 15px
-					max-height: 45px
-					overflow: hidden
-					margin-bottom: 0px
-					color: #606060
-			&__category
-				font-size: 8px
-				color: #606060
-			&__datetime
-				font-size: 8px
-				margin-left: 4px
-
-@media screen and (min-width: 992px) and (max-width: 1024px)
-	.blog
-		margin-bottom: 25px
-		padding-top: 20px
-		&__wrap
-			margin-top: 14px
-		&-item
-			margin-right: 8px
-			margin-left: 8px
-			&__marker
-				height: 6px
-				width: 6px
-				position: relative
-				bottom: 1px
-			&__img
-				height: 20vw
-			&__text
-				margin-bottom: 2px
-			&__descr
-				padding: 18px 25px 37px
-				&>div
-					bottom: 8px
-				h3
-					font-size: 17px
-					line-height: 20px
-					margin-bottom: 13px
-					color: #000
-				p
-					font-size: 12px
-					line-height: 20px
-					max-height: 60px
-					overflow: hidden
-					margin-bottom: 0px
-					color: #606060
-			&__category
-				font-size: 11px
-				color: #606060
-			&__datetime
-				font-size: 11px
-				margin-left: 6px
 
 @media screen and (min-width: 767px) and (max-width: 1040px)
-	.about .slick-prev:hover:after
-		border-color: rgba(255,255,255,0) #fff rgba(255,255,255,0) rgba(255,255,255,0)
-	.about .slick-next:hover:after
-		border-color: rgba(255,255,255,0)  rgba(255,255,255,0) rgba(255,255,255,0) #fff
+	
+	.slider-about
+		.slick-prev:hover:after
+			border-color: rgba(255,255,255,0) #fff rgba(255,255,255,0) rgba(255,255,255,0)
+		.slick-next:hover:after
+			border-color: rgba(255,255,255,0)  rgba(255,255,255,0) rgba(255,255,255,0) #fff
 
 @media screen and (max-width: 767px)
 	body
@@ -3564,7 +2555,7 @@ p
 	.open-mob
 		//position: fixed
 		overflow: hidden
-	.slider-head .slick-dots
+	.slider-default .slick-dots
 		display: none!important
 	.medium-1, .medium-2, .medium-4, .medium-8, .medium-9
 		max-width: 100%
@@ -3572,8 +2563,10 @@ p
 	.service .row
 		display: block
 		
-	.about .slick-arrow
-		display: none!important
+	
+	.slider-about
+		.slick-arrow
+			display: none!important
 	header
 		position: fixed
 		top: 0
@@ -3643,153 +2636,11 @@ p
 		span
 			font-size: 14px
 			line-height: 18px
-	.social-contact-wrap
-		padding: 27px 0
-	.social-contact 
-		padding-top: 27px
-		padding-bottom: 18px
-		padding-left: 0
-		.row
-			margin: 0
-		.columns
-			padding-right: 0
-			margin-bottom: 0
-			padding-left: 0
-		p
-			font-size: 13px
-		span
-			font-size: 27px
-			line-height: 36px
-			margin-bottom: 10px
-			color: #3f6fc5
-		.soc-item
-			margin: 12px 9px 20px
+	
 	.form-call h2, .form-call span
 		font-size: 20px
 		line-height: 32px
-	.filials
-		margin-top: 0
-		padding-top: 20px
-		padding-bottom: 0
-		&.reviews
-			font-size: 25px
-			line-height: 33px
-			.slider-nav
-				display: none!important
-		&_text
-			padding: 0 20px
-			margin: 0 auto 30px
-		p 
-			font-size: 12px
-		h2
-			font-size: 26px
-			line-height: 38px
-		.slick-dots
-			margin-top: 4px
-			li 
-				width: 40px
-				height: 30px
-				margin: 0 8px
-
-		.slick-slider
-			margin-bottom: 0
-		.slider-for 
-			.item
-				flex-direction: column
-				padding: 0
-				padding-bottom: 85px
-				.text, .img
-					width: 100%
-				.img
-					height: 235px
-					.map
-						height: 262px
-					.requisites
-						background: #fafafa
-						padding: 15px 18px
-						height: 262px
-						box-shadow: none
-						.close
-							right: 10px
-						.load-doc
-							margin: 3px
-							padding: 0 11px
-							font-size: 11px
-							line-height: 27px
-						h3
-							font-size: 15px
-							font-family: SFUIDisplay-Semibold
-						p
-							line-height: 16px
-							font-size: 10px
-							margin-bottom: 11px
-							padding-left: 0
-					.working 
-						border-radius: 0
-						padding-left: 18px
-						padding-bottom: 12px
-						box-shadow: inset 0px -150px 107px -100px rgba(0,0,0,0.5)
-						.content 
-							p
-								font-size: 13px
-				.text
-					padding-left: 18px
-					margin-bottom: 33px
-					h4
-						padding-top: 0
-						margin-bottom: 0
-						font-size: 18px
-					p 
-						line-height: 22px
-						padding-right: 15px
-						font-size: 13px
-						&.bold
-							margin-top: 15px
-							font-size: 14px
-							margin-bottom: 2px
-						span
-							display: inline-block
-						.light-gray
-							margin-right: 2px
-							margin-top: 2px
-						&.mobile-text
-							color: #3f6fc5
-							line-height: 14px
-							span
-								font-size: 13px
-								margin-right: 16px
-						&.address-text
-							font-size: 13px
-							line-height: 16px
-						&.work-days       
-							font-size: 12px
-							line-height: 14px
-							margin-bottom: 4px
-					.with-defis
-						letter-spacing: 0px
-						padding-top: 18px
-						&:before       
-							width: 15px
-							margin-left: 0
-							margin-right: 7px
-					.open-modal-btn
-						display: none
-					a
-						padding-top: 0
-						font-size: 13px
-							
-
-		.slick-list 
-			padding: 0!important
-		// .slick-track
-		//  width: 100%!important
-		.slider-nav 
-			.slick-slide
-				padding: 0 20px 9px
-				&.slick-current
-					padding-bottom: 8px
-		.colums
-			max-width: 100%
+	
 
 	.form-call
 		padding: 30px 8px
@@ -3829,74 +2680,7 @@ p
 	.input_block
 		width: 100%
 		margin-right: 0
-	.departament
-		padding-top: 0
-		.columns
-			flex: 0 0 100%
-		.small-right-padd, .small-center-padd, .small-left-padd
-			padding-right: 0
-			padding-left: 0
-		&-item
-			padding: 0
-			height: auto
-			margin-bottom: 0
-			&.open
-				padding-bottom: 21px
-				border-bottom: 1px solid #e6e6e6
-				h3
-					&:after
-						transform: rotate(-45deg)
-						background: #c7c7c7
-					&:before
-						transform: rotate(-45deg)
-						background: #c7c7c7
-
-			h3
-				border-bottom: 1px solid #e6e6e6
-				margin-bottom: 0
-				font-size: 18px
-				padding: 10px 20px
-				position: relative
-				&:after
-					content: ""
-					display: block
-					width: 1px
-					height: 21px
-					background: #3f6fc5
-					position: absolute
-					right: 24px
-					transition: all 0.3s
-					top: 17px
-				&:before
-					content: ""
-					display: block
-					width: 21px
-					height: 1px
-					background: #3f6fc5
-					transition: all 0.3s
-					position: absolute
-					right: 14px
-					top: 27px
-
-			&>p, .info
-				display: none
-			p
-				font-size: 15px
-				padding: 13px 18px
-				line-height: 22px
-				margin-bottom: 0px
-			.info 
-				padding-left: 18px
-				padding-bottom: 7px
-				&:last-child
-					margin-bottom: 0
-				span:nth-of-type(2)
-					color: #3f6fc5
-					font-size: 18px
-					line-height: 24px
-					margin-bottom: 2px
-
-
+	
 	.head-menu
 		position: fixed
 		background: #000
@@ -3934,85 +2718,16 @@ p
 		transition: all 0.3s
 		img
 			width: 19px
-	.white-block.large
-		min-height: auto
-	.white-block.medium
-		min-height: auto
-	.white-block.small
-		min-height: auto
-		margin-bottom: 0
-		border-bottom: 1px solid #e6e6e6
 	.gadgets-anim
 		background: #fff
-	.service
-		.row
-			padding-left: 0
-			padding-right: 0
-			flex-direction: column
-		&-item 
-			height: auto
-			padding: 0
-			margin: 0
-			border-bottom: 1px solid #e6e6e6
-			border-radius: 0
-			&.be-hide
-				display: none
-			.small:last-child
-				border-bottom: 0
-			.white-block
-				border-radius: 0
-				padding: 19px 23px 20px
-				p
-					font-size: 12px
-					line-height: 18px
-					max-width: 90%
-				h3
-					color: #0070c9
-					letter-spacing: 0px
-					font-family: 'SFUIDisplay-Semibold'
-		.seen-all
-			display: block
-			height: 50px
-			width: 100%
-			color: #0070c9
-			line-height: 46px
-			text-align: center
-			font-size: 14px
-			background: #fff
-			font-family: 'SFUIDisplay-Semibold'
-			&:after
-				border: 3.5px solid transparent
-				content: ""
-				display: inline-block
-				height: 0
-				width: 0
-				border-color: #0070c9 rgba(255, 212, 52, 0) rgba(255, 212, 52, 0)
-				border-top-width: 5px
-				border-bottom-width: 0
-				transition: all .3s
-				position: relative
-				top: -1px
-				margin-left: 6px
-			&.close:after
-				transform: scale(1, -1)
-		a, img
-			display: none
+	
 	.slider-head
 		margin-bottom: 0
 		display: none
-	.portfolio .slider-head
-		display: block
-	.vismob a
-		line-height: 27px 
-		display: block
-	.logo-wrap
-		position: absolute
-		top: 6px
-		left: 50%
-		transform: translate(-50%)
-	.phone span
-		font-size: 0
-		bottom: 0
+	.slider-default
+		&.portfolio-slider
+			display: block
+	
 	.search
 		position: static
 		width: 100%
@@ -4052,13 +2767,16 @@ p
 		.close-input
 			right: 0px
 			top: 2px
-
-	.slider-head
+	
+	.slider-default
 		.slick-dots 
 			bottom: 2px
 			li
 				margin: 0 6px
 				width: 30px
+
+
+	.slider-head
 		&__logo
 			display: none!important
 		&__item
@@ -4072,11 +2790,6 @@ p
 				font-size: 12px
 				line-height: 20px
 				margin-bottom: 15px
-			// a
-			// 	font-size: 12px
-			// 	line-height: 28px
-			// 	height: 30px
-			// 	width: 150px
 			h1, .h1
 				font-size: 20px
 				line-height: 28px
@@ -4109,31 +2822,19 @@ p
 		.slick-track
 			transform: translate3d(0, 0px, 0px)!important
 
-
-
-
-
 	.arrow-down>a:after
 		display: none
 	footer 
 		display: none
-	.all-solution
-		margin-bottom: 18px
-		height: 175px
-		padding-bottom: 0
-		background-position: center
-		background-size: cover
-		padding-right: 0
-		background-image: url('../img/specialoffers/alloffers_mob.png')!important
-		span
-			font-size: 21px
-			line-height: 21px
-		p
-			font-size: 13px
-			line-height: 26px
-			margin-bottom: 3px
-		a
-			margin-top: 4px
+	
+	.slider-default
+		&.portfolio-slider
+			.slick-dots 
+				bottom: 19px
+				display: block!important
+				li
+					margin: 0 10px
+					width: 40px
 
 	.portfolio
 		margin-bottom: 23px
@@ -4142,13 +2843,7 @@ p
 		background-size: cover
 		.slider-head, .slider-head__item
 			height: 485px
-		.slider-head
-			.slick-dots 
-				bottom: 19px
-				display: block!important
-				li
-					margin: 0 10px
-					width: 40px
+		.slider-head			
 			&__item
 				padding: 18px 0 30px
 				background: transparent!important
@@ -4190,208 +2885,85 @@ p
 			&.head-block
 				top: 18px
 				font-size: 28px
-
-		
-	.specoffer 
-		h2
+	
+	.portfolio-item
+		height: 341px
+		margin-bottom: 23px
+		padding: 22px
+		h3
 			font-size: 26px
-			margin-bottom: 11px
-			&.head-block
-				top: 16px
-		.small-12
-			padding: 0 17px
-	.specoffer-item
-		flex-direction: column-reverse
-		margin-bottom: 20px
-		&__img
-			height: 158px
-		&__text
-			padding: 16px 20px 46px 19px
-			min-height: 0px
-			h3
-				font-size: 17px
-				margin-bottom: 4px
-				letter-spacing: 0px
-			p
-				line-height: 18px
-				color: #000
-		&__price
-			bottom: 16px
-			left: 20px
-		&__price-actual
-			font-size: 21px
-		.profitable-price
-			height: 20px
-			line-height: 20px
-			font-size: 9px
-			border-radius: 10px
-			width: 100px
-		&__price-old
-			margin-left: 10px
-			&:after
-				top: 7px
-				left: 13%
-				width: 30px
-	.blog
-		margin-bottom: 27px
-		padding-top: 25px
-		&__wrap
-			margin-top: 10px
-			padding: 0 10px
-		&-item
-			margin-right: 8px
-			margin-left: 8px
-			margin-bottom: 15px
-			display: none
-			&:nth-of-type(1), &:nth-of-type(2), &:nth-of-type(3)
-				display: block
-			&__marker
-				height: 5px
-				width: 5px
-			&__img
-				height: 160px
-				height: 42vw
-			&__text
-				margin-bottom: 2px
-			&__descr
-				padding: 15px 19px 39px
-				position: relative
-				h3
-					font-size: 18px
-					letter-spacing: 0px
-					line-height: 20px
-					margin-bottom: 8px
-				p
-					font-size: 12px
-					line-height: 18px
-					max-height: 72px
-					overflow: hidden
-					margin-bottom: 5px
-					color: #000
-				&>div
-					bottom: 15px
-			&__category
-				font-size: 11px
-			&__datetime
-				font-size: 11px
-				margin-left: 4px
-		&__seen-all
-			font-size: 14px
-			font-family: SFUIDisplay-Bold
-			line-height: 42px
-			display: block
-			color: #fff
-			margin-bottom: 32px
-			background: #be1238
+			line-height: 32px
+		p
+			font-size: 11px
+		a 
+			font-size: 10px
+			padding: 0 6px
+			margin-right: 5px
+			&:last-child
+				margin-right: 0
+	.portfolio-wrapper
+		.columns
+			padding: 0 18px
+			min-width: 100%
+	.portfolio-item-white
+		margin-bottom: 23px
+		align-items: center
+		padding: 27px 0
+		justify-content: flex-start
+		height: 384px
+		background-size: 360px!important
+		background-position: center bottom -90px!important
+		img
+			margin: 0 auto 8px
+			width: 88px
+		span
 			text-align: center
-			border-radius: 3px
-			margin-left: 18px
-			margin-right: 18px
-			&:focus
-				color: #fff
+			font-size: 24px
+			line-height: 26px
+			margin-bottom: 6px
+		p 
+			font-size: 10px
+			margin-bottom: 20px
+		a
+			width: 84%
 
+	.portfolio
+		&-wrapper 
+			.columns
+				padding: 0 15px
+
+		&-item
+			height: 291px
+			margin-bottom: 20px
+			padding: 19px
+			background-size: cover
+			h3
+				font-size: 22px
+				line-height: 22px
+				margin-bottom: 6px
+				max-width: 80%
+			p 
+				font-size: 9px
+			&-white
+				padding: 23px 0
+				height: 327px
+				background-size: 328px!important
+				img
+					width: 78px
+					margin: 0 auto 6px
+				span
+					margin-bottom: 9px
+					font-size: 21px
+					max-width: 60%
+					line-height: 21px
+				p 
+					font-size: 8px
+					margin-bottom: 16px
 	.title
 		margin: 0 auto 31px
 		max-width: 75%
 		font-size: 12px
 		line-height: 17px
-
-	.about 
-		padding-bottom: 25px
-		margin-top: 17px
-		padding-top: 14px
-		background: #292a2b
-		h2
-			font-size: 28px
-		.slider-for
-			&__item
-				background-repeat: no-repeat
-				background-size: 200% auto
-				background-position: top right 10%
-				padding: 140px 0 38px 
-				height: auto
-			.comment
-				font-size: 14px
-				line-height: 25px
-				margin-bottom: 0
-				padding-bottom: 17px
-				padding-top: 21px
-				color: #fff
-				background: #292a2b
-			.about__worker 
-				background: #292a2b
-				p
-					font-size: 12px
-					line-height: 14px
-					color: #fff
-					margin-bottom: 4px
-				span
-					font-size: 10px
-					line-height: 18px
-					color: #fff
-				a
-					display: none
-		.slider-nav
-			margin-bottom: 11px
-			margin: 0 auto
-			width: 83%
-			&__item
-				height: 1px
-				background: #949595!important
-				margin: 0 6px
-				cursor: pointer
-	.slider-container
-		display: flex
-		flex-direction: column-reverse
-	.consultation
-		padding: 6px
-		height: 52px
-
-		.row
-			justify-content: space-between
-		&__general
-			padding-right: 0
-			flex: 1.5
-			text-align: left
-			img
-				width: 50%
-				margin-top: 5px
-			p
-				display: none
-		&__order
-			display: none
-		&__contacts 
-			text-align: center
-			span
-				font-size: 14px
-				line-height: 14px
-				display: none
-			p
-				font-size: 7px
-				line-height: 4px
-				display: none
-			a
-				width: 27px
-				height: 27px
-				background: #cbcbcb
-				border-radius: 50%
-				display: inline-block
-				margin-right: 4px
-				line-height: 27px
-				display: flex
-				align-items: center
-				justify-content: center
-				margin-top: 5px
-
-			.social-wrap
-				display: flex
-				justify-content: space-between
-				align-items: center
-				a:last-child
-					margin-right: 0
-
-
-
 
 	@keyframes topBar_open
 		0%
@@ -4522,71 +3094,7 @@ p
 			line-height: 38px
 		span
 			font-size: 14px
-	.find_text
-		.columns   
-			padding: 0 18px
-
-	.service-blocks 
-		.columns
-			padding: 0 18px
-			min-width: 100%
-			margin-bottom: 25px
-			.white-block
-				min-height: 0
-		.one-for-row
-			.white-block
-				padding-bottom: 200px
-				background-size: 390px
-				background-position: left 0px bottom
-		.two-for-row:nth-of-type(2)
-			.white-block
-				background-image: url("../img/service-page/bgitem2_mob.png")!important
-				background-repeat: no-repeat
-				background-size: 340px
-				background-position: center bottom
-				padding-bottom: 120px
-		.two-for-row:nth-of-type(3)
-			.white-block
-				background-image: url("../img/service-page/bgitem3_mob.png")!important
-				background-repeat: no-repeat
-				background-size: 340px
-				background-position: center bottom
-				padding-bottom: 120px
-		.two-for-row:nth-of-type(4)
-			.white-block
-				background-image: url("../img/service-page/bgitem4_mob.png")!important
-				background-repeat: no-repeat
-				background-size: contain
-				background-position: center right
-				padding-bottom: 55px
-		.two-for-row:nth-of-type(5)
-			.white-block
-				background-image: url("../img/service-page/bgitem5_mob.png")!important
-				background-repeat: no-repeat
-				background-size: contain
-				background-position: center right
-				padding-bottom: 28px
-				
-
-		.two-for-row
-			.white-block
-				padding-bottom: 121px
-				// background-size: 390px
-				// background-position: left 0px bottom
-
-		.white-block
-			padding: 14px 10px 20px 21px
-		h2
-			font-size: 19px
-			line-height: 30px
-		p 
-			line-height: 20px
-			max-width: 95%
-		li 
-			a 
-				line-height: 28px
-				&:before
-					width: 20px
+	
 	.head-with-image 
 		padding-top: 87px
 		height: 80vh
@@ -4611,593 +3119,26 @@ p
 			text-align: center    
 		a
 			margin-top: 20px
-	.description 
-		p
-			font-size: 16px
-			line-height: 25px
-			padding: 35px 0
-	.podcategory
-		.columns
-			max-width: 100%
-			padding: 0 18px
-			&:nth-of-type(1) .podcategory-item
-				background: #afbf86 url("../img/podcategory-page/back1_mob.png") center bottom -20px no-repeat!important
-				background-size: contain!important
-				height: 410px 
-			&:nth-of-type(4) .podcategory-item
-				background-position: center top
-		&-item
-			padding: 16px 22px
-			height: 293px
-			margin-bottom: 25px
-			&.black-text
-				padding: 25px 49px
-				span
-					font-size: 12px
-					margin-top: 6px
-
-			&.left-text
-				h2
-					text-align: center
-			h2
-				text-align: center
-				line-height: 25px
-				font-size: 24px
-				margin-bottom: 8px
-				span
-					display: none
-					
-			p 
-				font-size: 12px
-				text-align: center
-				&.mobile-left
-					text-align: left
-					margin-bottom: 3px
-
-			ul
-				margin-top: 0
-				li 
-					span
-						font-size: 13px
-						line-height: 22px
-			a.details-link
-				display: none
-				
+	
 	.pagination-service
 		display: none
-	.portfolio-item
-		height: 341px
-		margin-bottom: 23px
-		padding: 22px
-		h3
-			font-size: 26px
-			line-height: 32px
-		p
-			font-size: 11px
-		a 
-			font-size: 10px
-			padding: 0 6px
-			margin-right: 5px
-			&:last-child
-				margin-right: 0
 
 
-	.portfolio-wrapper
-		.columns
-			padding: 0 18px
-			min-width: 100%
-	.portfolio-item-white
-		margin-bottom: 23px
-		align-items: center
-		padding: 27px 0
-		justify-content: flex-start
-		height: 384px
-		background-size: 360px!important
-		background-position: center bottom -90px!important
-		img
-			margin: 0 auto 8px
-			width: 88px
-		span
-			text-align: center
-			font-size: 24px
-			line-height: 26px
-			margin-bottom: 6px
-		p 
-			font-size: 10px
-			margin-bottom: 20px
-		a
-			//line-height: 36px
-			width: 84%
-			//text-align: center
-			//font-size: 14px
-	.portfolio
-		&-wrapper 
-			.columns
-				padding: 0 15px
-
-		&-item
-			height: 291px
-			margin-bottom: 20px
-			padding: 19px
-			background-size: cover
-			h3
-				font-size: 22px
-				line-height: 22px
-				margin-bottom: 6px
-				max-width: 80%
-			p 
-				font-size: 9px
-			&-white
-				padding: 23px 0
-				height: 327px
-				background-size: 328px!important
-				img
-					width: 78px
-					margin: 0 auto 6px
-				span
-					margin-bottom: 9px
-					font-size: 21px
-					max-width: 60%
-					line-height: 21px
-				p 
-					font-size: 8px
-					margin-bottom: 16px
-				a
-					//line-height: 32px
-					//font-size: 12px
-
-
-	.tiser-text 
-		text-align: center
-		padding-right: 0
-		padding-bottom: 20px
-		.future
-			display: block
-			&:before
-				display: none
-			span
-				font-size: 60px
-				line-height: 60px
-				max-width: 100%
 	.logo-on-tiser
 		width: 171px
 		margin-bottom: 10px
-	.about-description 
-		p
-			padding: 33px 0 27px
-			font-size: 28px
-			line-height: 35px
-	.principe 
-		h4
-			font-size: 21px
-			line-height: 21px
-			padding: 0 13px
-		.columns
-			min-width: 100% 
-			&>div
-				border-left: 3px solid #de0a36
-				margin-left: 8px
-				margin-bottom: 25px
-		p 
-			line-height: 21px
-			font-size: 12px
-			padding: 3px 15px 3px 15px
-			letter-spacing: 0px
 
-	.present-company
-		margin: 6px 0 16px
-		padding: 31px 0 0  
-		overflow: hidden
-		border-bottom: none
-		padding-bottom: 15px
-		&__img
-			position: static
-			width: 100%
-			img
-				width: 485px
-				margin-left: -33px
-				max-width: 500px
-				margin-bottom: -28px
-		&__text
-			width: 90%
-			text-align: center
-			p
-				width: 240px
-				margin: 0 auto
-				font-size: 12px
-			h3
-				font-size: 25px
-				line-height: 25px
-				margin-bottom: 7px
-			a 
-				//line-height: 38px
-				margin-top: 15px
-				//font-size: 14px
-				//padding: 0 25px
-			span
-				font-size: 11px
-		.columns
-			flex-direction: column
-			padding: 0
-			width: 100%
-			border-bottom: 1px solid #e5e5e5
-	.our-command 
-		h2
-			font-size: 26px
-			margin-bottom: 11px
-		.columns
-			padding: 0 18px
-			&:nth-of-type(1)
-				order: 1
-				min-width: 100%
-			&:nth-of-type(2)
-				order: 2
-				padding-right: 10px
-			&:nth-of-type(3)
-				order: 3
-				padding-left: 10px
-			&:nth-of-type(4)
-				order: 5
-				padding-right: 10px
-			&:nth-of-type(5)
-				order: 6
-				padding-left: 10px
-			&:nth-of-type(6)
-				order: 4
-				min-width: 100%
-			&:nth-of-type(7)
-				order: 7
-			&.medium-12
-				min-width: 100%
-
-
-		&__item
-			height: 215px
-			margin-bottom: 20px
-			padding: 10px 14px
-			box-shadow: inset 24px -40px 101px rgba(0, 0, 0, 0.5)
-			span
-				font-size: 9px
-				line-height: 16px
-				background: none
-				padding: 0
-			h4
-				line-height: 22px
-				font-size: 19px
-				margin-bottom: 1px
-			&:hover span
-				background: transparent
-	.all-command
-		padding: 20px 0 30px
-		box-shadow: inset 0px 229px 0 rgba(0, 0, 0, 0.33)
-		margin-bottom: 45px
-		background-image: url('../img/about-page/all-work_mob.png')!important
-		background-size: cover
-		&_text
-			max-width: 82%
-			margin: 0 auto
-		h3
-			font-size: 21px
-			line-height: 24px
-			margin-bottom: 5px
-		p
-			margin-bottom: 5px
-			font-size: 13px
-			line-height: 18px
-			margin-bottom: 14px
 	.primary_link
 		line-height: 38px
 		font-size: 14px
 		padding: 0 20px
-	.technology
-		height: 89px
-		margin-bottom: 29px
-	.scroll-block
-		padding: 23px 18px 20px 17px
-		width: 100%
-		&__head
-			margin-right: 12px
-			font-size: 19px
-			line-height: 38px
-		&__techno
-			font-size: 28px
-			line-height: 35px
-			&:after
-				width: 20px
-				margin-right: 6px
-				margin-left: 8px
-				height: 2px
-		&__link
-			font-size: 26px
-			line-height: 26px
-			padding-bottom: 5px
-			padding-top: 0
-			&:after
-				margin-left: 15px
-				width: 25px
-	.conferencies 
-		h2
-			margin-bottom: 12px
-			font-size: 26px
 		
-		.columns
-			padding: 0 18px
-			max-width: 100%
-			position: relative
-			&.medium-9
-				padding-bottom: 26px
-			&.medium-3
-				padding: 0
-	.slider-conf
-		&__item
-			height: 205px
-			.content
-				padding: 12px 22px
-			p 
-				font-size: 10px
-		.slick-dots
-			display: none!important
-	.conference-nav
-		margin-top: 0
-		max-width: 100%
-		&__line
-			content: ""
-			width: 31%
-			height: 2px
-			position: absolute
-			top: 0
-			left: 0
-			z-index: 99
-			background: #3f6fc5
-			transition: all 0.3s
-			&-block
-				position: absolute
-				top: 1px
-				left: 16px
-				right: 16px
-				height: 2px
-				z-index: 99
-		&__item
-			border-left: 0
-			padding-left: 15px
-			padding-right: 15px
-			position: relative
-			margin-top: 1px
-			transform: translateX(-50px)
-			border-top: 1px solid #e5e5e5
-			h3
-				font-size: 21px
-			&.active, &.slick-current
-				border-left: 3px
-				padding-left: 15px
-				padding-right: 15px
-		.slick-prev
-			display: none!important
-		.slick-next
-			position: absolute
-			height: 100%
-			width: 25%
-			top: 0
-			right: 0
-
-				
-
-	.carousel
-		.columns
-			max-width: 100%
-	.history
-		margin-top: 31px
-		padding-top: 22px
-		h2
-			font-size: 25px
-			margin-bottom: 10px
-		.navigation
-			display: none
-		&__text
-			padding-left: 18px
-			padding-right: 18px
-			min-width: 100%
-			margin-bottom: 0
-		h3
-			font-size: 18px
-			margin-bottom: 3px
-			line-height: 26px
-		p 
-			margin-bottom: 20px
-			font-size: 12px
-			line-height: 23px
-	
-	.show-all-history
-		color: #0070c9
-		width: 100%
-		font-size: 14px
-		line-height: 46px
-		text-align: center
-		border-top: 1px solid #e6e6e6
-		font-family: "SFUIDisplay-Semibold"
-		&.opened
-			&:after
-				transform: rotate(180deg)
-		&:after
-			content: ""
-			display: inline-block
-			width: 0
-			height: 0
-			border: 3.5px solid transparent
-			border-top: 5px solid #0070c9
-			border-bottom: 0
-			margin-left: 4px
-			position: relative
-			top: -2px
-	
 	.will-be-hide
 		display: none
-	.quest
-		padding: 77px 0 69px
-		background: url('../img/about-page/quest_mob.png') center right no-repeat
-		background-size: cover
-		&__text
-			max-width: 100%
-			text-align: center
-			h3
-				font-size: 21px
-				margin-bottom: 0
-			p 
-				font-size: 12px
-				line-height: 21px
-				margin-bottom: 25px
-				max-width: 80%
-				margin: 0 auto 28px
-	.filials
-		.nav-write-request
-			display: none 
-		&.reviews
-			padding-top: 35px
-		.filials-rev-nav
-			display: none!important
-
-	.carousel
-		padding-top: 40px
-		padding-bottom: 44px
-		h2
-			font-size: 25px
-			line-height: 32px
-			padding-left: 19px
-			letter-spacing: 0.5px
-			max-width: 100%
-			padding-right: 15px
-			min-height: 96px
-			margin-bottom: 10px
-			.br
-				display: inline
-			span
-				font-size: 25px
-				line-height: 32px
-				display: inline
-		&__text
-			font-size: 14px
-			line-height: 20px
-			padding-left: 17px
-		.seen-all
-			margin-top: 24px
-			line-height: 38px
-			font-size: 12px
-			padding: 0 25px
-		.slick-dots
-			margin-top: 5px
-			li
-				display: inline-block
-				width: 40px
-				padding: 10px 0
-				margin: 0 5px
-				button
-					width: 100%
-					height: 1px
-					transition: all 0.2s
-					background: rgba(255, 255, 255, 0.2)
-					font-size: 0
-				&.slick-active
-					button
-						background: rgba(255, 255, 255, 1)
-	.vacancy-carousel
-		padding-top: 25px
-		h3
-			font-size: 22px
-		p 
-			font-size: 11px
-			padding: 0 10px
-			line-height: 22px
-		.slick-prev
-			background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15px" height="30px"> <path fill-rule="evenodd"  opacity="0.22" fill="rgb(255, 255, 255)" d="M1.217,-0.003 L0.000,3.496 L10.567,14.998 L0.000,26.497 L1.217,29.997 L15.000,14.998 L1.217,-0.003 Z"/> </svg>') center no-repeat;
-			background-repeat: no-repeat
-			background-position: center 
-			left: 0
-			top: 44%
-			width: 25px
-			background-size: 10px
-			transform: scaleX(-1)
-			z-index: 99
-			&:hover
-				background-size: 10px!important
-				background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15px" height="30px"> <path fill-rule="evenodd"  opacity="0.22" fill="rgb(255, 255, 255)" d="M1.217,-0.003 L0.000,3.496 L10.567,14.998 L0.000,26.497 L1.217,29.997 L15.000,14.998 L1.217,-0.003 Z"/> </svg>') center no-repeat;
-			&:after
-				display: none
-
-		.slick-next
-			background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15px" height="30px"> <path fill-rule="evenodd"  opacity="0.22" fill="rgb(255, 255, 255)" d="M1.217,-0.003 L0.000,3.496 L10.567,14.998 L0.000,26.497 L1.217,29.997 L15.000,14.998 L1.217,-0.003 Z"/> </svg>') center no-repeat;
-			background-repeat: no-repeat
-			background-position: center 
-			right: 0
-			top: 44%
-			width: 25px
-			background-size: 10px
-			z-index: 99
-			&:hover
-				background-size: 10px!important
-				background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15px" height="30px"> <path fill-rule="evenodd"  opacity="0.22" fill="rgb(255, 255, 255)" d="M1.217,-0.003 L0.000,3.496 L10.567,14.998 L0.000,26.497 L1.217,29.997 L15.000,14.998 L1.217,-0.003 Z"/> </svg>') center no-repeat;
-			&:after
-				display: none
-
-		&__item 
-			padding: 0 25px
-			a
-				padding: 0
-	
+			
 	.mobile-left
 		text-align: left
-
-	.partners 
-		.scroll-block
-			padding: 20px 18px 25px 17px
-			&__head
-				margin-right: 27px
-				font-size: 21px
-				line-height: 45px
-			&__logo
-				line-height: 40px
-				margin-bottom: 5px
-				&:after
-					height: 35px
-					margin: 0 24px 0 28px
-				img
-					max-width: 80px
-					max-height: 26px
-	
-	.reviews
-		.columns
-			padding: 0
-		a
-			font-size: 14px
-			color: #fff
-		.row
-			display: block
-		.seen_all
-			text-align: center
-			a 
-				display: inline-block
-	.filials.reviews 
-		.slick-slider
-			margin-top: 0
-	
-	.mobile-accord
-		.row
-			display: none
-			margin: 0
-			&.thanks-letters
-				display: block
-				max-width: 73%
-				margin: 0 auto
 			
-	.letter
-		margin-bottom: 18px
-		&.vertical
-			height: 102vw
-		&.horizontal
-			height: 51vw
-
-
-	.video-block
-		margin-bottom: 0			
 	.mobile-accord
 		margin-top: 18px
 		.slick-slide
@@ -5297,72 +3238,7 @@ p
 				top: 29px
 			.seen_all
 				text-align: center
-	.video-block
-		&__iframe
-			height: 127vw	
-		&__text
-			padding: 0 0 25px 25px
-			h3
-				font-size: 21px
-			p 
-				font-size: 11px
-
-	.request
-		&__block
-			flex-direction: column
-			padding: 15px 15px 0
-			align-items: center
-		&__user
-			margin-bottom: 17px
-			img
-				max-width: 120px
-				max-height: 120px
-				margin: 15px auto 18px
-			h4
-				font-size: 13px
-			p
-				font-size: 11px
-			&-img
-				position: relative
-				
-			&-logo
-				width: 46px
-				height: 46px
-				border-radius: 50%
-				position: absolute
-				bottom: 0
-				right: 16px
-				display: flex
-				align-items: center
-				justify-content: center
-				background: #DD0A36
-				svg 
-					fill: #fff
-					max-width: 22px
-					max-height: 22px
-		&__text
-			padding-left: 0
-			border-left: 0
-			&-descr
-				max-height: 105px
-				&.open
-					max-height: none
-			h3
-				max-width: 85%
-				margin-bottom: 9px
-			p 
-				max-width: 100%
-				line-height: 21px
-				overflow: hidden
-				
-			.publication
-				display: none
-	.show-all
-		color: #3f6fc5
-		font-size: 12px
-		line-height: 15px
-		margin-top: 3px
-
+	
 	.gray-butt		
 		.slick-prev
 			background: url('../img/svg/arrow-gray.svg') center no-repeat
@@ -5402,25 +3278,6 @@ p
 				padding-bottom: 15px
 
 
-@media screen and (max-width: 450px)
-	.consultation
-		.row
-			justify-content: center
-		&__contacts
-			text-align: right
-		&__general
-			text-align: left
-			img
-				width: 75%
-	.mobile-tiser
-		.overlay 
-			h1, .h1
-				font-size: 23px
-				font-size: 7vw
-				line-height: 30px
-				line-height: 9.5vw
-				max-width: 95%
-
 
 @media screen and (max-width: 359px)
 	h3
@@ -5429,15 +3286,7 @@ p
 		font-size: 22px
 	p
 		font-size: 10px
-	.service-item 
-		.white-block 
-			padding: 14px 19px 18px
-			p
-				font-size: 10px
-				line-height: 16px
-	.vismob 
-		a
-			line-height: 23px
+	
 	.head-with-image
 		height: 80vh
 		&.contacts-box
@@ -5457,46 +3306,8 @@ p
 			line-height: 30px
 		span
 			font-size: 12px
-	.service-blocks 
-		.columns
-			padding: 0 15px
-			margin-bottom: 20px
-		h2
-			font-size: 16px
-			line-height: 24px
-		p
-			line-height: 17px
-			margin-bottom: 8px
-		li 
-			padding-left: 26px
-			line-height: 22px
-			a
-				font-size: 13px
-				line-height: 22px
-				&:before
-					left: -26px
-					width: 16px
-					top: 6px
-		.one-for-row 
-			.white-block
-				padding-bottom: 173px
-				background-size: 332px
-		.two-for-row:nth-of-type(2) 
-			.white-block
-				background-size: 290px
-				padding-bottom: 105px
-		.two-for-row:nth-of-type(3) 
-			.white-block
-				background-size: 290px
-				padding-bottom: 108px
-		.two-for-row:nth-of-type(4) 
-			.white-block
-				padding-bottom: 47px
-		.white-block
-			padding: 13px 15px 20px 17px
-	.find_text 
-		.columns
-			padding: 0 15px
+	
+	
 	.help-block
 		padding: 11px 10px 17px 19px
 		margin-bottom: 29px
@@ -5508,176 +3319,8 @@ p
 			font-size: 10px
 			line-height: 18px
 
-	.description 
-		p
-			font-size: 14px
-			line-height: 21px
-			padding: 30px 0
-	.podcategory
-		&-item 
-			padding: 15px 18px
-			margin-bottom: 20px
-			height: 250px
-			&.black-text
-				padding: 21px 38px
-				span
-					font-size: 10px
-					margin-top: 8px
-			&.videograph
-				p 
-					margin-top: 12px
-					margin: 12px auto 
-			h2
-				font-size: 21px
-				line-height: 21px
-				margin-bottom: 6px
-			p 
-				font-size: 10px
-				max-width: 240px
-			ul
-				li
-					line-height: 18px
-					span
-						font-size: 11px
-						line-height: 18px
-						&:before
-							width: 16px
-							margin-right: 8px
-							margin-bottom: 2px
-		.columns
-			padding: 0 15px
-			&:nth-of-type(1) 
-				.podcategory-item
-					height: 351px
+	
 
-	.departament
-		&-item 
-			h3
-				padding: 7px 15px
-				font-size: 16px
-				&:after
-					height: 17px
-					top: 17px
-					right: 26px
-				&:before
-					width: 17px
-					right: 18px
-					top: 25px
-			p 
-				font-size: 13px
-				padding: 11px 15px 6px
-				line-height: 19px
-			.info
-				padding-left: 15px
-				margin-bottom: 0
-				span
-					&:first-child
-						font-size: 10px
-					&:nth-of-type(2)
-						font-size: 15px
-						line-height: 20px
-						margin-bottom: 4px
-	.social
-		&-contact
-			padding-top: 23px
-			margin-bottom: 18px
-			&-wrap
-				padding: 23px 0 0
-			p 
-				font-size: 11px
-			span
-				font-size: 24px
-				line-height: 29px
-			.soc-item
-				width: 36px
-				height: 36px
-				margin: 10px 7px 15px
-				&:nth-of-type(1)
-					line-height: 39px
-					img
-						width: 9px
-				&:nth-of-type(2)
-					line-height: 40px
-					img
-						width: 17px
-				&:nth-of-type(3)
-					line-height: 34px
-					img
-						width: 19px
-				&:nth-of-type(4)
-					line-height: 34px
-					img
-						width: 16px
-				&:nth-of-type(5)
-					line-height: 39px
-					img
-						width: 17px
-	.filials 
-		h2
-			font-size: 23px
-			line-height: 32px
-		p 
-			font-size: 10px
-		.slider-nav 
-			.slick-slide
-				padding: 0 18px 3px
-				&.slick-current
-					padding-bottom: 2px
-		.slider-for 
-			.item 
-				.text
-					padding-left: 15px
-					h4
-						font-size: 15px
-					p 
-						line-height: 18px
-						font-size: 11px
-						&.bold
-							font-size: 12px
-							margin-top: 12px
-						&.address-text
-							font-size: 11px
-							line-height: 15px
-							height: 13px
-						&.mobile-text 
-							line-height: 11px 
-							span
-								font-size: 11px
-								margin-right: 14px
-					a 
-						font-size: 11px
-					.with-defis
-						padding-top: 11px
-						&:before
-							width: 12px
-							margin-right: 5px
-				.img 
-					height: 203px
-					.map
-						height: 225px
-					.requisites
-						padding: 6px 16px
-						height: 225px
-						h3
-							font-size: 13px
-						p 
-							font-size: 8px
-							line-height: 13px
-							margin-bottom: 11px
-						.bold
-							font-size: 8px
-						.load-doc
-							margin: 1px
-							padding: 0 12px
-							font-size: 9px
-							line-height: 22px
-						.close
-							right: 2px
-							top: 2px
-					.working
-						padding-left: 14px
-						padding-bottom: 8px
-						font-size: 11px
 	.form-call
 		padding: 33px 4px
 		h2
@@ -5705,27 +3348,19 @@ p
 			font-size: 18px
 			line-height: 22px
 
-	.service 
-		.seen-all
-			font-size: 11px
-			height: 40px
-			line-height: 38px
-			&:after
-				border: 3.5px solid transparent
-				border-color: #0070c9 rgba(255,212,52,0) rgba(255,212,52,0)
-				border-top-width: 4px
-				border-bottom: 0
-	.portfolio
-		margin-bottom: 30px
-		margin-top: 0
-		.slider-head, .slider-head__item
-			height: 413px
-		.slider-head
+	.slider-default
+		&.portfolio-slider
 			.slick-dots 
 				bottom: 14px
 				li
 					margin: 0 8px
 					width: 35px
+	.portfolio
+		margin-bottom: 30px
+		margin-top: 0
+		.slider-head, .slider-head__item
+			height: 413px
+		.slider-head			
 			&__item
 				padding: 24px 3px 36px
 				background-size: cover
@@ -5763,458 +3398,24 @@ p
 		h2.head-block
 			top: 15px
 			font-size: 23px
-	.specoffer 
-		h2
-			font-size: 22px
-			margin-bottom: 12px
-			&.head-block
-				top: 16px
-	.specoffer-item
-		flex-direction: column-reverse
-		margin-bottom: 15px
-		&__img
-			height: 136px
-		&__text
-			padding: 11px 15px 15px 14px
-			min-height: 121px
-			h3
-				font-size: 14px
-				margin-bottom: 2px
-
-			p
-				line-height: 16px
-		&__price
-			bottom: 14px
-			left: 14px
-		&__price-actual
-			font-size: 18px
-		.profitable-price
-			height: 18px
-			line-height: 18px
-			font-size: 9px
-			width: 82px
-			border-radius: 9px
-	.all-solution
-		height: 151px
-		padding-bottom: 5px
-		a
-			margin-top: 5px
-		span
-			font-size: 18px
-			line-height: 18px
-		p
-			font-size: 11px
-			line-height: 22px
-			margin-bottom: 2px
-	.blog
-		margin-bottom: 23px
-		padding-top: 20px
-		&__wrap
-			margin-top: 10px
-			padding: 0 7px
-		&__seen-all
-			line-height: 32px
-			font-size: 12px
-			margin-left: 12px
-			margin-right: 12px
-			margin-bottom: 24px
-
-		&-item
-			margin-right: 8px
-			margin-left: 8px
-			&__marker
-				height: 5px
-				width: 5px
-			&__text
-				margin-bottom: 2px
-			&__descr
-				padding: 13px 15px 31px 15px
-				h3
-					font-size: 14px
-					line-height: 17px
-					margin-bottom: 8px
-				p
-					font-size: 10px
-					line-height: 15px
-					max-height: 60px
-					padding-right: 30px
-					overflow: hidden
-				&>div
-					bottom: 12px
-					left: 15px
-			&__category
-				font-size: 9px
-			&__datetime
-				font-size: 9px
-				margin-left: 2px
+	
 	.title
 		margin: 0 auto 25px
 		max-width: 75%
 		font-size: 10px
 		line-height: 15px
 
-	.about 
-		padding-bottom: 22px
-		margin-top: 10px
-		padding-top: 14px
-		background: #292a2b
-		.slider-for
-			&__item
-				background-repeat: no-repeat
-				background-size: 200% auto
-				background-position: top right 10%
-				padding: 120px 0 31px 
-				height: auto
-			.comment
-				font-size: 12px
-				margin-bottom: 35px
-				line-height: 21px
-				margin-bottom: 0
-				padding-bottom: 17px
-				padding-top: 16px
-				color: #fff
-				background: #292a2b
-			.about__worker 
-				background: #292a2b
-				p
-					font-size: 10px
-					line-height: 14px
-					color: #fff
-					margin-bottom: 3px
-				span
-					font-size: 9px
-					line-height: 15px
-					color: #fff
-				a
-					display: none
-		.slider-nav
-			margin-bottom: 11px
-			margin: 0 auto
-			width: 58%
-			&__item
-				height: 1px
-				background: #949595!important
-				margin: 0 6px
-	.slider-container
-		display: flex
-		flex-direction: column-reverse
-	.consultation
-		padding: 6px
-		height: 52px
 
-		&__general
-			padding-right: 0
-			flex: 1.5
-			img
-				width: 90%
-				margin-top: 5px
-			p
-				display: none
-		&__order
-			display: none
-		&__contacts 
-			text-align: center
-			span
-				font-size: 14px
-				line-height: 14px
-			p
-				font-size: 7px
-				line-height: 4px 
 	.logo-on-tiser
 		width: 144px
 		margin-bottom: 5px
-	.tiser-text 
-		.future 
-			span
-				font-size: 50px
-				line-height: 50px
-	.about-description 
-		p
-			padding: 28px 0 22px
-			font-size: 24px
-			line-height: 30px
-
-	.principe 
-		h4
-			font-size: 18px
-			line-height: 18px
-			padding: 0 11px
-		p 
-			line-height: 18px
-			font-size: 10px
-			padding: 0px 10px 3px 12px
-		.columns 
-			&>div
-				margin-left: 5px
-				margin-bottom: 20px
-	.present-company
-		padding: 26px 0 0
-		margin: 4px 0 25px
-		&__text
-			h3
-				font-size: 21px
-				line-height: 21px
-				margin-bottom: 7px
-			p 
-				width: 70%
-				font-size: 10px
-			a
-				//line-height: 34px
-				margin-top: 14px
-				//font-size: 12px
-				//padding: 0 23px
-				margin-bottom: 9px
-			span
-				font-size: 9px
-				padding-right: 0
-		&__img
-			img
-				width: 130%
-				margin-bottom: -27px
-	.our-command 
-		h2
-			font-size: 23px
-			margin-bottom: 10px
-		.columns
-			padding: 0 15px
-			&:nth-of-type(2), &:nth-of-type(4)
-				padding-right: 8px
-			&:nth-of-type(3), &:nth-of-type(5)
-				padding-left: 8px
-		&__item
-			height: 184px
-			margin-bottom: 16px
-			padding: 7px 3px 7px 10px 
-			h4
-				line-height: 18px
-				font-size: 15px
-				margin-bottom: 1px
-			span
-				font-size: 8px
-	.all-command 
-		padding: 20px 0 25px
-		margin-bottom: 39px
-		h2
-			font-size: 18px
-			line-height: 20px
-		p
-			font-size: 11px
-			line-height: 14px
-		h3
-			font-size: 18px
-			line-height: 20px
-			margin-bottom: 5px
+	
 	.primary_link
 		line-height: 32px
 		font-size: 12px
 		padding: 0 17px
-	.technology
-		height: 76px
-		margin-bottom: 23px
-	.scroll-block
-		padding: 21px 15px 24px 15px
-		&__head
-			font-size: 16px
-			line-height: 30px
-		&__techno
-			font-size: 22px
-			line-height: 30px
-		&__link
-			padding-bottom: 5px
-			font-size: 20px
-			line-height: 20px
-			&:after
-				margin-left: 13px
-				width: 20px
-	.conferencies 
-		h2
-			font-size: 23px
-			margin-bottom: 10px
-		.columns
-			padding: 0 15px
-			&.medium-9
-				padding-bottom: 22px
-	.slider-conf
-		&__item
-			height: 175px
-			.content
-				padding: 10px 13px
-			p
-				font-size: 8px
-	.conference
-		&-nav
-			&__item 
-				padding-right: 0
-				padding-left: 13px
-				&.active, &.slick-current
-					padding-right: 0
-					padding-left: 13px
-				h3
-					font-size: 18px
-					line-height: 25px
-				p 
-					font-size: 11px
-	.history
-		margin-top: 28px
-		padding-top: 17px
-		h2
-			font-size: 21px
-		&__text
-			padding-left: 15px
-			padding-right: 15px
-		h3
-			font-size: 15px
-		p
-			font-size: 11px
-			line-height: 20px
-	.show-all-history
-		font-size: 12px
-		line-height: 40px
-		&:after
-			border: 3px solid transparent
-			border-top: 4px solid #0070c9
-			border-bottom: 0
-	.quest
-		padding: 64px 0 59px
-		&__text 
-			h3
-				font-size: 18px
-			p 
-				font-size: 10px
-				line-height: 18px
-				margin-bottom: 25px
-				max-width: 75%
-				margin: 0 auto 24px
-	.filials.reviews
-		padding-top: 30px
-		h2
-			font-size: 21px
-			line-height: 25px
-	.partners 
-		.scroll-block
-			padding: 15px 15px 17px 14px
-			&__head
-				margin-right: 22px
-				font-size: 18px
-				line-height: 42px
-			&__logo
-				line-height: 40px
-				margin-bottom: 4px
-				img
-					max-width: 70px
-					max-height: 23px
-				&:after
-					height: 38px
-					margin: 0 17px 0 23px
-	.carousel
-		padding-top: 35px
-		h2
-			font-size: 21px
-			line-height: 28px
-			padding-left: 15px
-			min-height: 86px
-			margin-bottom: 5px
-			span
-				font-size: 21px
-				line-height: 28px
-		&__text
-			font-size: 12px
-			line-height: 16px
-			padding-left: 14px
-		.slick-dots 
-			li
-				width: 35px
-
-	.vacancy-carousel
-		padding-top: 22px
-		h3
-			font-size: 19px
-		p 
-			font-size: 10px
-			padding: 0 5px
-			line-height: 18px
-			margin-bottom: 8px
-		span
-			font-size: 9px
-			line-height: 22px
-			padding: 0 14px
-		.slick-next
-			background-size: 8px
-			top: 32%
-			width: 20px
-		.slick-prev
-			background-size: 8px
-			top: 32%
-			width: 20px
-	.carousel 
-		padding-bottom: 39px
-		.seen-all
-			margin-top: 20px
-			line-height: 32px
-			font-size: 10px
-			padding: 0 25px
-	.consultation__contacts 
-		a
-			width: 24px
-			height: 24px
-			line-height: 24px
-			img
-				max-width: 13px
-				max-height: 12px
-	.mobile-accord 
-		.tabs
-			font-size: 16px
-			padding: 10px 16px
-			&:before
-				width: 17px
-				right: 15px
-				top: 26px
-			&:after
-				right: 23px
-				height: 17px
-				top: 18px
-	.reviews 
-		h3
-			font-size: 15px
-			line-height: 21px
-		a
-			font-size: 12px
-	.filials 
-		.slick-dots 
-			margin-top: -15px
-			margin-bottom: 6px
-			li
-				height: 12px
-		p 
-			font-size: 9px
-	.request
-		&-block
-			padding: 10px 15px 0
-		&__user 
-			img
-				max-width: 100px
-				max-height: 100px
-				margin: 12px auto
-			&-logo
-				width: 40px
-				height: 40px
-				svg
-					max-width: 18px
-					max-height: 18px
-			h4
-				font-size: 11px
-			p 
-				font-size: 9px
-		&__text
-			p 
-				font-size: 10px
-				line-height: 18px
-			h3
-				margin-bottom: 5px
-				font-size: 15px
-				line-height: 21px
-			&-descr
-				max-height: 90px
+	
+	
 	.mobile-accord 
 		.slick-slide
 			a
@@ -6234,5 +3435,3 @@ p
 			background-size: 7px
 	.show-all
 		font-size: 10px
-	.filials .slick-dots
-		margin-top: -6px
