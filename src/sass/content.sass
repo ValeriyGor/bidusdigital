@@ -2330,6 +2330,20 @@ $anim_time: 0.3s
 		.columns 
 			&>div
 				border-left-width: 2px
+	.nav-write-request
+		.slick-slide
+			margin: 0 14px
+		&__item
+			height: 60px
+			max-width: 60px
+			line-height: 58px
+			svg, img
+				witdh: 50%
+				max-width: 65%
+			svg image				
+				max-width: 65%				
+				witdh: 50%
+
 
 @media screen and (min-width: 866px) and (max-width: 1024px)
 	#gadget1
@@ -2850,50 +2864,6 @@ $anim_time: 0.3s
 			&:focus
 				color: #fff
 
-	.about 
-		padding-bottom: 25px
-		margin-top: 17px
-		padding-top: 14px
-		background: #292a2b
-		h2
-			font-size: 28px
-		.slider-for
-			&__item
-				background-repeat: no-repeat
-				background-size: 200% auto
-				background-position: top right 10%
-				padding: 140px 0 38px 
-				height: auto
-			.comment
-				font-size: 14px
-				line-height: 25px
-				margin-bottom: 0
-				padding-bottom: 17px
-				padding-top: 21px
-				color: #fff
-				background: #292a2b
-			.about__worker 
-				background: #292a2b
-				p
-					font-size: 12px
-					line-height: 14px
-					color: #fff
-					margin-bottom: 4px
-				span
-					font-size: 10px
-					line-height: 18px
-					color: #fff
-				a
-					display: none
-		.slider-nav
-			margin-bottom: 11px
-			margin: 0 auto
-			width: 83%
-			&__item
-				height: 1px
-				background: #949595!important
-				margin: 0 6px
-				cursor: pointer
 	.slider-container
 		display: flex
 		flex-direction: column-reverse
@@ -3114,6 +3084,7 @@ $anim_time: 0.3s
 				//padding: 0 25px
 			span
 				font-size: 11px
+				padding-right: 0
 		.columns
 			flex-direction: column
 			padding: 0
@@ -3147,6 +3118,9 @@ $anim_time: 0.3s
 				order: 7
 			&.medium-12
 				min-width: 100%
+			&.medium-3
+				max-width: 50%
+				flex: 0 0 50%
 
 
 		&__item
@@ -3642,6 +3616,12 @@ $anim_time: 0.3s
 				line-height: 9.5vw
 				max-width: 95%
 	
+@media screen and (min-width: 640px) and (max-width: 767px)
+	.podcategory
+		.columns
+			padding: 0 15px
+
+
 @media screen and (max-width: 359px)
 	.social
 		&-contact
@@ -3896,48 +3876,7 @@ $anim_time: 0.3s
 			&__datetime
 				font-size: 9px
 				margin-left: 2px
-	.about 
-		padding-bottom: 22px
-		margin-top: 10px
-		padding-top: 14px
-		background: #292a2b
-		.slider-for
-			&__item
-				background-repeat: no-repeat
-				background-size: 200% auto
-				background-position: top right 10%
-				padding: 120px 0 31px 
-				height: auto
-			.comment
-				font-size: 12px
-				margin-bottom: 35px
-				line-height: 21px
-				margin-bottom: 0
-				padding-bottom: 17px
-				padding-top: 16px
-				color: #fff
-				background: #292a2b
-			.about__worker 
-				background: #292a2b
-				p
-					font-size: 10px
-					line-height: 14px
-					color: #fff
-					margin-bottom: 3px
-				span
-					font-size: 9px
-					line-height: 15px
-					color: #fff
-				a
-					display: none
-		.slider-nav
-			margin-bottom: 11px
-			margin: 0 auto
-			width: 58%
-			&__item
-				height: 1px
-				background: #949595!important
-				margin: 0 6px
+	
 	.slider-container
 		display: flex
 		flex-direction: column-reverse
