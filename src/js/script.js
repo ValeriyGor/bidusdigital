@@ -8,9 +8,9 @@ var fixNavOutTop = 0;
 
 new WOW().init();
 
-$( "li.arrow-down").hover(
+$( ".head-menu li").hover(
     function() {
-        if ($(window).width() > '1024'){
+        if ($(window).width() > '1024' && $(this).hasClass('arrow-down')){
                 if(!$('.curtain').is(":visible")){
                   $(".curtain").fadeIn(150);
                 }                
@@ -21,6 +21,9 @@ $( "li.arrow-down").hover(
                   $(this).children(".head-menu__dropdown").stop().fadeTo(150, 1);
                 }
                 $(this).children(".head-menu__dropdown").addClass('open');
+            }
+            else{             
+                $(".curtain").fadeOut(150);              
             }
     }, function(e) {
         if ($(window).width() > '1024'){  
@@ -89,19 +92,20 @@ $( ".close-input" ).click(function(e) {
       $(this).addClass('visible');
       $(this).fadeIn(300);
       AnimateRotate($('.close-input'), 90);
-      // $(this).fadeIn(300);
     } 
     else{
       $(this).removeClass('visible');
       $(this).addClass('not-visible');
       $('.search input').hide(0);
       $('.search input').delay(350).fadeIn(300);
-
-
-
+      if ($(window).width() > '767'){
       $(this).fadeOut(500);
-      // $(this).fadeOut(300);
-      AnimateRotate($('.close-input'), -90);
+        AnimateRotate($('.close-input'), -90);
+      }
+      else {
+        $(this).fadeOut(0);
+      }
+      
     } 
     $(".curtain").fadeOut(300);
     $(".search input").val('');
