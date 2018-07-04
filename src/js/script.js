@@ -771,7 +771,10 @@ $(document).ready(function() {
     $('.form-call input').blur(function(){
       $('.form-call').removeClass('focused');
       $('.typed-cursor').show(0);
-      typed.start();
+        if($('.typed-cursor').hasClass('typed-cursor--blink'))
+        {
+          typed.start();
+        }      
     });
 
     if($("div").is(".blog__wrap") && $(window).width() > '767'){
