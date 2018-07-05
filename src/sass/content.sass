@@ -3560,7 +3560,7 @@ $anim_time: 0.3s
 				&:before
 					left: -26px
 					width: 16px
-					top: 6px
+					top: 9px
 		.one-for-row 
 			.white-block
 				padding-bottom: 200px
@@ -4273,4 +4273,47 @@ $anim_time: 0.3s
 	.service-blocks .one-for-row .white-block
 		background-position: left 145px bottom
 	.portfolio-item
-		height: 500px
+		height: 250px
+		margin-bottom: 15px
+	.portfolio-wrapper .columns
+		min-width: 50%
+	.two-for-row.columns.medium-6
+		min-width: 50%
+		&:nth-of-type(2n+1)
+			padding-left: 10px
+		&:nth-of-type(2n)
+			padding-right: 10px
+	.three-for-row.columns.medium-4
+		min-width: 100%
+		
+	.service-blocks 
+		li 
+			a
+				font-size: 13px
+				line-height: 20px
+				&:before
+					top: 7px
+		p 
+			font-size: 11px
+			line-height: 18px
+		
+		.two-for-row
+			.white-block
+				min-height: 351px
+		.one-for-row
+			.white-block
+				padding-right: 50%
+				background-position: bottom right -25px
+				background-size: 350px
+				padding-bottom: 20px
+		.three-for-row
+			.white-block
+				p 
+					max-width: 100%
+
+		.columns
+			margin-bottom: 18px
+	.portfolio-wrapper
+		padding: 0 8px
+		.columns
+			padding: 0 8px
