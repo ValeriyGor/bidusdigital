@@ -777,8 +777,8 @@ $(document).ready(function() {
         }      
     });
 
-    if($("div").is(".blog__wrap") && $(window).width() > '767'){
-        $('.blog__wrap').slick({
+    if($("div").is(".blog__slider") && $(window).width() > '767'){
+        $('.blog__slider').slick({
           infinite: true,
           slidesToShow: 3,
           slidesToScroll: 3,
@@ -1069,7 +1069,7 @@ $(window).resize(function() {
   if ($(window).width() < '768'){
     $(".reviews .slider-for.slick-slider").slick('unslick');
     // $(".conference-nav").slick('unslick');
-    $('.blog__wrap.slick-slider').slick('unslick');
+    $('.blog__slider.slick-slider').slick('unslick');
     //$(".conference-nav").slick(getSliderConfSettings());
   }
   if ($(window).width() > '767'){

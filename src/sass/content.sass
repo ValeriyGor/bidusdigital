@@ -215,6 +215,12 @@ $anim_time: 0.3s
 	margin-bottom: 53px
 	&__wrap
 		margin-top: 19px
+	&__till
+		margin-top: 0
+		.blog-item
+			margin-left: 0
+			margin-right: 0
+			margin-bottom: 30px
 	&-item
 		margin-left: 15px
 		margin-right: 15px
@@ -222,6 +228,32 @@ $anim_time: 0.3s
 		border-radius: 3px
 		overflow: hidden
 		display: block
+		position: relative
+		&-full-width
+			display: flex
+			.blog-item__descr
+				flex: 1
+				padding: 73px 7px 15px
+				&>div
+					bottom: auto
+					top: 27px
+					left: 30px
+				h3					
+					font-size: 24px
+					line-height: 32px
+					font-family: 'SFUIDisplay-Bold'
+					padding: 0 22px
+				p
+					padding: 3px 50px 0 22px
+					font-size: 16px
+
+			.blog-item__img
+				flex: 2
+				height: auto
+			.primary_link
+				margin: 17px 22px
+				
+
 		&__img
 			height: 240px
 			background-position: center
@@ -264,13 +296,18 @@ $anim_time: 0.3s
 				background-color: #f9896d
 			&.marker-blue
 				background-color: #7c9bef
+			&.marker-lightgreen
+				background-color: #adda91
+			&.marker-grey
+				background-color: #9fa6a6
 		&__text
 			margin-bottom: 9px
 		&__datetime
 			font-size: 13px
 			color: #b5b5b5
 			margin-left: 9px
-
+.without-padtop
+	padding-top: 0
 .consultation
 	height: 105px
 	background: #fff
@@ -1450,7 +1487,8 @@ $anim_time: 0.3s
 				background: #f70c3b
 
 	.blog
-		&-item
+		&-item:not(.blog-item-full-width)
+			/* style */
 			&:hover
 				h3
 					color: #0070c9
