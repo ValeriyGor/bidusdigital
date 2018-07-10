@@ -1427,6 +1427,160 @@ $anim_time: 0.3s
 	-moz-animation: blink 0.7s infinite
 	animation: blink 0.7s infinite
 
+.properties
+	&-article
+		padding-top: 10px
+		.date
+			&:before
+				content: ""
+				display: inline-block
+				height: 14px
+				width: 14px
+				background-size: contain
+				margin-right: 3px
+				vertical-align: middle
+				position: relative
+				top: -1px
+				background: url('data:image/svg+xml;utf8,<svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14px" height="14px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M6.996,13.999 C3.146,13.999 -0.004,10.849 -0.004,7.000 C-0.004,3.149 3.146,-0.001 6.996,-0.001 C10.846,-0.001 13.996,3.149 13.996,7.000 C13.996,10.849 10.846,13.999 6.996,13.999 ZM6.996,1.400 C3.916,1.400 1.396,3.919 1.396,7.000 C1.396,10.080 3.916,12.600 6.996,12.600 C10.076,12.600 12.596,10.080 12.596,7.000 C12.596,3.919 10.076,1.400 6.996,1.400 ZM6.296,7.699 L6.296,3.499 L7.346,3.499 L7.346,7.140 L10.496,9.029 L9.936,9.940 L6.296,7.699 Z"/></svg>') center no-repeat;
+		
+		.author
+			&:before
+				content: ""
+				display: inline-block
+				height: 18px
+				width: 15px
+				background-size: contain
+				margin-right: 7px
+				vertical-align: middle
+				position: relative
+				top: -1px
+				background: url('../img/svg/ic_user.svg') center no-repeat
+				background-size: contain
+		&>div
+			display: inline-block
+		&.gray-text
+			.properties_value
+				color: #737373
+			.date
+				&:before
+					background: url('data:image/svg+xml;utf8,<svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14px" height="14px"><path fill-rule="evenodd"  fill="rgb(115, 115, 115)" d="M6.996,13.999 C3.146,13.999 -0.004,10.849 -0.004,7.000 C-0.004,3.149 3.146,-0.001 6.996,-0.001 C10.846,-0.001 13.996,3.149 13.996,7.000 C13.996,10.849 10.846,13.999 6.996,13.999 ZM6.996,1.400 C3.916,1.400 1.396,3.919 1.396,7.000 C1.396,10.080 3.916,12.600 6.996,12.600 C10.076,12.600 12.596,10.080 12.596,7.000 C12.596,3.919 10.076,1.400 6.996,1.400 ZM6.296,7.699 L6.296,3.499 L7.346,3.499 L7.346,7.140 L10.496,9.029 L9.936,9.940 L6.296,7.699 Z"/></svg>') center no-repeat;
+					background-size: contain
+			.author
+				&:before
+					background: url('../img/svg/ic_user-gray.svg') center no-repeat
+					background-size: contain
+				
+
+	&_value
+		font-size: 13px
+		color: #fff
+		font-family: Open Sans
+		margin: 0 15px
+
+
+.article
+	&__wrap
+		background: #fff
+		max-width: 1140px
+		padding: 67px 0 0
+		.text-col
+			padding-left: 98px
+			padding-right: 0
+		img
+			max-width: 100%
+			margin-bottom: 30px
+	h2, h3
+		text-align: left
+		font-family: "SFUIDisplay-Bold"
+	h2
+		font-size: 24px
+		letter-spacing: 0
+	h3
+		font-size: 20px
+	p
+		font-size: 16px
+		line-height: 30px
+		padding-right: 37px
+		margin-bottom: 30px
+		&.postscriptum
+			font-size: 13px
+			line-height: 13px
+			color: #737373
+
+.quote
+	&__text
+		border-left: 3px solid #0070c9
+		font-family: "SFUIDisplay-Medium"
+		line-height: 36px
+		font-size: 24px
+		padding: 5px 70px 5px 35px
+		left: -2px
+		margin: 38px 0
+	margin: 30px 0 0
+	position: relative
+	span
+		font-family: "SFUIDisplay-Bold"
+
+.footnote
+	position: absolute
+	bottom: 0
+	right: 0
+	transform: translateX(calc(100% + 22px))
+	padding-bottom: 10px
+	p 
+		margin-bottom: 0
+		line-height: 20px
+		font-size: 13px
+		line-height: 14px
+	.blue-text
+		color: #0070c9
+		font-size: 16px
+		line-height: 20px
+		font-family: "SFUIDisplay-Bold"
+	&__img
+		padding-bottom: 43px 
+		p 
+			font-size: 13px
+			font-style: italic
+			font-weight: 300
+			max-width: 65%
+			line-height: 20px
+			color: #737373	
+
+.right-col
+	padding-left: 20px
+	padding-top: 48px
+	p 
+		font-size: 13px
+		font-style: italic
+		font-weight: 300
+		max-width: 65%
+		line-height: 20px
+		padding-right: 0
+		margin-bottom: 20px
+		color: #737373	
+
+.footer-article
+	border-top: 1px solid #e5e5e5
+	margin-top: 23px
+	.properties-article
+		padding-top: 17px
+		padding-bottom: 20px
+
+.article-share
+	float: right
+	width: 30%
+	&__wrap
+		display: inline-block
+	&__item
+		height: 30px
+		width: 30px
+		border-radius: 50%
+		border: 1px solid #cccccc
+		display: inline-block
+		vertical-align: top
+
+
 @keyframes blink
 	0%
 		opacity: 1
