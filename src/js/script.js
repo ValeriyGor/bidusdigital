@@ -83,6 +83,13 @@ $( ".send_form" ).click(function(e) {
     $(".success_send").fadeIn(0);
 });
 
+$( ".accordeon__item-header" ).click(function(e) {
+    $( ".accordeon__item-header.open").not(this).next().slideToggle(300);
+     $( ".accordeon__item-header.open").not(this).removeClass('open');
+    $(this).next().slideToggle(300);
+    $(this).toggleClass('open');
+});
+
 $( ".close-input" ).click(function(e) {
     $(".fast-link").hide(0);
     $(".result-search").hide(0);

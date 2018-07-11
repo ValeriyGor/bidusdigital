@@ -630,35 +630,29 @@ $anim_time: 0.3s
 		padding-left: 117px
 		padding-right: 100px
 		margin-bottom: 15px
-	.navigation 
-		position: static
-		a 
-			color: #0070c9
-			font-size: 14px
-			font-family: 'SFUIDisplay-Medium' 
-			line-height: 30px
-			transition: all 0.2s
-			&.active
-				font-family: 'SFUIDisplay-Bold' 
-			&:before
-				display: inline-block
-				content: ""
-				width: 16px
-				height: 1px
-				background: #0070c9
-				margin-left: 2px
-				margin-right: 10px
-				margin-bottom: 4px
-				transition: all .2s
-			// &:hover
-			// 	font-family: 'SFUIDisplay-Bold' 
-			// 	color: #1588e4
-			// 	&:before
-			// 		background: #1588e4
-			// 		width: 20px
-		&__container
-			padding-bottom: 55px
-			padding-top: 15px
+.navigation 
+	position: static
+	a 
+		color: #0070c9
+		font-size: 14px
+		font-family: 'SFUIDisplay-Medium' 
+		line-height: 30px
+		transition: all 0.2s
+		&.active
+			font-family: 'SFUIDisplay-Bold' 
+		&:before
+			display: inline-block
+			content: ""
+			width: 16px
+			height: 1px
+			background: #0070c9
+			margin-left: 2px
+			margin-right: 10px
+			margin-bottom: 4px
+			transition: all .2s
+	&__container
+		padding-bottom: 55px
+		padding-top: 15px
 
 .reviews
 	.row
@@ -781,16 +775,19 @@ $anim_time: 0.3s
 
 	&__text
 		padding-left: 34px
-		display: block
-		width: 100%
-		color: #de0a36
-		font-family: 'SFUIDisplay-Bold' 
-		font-size: 24px
-		line-height: 60px
+
 	.seen-all
 		margin-top: 125px
 		transition: all 0.3s
 		line-height: 50px
+
+.red_title	
+	display: block
+	width: 100%
+	color: #de0a36
+	font-family: 'SFUIDisplay-Bold' 
+	font-size: 24px
+	line-height: 60px
 
 .center-text
 	text-align: center
@@ -1453,7 +1450,7 @@ $anim_time: 0.3s
 				margin-right: 7px
 				vertical-align: middle
 				position: relative
-				top: -1px
+				top: -2px
 				background: url('../img/svg/ic_user.svg') center no-repeat
 				background-size: contain
 		&>div
@@ -1479,12 +1476,17 @@ $anim_time: 0.3s
 
 
 .article
+	margin-bottom: 10px
+	&.with-marg-bottom
+		margin-bottom: 30px
 	&__wrap
 		background: #fff
 		max-width: 1140px
 		padding: 67px 0 0
+		&.with-navigation
+			padding-top: 25px
 		.text-col
-			padding-left: 98px
+			padding-left: 95px
 			padding-right: 0
 		img
 			max-width: 100%
@@ -1506,6 +1508,29 @@ $anim_time: 0.3s
 			font-size: 13px
 			line-height: 13px
 			color: #737373
+	&-share
+		text-align: right
+		padding: 15px 6px
+		span
+			font-size: 12px
+			line-height: 12px
+			vertical-align: middle
+			display: inline-block
+			color: #bbb
+		&__flex
+			display: flex
+
+		&__item
+			display: flex
+			align-items: center
+			justify-content: center
+			text-align: center
+			margin-left: 10px
+			transition: all 0.3s
+			img, svg, path
+				transition: all 0.3s
+			path
+				fill: rgb(204, 204, 204)
 
 .quote
 	&__text
@@ -1525,7 +1550,7 @@ $anim_time: 0.3s
 	position: absolute
 	bottom: 0
 	right: 0
-	transform: translateX(calc(100% + 22px))
+	transform: translateX(calc(100% + 9px))
 	padding-bottom: 10px
 	p 
 		margin-bottom: 0
@@ -1543,13 +1568,13 @@ $anim_time: 0.3s
 			font-size: 13px
 			font-style: italic
 			font-weight: 300
-			max-width: 65%
 			line-height: 20px
+			padding-right: 0
 			color: #737373	
 
 .right-col
 	padding-left: 20px
-	padding-top: 48px
+	padding-top: 45px
 	p 
 		font-size: 13px
 		font-style: italic
@@ -1559,26 +1584,208 @@ $anim_time: 0.3s
 		padding-right: 0
 		margin-bottom: 20px
 		color: #737373	
+	&.navigation
+		padding-top: 15px
+
 
 .footer-article
 	border-top: 1px solid #e5e5e5
-	margin-top: 23px
+	margin-top: 20px
 	.properties-article
 		padding-top: 17px
 		padding-bottom: 20px
+		.date:before
+			margin-right: 5px
+	.properties_value
+		margin: 0 2px 0 19px
 
 .article-share
 	float: right
 	width: 30%
 	&__wrap
 		display: inline-block
+		vertical-align: middle
 	&__item
 		height: 30px
 		width: 30px
 		border-radius: 50%
 		border: 1px solid #cccccc
+		span
+			display: inline-block
+			margin: auto
+
+.accordeon
+	&__item-content
+		display: none
+		padding-left: 27px
+		border-left: 3px solid #0070c9
+		margin-bottom: 43px
+		p 
+			margin-bottom: 15px
+	h2
+		font-size: 24px
+		margin-top: 29px
+		margin-bottom: 15px
+	h3
+		padding: 0 0 20px
+		font-size: 20px
+		line-height: 30px
+		cursor: pointer
+		transition: all 0.3s
+		font-family: "SFUIDisplay-Medium"
+		&:after
+			content: ""
+			display: inline-block
+			width: 0
+			height: 0
+			border: 5px solid transparent
+			border-top: 0
+			border-bottom: 8px solid #ccc
+			transition: border-color 0.2s
+			position: relative
+			bottom: 2px
+			margin-left: 5px
+		&.open
+			font-family: "SFUIDisplay-Bold"
+			&:after
+				border-top: 8px solid #0070c9
+				border-bottom: 0
+
+	img
+		margin-top: 10px
+		margin-bottom: 20px
+	p 
+		padding-right: 10px
+		a 
+			color: #0070c9
+	ol
+		margin-bottom: 15px
+	ul
+		list-style-type: disc
+		padding-left: 15px
+		li
+			margin-top: 7px
+	li
+		font-size: 16px
+		line-height: 30px
+		margin-bottom: 6px
+	ol>li
+		counter-increment: item
+		padding-left: 35px
+		position: relative
+		&:before
+			display: inline-block
+			width: 1em
+			position: absolute
+			padding-right: 0.5em
+			font-weight: bold
+			text-align: right
+			left: 9px
+			top: 0
+			content: counter(item) "."
+	.docs
+		a 
+			font-family: "SFUIDisplay-SemiBold"
+			font-size: 14px
+			border: 1px solid #e6e6e6
+			border-radius: 3px
+			padding: 0 14px
+			display: inline-block
+			text-align: center
+			line-height: 38px
+			margin-right: 10px
+			&:before
+				content: ""
+				display: inline-block
+				margin-right: 7px
+				height: 14px
+				width: 12px
+				vertical-align: middle
+				position: relative
+				bottom: 1px
+				background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12px" height="14px"><path fill-rule="evenodd"  fill="rgb(0, 112, 201)" d="M11.500,14.000 L0.500,14.000 C0.224,14.000 -0.000,13.795 -0.000,13.543 L-0.000,0.456 C-0.000,0.204 0.224,-0.000 0.500,-0.000 L7.000,-0.000 L7.000,4.109 C7.000,4.361 7.224,4.565 7.500,4.565 L12.000,4.565 L12.000,13.543 C12.000,13.795 11.776,14.000 11.500,14.000 ZM2.500,11.261 L6.500,11.261 C6.776,11.261 7.000,11.056 7.000,10.804 C7.000,10.552 6.776,10.348 6.500,10.348 L2.500,10.348 C2.224,10.348 2.000,10.552 2.000,10.804 C2.000,11.056 2.224,11.261 2.500,11.261 ZM9.500,6.695 L2.500,6.695 C2.224,6.695 2.000,6.900 2.000,7.152 C2.000,7.404 2.224,7.608 2.500,7.608 L9.500,7.608 C9.776,7.608 10.000,7.404 10.000,7.152 C10.000,6.900 9.776,6.695 9.500,6.695 ZM9.500,8.522 L2.500,8.522 C2.224,8.522 2.000,8.726 2.000,8.978 C2.000,9.230 2.224,9.435 2.500,9.435 L9.500,9.435 C9.776,9.435 10.000,9.230 10.000,8.978 C10.000,8.726 9.776,8.522 9.500,8.522 ZM8.000,0.267 L11.707,3.652 L8.000,3.652 L8.000,0.267 Z"/> </svg>') center no-repeat
+			
+.footer-article-help
+	padding: 10px 25px
+	display: flex
+	margin-top: 10px
+	align-items: center
+	justify-content: space-between
+	p 
+		max-width: 75%
 		display: inline-block
-		vertical-align: top
+		font-size: 14px
+		margin-bottom: 0
+		span
+			font-weight: 600
+	.oval-red-button
+
+.workers
+	&__item
+		display: block
+		width: 23%
+
+.till-flex
+	display: flex
+	align-items: flex-start
+	justify-content: space-between
+	flex-wrap: wrap
+
+.banner
+	background-size: cover
+	margin: 45px 0
+	padding: 95px 0
+	h2
+		line-height: 48px
+		letter-spacing: 0
+	&-big
+		height: 700px
+
+	&-medium
+		height: 550px
+	&-whitetxt
+		h2, p, span
+			color: #fff
+	&-txtleft
+		h2, p, span
+			text-align: left
+.living-team
+	h2
+		width: 100%
+
+.workers
+	background: #fff
+	padding: 45px 0
+	h2
+		font-size: 36px
+		line-height: 48px
+		padding: 15px 0
+		letter-spacing: 0
+		span
+			color: #de0a36
+			font-family: SFUIDisplay-Bold
+	&__item
+		padding: 45px 0 10px
+
+	&__img
+		width: 161px
+		height: 161px
+		border-radius: 50%
+		overflow: hidden
+		margin: 0 auto 22px
+		display: block
+
+	&__name
+		font-size: 20px
+		font-family: SFUIDisplay-Bold
+		text-align: center
+
+	&__position
+		color: #0070c9
+		font-size: 12px
+		font-family: SFUIDisplay-Bold
+		text-align: center
+
 
 
 @keyframes blink
@@ -1624,6 +1831,12 @@ $anim_time: 0.3s
 				&:hover 
 					h3
 						color: $link-color
+	.accordeon
+		h3
+			&:hover
+				&:after
+					border-bottom-color: #0070c9
+
 	.specoffer
 		h2
 			margin-bottom: 38px
@@ -1663,15 +1876,14 @@ $anim_time: 0.3s
 				span
 					background: #de0a36
 
-	.history
-		.navigation 
-			a 
-				&:hover
-					font-family: 'SFUIDisplay-Bold' 
-					color: #1588e4
-					&:before
-						background: #1588e4
-						width: 20px
+	.navigation 
+		a 
+			&:hover
+				font-family: 'SFUIDisplay-Bold' 
+				color: #1588e4
+				&:before
+					background: #1588e4
+					width: 20px
 			
 	.scroll-block
 		&__link
@@ -1718,6 +1930,13 @@ $anim_time: 0.3s
 						.close						
 							&:hover
 								opacity: 0.8
+	.article
+		&-share
+			&__item
+				&:hover
+					background: rgb(204, 204, 204)
+					path
+						fill: #fff
 
 
 @media screen and (min-width: 767px) and (max-width: 1025px)
@@ -2405,17 +2624,17 @@ $anim_time: 0.3s
 			font-size: 11px
 			line-height: 23px
 			margin-bottom: 25px
-		.navigation
-			padding-left: 0
-			a
-				font-size: 12px
-				line-height: 20px
-				&:before
-					width: 15px
-					margin-left: 0
-					margin-right: 7px
-			li
-				line-height: 24px
+	.navigation
+		padding-left: 0
+		a
+			font-size: 12px
+			line-height: 20px
+			&:before
+				width: 15px
+				margin-left: 0
+				margin-right: 7px
+		li
+			line-height: 24px
 	.quest
 		padding: 62px 69px
 		&__text
@@ -2508,10 +2727,11 @@ $anim_time: 0.3s
 				font-size: 32px
 				line-height: 38px
 		&__text
-			font-size: 18px
-			line-height: 40px
 			padding-left: 24px
-	
+	.red_title
+		font-size: 18px
+		line-height: 40px
+
 
 	.carousel 
 		padding-bottom: 32px
@@ -3449,8 +3669,6 @@ $anim_time: 0.3s
 		h2
 			font-size: 25px
 			margin-bottom: 10px
-		.navigation
-			display: none
 		&__text
 			padding-left: 18px
 			padding-right: 18px
@@ -3464,6 +3682,8 @@ $anim_time: 0.3s
 			margin-bottom: 20px
 			font-size: 12px
 			line-height: 23px
+	.navigation
+		display: none
 	
 	.show-all-history
 		color: #0070c9
@@ -3504,6 +3724,9 @@ $anim_time: 0.3s
 				margin-bottom: 25px
 				max-width: 80%
 				margin: 0 auto 28px
+	.red_title
+		font-size: 14px
+		line-height: 20px
 
 	.carousel
 		padding-top: 40px
@@ -3524,8 +3747,6 @@ $anim_time: 0.3s
 				line-height: 32px
 				display: inline
 		&__text
-			font-size: 14px
-			line-height: 20px
 			padding-left: 17px
 		.seen-all
 			margin-top: 24px
@@ -4271,6 +4492,9 @@ $anim_time: 0.3s
 				&:after
 					height: 38px
 					margin: 0 17px 0 23px
+	.red_title
+		font-size: 12px
+		line-height: 16px
 
 	.carousel
 		padding-top: 35px
@@ -4284,8 +4508,6 @@ $anim_time: 0.3s
 				font-size: 21px
 				line-height: 28px
 		&__text
-			font-size: 12px
-			line-height: 16px
 			padding-left: 14px
 		.slick-dots 
 			li
