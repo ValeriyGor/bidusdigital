@@ -1,4 +1,4 @@
-﻿@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600,700');
+﻿@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600,600i,700');
 @import 'font-face'
 
 @include fontFace('SFUIDisplay-Bold', '../fonts/SFUIDisplay-Bold') 
@@ -38,6 +38,9 @@ h2
 	letter-spacing: -1px
 	line-height: 1.7em
 	font-family: 'SFUIDisplay-Bold'
+	&.full-width
+		width: 100%
+		letter-spacing: 0
 h3
 	font-size: 20px
 	line-height: 1.7em
@@ -1584,6 +1587,8 @@ p
 			line-height: 55px
 	&.with-pdbottom
 		padding-bottom: 60px
+	.small-logo
+		width: 160px
 
 .second-menu
 	ul

@@ -1294,6 +1294,9 @@ $anim_time: 0.3s
 		img
 			display: block
 			margin: 8px auto 22px
+			max-width: 165px
+			border-radius: 50%
+			overflow: hidden
 		h4
 			font-size: 16px
 			font-family: 'SFUIDisplay-Bold' 
@@ -1308,6 +1311,8 @@ $anim_time: 0.3s
 			font-size: 13px
 			margin-bottom: 0
 			color: #0070c9
+			display: block
+			text-align: center
 
 	&__text
 		flex: 5
@@ -1324,6 +1329,8 @@ $anim_time: 0.3s
 			font-size: 14px
 			line-height: 26px
 			max-width: 93%
+		&-descr-bold
+			font-weight: bold
 		.publication
 			margin-top: 18px
 
@@ -1724,6 +1731,7 @@ $anim_time: 0.3s
 	&__item
 		display: block
 		width: 23%
+		color: #000
 
 .till-flex
 	display: flex
@@ -1733,11 +1741,19 @@ $anim_time: 0.3s
 
 .banner
 	background-size: cover
-	margin: 45px 0
+	background-repeat: no-repeat
+	background-position: center
+	margin-top: 45px
 	padding: 95px 0
 	h2
 		line-height: 48px
 		letter-spacing: 0
+		margin-bottom: 17px
+	p
+		font-size: 16px
+		line-height: 28px
+		max-width: 85%
+		margin-bottom: 10px
 	&-big
 		height: 700px
 
@@ -1749,9 +1765,86 @@ $anim_time: 0.3s
 	&-txtleft
 		h2, p, span
 			text-align: left
+	&__title
+		font-size: 13px
+		font-weight: 600
+		font-style: italic
 .living-team
+	margin-top: 45px
 	h2
 		width: 100%
+		margin-bottom: 18px
+
+.info-block
+	background: #fff
+	margin-bottom: 60px
+	&-full
+		display: flex
+		justify-content: space-between
+		min-height: 375px
+
+	&__half
+		padding-top: 33px
+		&-left
+			margin-right: 15px
+		&-right
+			margin-left: 15px
+		.info-block__text
+			padding: 10px 80px
+		.info-block__head
+			padding: 0 30px
+		&.with-padd-bottom
+			padding-bottom: 30px
+	&__center
+		text-align: center
+	&__link
+		font-size: 16px
+		color: #0070c9
+		font-family: "SFUIDisplay-Bold"
+
+	.left-text, .right-text
+		flex: 0 0 43%
+		padding: 30px 40px 30px 50px
+
+
+	.info-block__img-right, .info-block__img-left
+		flex: 0 0 57%
+		background-size: cover
+	&__img
+		min-height: 280px
+	&__head
+		font-size: 36px
+		line-height: 40px
+		font-family: "SFUIDisplay-Bold"
+
+	&__theme
+		font-size: 13px
+	&__text
+		font-size: 16px
+		line-height: 26px
+		margin-bottom: 15px
+		margin-top: 10px
+	&__list
+		li
+			position: relative
+			font-family: "SFUIDisplay-Bold"
+			font-size: 16px
+			line-height: 22px
+			margin-bottom: 8px
+			padding-left: 25px
+			&:before
+				content: ""
+				display: inline-block
+				position: absolute
+				top: 9px
+				left: 2px
+				width: 12px
+				height: 1px
+				background: #000
+	
+
+	
+
 
 .workers
 	background: #fff
@@ -1774,6 +1867,7 @@ $anim_time: 0.3s
 		overflow: hidden
 		margin: 0 auto 22px
 		display: block
+		transition: all 0.2s
 
 	&__name
 		font-size: 20px
@@ -1783,10 +1877,92 @@ $anim_time: 0.3s
 	&__position
 		color: #0070c9
 		font-size: 12px
-		font-family: SFUIDisplay-Bold
+		font-family: 'SFUIDisplay-Bold'
 		text-align: center
 
+.about-me
+	margin-bottom: 80px
+	h3
+		font-size: 20px
+		max-width: 100%
+		margin-bottom: 13px
+	.request__text-descr
+		margin-bottom: 10px
+	.secondary-button
+		height: 45px
+		line-height: 42px
+	.primary_link, .secondary-button
+		margin-top: 20px
+		margin-right: 20px
+		vertical-align: top
+		font-family: SFUIDisplay-Bold
 
+.description
+	&-width-image
+		background-size: cover
+		background-position: center
+		padding: 110px 0 135px
+	&__text
+		font-size: 60px
+		line-height: 72px
+		font-family: 'SFUIDisplay-Bold'
+		text-align: center
+		max-width: 66%
+		margin: 0 auto
+		&-white
+			color: #fff
+		&-black
+			color: #000
+
+.statistics
+	.scroll-block
+		&__head
+			margin-right: 50px
+	&__item
+		display: inline-block
+		color: #000
+		vertical-align: top
+		padding-top: 23px
+		margin-right: 20px
+	&__digital
+		font-size: 60px
+		line-height: 60px
+		font-family: 'SFUIDisplay-Bold'
+		display: inline-block
+		vertical-align: top
+
+	&__description
+		font-size: 13px
+		padding: 5px 10px
+		position: relative
+		line-height: 17px
+		font-family: 'SFUIDisplay-Bold'
+		display: inline-block
+		vertical-align: top
+		max-width: 130px
+		&:before
+			content: ""
+			width: 40px
+			height: 3px
+			background: #0070c9
+			position: absolute
+			display: block
+			bottom: -7px
+			left: 10px
+.transparent-back
+	background: transparent
+	.slick-slider
+		background: transparent
+
+.project:nth-child(n+7)
+	display: none
+
+.rev:nth-child(n+7)
+	display: none
+
+
+.no-margin-top
+	margin-top: 0
 
 @keyframes blink
 	0%
@@ -1852,7 +2028,13 @@ $anim_time: 0.3s
 		a 
 			&:hover
 				background: #f70c3b
-
+	.workers
+		&__item
+			&:hover
+				h4
+					color: #000
+				img
+					transform: translateY(-7px)
 	.blog
 		&-item:not(.blog-item-full-width)
 			/* style */
