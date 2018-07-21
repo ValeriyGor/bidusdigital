@@ -1454,6 +1454,10 @@ p
 	width: 400px
 
 
+	
+	
+
+
 .help-block
 	display: flex
 	background: #fff
@@ -1589,6 +1593,10 @@ p
 		padding-bottom: 60px
 	.small-logo
 		width: 160px
+	.medium-logo
+		width: 238px
+	&.back-red-gradient
+		background: linear-gradient(to bottom, #be1238, #a60f30);
 
 .second-menu
 	ul
@@ -1700,7 +1708,7 @@ p
 .print-version
 	color: #000
 	font-size: 13px
-	margin-right: 22px
+	margin-right: 15px
 	line-height: 50px
 	&:before
 		content: ""
@@ -1722,6 +1730,13 @@ p
 .form-call
 	background: #1f1f1f
 	padding: 115px 0 125px
+	&.with-calendar
+		padding: 60px 0 65px
+		form
+			margin-top: 35px
+		button
+			float: right
+			margin-top: 35px
 	form
 		margin-top: 74px
 	button
@@ -1815,7 +1830,15 @@ p
 		position: absolute
 		top: 21px
 		left: 0
-	
+
+.slider-one-slide
+	&.white-arrow 
+		.slick-prev
+			left: -215px
+		.slick-next
+			right: -215px
+
+
 @media screen and (min-width: 1024px)
 	
 	.portfolio
@@ -1824,7 +1847,11 @@ p
 				&:hover
 					&:before
 						width: 25px
-	
+	.head-with-image .search-on-tiser
+		.result-search-on-tiser, .fast-link-on-tiser
+			a:hover
+				background: transparent
+				color: #0070c9
 	.slider-head
 		&__item
 			.play
@@ -2016,6 +2043,12 @@ p
 		margin-bottom: 20px
 	.slider-default .slick-next, .slider-default .slick-prev
 		width: 60px
+	.slider-one-slide
+		&.white-arrow 
+			.slick-prev
+				left: -175px
+			.slick-next
+				right: -175px
 
 
 @media screen and (min-width: 767px) and (max-width: 1250px)
@@ -2349,8 +2382,8 @@ p
 	
 
 	.head-without-image
-		padding-top: 37px
-		padding-bottom: 37px
+		padding-top: 34px
+		padding-bottom: 34px
 		h1
 			font-size: 38px
 			line-height: 38px
@@ -2387,6 +2420,24 @@ p
 			font-size: 18px
 			line-height: 18px
 			margin-top: 4px
+		&.text-imparts-on-tiser 
+			margin-bottom: -23px
+			padding-bottom: 4px
+			h1
+				max-width: 80%
+				line-height: 36px
+		svg
+			transform: scale(0.65, 0.65)
+			margin-bottom: -5px
+		&.with-pdbottom
+			padding-bottom: 35px
+	.tooltip-block
+		top: 40px
+		padding: 9px
+		width: 120px
+		height: 50px
+		line-height: 16px
+		font-size: 12px
 	
 	.form-call 
 		padding: 65px 8px 57px
@@ -2402,6 +2453,33 @@ p
 			&:after
 				width: 29px
 				margin-left: 12px
+		&.with-calendar
+			padding: 44px 8px 55px
+			h2
+				line-height: 34px
+			.red_title
+				font-size: 15px
+				line-height: 32px
+			form
+				margin-top: 26px				
+			.input_block
+				height: 48px
+				label
+					font-size: 13px
+				input
+					height: 40px
+					font-size: 13px
+					&:focus 
+						height: 39px
+						&~.form-label
+							font-size: 7px
+							top: 0
+							left: 0
+					&:valid
+						&~.form-label
+							font-size: 7px
+							top: 0
+							left: 0
 
 	.input_block 
 		margin-right: 32px
