@@ -67,12 +67,18 @@ $( ".curtain" ).click(function(e) {
     $('.dropdown-filter').slideUp(300);
     $(".search").removeClass('active');
     $('.close-input').fadeOut(300);
-
-    $(".close-input").removeClass('visible');
-    $(".close-input").addClass('not-visible');
+    if($(".close-input").hasClass('visible')){
+      $(".close-input").removeClass('visible');
+      $(".close-input").addClass('not-visible');
+      
+      $('.search input').hide(0);
+      $('.search input').delay(350).fadeIn(300);
+    }
+    if($('.nav-header').hasClass('opened')){
+      $('.nav-header').removeClass('opened');
+      $('.nav').slideUp(200);
+    }
     
-    $('.search input').hide(0);
-    $('.search input').delay(350).fadeIn(300);
     AnimateRotate($('.close-input'), -90)
   $(".search input").attr("placeholder", "");
     $(this).fadeOut(300);
@@ -190,7 +196,7 @@ $( ".mob-button" ).click(function(e) {
     $('.fast-link.open, .result-search.open').hide(0);
     $(this).children('img').attr("src","img/close-menu.png");
 });
-$( ".open-dropdown-filter" ).click(function(e) {
+$( ".open-dropdown-filter, .close-dropdown-button" ).click(function(e) {
     $(".dropdown-filter").toggleClass("open");
     $(".breadscrumb-wrap").toggleClass("open");
     $('.curtain').fadeToggle(300);
@@ -247,7 +253,7 @@ $( ".open-requisites" ).click(function(e) {
     $(this).text(text);
     
 });
-$(".show-all-history").click(function(e) {
+$(".show-all-history, .toggle-workers").click(function(e) {
     if($(this).hasClass('opened')){
 
     //узнаем высоту от начала страницы до блока на который ссылается якорь
@@ -257,7 +263,6 @@ $(".show-all-history").click(function(e) {
         console.log(hAll);
       });
       var top = $(this).offset().top - hAll - 200;
-      //анимируем переход на расстояние - top за 1500 мс
       $('body,html').animate({scrollTop: top}, 300);
     }
     $(this).toggleClass("opened");
@@ -274,6 +279,61 @@ $(".show-all").click(function(e) {
     $(this).prevAll('.request__text-descr').toggleClass('open');
     
 });
+$(".first-step").click(function(e) {
+    $('.your-data').show();
+    $('.calendar').hide();
+    $('.time').hide();
+    $('.form-call button').hide();
+    
+});
+$(".nav-header").click(function(e) {
+    $(this).toggleClass('opened');
+    $('.nav').slideToggle(200);
+    $('.curtain').fadeToggle(200);
+    
+});
+$(".second-step").click(function(e) {
+    $('.your-data').hide();
+    $('.calendar').show();
+    $('.time').hide();
+    $('.form-call button').hide();
+    
+});
+$(".third-step").click(function(e) {
+    $('.calendar').hide();
+    $('.time').show();
+    $('.form-call button').show();
+    
+});
+
+
+$(".seen-all-vacancies").click(function(e) {
+    if($(this).hasClass('opened')){
+      var top = $('.vacancies_all').offset().top + 600;
+      $('body,html').animate({scrollTop: top}, 500);
+    }
+    $(this).toggleClass('opened');
+    $('.vacancies_all').toggleClass('open');
+    var text = $(this).text();
+    $(this).text($(this).attr("data-hide"));
+    $(this).attr("data-hide", text);
+    
+});
+
+$('.universal-seen-all').click(function(e) {
+    if($(this).hasClass('opened')){
+      var top = $(this).prev().offset().top + 600;
+      $('body,html').animate({scrollTop: top}, 500);
+    }
+    $(this).toggleClass('opened');
+    $(this).prev().toggleClass('open');
+    var text = $(this).text();
+    $(this).text($(this).attr("data-hide"));
+    $(this).attr("data-hide", text);
+    
+});
+
+
 $( ".requisites .close" ).click(function(e) {
     e.preventDefault();
     $(this).parent().hide(0);
@@ -373,12 +433,14 @@ function getSliderConfSettings(){
 
 $( ".search input" ).focus(function() {     
 
-    $(this).parent().addClass('active');
     $('.close-input').removeClass('not-visible');
     $('.close-input').addClass('visible');
-    $('.close-input').fadeIn(300);
-    AnimateRotate($('.close-input'), 90);
- $(".search input").attr("placeholder", "Поиск по сайту...");
+    $('.close-input').fadeIn(300);    
+    if(!$(this).parent().hasClass('active')){
+      AnimateRotate($('.close-input'), 90);
+    }
+    $(this).parent().addClass('active');
+    $(".search input").attr("placeholder", "Поиск по сайту...");
     $(".curtain").fadeIn(300);
     $(".fast-link").delay(300).slideDown(0);
     $(".fast-link").addClass('open');
@@ -403,7 +465,9 @@ $( ".search-on-tiser input" ).focus(function() {
     $(".fast-link-on-tiser").slideDown(0);
     $(".fast-link-on-tiser").addClass('open');
     $('.close-input-on-tiser').fadeIn(300);
-    AnimateRotate($('.close-input-on-tiser'), 90);
+    if(!$(this).parent().hasClass('active')){
+      AnimateRotate($('.close-input-on-tiser'), 90);
+    }
     $('.curtain').fadeIn(300);
     $(this).parent().addClass('active');
   });
@@ -520,6 +584,9 @@ wnd.scroll(function(){
           else if($(window).scrollTop() == 0){
             $("#techno-carousel").css("transform", "translateX(0%)");
           }
+          else if((res>max) && $(window).scrollTop() != 0){
+            $("#techno-carousel").css("transform", "translateX(-"+ max+"%)");
+          }
         }
       }
       
@@ -542,6 +609,9 @@ wnd.scroll(function(){
           else if($(window).scrollTop() == 0){
             $("#partners-carousel").css("transform", "translateX(0%)");
           }
+          else if((res>max) && $(window).scrollTop() != 0){
+            $("#partners-carousel").css("transform", "translateX(-"+ max+"%)");
+          }
         }
       }
 });
@@ -561,15 +631,25 @@ $(document).ready(function(){
         }
       return false; // выключаем стандартное действие
     });
-
-    $('.vacancies_all').isotope({
-      itemSelector: '.vacancies__item',
-      layoutMode: "fitRows"
-    });
+    if($('.vacancies_all').length){
+       $('.vacancies_all').isotope({
+        itemSelector: '.vacancies__item',
+        layoutMode: "fitRows"
+      });
+    }
+   
     $('.vacancies .nav li').click( function(){ 
       $('.vacancies .nav li.active').not($(this)).removeClass('active');
       if(!$(this).hasClass('active')){
         $(this).addClass('active');
+     }
+     if($(window).width() <= '767'){
+      $('.curtain').fadeOut(200);
+      $('.nav').slideUp(200);
+      var text = $(this).text();
+      $('.nav-header').text(text);
+      $('.nav-header').removeClass("opened");
+
      }
       var selector = $(this).attr('data-filter');
       $('.vacancies_all').isotope({
@@ -587,7 +667,7 @@ $(document).ready(function() {
         $(".conference-nav").slick(getSliderConfSettings());
 
         
-      $('.thanks-letters').slick({
+      $('.thanks-letters.mob-slide').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: true,
@@ -781,31 +861,32 @@ $(document).ready(function() {
       }
       ]
     });
+  if($("div").is(".slider-one-slide") && $(window).width() > '767'){
+      $('.slider-one-slide').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        centerPadding: '0',
+        dots: true,
+        responsive: [
+        {
+          breakpoint: 761,
+          settings:{
+          dots: false,
 
-    $('.slider-one-slide').slick({
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      arrows: true,
-      centerPadding: '0',
-      dots: true,
-      responsive: [
-      {
-        breakpoint: 761,
-        settings:{
-        dots: false,
-
+          }
+        },
+        {
+          breakpoint: 1025,
+          settings: {
+            arrows: false
+          }
         }
-      },
-      {
-        breakpoint: 1025,
-        settings: {
-          arrows: false
-        }
-      }
-      ]
-    });
+        ]
+      });
+    }
     
-    $('.content-write-request').slick({
+    $('.content-write-request').not('.custom-mob-slider').slick({
       slidesToShow: 1,
       slidesToScroll: 1,
       arrows: false,
@@ -814,6 +895,27 @@ $(document).ready(function() {
       dots: false,
       adaptiveHeight: true,
       asNavFor: '.nav-write-request'
+    });
+    $('.content-write-request.custom-mob-slider').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      speed: 150,
+      fade: true,
+      dots: false,
+      adaptiveHeight: true,
+      asNavFor: '.nav-write-request',
+      responsive: [
+            {
+              breakpoint: 761,
+              settings: {
+                dots: true,
+                centerMode: true,
+                adaptiveHeight: false,
+                arrows: true
+              }
+            }
+          ]
     });
     $('.nav-write-request').slick({
       slidesToShow: 100,
@@ -1076,13 +1178,27 @@ function anim(){
       $(".invideo").addClass("left-back");
 }
 
+function writeTime(hour, minutes){
+  var minutes1 = parseInt(minutes);
+  var minutes2 = parseInt(minutes) + 45;
+  var hour2 = parseInt(hour);
+  if (minutes2 >= 60){
+    minutes2 = minutes2 - 60;
+    ++hour2;
+  }
+  if (minutes1 <= 0)
+    minutes1 = "00";
+  if (minutes2 <= 0)
+    minutes2 = "00";
+  $('.selected-time').text(hour + ":" + minutes1 + " - " + hour2 + ":" + minutes2);
 
+}
 
 $(document).ready(function() { // зaпускaем скрипт пoсле зaгрузки всех элементoв
     /* зaсунем срaзу все элементы в переменные, чтoбы скрипту не прихoдилoсь их кaждый рaз искaть при кликaх */
     var overlay = $('#overlay'); // пoдлoжкa, дoлжнa быть oднa нa стрaнице
     var open_modal = $('.open-modal-btn'); // все ссылки, кoтoрые будут oткрывaть oкнa
-    var close = $('.modal_close, #overlay'); // все, чтo зaкрывaет мoдaльнoе oкнo, т.е. крестик и oверлэй-пoдлoжкa
+    var close = $('.modal_close, #overlay, .modal_close-butt'); // все, чтo зaкрывaет мoдaльнoе oкнo, т.е. крестик и oверлэй-пoдлoжкa
     var modal = $('.modal_div'); // все скрытые мoдaльные oкнa
     
     
@@ -1095,9 +1211,14 @@ $(document).ready(function() { // зaпускaем скрипт пoсле зaг�
          var div = $(this).attr('href'); // вoзьмем стрoку с селектoрoм у кликнутoй ссылки
          overlay.fadeIn(400, //пoкaзывaем oверлэй
               function(){ // пoсле выпoлнения предъидущей aнимaции
-              $(div)
-                .css('display', 'flex') // убирaем у мoдaльнoгo oкнa display: none;
-                .animate({opacity: 1, top: '50%'}, 200); // плaвнo пoкaзывaем
+                if($(div).hasClass('block-mob') && $(window).width() < '768'){
+                  $(div).css('display', 'block'); // плaвнo пoкaзывaем
+                }
+                else{
+                  $(div).css('display', 'flex');
+                }
+              $(div).animate({opacity: 1, top: '50%'}, 200); // плaвнo пoкaзывaем
+              $('body').addClass('modal-open');
          });
      });
 
@@ -1107,6 +1228,7 @@ $(document).ready(function() { // зaпускaем скрипт пoсле зaг�
                  function(){ // пoсле этoгo
                      $(this).css('display', 'none');
                      overlay.fadeOut(400); // прячем пoдлoжку
+                      $('body').removeClass('modal-open');
                  }
              );
      });     
@@ -1114,45 +1236,54 @@ $(document).ready(function() { // зaпускaем скрипт пoсле зaг�
      $('.minutes-plus').click( function(){ 
         var time = parseInt($(this).next().text());
         var hour =  parseInt($('.hours span').text());
+        var time2 = parseInt($('.hours span').text());
         if(hour < $('.hours-plus').attr('data-max') && hour < 24){
-          if(time >= 60){
-            time = 15;
-          }
-          else {
-            time += 15;
-            if (time == 60){
-              var time2 = parseInt($('.hours span').text());
-              ++time2;
+          time += 45;
+          if (time >= 60){
+            ++time2;
+            time = time - 60;
+            if (time == 0) time = '00';
+            if(time2 == $('.hours-plus').attr('data-max'))
               time = '00';
-            }
-
+          }
+          if(time <= 0) {
+            time = '00';
           }
         }
-        else{
+        else{          
           time = '00';
         }
-        
         $(this).next().text(time);
         $('.hours span').text(time2);
+        writeTime(time2, time);
+
      });
 
      $('.minutes-minus').click( function(){ 
         var time = parseInt($(this).prev().text());
         var hour =  parseInt($('.hours span').text());
-        if(hour >= $('.hours-minus').attr('data-min') && hour > 0){
+        var time2 = parseInt($('.hours span').text());
+        if(hour > $('.hours-minus').attr('data-min') && hour > 0){
           if(time <= 0){
             if(hour == $('.hours-minus').attr('data-min')){
               time = '00';
             }
             else{
-              time = 45;
-              var time2 = parseInt($('.hours span').text());
+              time -= 45;
+              time = 60 + time;
+              if (time == "0") time = "00"
+              
               --time2;
             }
           }
           else {
-              time -= 15;
-              if (time == "0") time = "00"
+              time -= 45;
+              if (time < 0) {
+                time = 60 + time;  
+                --time2;
+              }
+              if (time == "0") time = "00";
+
           }
         }
         else{
@@ -1161,9 +1292,11 @@ $(document).ready(function() { // зaпускaем скрипт пoсле зaг�
         
         $(this).prev().text(time);
         $('.hours span').text(time2);
+        writeTime(time2, time);
      });
      $('.hours-plus').click( function(){ 
         var hour =  parseInt($(this).next().text());
+        var time =  parseInt($('.minutes span').text());
         if(hour < $(this).attr('data-max')-1){
           ++hour;
           $(this).next().text(hour);
@@ -1176,9 +1309,11 @@ $(document).ready(function() { // зaпускaем скрипт пoсле зaг�
         else{
           $('.minutes span').text("00");
         }
+        writeTime(hour, time);
      });
      $('.hours-minus').click( function(){ 
         var hour =  parseInt($(this).prev().text());
+        var time =  parseInt($('.minutes span').text());
         if(hour > $(this).attr('data-min')){
           --hour;
           $(this).prev().text(hour);
@@ -1186,6 +1321,7 @@ $(document).ready(function() { // зaпускaем скрипт пoсле зaг�
         else{
           $('.minutes span').text("00");
         }
+        writeTime(hour, time);
      });
      $('.maybe-selected').click( function(){ 
         $('.calendar__item.selected').removeClass('selected');
@@ -1239,18 +1375,18 @@ window.addEventListener("orientationchange", function() {
 
 function resizeItems(elements){
   var maxHeight = 0; 
-  $(elements).each(function(){
+  $(elements).not(".blog-item-full-width").each(function(){
       $(this).height("auto");
     });  
 
-  $(elements).each(function(){
+  $(elements).not(".blog-item-full-width").each(function(){
     if($(this).height() > maxHeight) 
     {
       maxHeight = $(this).height();
     }
     });
 
-  $(elements).each(function(){
+  $(elements).not(".blog-item-full-width").each(function(){
     $(this).height(maxHeight);
   });
 }

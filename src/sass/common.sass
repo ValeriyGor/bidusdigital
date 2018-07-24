@@ -1,4 +1,4 @@
-﻿@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600,600i,700');
+﻿@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,600i,700');
 @import 'font-face'
 
 @include fontFace('SFUIDisplay-Bold', '../fonts/SFUIDisplay-Bold') 
@@ -37,7 +37,7 @@ h2
 	text-align: center
 	letter-spacing: -1px
 	line-height: 1.7em
-	font-family: 'SFUIDisplay-Bold'
+	font-family: 'SFUIDisplay-Bold', sans-serif
 	&.full-width
 		width: 100%
 		letter-spacing: 0
@@ -74,7 +74,7 @@ p
 		height: auto
 	&__tag
 		font-size: 13px
-		font-family: 'SFUIDisplay-Semibold'
+		font-family: 'SFUIDisplay-Semibold', sans-serif
 		text-transform: uppercase
 		letter-spacing: 1px
 		margin-bottom: 18px
@@ -97,7 +97,7 @@ p
 			font-size: 48px
 			line-height: 58px
 			text-align: center
-			font-family: 'SFUIDisplay-Bold'
+			font-family: 'SFUIDisplay-Bold', sans-serif
 			color: #fff
 			max-width: 600px
 			margin: 20px auto
@@ -108,7 +108,7 @@ p
 		h2
 			font-weight: 300
 			text-align: left
-			font-family: 'SFUIDisplay-Bold'
+			font-family: 'SFUIDisplay-Bold', sans-serif
 			color: #fff
 			letter-spacing: 0
 			max-width: 45%
@@ -536,14 +536,19 @@ p
 			span
 				font-size: 13px
 				color: #999
-		&.company-drop
-			width: 436px
-			background: #fff url('../img/company.png') center right no-repeat
-			background-size: contain
-			padding-bottom: 19px
-			padding-left: 35px
-			left: 564px
-
+		&.our-company-drop
+			// width: 436px
+			// background: #fff url('../img/company.png') center right no-repeat
+			// background-size: contain
+			// padding-bottom: 19px
+			// padding-left: 35px
+			// left: 564px
+			a
+				line-height: 30px
+			.our-project
+				padding-top: 25px
+.head-menu__dropdown.portfolio-dropdown.our-company-drop:before
+	left: 57%
 .curtain
 	position: fixed
 	top: 0
@@ -616,7 +621,7 @@ p
 		span
 			font-size: 42px
 			line-height: 43px
-			font-family: 'SFUIDisplay-Bold'
+			font-family: 'SFUIDisplay-Bold', sans-serif
 			width: 325px
 			margin-bottom: 15px
 		img
@@ -637,7 +642,7 @@ p
 	h3
 		font-size: 36px
 		line-height: 38px
-		font-family: 'SFUIDisplay-Bold'
+		font-family: 'SFUIDisplay-Bold', sans-serif
 		color: #fff
 		position: relative
 		bottom: -36px
@@ -871,7 +876,7 @@ p
 			font-size: 16px
 			color: #fff
 			font-weight: 400
-			font-family: 'SFUIDisplay-Bold'
+			font-family: 'SFUIDisplay-Bold', sans-serif
 			background: none
 			text-align: left
 			line-height: 35px
@@ -893,7 +898,7 @@ p
 			font-weight: 300
 			line-height: 1.2em
 			color: #fff
-			font-family: 'SFUIDisplay-Bold'
+			font-family: 'SFUIDisplay-Bold', sans-serif
 		.portfolio-slider-title
 			font-size: 13px
 			line-height: 24px
@@ -1298,11 +1303,11 @@ p
 	display: inline-block
 	text-align: center
 	transition: all 0.3s 
-	font-family: 'SFUIDisplay-Semibold'
+	font-family: 'SFUIDisplay-Semibold', sans-serif
 	font-size: 14px
 	background: #fff
 	&:focus
-		font-family: 'SFUIDisplay-Semibold'
+		font-family: 'SFUIDisplay-Semibold', sans-serif
 	&.white-text
 		color: #fff
 	&.black-text
@@ -1319,7 +1324,7 @@ p
 		font-size: 16px
 		line-height: 22px
 		margin-bottom: 4px
-		font-family: 'SFUIDisplay-Bold'
+		font-family: 'SFUIDisplay-Bold', sans-serif
 	a
 		font-size: 13px
 		display: inline-block
@@ -1396,6 +1401,7 @@ p
 				border-top: 4px solid #7f7f7f
 				border-bottom: 0
 				position: relative
+				transition: all 0.2s
 				top: -1px
 				margin-left: 10px
 	.breadscrumb a
@@ -1433,14 +1439,14 @@ p
 	margin-bottom: 9px
 	display: inline-block
 	transition: all 0.3s
-	&:hover
+	&:hover, &:focus, &:active
 		color: #fff
 
 .head-without-image
 	padding-top: 50px // 45px
 	padding-bottom: 50px // 35px
 	h1
-		font-family: 'SFUIDisplay-Bold'
+		font-family: 'SFUIDisplay-Bold', sans-serif
 		font-size: 48px
 		text-align: center
 		line-height: 64px
@@ -1449,7 +1455,7 @@ p
 		display: block
 		text-align: center
 		font-size: 24px
-		font-family: 'SFUIDisplay-Medium'
+		font-family: 'SFUIDisplay-Medium', sans-serif
 .logo-on-tiser
 	width: 400px
 
@@ -1468,7 +1474,7 @@ p
 		width: 50%
 		font-size: 36px
 		line-height: 48px
-		font-family: 'SFUIDisplay-Bold'
+		font-family: 'SFUIDisplay-Bold', sans-serif
 	p 
 		width: 50%
 		font-size: 16px
@@ -1490,7 +1496,8 @@ p
 			display: block
 			padding-right: 15px
 
-
+.open-dropdown-filter
+	transition: all 0.2s
 .dropdown-filter
 	position: absolute
 	top: 50px
@@ -1511,7 +1518,7 @@ p
 		font-size: 16px
 		padding-left: 0
 		line-height: 30px
-		font-family: 'SFUIDisplay-Semibold'
+		font-family: 'SFUIDisplay-Semibold', sans-serif
 	ul
 		li
 			a
@@ -1572,21 +1579,39 @@ p
 	padding-top: 70px
 	h1
 		color: #fff
-		font-family: 'SFUIDisplay-Bold'
+		font-family: 'SFUIDisplay-Bold', sans-serif
 		max-width: 900px
 		text-align: center
 		margin-left: auto
 		margin-right: auto
+		position: relative
+		z-index: 5
+
 	span
 		font-size: 24px
 		line-height: 40px
 		color: #fff
-		font-family: 'SFUIDisplay-Medium'
+		font-family: 'SFUIDisplay-Medium', sans-serif
+		position: relative
+		z-index: 5
 	a
 		margin-top: 25px
 	&.text-imparts-on-tiser
 		margin-bottom: -88px
 		padding-bottom: 55px
+		position: relative
+		
+		&.with-20shadow
+			&:after
+				content: ""
+				display: block					
+				position: absolute
+				z-index: 1
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				background: rgba(0, 0, 0, 0.2)
 		h1
 			line-height: 55px
 	&.with-pdbottom
@@ -1595,8 +1620,17 @@ p
 		width: 160px
 	.medium-logo
 		width: 238px
-	&.back-red-gradient
-		background: linear-gradient(to bottom, #be1238, #a60f30);
+	&.back-gradient
+		&.actual-vacancy
+			background: linear-gradient(to bottom, #be1238, #a60f30);
+		&.all-actual-vacancy
+			background: linear-gradient(to bottom, #2a313b, #3d4656);
+		&.not-actual-vacancy
+			background: linear-gradient(to bottom, #7e888c, #a3b6be);
+		h1
+			margin-bottom: 5px
+		svg, img
+			margin-bottom: 10px
 
 .second-menu
 	ul
@@ -1625,7 +1659,7 @@ p
 	padding-left: 30px 
 
 .button-white-border
-	font-family: 'SFUIDisplay-Bold'
+	font-family: 'SFUIDisplay-Bold', sans-serif
 	font-size: 16px
 	padding: 0 30px
 	line-height: 41px
@@ -1638,7 +1672,7 @@ p
 		color: #fff
 
 .primary_link
-	font-family: 'SFUIDisplay-Bold' 
+	font-family: 'SFUIDisplay-Bold', sans-serif 
 	font-size: 16px
 	border-radius: 3px
 	line-height: 45px
@@ -1651,7 +1685,7 @@ p
 	&:focus
 		background: #cd1829
 		color: #fff
-		font-family: 'SFUIDisplay-Bold' 
+		font-family: 'SFUIDisplay-Bold', sans-serif 
 	&:hover
 		color: #fff
 	
@@ -1701,7 +1735,7 @@ p
 			display: block
 		.theme
 			font-size: 24px
-			font-family: 'SFUIDisplay-Bold'
+			font-family: 'SFUIDisplay-Bold', sans-serif
 			color: #000
 			transition: all 0.2s
 			
@@ -1732,6 +1766,9 @@ p
 	padding: 115px 0 125px
 	&.with-calendar
 		padding: 60px 0 65px
+		h2
+			min-height: 1em
+			margin-bottom: 10px
 		form
 			margin-top: 35px
 		button
@@ -1740,7 +1777,7 @@ p
 	form
 		margin-top: 74px
 	button
-		font-family: 'SFUIDisplay-Bold'
+		font-family: 'SFUIDisplay-Bold', sans-serif
 		font-size: 36px
 		color: #fff
 		margin-left: 12px
@@ -1757,7 +1794,7 @@ p
 	h2, span
 		text-align: left
 		color: #fff
-		font-family: 'SFUIDisplay-Bold'
+		font-family: 'SFUIDisplay-Bold', sans-serif
 		font-size: 48px
 		line-height: 54px
 		letter-spacing: 0
@@ -1811,7 +1848,7 @@ p
 		cursor: pointer
 		border-bottom: 1px solid #636363
 		background: #1f1f1f
-		font-family: 'SFUIDisplay-Semibold'
+		font-family: 'SFUIDisplay-Semibold', sans-serif
 		font-size: 20px
 		color: #fff
 		box-shadow: none
@@ -1822,7 +1859,7 @@ p
 		width: 100%
 		height: 64px
 		position: absolute
-		font-family: 'SFUIDisplay-Semibold'
+		font-family: 'SFUIDisplay-Semibold', sans-serif
 		transition: all 0.3s ease
 		font-size: 20px
 		line-height: 24px
@@ -1937,6 +1974,13 @@ p
 				a
 					&:hover
 						color: #007de3
+	.open-dropdown-filter
+		&:hover
+			color: #007de3
+	.breadscrumb-wrap .filter-block 
+		span:hover
+			&:after
+				border-top: 4px solid #007de3
 
 	.portfolio-item
 		&:hover
@@ -2386,7 +2430,7 @@ p
 		padding-bottom: 34px
 		h1
 			font-size: 38px
-			line-height: 38px
+			line-height: 48px
 		span
 			font-size: 18px
 	.breadscrumb-wrap
@@ -2632,7 +2676,7 @@ p
 
 @media screen and (max-width: 767px)
 	body
-		background: #e6e6e6
+		background: #f5f5f5
 		&.back-f5
 			background: #f5f5f5
 		&.back-f4
@@ -2644,7 +2688,7 @@ p
 	h3
 		font-size: 17px
 	.mob-none
-		display: none
+		display: none!important
 	.open-mob
 		//position: fixed
 		overflow: hidden
@@ -2705,7 +2749,7 @@ p
 				font-size: 5vw
 				line-height: 30px
 				line-height: 7.5vw
-				font-family: 'SFUIDisplay-Bold'
+				font-family: 'SFUIDisplay-Bold', sans-serif
 				color: #fff
 				max-width: 68%
 				transition: all 0.1s
@@ -2722,13 +2766,126 @@ p
 
 	.breadscrumb-wrap
 		display: none
+		&.no-hide-onmob
+			display: block
+		.breadscrumb
+			display: none
+	.dropdown
+		&-filter
+			top: 0
+			padding: 18px 0 0
+			span
+				font-size: 18px
+			ul 
+				padding: 18px 0
+				li
+					padding-left: 13px
+					border-top: 1px solid #e5e5e5
+					a 
+						font-size: 14px
+						line-height: 40px
+			.medium-4
+				flex: 0 0 100%
+				padding-left: 19px
+				padding-right: 20px
+			.blog-item
+				&__marker
+					margin-right: 9px
+					width: 11px
+					height: 11px
+					position: relative
+					top: 1px
+			.border-left
+				padding-top: 9px
+				padding-left: 0
+				border-left: 0
+				.three-col
+					ul
+						padding: 14px 0
+						li 
+							border-top: 0
+							a
+								font-size: 14px
+								line-height: 32px 
+	.close-dropdown
+		font-size: 14px
+		color: #0070c9
+		margin-top: 20px
+		line-height: 20px
+		border-top: 1px solid #f4f4f4
+		padding: 13px 10px
+		text-align: center
+		display: block
+		width: 100%
+		font-family: 'SFUIDisplay-Semibold', sans-serif
+		&:after
+			content: ""
+			display: inline-block
+			border: 3px solid transparent
+			border-bottom: 5px solid #3f6fc5
+			margin-left: 7px
+			position: relative
+			bottom: 2px
+		&-krestik
+			display: block
+			position: absolute
+			top: 12px
+			right: 16px
+			svg 
+				width: 14px
+				height: 14px
+				fill: #ababab
+	.breadscrumb-wrap .filter-block
+		padding-left: 0
+		&_container
+			width: 100%
+			span
+				padding-left: 25px
+				padding-right: 25px
+				font-size: 14px
+				line-height: 44px
+				color: #0070c9
+				width: 100%
+				text-align: center
+				font-family: 'SFUIDisplay-Semibold', sans-serif
+				&:after
+					top: -2px
+					border-top-color: #0070c9
+	.head-without-image 
+		&.head-without-image-with-filter
+			padding-top: 25px
+			padding-bottom: 27px
+		span
+			font-size: 14px
+		h1
+			font-size: 30px
+			line-height: 36px
+
 	.head-with-image
 		height: 445px
 		h1
 			font-size: 28px
+			margin-bottom: 4px
+			&.thin
+				max-width: 85%
+				font-size: 24px
+				line-height: 30px
 		span
 			font-size: 14px
 			line-height: 18px
+		&.text-imparts-on-tiser
+			padding-top: 0
+			padding-bottom: 46px
+			margin-bottom: 0
+			h1.thin
+				max-width: 85%
+			h1
+				line-height: 30px
+		svg
+			transform: scale(0.6, 0.6)
+			&.small-logo
+				transform: scale(0.9, 0.9)
+
 	
 	.form-call h2, .form-call span
 		font-size: 20px
@@ -2747,11 +2904,11 @@ p
 		form
 			margin-top: 40px
 		h2
-			font-size: 24px
+			font-size: 26px
 			line-height: 30px
 			min-height: 90px
 			span
-				font-size: 24px
+				font-size: 26px
 				line-height: 30px
 			.br
 				display: inline

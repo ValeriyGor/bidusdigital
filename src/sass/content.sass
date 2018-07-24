@@ -80,7 +80,7 @@ $anim_time: 0.3s
 		h3
 			display: inline-block
 			transition: all 0.2s
-			font-family: "SFUIDisplay-Semibold"
+			font-family: "SFUIDisplay-Bold", sans-serif
 		li
 			&:not(:first-child) 
 				a:before
@@ -96,6 +96,7 @@ $anim_time: 0.3s
 				
 		a 
 			color: $link-color
+			font-family: "SFUIDisplay-Bold", sans-serif
 			font-size: 14px
 			line-height: 30px
 			position: relative
@@ -128,7 +129,7 @@ $anim_time: 0.3s
 			h3
 				line-height: 1.3em
 				margin-bottom: 7px
-				font-family: 'SFUIDisplay-Semibold'
+				font-family: 'SFUIDisplay-Semibold', sans-serif
 			p 
 				color: #737373
 				line-height: 24px
@@ -149,19 +150,19 @@ $anim_time: 0.3s
 			position: absolute
 			bottom: 23px
 			left: 29px 
-			font-family: 'SFUIDisplay-Semibold'
+			font-family: 'SFUIDisplay-Semibold', sans-serif
 			&-actual
 				font-size: 24px
 				color: #000
 				vertical-align: sub
-				font-family: 'SFUIDisplay-Semibold'
+				font-family: 'SFUIDisplay-Semibold', sans-serif
 				span
-					font-family: 'SFUIDisplay-Semibold'
+					font-family: 'SFUIDisplay-Semibold', sans-serif
 			&-old
 				color: #a3a3a3 
 				margin-left: 15px
 				position: relative
-				font-family: 'SFUIDisplay-Semibold'
+				font-family: 'SFUIDisplay-Semibold', sans-serif
 				&:after
 					content: ""
 					height: 1px
@@ -198,7 +199,7 @@ $anim_time: 0.3s
 	span
 		font-size: 36px
 		line-height: 54px
-		font-family: 'SFUIDisplay-Bold'
+		font-family: 'SFUIDisplay-Bold', sans-serif
 		color: #fff
 		margin-bottom: 5px
 	p
@@ -241,11 +242,12 @@ $anim_time: 0.3s
 				h3					
 					font-size: 24px
 					line-height: 32px
-					font-family: 'SFUIDisplay-Bold'
+					font-family: 'SFUIDisplay-Bold', sans-serif
 					padding: 0 22px
 				p
 					padding: 3px 50px 0 22px
 					font-size: 16px
+					color: #000
 
 			.blog-item__img
 				flex: 2
@@ -267,7 +269,7 @@ $anim_time: 0.3s
 				margin-bottom: 12px
 				font-size: 20px
 				line-height: 26px
-				font-family: 'SFUIDisplay-Semibold'
+				font-family: 'SFUIDisplay-Semibold', sans-serif
 				color: #000
 				transition: all 0.3s
 				display: block
@@ -338,13 +340,17 @@ $anim_time: 0.3s
 		span
 			font-size: 24px
 			line-height: 24px 
-			font-family: 'SFUIDisplay-Bold'
+			font-family: 'SFUIDisplay-Bold', sans-serif
 
 .service-blocks
 	h2
 		font-size: 24px
 		text-align: left
 		letter-spacing: 0
+		a 
+			color: inherit
+			font-family: inherit
+			transition: all 0.2s
 	p 
 		max-width: 335px
 		line-height: 24px
@@ -379,7 +385,7 @@ $anim_time: 0.3s
 			line-height: 30px
 			position: relative
 			z-index: 250
-			font-family: 'SFUIDisplay-Bold'
+			font-family: 'SFUIDisplay-Bold', sans-serif
 
 .podcategory-item
 	height: 500px
@@ -396,11 +402,11 @@ $anim_time: 0.3s
 	font-size: 36px
 	text-align: center
 	line-height: 50px
-	font-family: 'SFUIDisplay-Bold'
+	font-family: 'SFUIDisplay-Bold', sans-serif
 	padding: 50px 0
 	span.red
 		color: #de0a36
-		font-family: 'SFUIDisplay-Bold'
+		font-family: 'SFUIDisplay-Bold', sans-serif
 
 .tiser-text
 	padding-bottom: 35px
@@ -409,7 +415,7 @@ $anim_time: 0.3s
 		display: inline-block
 		vertical-align: top
 		span
-			font-family: 'BebasNeueBold'
+			font-family: 'BebasNeueBold', sans-serif
 			font-size: 75px
 			line-height: 80px
 			display: inline-block
@@ -443,7 +449,7 @@ $anim_time: 0.3s
 		display: inline-block 
 		transition: all 0.3s 
 		margin-left: 0
-		font-family: 'SFUIDisplay-Bold'
+		font-family: 'SFUIDisplay-Bold', sans-serif
 	p
 		font-size: 13px
 		padding: 8px 40px 6px 20px
@@ -460,7 +466,7 @@ $anim_time: 0.3s
 		line-height: 42px
 		margin-bottom: 15px
 		span
-			font-family: 'SFUIDisplay-Bold'
+			font-family: 'SFUIDisplay-Bold', sans-serif
 	p 
 		font-size: 16px
 		max-width: 360px
@@ -470,9 +476,9 @@ $anim_time: 0.3s
 	ul 
 		margin-top: 25px
 		li 
-			span 
+			span, a
 				font-size: 16px
-				font-family: 'SFUIDisplay-Bold'
+				font-family: 'SFUIDisplay-Bold', sans-serif
 				color: #fff
 				line-height: 30px
 				&:before
@@ -506,7 +512,7 @@ $anim_time: 0.3s
 			text-align: center
 			font-size: 16px
 			margin-top: 5px
-			font-family: 'SFUIDisplay-Bold'
+			font-family: 'SFUIDisplay-Bold', sans-serif
 
 .present-company
 	margin: 84px 0 65px
@@ -526,7 +532,7 @@ $anim_time: 0.3s
 			font-size: 36px
 			line-height: 40px
 			margin-bottom: 19px
-			font-family: 'SFUIDisplay-Bold'
+			font-family: 'SFUIDisplay-Bold', sans-serif
 		p 
 			font-size: 16px
 			color: #000
@@ -565,7 +571,7 @@ $anim_time: 0.3s
 			font-size: 30px
 			color: #fff
 			margin-bottom: 14px
-			font-family: 'SFUIDisplay-Bold'
+			font-family: 'SFUIDisplay-Bold', sans-serif
 		span
 			color: #fff
 			font-size: 13px
@@ -588,7 +594,7 @@ $anim_time: 0.3s
 		
 	h3
 		font-size: 36px 
-		font-family: 'SFUIDisplay-Bold' 
+		font-family: 'SFUIDisplay-Bold', sans-serif 
 		color: #fff
 		line-height: 40px
 		text-align: center
@@ -615,10 +621,10 @@ $anim_time: 0.3s
 		font-size: 23px
 		line-height: 26px
 		margin-bottom: 8px
-		font-family: 'SFUIDisplay-Bold' 
+		font-family: 'SFUIDisplay-Bold', sans-serif 
 	h4
 		font-size: 20px
-		font-family: 'SFUIDisplay-Semibold' 
+		font-family: 'SFUIDisplay-Semibold', sans-serif 
 		color: #000
 		margin-bottom: 6px
 	p 
@@ -635,11 +641,11 @@ $anim_time: 0.3s
 	a 
 		color: #0070c9
 		font-size: 14px
-		font-family: 'SFUIDisplay-Medium' 
+		font-family: 'SFUIDisplay-Medium', sans-serif 
 		line-height: 30px
 		transition: all 0.2s
 		&.active
-			font-family: 'SFUIDisplay-Bold' 
+			font-family: 'SFUIDisplay-Bold', sans-serif, sans-serif 
 		&:before
 			display: inline-block
 			content: ""
@@ -743,7 +749,7 @@ $anim_time: 0.3s
 		max-width: 330px
 		h3
 			font-size: 36px
-			font-family: 'SFUIDisplay-Bold' 
+			font-family: 'SFUIDisplay-Bold', sans-serif 
 			color: #fff
 			margin-bottom: 7px
 		p 
@@ -771,7 +777,7 @@ $anim_time: 0.3s
 			color: #fff
 			line-height: 54px
 			max-width: 100%
-			font-family: 'SFUIDisplay-Bold' 
+			font-family: 'SFUIDisplay-Bold', sans-serif 
 
 	&__text
 		padding-left: 34px
@@ -785,7 +791,7 @@ $anim_time: 0.3s
 	display: block
 	width: 100%
 	color: #de0a36
-	font-family: 'SFUIDisplay-Bold' 
+	font-family: 'SFUIDisplay-Bold', sans-serif 
 	font-size: 24px
 	line-height: 60px
 
@@ -798,6 +804,8 @@ $anim_time: 0.3s
 	height: 200px
 	margin-bottom: 65px
 	overflow: hidden
+	&.no-margin-bottom
+		margin-bottom: 0
 	h2
 		text-align: center
 		width: 100%
@@ -812,7 +820,7 @@ $anim_time: 0.3s
 	white-space: nowrap
 	&__techno
 		font-size: 60px  
-		font-family: 'SFUIDisplay-Medium'
+		font-family: 'SFUIDisplay-Medium', sans-serif
 		color: #fff
 		line-height: 100px
 		display: inline-block
@@ -827,9 +835,12 @@ $anim_time: 0.3s
 			margin-left: 30px
 			margin-right: 20px
 			vertical-align: super
+		&:last-child:after
+			display: none
+
 			
 	&__head
-		font-family: 'SFUIDisplay-Semibold' 
+		font-family: 'SFUIDisplay-Semibold', sans-serif 
 		font-size: 36px
 		color: #fff
 		margin-right: 50px
@@ -839,7 +850,7 @@ $anim_time: 0.3s
 		
 
 	&__link
-		font-family: 'SFUIDisplay-Bold' 
+		font-family: 'SFUIDisplay-Bold', sans-serif 
 		font-size: 60px
 		vertical-align: bottom
 		display: inline-block
@@ -924,6 +935,10 @@ $anim_time: 0.3s
 			&.slick-current
 				border-bottom: 2px solid #0070c9
 				padding-bottom: 9px   
+	&.portfolio-worker
+		.slider-for 
+			.item
+				padding: 0
 	.slider-for 
 		.item
 			padding: 0 15px
@@ -951,7 +966,7 @@ $anim_time: 0.3s
 					font-size: 20px
 					padding-top: 3px
 					margin-bottom: 5px
-					font-family: 'SFUIDisplay-Semibold'
+					font-family: 'SFUIDisplay-Semibold', sans-serif
 				p 
 					line-height: 24px
 					padding-right: 25px
@@ -960,7 +975,7 @@ $anim_time: 0.3s
 						
 					&.bold
 						font-weight: bold
-						font-family: 'SFUIDisplay-Semibold'
+						font-family: 'SFUIDisplay-Semibold', sans-serif
 						font-size: 16px
 						margin-top: 20px
 						margin-bottom: 2px
@@ -1044,11 +1059,11 @@ $anim_time: 0.3s
 					background: #fff
 					box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.1)
 					.bold
-						font-family: 'SFUIDisplay-Semibold'
+						font-family: 'SFUIDisplay-Semibold', sans-serif
 						font-size: 16px
 					h3
 						font-size: 36px
-						font-family: 'SFUIDisplay-Bold'
+						font-family: 'SFUIDisplay-Bold', sans-serif
 					p 
 						line-height: 26px
 						margin-bottom: 16px
@@ -1060,7 +1075,7 @@ $anim_time: 0.3s
 						line-height: 45px
 						color: #fff
 						margin: 7px 3px
-						font-family: 'SFUIDisplay-Bold'
+						font-family: 'SFUIDisplay-Bold', sans-serif
 						padding: 0 25px
 						transition: all 0.2s
 						span
@@ -1132,7 +1147,7 @@ $anim_time: 0.3s
 			padding-bottom: 6px
 		h3
 			font-size: 24px
-			font-family: 'SFUIDisplay-Medium'
+			font-family: 'SFUIDisplay-Medium', sans-serif
 			font-weight: normal
 			
 		p 
@@ -1143,7 +1158,7 @@ $anim_time: 0.3s
 			opacity: 1
 			padding-left: 24px 
 			h3
-				font-family: 'SFUIDisplay-Bold'
+				font-family: 'SFUIDisplay-Bold', sans-serif
 
 .video-block
 	margin-bottom: 24px
@@ -1159,7 +1174,7 @@ $anim_time: 0.3s
 		padding: 0 0 25px 30px
 		h3
 			font-size: 24px
-			font-family: 'SFUIDisplay-Bold'
+			font-family: 'SFUIDisplay-Bold', sans-serif
 			color: #fff
 			text-align: left
 			line-height: 30px
@@ -1181,7 +1196,7 @@ $anim_time: 0.3s
 			padding: 0 25px
 			
 	h3
-		font-family: 'SFUIDisplay-Bold' 
+		font-family: 'SFUIDisplay-Bold', sans-serif 
 		color: #fff
 		font-size: 30px
 	p 
@@ -1301,7 +1316,7 @@ $anim_time: 0.3s
 			overflow: hidden
 		h4
 			font-size: 16px
-			font-family: 'SFUIDisplay-Bold' 
+			font-family: 'SFUIDisplay-Bold', sans-serif 
 			text-align: center
 			
 		p 
@@ -1322,7 +1337,7 @@ $anim_time: 0.3s
 		border-left: 1px solid #d9d9d9 
 		h3
 			font-size: 18px
-			font-family: 'SFUIDisplay-Bold' 
+			font-family: 'SFUIDisplay-Bold', sans-serif 
 			text-align: left
 			line-height: 24px
 			max-width: 75%
@@ -1363,7 +1378,7 @@ $anim_time: 0.3s
 			font-size: 24px
 			margin-bottom: 5px
 			line-height: 36px
-			font-family: 'SFUIDisplay-Bold'
+			font-family: 'SFUIDisplay-Bold', sans-serif
 		p 
 			font-size: 13px
 			line-height: 20px
@@ -1374,7 +1389,7 @@ $anim_time: 0.3s
 				font-size: 12px
 			span:nth-of-type(2)
 				font-size: 20px
-				font-family: 'SFUIDisplay-Semibold'
+				font-family: 'SFUIDisplay-Semibold', sans-serif
 				color: #000
 				display: block
 				margin-bottom: 7px
@@ -1392,7 +1407,7 @@ $anim_time: 0.3s
 		font-size: 36px
 		display: block
 		text-align: center
-		font-family: 'SFUIDisplay-Bold'
+		font-family: 'SFUIDisplay-Bold', sans-serif
 	.soc
 		text-align: center 
 		&-item
@@ -1568,9 +1583,11 @@ $anim_time: 0.3s
 		font-family: "SFUIDisplay-Medium"
 		line-height: 36px
 		font-size: 24px
-		padding: 5px 70px 5px 35px
+		padding: 5px 70px 7px 35px
 		left: -2px
 		margin: 38px 0
+	&__pharagraph
+		margin-top: 0
 	margin: 30px 0 0
 	position: relative
 	span
@@ -1592,12 +1609,18 @@ $anim_time: 0.3s
 		font-size: 16px
 		line-height: 20px
 		font-family: "SFUIDisplay-Bold"
+	&__top
+		bottom: auto
+		right: 4px
+		top: 5px
+		p 
+			margin-bottom: 20px
 	&__img
 		padding-bottom: 43px 
 		p 
 			font-size: 13px
 			font-style: italic
-			font-weight: 300
+			font-weight: 400
 			line-height: 20px
 			padding-right: 0
 			color: #737373	
@@ -1608,7 +1631,7 @@ $anim_time: 0.3s
 	p 
 		font-size: 13px
 		font-style: italic
-		font-weight: 300
+		font-weight: 400
 		max-width: 65%
 		line-height: 20px
 		padding-right: 0
@@ -1616,8 +1639,8 @@ $anim_time: 0.3s
 		color: #737373	
 	&.navigation
 		padding-top: 15px
-	&.conditions-work
-		padding-top: 10px
+.article .conditions-work
+		padding-top: 5px
 		h3
 			font-size: 18px
 			font-family: "SFUIDisplay-Bold"
@@ -1627,6 +1650,7 @@ $anim_time: 0.3s
 			font-size: 12px
 			color: #737373
 			display: block
+			font-family: 'Open Sans'
 		p 
 			font-size: 14px
 			line-height: 20px
@@ -1638,7 +1662,7 @@ $anim_time: 0.3s
 		h4
 			font-size: 13px
 			color: #000
-			margin-top: 35px
+			margin-top: 0
 			font-family: "SFUIDisplay-Bold"
 		h5
 			font-size: 13px
@@ -1665,11 +1689,12 @@ $anim_time: 0.3s
 			li
 				line-height: 16px
 				max-width: 80%
+				padding-left: 0
+				padding-right: 0
+				margin: 0
 				&:before
 					display: none
 					padding-left: 0
-		.bottom-block
-			margin-top: 290px
 				
 			
 
@@ -1725,17 +1750,17 @@ $anim_time: 0.3s
 			display: inline-block
 			width: 0
 			height: 0
-			border: 5px solid transparent
+			border: 4px solid transparent
 			border-top: 0
-			border-bottom: 8px solid #ccc
+			border-bottom: 6px solid #ccc
 			transition: border-color 0.2s
 			position: relative
-			bottom: 2px
+			bottom: 3px
 			margin-left: 5px
 		&.open
 			font-family: "SFUIDisplay-Bold"
 			&:after
-				border-top: 8px solid #0070c9
+				border-top: 6px solid #0070c9
 				border-bottom: 0
 
 	img
@@ -1745,6 +1770,7 @@ $anim_time: 0.3s
 		padding-right: 10px
 		a 
 			color: #0070c9
+			transition: all 0.3s
 	ol
 		margin-bottom: 15px
 	ul
@@ -1780,6 +1806,8 @@ $anim_time: 0.3s
 			display: inline-block
 			text-align: center
 			line-height: 38px
+			color: #000
+			transition: all 0.2s
 			margin-right: 10px
 			&:before
 				content: ""
@@ -1836,6 +1864,13 @@ $anim_time: 0.3s
 	&-big
 		height: 700px
 		padding: 95px 0
+		&.without-mt
+			margin-top: 0
+		p 
+			position: relative
+			text-shadow: 2px 2px 25px rgba(0, 0, 0, 1)
+				
+				
 
 	&-medium
 		height: 550px
@@ -1982,11 +2017,13 @@ $anim_time: 0.3s
 	&__position
 		color: #0070c9
 		font-size: 12px
-		font-family: 'SFUIDisplay-Bold'
+		font-family: 'SFUIDisplay-Bold', sans-serif
 		text-align: center
 
 .about-me
-	margin-bottom: 80px
+	padding-bottom: 80px
+	padding-top: 65px
+	background: #fff
 	h3
 		font-size: 20px
 		max-width: 100%
@@ -1996,6 +2033,7 @@ $anim_time: 0.3s
 	.secondary-button
 		height: 45px
 		line-height: 42px
+		color: #000
 	.primary_link, .secondary-button
 		margin-top: 20px
 		margin-right: 20px
@@ -2010,7 +2048,7 @@ $anim_time: 0.3s
 	&__text
 		font-size: 60px
 		line-height: 72px
-		font-family: 'SFUIDisplay-Bold'
+		font-family: 'SFUIDisplay-Bold', sans-serif
 		text-align: center
 		max-width: 66%
 		margin: 0 auto
@@ -2032,7 +2070,7 @@ $anim_time: 0.3s
 	&__digital
 		font-size: 60px
 		line-height: 60px
-		font-family: 'SFUIDisplay-Bold'
+		font-family: 'SFUIDisplay-Bold', sans-serif
 		display: inline-block
 		vertical-align: top
 
@@ -2042,7 +2080,7 @@ $anim_time: 0.3s
 		position: relative
 		white-space: normal
 		line-height: 17px
-		font-family: 'SFUIDisplay-Bold'
+		font-family: 'SFUIDisplay-Bold', sans-serif
 		display: inline-block
 		vertical-align: top
 		max-width: 130px
@@ -2099,7 +2137,7 @@ $anim_time: 0.3s
 
 	&__date
 		font-size: 13px
-		font-family: 'SFUIDisplay-Bold'
+		font-family: 'SFUIDisplay-Bold', sans-serif
 		vertical-align: middle
 		margin-bottom: 5px
 		&:before
@@ -2128,7 +2166,7 @@ $anim_time: 0.3s
 		font-size: 30px
 		line-height: 36px
 		margin-bottom: 5px
-		font-family: 'SFUIDisplay-Bold'
+		font-family: 'SFUIDisplay-Bold', sans-serif
 		transition: all 0.3s
 
 .nav
@@ -2141,7 +2179,7 @@ $anim_time: 0.3s
 		display: inline-block
 		color: #000
 		opacity: 0.7
-		font-family: 'SFUIDisplay-Medium'
+		font-family: 'SFUIDisplay-Medium', sans-serif
 		transition: all 0.2s
 		font-size: 18px
 		border-bottom: 1px solid #d0d0d0
@@ -2149,7 +2187,7 @@ $anim_time: 0.3s
 		cursor: pointer
 		&.active
 			opacity: 1
-			font-family: 'SFUIDisplay-Bold'
+			font-family: 'SFUIDisplay-Bold', sans-serif
 			padding-bottom: 9px
 			border-bottom: 2px solid #0070c9
 		&:hover
@@ -2188,7 +2226,7 @@ $anim_time: 0.3s
 	.content-write-request
 		padding-bottom: 50px
 	&__head
-		font-family: 'SFUIDisplay-Bold'
+		font-family: 'SFUIDisplay-Bold', sans-serif
 		font-size: 30px
 		text-align: center
 		
@@ -2239,7 +2277,7 @@ $anim_time: 0.3s
 		text-align: center
 		h3
 			font-size: 20px
-			font-family: 'SFUIDisplay-Bold'
+			font-family: 'SFUIDisplay-Bold', sans-serif
 			line-height: 20px
 		a 
 			font-size: 12px
@@ -2254,6 +2292,7 @@ $anim_time: 0.3s
 				margin: 12px 22px 22px
 	.video-block__iframe
 		height: 255px
+		background: #000
 	.video-block__text
 		position: static
 		padding: 15px 0 18px 0px
@@ -2288,14 +2327,14 @@ $anim_time: 0.3s
 					opacity: 1
 
 #letter_modal
-	width: 1000px
-	height: 913px
+	width: 786px
+	height: 640px
 	background: #fff
 	position: fixed
 	top: 45%
 	left: 50%
-	margin-top: -432px
-	margin-left: -500px
+	margin-top: -320px
+	margin-left: -393px
 	display: none
 	opacity: 0
 	z-index: 1009
@@ -2309,17 +2348,17 @@ $anim_time: 0.3s
 		height: 100%
 		margin-right: 30px
 	&_text
-		flex: 3
+		flex: 4
 		padding-top: 30px
 		padding-right: 33px
 		p 
 			font-size: 13px
-			margin-top: 25px
+			margin-top: 20px
 			line-height: 22px
 
 		h3
 			font-size: 24px
-			font-family: 'SFUIDisplay-Bold'
+			font-family: 'SFUIDisplay-Bold', sans-serif
 			line-height: 30px
 		a
 			font-size: 14px
@@ -2346,7 +2385,7 @@ $anim_time: 0.3s
 #request_modal
 	h2
 		font-size: 32px
-		font-family: 'SFUIDisplay-Bold'
+		font-family: 'SFUIDisplay-Bold', sans-serif
 		letter-spacing: 0
 	p
 		font-size: 13px
@@ -2434,7 +2473,7 @@ $anim_time: 0.3s
 	align-items: flex-start
 	h3
 		font-size: 24px
-		font-family: 'SFUIDisplay-Bold'
+		font-family: 'SFUIDisplay-Bold', sans-serif
 		color: #fff
 		margin-bottom: 0
 .your-data
@@ -2449,6 +2488,7 @@ $anim_time: 0.3s
 	margin-right: 65px
 	&__list
 		margin-top: 15px
+		user-select: none
 	&__item
 		width: 30px
 		height: 30px
@@ -2468,6 +2508,7 @@ $anim_time: 0.3s
 			background-color: #de0a36
 		&.not-this-month
 			color: #666
+
 .time
 	flex: 4
 	&__wrap
@@ -2477,7 +2518,8 @@ $anim_time: 0.3s
 		width: 100px
 		margin-right: 20px
 		display: inline-block
-		margin-top: 30px
+		margin-top: 15px
+		user-select: none
 		
 		.button-plus, .button-minus
 			background: #404040
@@ -2509,13 +2551,15 @@ $anim_time: 0.3s
 		color: #fff
 		font-size: 13px
 		line-height: 18px
-		font-family: 'SFUIDisplay-Medium'
+		font-family: 'SFUIDisplay-Medium', sans-serif
+		&.chance-time
+			margin-top: 21px
 		span.selected-time
 			color: #fff
 			font-size: 16px
 			line-height: 26px
 			margin-bottom: 10px
-			font-family: 'SFUIDisplay-Bold'
+			font-family: 'SFUIDisplay-Bold', sans-serif
 			display: block
 			text-align: center
 		span
@@ -2525,29 +2569,40 @@ $anim_time: 0.3s
 			
 
 	&__descr
-		padding-top: 30px
+		padding-top: 15px
+		user-select: none
 		p
 			margin-bottom: 24px
 			&:last-child
 				margin-bottom: 0
 .search-on-tiser
 	position: relative
-	width: 56%
+	width: 750px
 	margin: 26px auto 80px
-
 	&.active
-		z-index: 1002
+		z-index: 990
 	input
 		height: 56px
 		padding-left: 55px
+		padding-right: 55px
 		background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd"  opacity="1" fill="rgb(204, 204, 204)" id="ic_search_link" class="cls-1" d="M423.806,221.866l-3.847-3.847a6.745,6.745,0,1,0-.944.943l3.848,3.844A0.666,0.666,0,0,0,423.806,221.866Zm-9.062-2.721a5.4,5.4,0,1,1,5.4-5.4A5.408,5.408,0,0,1,414.744,219.145Z" transform="translate(-408 -207)"/></svg>') center left 0px no-repeat
 		background-size: 20px
-		background-position: center left 15px 
+		background-position: center left 20px 
 		background-color: #fff
 		border: none
 		outline: none 
+		z-index: 9
+		position: relative
 		border-radius: 3px
 		color: #000
+		&::-webkit-input-placeholder 
+			color: #999
+		&::-moz-placeholder
+			color: #999
+		&:-moz-placeholder
+			color: #999
+		&:-ms-input-placeholder
+			color: #999
 		&:focus
 			border: none
 	.fast-link-on-tiser, .result-search-on-tiser
@@ -2605,6 +2660,7 @@ $anim_time: 0.3s
 		width: 45px
 		position: absolute
 		display: none
+		z-index: 9
 		top: 5px
 		right: 10px
 		cursor: pointer
@@ -2662,6 +2718,16 @@ $anim_time: 0.3s
 				&:hover 
 					h3
 						color: $link-color
+	.accordeon
+		p
+			a
+				&:hover
+					color: #007de3
+	.service
+		&-blocks
+			h2 
+				a:hover
+					color: $link-color
 	.info-block
 		&__link.with-line-before
 			&:hover:before
@@ -2673,6 +2739,11 @@ $anim_time: 0.3s
 				&:hover
 					cursor: pointer
 					background: #de0a36
+	.podcategory-item
+		ul li
+			a:hover
+				&:before
+					width: 24px
 	.vacancies
 		&__item
 			a
@@ -2713,6 +2784,7 @@ $anim_time: 0.3s
 					color: #000
 				img
 					transform: translateY(-7px)
+					box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1)
 	.calendar
 		&__item
 			&.maybe-selected
@@ -2744,7 +2816,7 @@ $anim_time: 0.3s
 	.navigation 
 		a 
 			&:hover
-				font-family: 'SFUIDisplay-Bold' 
+				font-family: 'SFUIDisplay-Bold', sans-serif 
 				color: #1588e4
 				&:before
 					background: #1588e4
@@ -2815,6 +2887,21 @@ $anim_time: 0.3s
 
 
 @media screen and (min-width: 767px) and (max-width: 1024px)	
+
+	body
+		&.modal-open
+			overflow: hidden
+
+	#letter_modal, #request_modal
+		height: auto
+		overflow: scroll
+		max-height: 100vh
+		transform: translate(0,0)
+		height: 100%
+		margin-top: 0
+		padding-bottom: 25px
+		left: 50%
+		top: 0!important
 	.service-item .mobile-transparent
 		top: 21px
 		right: 56px
@@ -3075,7 +3162,25 @@ $anim_time: 0.3s
 					top: 7px
 					left: -22px
 					width: 12px
-
+	#letter_modal
+		height: 600px
+		width: 736px
+		margin-top: -300px
+		margin-left: -368px
+	.letter_modal
+		&_text
+			padding-top: 20px
+			padding-right: 25px
+			h3
+				font-size: 20px
+				line-height: 20px
+			a
+				font-size: 12px
+				line-height: 12px
+			p
+				font-size: 12px
+				margin-top: 10px
+				line-height: 20px
 	.departament
 		padding-top: 32px
 		.small-left-padd
@@ -3282,7 +3387,7 @@ $anim_time: 0.3s
 			ul
 				margin-top: 2px
 				li 
-					span
+					span, a
 						font-size: 12px
 						line-height: 18px
 						&:before
@@ -3439,6 +3544,8 @@ $anim_time: 0.3s
 	.technology
 		height: 100px
 		margin-bottom: 24px
+		&.no-margin-bottom
+			margin-bottom: 0
 	.conferencies 
 		h2
 			margin-bottom: 14px
@@ -3650,6 +3757,8 @@ $anim_time: 0.3s
 				margin-right: 3px
 	.article 
 		margin-bottom: 5px
+		&-vacancy
+			margin-bottom: 40px
 		h2
 			font-size: 18px
 		h3 
@@ -3665,13 +3774,15 @@ $anim_time: 0.3s
 
 	.quote
 		margin: 9px 0 0
+		&__pharagraph
+			margin-top: 0
 		&__text
 			margin: 13px 0 28px
 			left: 0
 			border-left-width: 2px
 			line-height: 27px
 			font-size: 19px
-			padding: 5px 70px 5px 22px
+			padding: 5px 70px 7px 22px
 	.footer-article
 		margin-top: 16px
 
@@ -3684,6 +3795,10 @@ $anim_time: 0.3s
 	.footnote
 		bottom: 2px
 		padding-left: 5px
+		&__top
+			top: 2px
+			p 
+				margin-bottom: 16px
 		p 
 			font-size: 9px
 			line-height: 9px
@@ -3729,6 +3844,9 @@ $anim_time: 0.3s
 			width: 20px
 			height: 20px
 			margin-left: 7px
+			&:first-child
+				svg
+					transform: scale(0.6, 0.6)
 			svg
 				transform: scale(0.7, 0.7)
 	.search-on-tiser
@@ -3737,6 +3855,7 @@ $anim_time: 0.3s
 		input
 			background-size: 10px
 			padding-left: 36px
+			padding-right: 36px
 			font-size: 11px
 			height: 40px
 		.close-input-on-tiser
@@ -3854,7 +3973,7 @@ $anim_time: 0.3s
 			height: 100px
 			margin-bottom: 15px
 		&__name
-			font-size: 15px
+			font-size: 14px
 		&__position
 			font-size: 9px
 	.banner
@@ -3944,8 +4063,8 @@ $anim_time: 0.3s
 		&__theme
 			font-size: 9px
 	.about-me
-		margin-top: 33px
-		margin-bottom: 50px
+		padding-top: 33px
+		padding-bottom: 50px
 		.request
 			&__block
 				padding: 20px 30px 0
@@ -4060,12 +4179,14 @@ $anim_time: 0.3s
 		p 
 			font-size: 8px
 			line-height: 12px
+			&.chance-time
+				margin-top: 13px
 			span.selected-time
 				font-size: 10px
 				line-height: 16px
 		&__select
 			width: 64px
-			margin-top: 21px
+			margin-top: 11px
 			margin-right: 12px
 			span
 				line-height: 44px
@@ -4074,7 +4195,7 @@ $anim_time: 0.3s
 				width: 64px
 				height: 18px
 		&__descr
-			padding-top: 19px
+			padding-top: 10px
 			p
 				padding-right: 10px
 				margin-bottom: 10px
@@ -4137,19 +4258,25 @@ $anim_time: 0.3s
 						top: 9px
 						width: 5px
 						height: 5px
-	.right-col
-		&.conditions-work 
+	.article
+		.conditions-work 
 			h3
 				font-size: 14px
 				line-height: 24px
 				margin-bottom: 0
 			h4
 				font-size: 12px
-				margin-top: 30px
 			h5
 				font-size: 11px
 				line-height: 18px
 				margin-top: 18px
+			ul
+				padding-left: 0
+				padding-right: 0
+				li
+					padding: 0
+					margin: 0
+					max-width: 100%
 			span
 				font-size: 10px
 				margin-bottom: 3px
@@ -4162,12 +4289,6 @@ $anim_time: 0.3s
 				line-height: 17px
 				&:before
 					top: 9px
-			.bottom-block
-				margin-top: 355px
-				li 
-					max-width: 100%
-					a 
-						font-size: 9px
 	.slider-wrapper
 		padding: 34px 0
 		margin-bottom: 25px
@@ -4407,7 +4528,7 @@ $anim_time: 0.3s
 					margin-bottom: 13px
 					color: #000
 				p
-					font-size: 12px
+					font-size: 12px 
 					line-height: 20px
 					max-height: 60px
 					overflow: hidden
@@ -4421,7 +4542,10 @@ $anim_time: 0.3s
 				margin-left: 6px
 
 @media screen and (max-width: 767px)
-	
+	body
+		&.modal-open
+			overflow: hidden
+			position: fixed
 	.filials
 		.nav-write-request
 			display: none 
@@ -4563,7 +4687,7 @@ $anim_time: 0.3s
 				h3
 					color: #0070c9
 					letter-spacing: 0px
-					font-family: 'SFUIDisplay-Semibold'
+					font-family: 'SFUIDisplay-Semibold', sans-serif
 		.seen-all
 			display: block
 			height: 50px
@@ -4573,7 +4697,7 @@ $anim_time: 0.3s
 			text-align: center
 			font-size: 14px
 			background: #fff
-			font-family: 'SFUIDisplay-Semibold'
+			font-family: 'SFUIDisplay-Semibold', sans-serif
 			&:after
 				border: 3.5px solid transparent
 				content: ""
@@ -4742,6 +4866,11 @@ $anim_time: 0.3s
 				top: 16px
 		.small-12
 			padding: 0 17px
+	.properties-article
+		padding-top: 4px
+	.properties_value
+		font-size: 11px
+		margin: 0 10px 
 	.specoffer-item
 		flex-direction: column-reverse
 		margin-bottom: 20px
@@ -4773,20 +4902,80 @@ $anim_time: 0.3s
 			&:after
 				top: 7px
 				left: 13%
-				width: 30px
+				width: 30px 
+	.article
+		&__wrap 
+			padding: 20px 0 0
+			img
+				margin-bottom: 25px
+			.text-col
+				padding-left: 19px
+				padding-right: 18px
+		h2
+			font-size: 22px
+		p 
+			font-size: 14px
+			line-height: 25px
+			padding-right: 0
+			margin-bottom: 12px
+			&.postscriptum
+				font-size: 10px
+				line-height: 14px
+
 	.blog
 		margin-bottom: 27px
 		padding-top: 25px
+		&.without-padtop
+			padding-top: 2px
+			.blog__wrap
+				margin-top: 0
+		&.no-mob-margin
+			margin-bottom: 0
 		&__wrap
 			margin-top: 10px
 			padding: 0 10px
+			.columns 
+				min-width: 100%
+		&__till
+			.blog-item
+				margin-bottom: 17px
+
 		&-item
-			margin-right: 8px
-			margin-left: 8px
+			margin-right: 0px
+			margin-left: 0px
 			margin-bottom: 15px
 			display: none
+			min-width: 100% 
 			&:nth-of-type(1), &:nth-of-type(2), &:nth-of-type(3)
 				display: block
+			&-full-width
+				&:nth-of-type(1)
+					display: flex
+					flex-direction: column-reverse
+				.primary_link
+					margin: 48px 3% 3px
+					width: 94%
+				.blog-item
+					&__img
+						height: 225px
+					&__descr
+						padding-top: 17px
+						p 
+							font-size: 13px
+							line-height: 22px
+							padding: 2px 20px 0 12px
+							max-height: 134px
+						h3
+							font-size: 21px
+							letter-spacing: 0px
+							line-height: 28px
+							margin-bottom: 8px
+							padding: 0 14px
+						&>div
+							top: auto
+							left: 24px
+							bottom: 80px
+
 			&__marker
 				height: 5px
 				width: 5px
@@ -4881,9 +5070,916 @@ $anim_time: 0.3s
 				align-items: center
 				a:last-child
 					margin-right: 0
+	.footnote
+		position: relative
+		transform: none
+		padding: 0
+		background: #fff
+		padding-left: 6px
+		left: -30px
+		padding-top: 12px
+		margin-bottom: 29px
+		&__img
+			position: static
+			padding-left: 0
+			padding-top: 0
+			margin-bottom: 15px
+			margin-top: -20px
+			
+		&__top
+			position: static
+			padding-left: 0
+			padding-top: 0
+			margin-bottom: 0
+		p 
+			font-size: 11px
+			line-height: 17px
+			margin-bottom: 0
+		.blue-text
+			font-size: 14px
+	.quote
+		&__text
+			font-size: 18px
+			line-height: 28px
+			padding: 0px 0 0 22px
+			margin: 22px 0
+
+	.footer-article
+		margin-top: 13px
+		.properties-article
+			display: none
+	.article-share
+		float: none
+		display: block
+		width: 100%	
+		padding: 21px 0
+		&__item
+			margin-right: 13px
+			margin-left: 9px
+			height: 32px
+			width: 32px
+	.blog h2
+		font-size: 23px
+
+	.search-on-tiser
+		margin: 20px auto -25px
+		width: 91%
+		input
+			padding-left: 45px
+			padding-right: 45px
+			font-size: 14px
+			background-size: 16px
+			height: 45px 
+		.close-input-on-tiser
+			top: 0
+			right: 3px
+	.article__wrap
+		&.with-navigation
+			padding-top: 0
+	.accordeon 
+		h2
+			margin-top: 20px
+			margin-bottom: 7px
+		h3
+			padding: 5px 0 14px
+			font-size: 17px
+			line-height: 21px
+			&:after
+				border: 3px solid transparent
+				border-top: 5px solid #ccc
+				border-bottom: 0
+			&.open
+				&:after
+					border-bottom: 5px solid #0070c9
+					border-top: 0
+					margin-left: 3px
+
+		&__item
+			&-content
+				border-left-width: 2px
+				padding-left: 13px
+				p 
+					margin-bottom: 8px
+		ol
+			margin-bottom: 10px
+			&>li
+				padding-left: 22px
+				&:before
+					top: 1px
+					left: 0
+		ul 
+			padding-left: 0
+		li 
+			font-size: 14px
+			line-height: 25px
+	.article 
+		.text-col 
+			ul
+				margin-bottom: 10px
+				li
+					padding-left: 3px
+					font-size: 14px
+					line-height: 24px
+					padding-right: 10px
+					margin: 8px 0 5px
+					&:before
+						left: -17px
+						top: 9px
+	.right-col
+		display: none
+
+	.footer-article
+		margin-top: 9px
+		p 
+			font-size: 13px
+			line-height: 22px
+			margin-bottom: 5px
+		&-help
+			flex-direction: column
+			padding: 12px 16px
+			p
+				max-width: 100%
+		.oval-red-button
+			height: 38px
+			border-radius: 3px
+			width: 100%
+			line-height: 34px
+			font-size: 14px
+	.article
+		&.with-marg-bottom
+			margin-bottom: 0
+	.find_text
+		border-top: 1px solid #f4f4f4
+		border-bottom: 1px solid #f4f4f4
+		&.no-pad-onmob
+			.columns
+				padding: 0
+			.help-block
+				margin-bottom: 0
+				padding: 18px 10px 24px 19px
+
+	.workers
+		padding: 16px 0 0
+		h2
+			font-size: 16px
+			line-height: 25px
+			padding: 25px 0
+		.columns
+			padding: 0
+		&__item
+			padding: 14px 17px 12px
+			border-top: 1px solid #e6e6e6
+			width: 100%
+			&.will-be-hide
+				display: none
+		&__img
+			width: 72px
+			height: 72px
+			margin: 0
+			float: left
+			margin-right: 19px
+		&__name
+			text-align: left
+			padding-top: 10px
+		&__position
+			text-align: left
+	.till-flex
+		flex-direction: column
+
+	.toggle-workers
+		font-size: 16px
+		border-top: 1px solid #e6e6e6
+		font-family: 'SFUIDisplay-Semibold', sans-serif
+		padding: 12px 0
+		font-size: 14px
+		line-height: 22px
+		text-align: center
+		color: #0070c9
+		padding: 12px 0
+	.arrow-after-button
+		&:after
+			content: ""
+			display: inline-block
+			border: 3px solid transparent
+			border-top: 5px solid #0070c9
+			border-bottom: 0
+			margin-left: 3px
+			width: 0
+			height: 0
+			margin-bottom: 2px
+		&.opened
+			&:after
+				transform: scaleY(-1)
+	.banner
+		margin-top: 0
+		&-big
+			height: 485px
+			background-position: center right -175px
+			padding: 25px
+			box-shadow: 0px -254px 182px rgba(0, 0, 0, 0.3) inset
+			.row
+				align-items: flex-end
+				height: 100%
+		&-medium
+			height: 318px
+			padding: 27px 8px
+			box-shadow: 0px 254px 182px rgba(0, 0, 0, 0.4) inset
+			h2
+				max-width: 55%
+			p 
+				margin-bottom: 7px
+				max-width: 100%
+				font-size: 14px
+				line-height: 24px
+		&__title
+			font-size: 11px
+
+		p
+			margin-bottom: 12px
+			max-width: 90%
+			font-size: 13px
+			line-height: 18px
+		h2
+			margin-bottom: 11px
+			font-size: 25px
+			line-height: 28px
+		&-small
+			height: 485px
+			padding: 34px 7px
+			box-shadow: 0px 254px 182px rgba(0, 0, 0, 0.4) inset
+			h2
+				max-width: 50%
+				margin-bottom: 13px
+			p
+				max-width: 75%
+				font-size: 13px
+				line-height: 20px
+	.info-block
+		margin-bottom: 35px
+		&-full
+			flex-direction: column
+			&.reverse-mob
+				flex-direction: column-reverse
+		&__head
+			font-size: 25px
+			line-height: 30px
+			text-align: center
+			
+		&__text
+			font-size: 12px
+			line-height: 20px
+			margin-top: 7px
+			margin-bottom: 10px
+		&__img
+			min-height: 215px
+		.left-text, .right-text
+			padding: 12px 20px 15px 20px
+		&__list 
+			li
+				font-size: 14px
+				line-height: 18px
+				margin-bottom: 8px
+				padding-left: 20px
+				&:before
+					left: 5px
+					width: 8px
+		&__half
+			padding-top: 19px
+			&-left
+				margin-right: 0
+			&-right
+				margin-left: 0
+			.info-block__text
+				padding: 0 30px
+			.info-block__img
+				min-height: 200px
+		&__theme
+			font-size: 11px
+			text-align: center
+
+			
+	.vacancy-benefits
+		padding: 20px 8px
+		.columns
+			min-width: 100%
+		.info-block
+			margin-bottom: 20px
+			&__head
+				padding: 0 10px 5px
+			&__text
+				margin-bottom: 15px
+			&__link
+				font-size: 15px
+				margin-bottom: 8px
+			&__half
+				&.with-padd-bottom
+					padding-bottom: 15px
+	.living-team
+		margin-top: 24px
+		padding: 0 7px
+		h2
+			font-size: 30px
+			margin-bottom: 11px
+
+	.about-me
+		h2
+			display: none
+	
+	.about-me 
+		padding-bottom: 30px
+		padding-top: 30px
+		.request
+			&__user
+				display: flex
+				align-items: center
+				justify-content: flex-start
+				width: 100%
+				text-align: left
+				p 
+					text-align: left
+					font-size: 13px
+					line-height: 20px
+					margin-bottom: 4px
+				h4
+					font-size: 18px
+					text-align: left
+					line-height: 30px
+				a 
+					text-align: left
+					margin-bottom: 5px
+				&-img
+					margin-right: 23px
+				img
+					max-width: 106px
+					max-height: 106px
+					margin: 6px auto 9px
+			&__text
+				h3
+					max-width: 100%
+					font-size: 18px
+				p
+					font-size: 12px
+					line-height: 21px
+				&-descr
+					max-height: none
+					margin-bottom: 0
+			&__block
+				padding: 0 18px
+		.primary_link, .secondary-button
+			margin-top: 15px
+			width: 100%
+			height: 38px
+			line-height: 36px
+		.secondary-button
+			color: #000
+	.description
+		&-width-image
+			padding: 150px 0 140px
+			background-position: center
+			background-size: cover
+		&-big
+			background-color: #be1238
+			background-image: url("../img/team/back-mob.png")!important
+			background-position: center left 
+			background-repeat: no-repeat
+			background-size: contain
+		&__text
+			font-size: 24px
+			line-height: 36px
+			max-width: 84%
+	.statistics
+		&__item
+			padding-top: 10px
+			margin-right: 8px
+		&__description
+			line-height: 14px
+			font-size: 10px
+			max-width: 99px
+			padding: 2px 6px
+			&:before
+				left: 6px
+				bottom: -5px
+		.scroll-block__head
+			margin-right: 12px
+			font-size: 19px
+			line-height: 48px
+		&__digital
+			font-size: 46px
+			line-height: 46px
+	.flexbox
+		display: block
+		position: relative
+		
+	.filials.portfolio-worker 
+		padding-top: 28px
+		.filials-rev-nav
+			display: block!important
+			margin-top: 3px
+		.slick-slide
+			margin-top: 5px
+		.slick-list
+			overflow: hidden
+		.slider-for 
+			.item
+				padding-bottom: 5px
+		.slider-nav 
+			.slick-slide
+				padding: 0 18px 7px
+				&.slick-current
+					padding-bottom: 6px
+		h3
+			font-size: 12px
+		.portfolio-item h3
+			font-size: 26px
+			line-height: 28px
+			margin-bottom: 3px
+		.slick-slide 
+			a
+				margin-bottom: 20px
+		.mobile-accord .slick-slide a.secondary-button
+			line-height: 36px
+			height: 40px
+			font-size: 14px
+			color: #000
+
+	.portfolio-worker 
+		padding-top: 28px
+		.row
+			display: block!important
+		.portfolio-item
+			height: 340px
+			margin-bottom: 25px
+	
+	.your-data
+		padding-right: 0
+		.input_block
+			margin-right: 0
+	.calendar
+		margin-right: 0
+		display: none
+		&__list
+			margin-top: 20px
+		&__item
+			margin-right: 18px
+			&:nth-of-type(7n+7)
+				margin-right: 0
+	.time
+		display: none
+		&__select 
+			margin-right: 18px
+			span
+				line-height: 66px
+				font-size: 45px
+		p 
+			font-size: 12px
+		&__descr 
+			p
+				margin-bottom: 16px
+				&:last-child
+					margin-bottom: 0
+		&__wrap
+			margin-bottom: 21px
+
+	.profi
+		font-size: 14px
+		font-family: 'SFUIDisplay-Bold', sans-serif
+		color: #fff
+		img
+			width: 22px
+			margin-right: 5px
+			vertical-align: middle
+	.back-step
+		position: absolute
+		bottom: 0px
+		left: 0
+		display: inline-block
+		width: 28px
+		height: 36px
+		vertical-align: middle		
+		background: url('../img/svg/arrow-form-gray.svg') center no-repeat
+		background-size: contain
 
 
+	.form-call
+		&.with-calendar
+			padding: 38px 6px 45px
+		.profi
+			font-size: 14px
+			line-height: 30px
+			display: block
+			margin-bottom: 10px
+		&.with-calendar
+			button
+				display: none
+				float: none
+				width: 100%
+				text-align: center
+				margin-right: 6px
+				margin-left: 40px
 
+		.next-step
+			font-size: 24px
+			font-family: 'SFUIDisplay-Bold', sans-serif
+			color: #fff
+			margin-left: 40px
+			margin-right: 6px
+			margin-top: 20px
+			text-align: center
+			&:after 
+				content: ""
+				display: inline-block
+				width: 28px
+				height: 12px
+				vertical-align: middle
+				background: url('../img/arrow-form.png') center no-repeat
+				background-size: contain
+				margin-left: 17px
+			&.from-first
+				mt34px
+		.back-step.second-step
+			bottom: -67px
+	.nav
+		flex-direction: column
+		margin: 5px 0
+		padding-left: 18px
+		display: none
+		background: #fff
+		position: absolute
+		z-index: 999
+		top: 54px
+		li
+			text-align: left
+			display: block
+			padding-left: 9px
+			padding: 14px 22px
+			&.active
+				border-bottom: 1px solid #d0d0d0
+				font-family: 'SFUIDisplay-Medium', sans-serif
+		&-header
+			width: 100%
+			border-bottom: 1px solid #d0d0d0
+			padding: 16px 18px 14px
+			font-size: 19px
+			background: #fff
+			font-family: "SFUIDisplay-Bold"
+			&:after
+				content: ""
+				display: inline-block
+				border: 5px solid transparent
+				border-top: 7px solid #0070c9
+				border-bottom: 0
+				margin-left: 3px
+				float: right
+				vertical-align: middle
+				margin-top: 11px
+				width: 0
+				height: 0
+				margin-bottom: 2px
+			&.opened
+				z-index: 999
+				&:after
+					transform: scaleY(-1)
+	.seen-all-vacancies, .universal-seen-all
+		width: 100%
+		border-bottom: 1px solid #d0d0d0
+		padding: 13px 18px 13px
+		font-size: 14px
+		background: #fff
+		color: #0070c9
+		text-align: center
+		font-family: "SFUIDisplay-Bold"
+		border-top: 1px solid #f5f5f5
+		z-index: 99
+		&:after
+			content: ""
+			display: inline-block
+			border: 3px solid transparent
+			border-top: 5px solid #0070c9
+			border-bottom: 0
+			margin-left: 5px
+			vertical-align: middle
+			margin-top: 2px
+			width: 0
+			height: 0
+			margin-bottom: 2px
+		&.opened
+			&:after
+				transform: scaleY(-1)
+	
+	.universal-seen-all				
+		width: calc(100% + 44px)
+		margin-left: -22px
+		max-width: calc(100% + 44px)
+
+	#letter_modal, #request_modal
+		max-width: 100%
+		opacity: 1
+		margin: 0
+		transform: none
+		left: 0
+		padding: 55px 0 0
+		height: auto
+		overflow: scroll
+		flex-direction: column
+		max-height: 100vh
+		top: 0!important
+		bottom: 0
+	#request_modal
+		padding-top: 26px
+		padding-bottom: 25px
+		h2
+			font-size: 23px
+		p
+			font-size: 11px
+			margin-top: 16px
+			&.request_modal__title
+				padding: 0 40px
+		.form-reviews
+			padding: 5px 20px
+		input
+			border-radius: 3px
+			&.half-size
+				width: 100%
+				font-size: 13px
+				margin-top: 12px
+		textarea
+			height: 178px
+			border-radius: 3px
+			margin-top: 12px
+			padding: 10px 15px
+		.file-thank
+			width: 100%
+			input
+				height: 38px
+				padding-left: 44px
+				font-size: 12px
+				width: 100%
+			label
+				width: 32px
+				height: 38px
+			.file-thank__clear
+				width: 8px
+				height: 8px
+				top: 15px
+				right: 15px
+		.primary_link
+			width: 100%
+			margin-bottom: 25px
+	.modal_close
+		width: 16px
+		height: 16px
+		top: 20px
+		right: 16px
+		&-butt
+			width: 100%
+			line-height: 46px
+			margin-top: 9px
+			font-size: 14px
+			font-family: 'SFUIDisplay-Medium', sans-serif
+			text-align: center
+			border-top: 1px solid #e5e5e5
+	.letter_modal
+		&_text
+			padding: 20px 16px 0
+			display: flex
+			flex-direction: column
+
+			h3
+				font-size: 19px
+				line-height: 24px
+			a
+				font-size: 11px
+				line-height: 15px
+			p 
+				font-size: 13px
+				margin-top: 12px
+				line-height: 21px
+				margin-bottom: 10px
+		&_image
+			height: 127vw	
+			margin: 0 auto
+			width: 100%
+	.vacancies
+		position: relative
+		margin-bottom: 0
+		&_all
+			max-height: 900px
+			transition: max-height 0.5s
+			overflow: hidden
+			&.open
+				max-height: 5000px
+				transition: max-height 0.5s
+		&__item
+			padding: 0
+			margin: 0
+			border-bottom: 1px solid #f5f5f5
+			a
+				height: 150px
+				padding: 0 50px
+		&__date
+			font-size: 12px
+			margin-bottom: 8px
+		&__head
+			font-size: 25px
+			line-height: 29px
+			margin-bottom: 0
+
+	.article-vacancy
+		margin-bottom: 0
+		.text-col 
+			ul
+				padding-left: 30px
+				li 
+					margin: 4px 0 26px
+					padding-right: 0
+
+	.footnote
+		&__full-mob
+			margin-top: 18px
+			border-top: 1px solid #e2e2e3
+			border-bottom: 1px solid #e2e2e3
+			margin-left: -19px
+			width: calc(100% + 37px)
+			max-width: calc(100% + 37px)
+			background: #fafafa
+			padding-left: 19px
+			padding-bottom: 11px
+	.rewiews
+		&__all
+			padding: 0 7px
+			.all-command
+				padding: 40px 0 30px
+			.columns
+				max-width: 100%
+			.rew-video
+				max-height: calc(150vw + 225px)
+				transition: all 0.5s
+				overflow: hidden
+				&.open
+					max-height: 9000px
+			.slider-wrapper 
+				margin-bottom: 35px
+				.nav-write-request 
+					display: none
+				.content-write-request
+					padding-bottom: 15px
+				.video-block
+					&__iframe
+						height: 50vw
+					&__text
+						padding: 2px 0 30px 0
+						h3
+							font-size: 17px
+							line-height: 23px
+			.request
+				&__block
+					padding: 0 22px
+				&__text
+					h3
+						max-width: 100%
+					p 
+						font-size: 12px
+				&__user
+					margin-bottom: 30px
+					img
+						margin: 10px auto 15px
+					a
+						font-size: 11px
+					&-logo
+						width: 30px
+						height: 30px
+						right: 20px
+						transform: scale(0.6, 0.6)
+			.slick-prev
+				top: 46px
+				left: 5px
+
+			.slick-next
+				top: 46px
+				right: 5px
+			.slick-dots
+				display: flex
+				width: 100%
+				justify-content: center
+				padding: 0 17px
+				margin-top: 12px
+				li
+					display: inline-block
+					width: 68px
+					height: 10px
+					background-color: transparent
+					font-size: 0
+					margin: 0 5px
+					cursor: pointer
+					padding: 15px 0
+					button
+						width: 100%
+						border-top: 2px solid #e3e3e3
+					&.slick-active 
+						button
+							border-top: 2px solid #000
+	.rew-video
+		.columns
+			min-width: 100%
+	.slider-wrapper
+		padding: 15px 0
+		&.with-padd
+			padding: 18px 22px 0
+		&__title
+			display: none
+		&__head
+			font-size: 19px
+			margin-bottom: 11px
+		.letter
+			&.vertical
+				height: 50vw
+				margin-bottom: 15px
+			h3
+				font-size: 13px
+				line-height: 14px
+				max-height: 13px
+		.thanks-letters
+			&__slider
+				max-height: 775px
+				transition: all 0.5s
+				overflow: hidden
+				
+				&.open
+					max-height: 9000px
+					transition: all 1s
+			.medium-3-5
+				display: flex
+				margin-bottom: 25px
+				flex-direction: column
+			
+			h3
+				font-size: 13px
+				line-height: 14px
+				max-height: 13px
+			a 
+				margin-top: 3px
+				font-size: 11px
+	.seen-all-letters
+		width: calc(100% + 44px)
+		margin-left: -22px
+		max-width: calc(100% + 44px)
+		border-bottom: 0
+		border-top: 1px solid #e6e6e6
+		margin-top: 18px
+	.container-banner
+		height: 230px
+		padding: 45px 0 30px
+	.medium-3-5
+		flex: 0 0 50%
+		margin-bottom: 20px
+	.article 
+		.conditions-work
+			margin-bottom: 17px
+			h3
+				padding-top: 12px
+				font-size: 14px
+				margin-bottom: 10px
+			h4
+				font-size: 11px
+			h5
+				font-size: 10px
+				line-height: 12px
+			ul
+				padding-left: 0
+				li
+					margin: 0
+					padding: 0
+					line-height: 15px
+					a
+						font-size: 11px
+						line-height: 15px
+			.inline-mob
+				display: inline
+				ul, li, h5
+					display: inline
+					line-height: 12px
+				li
+					&:last-child
+						a
+							&:before
+								display: none
+				a
+					max-height: 12px	
+					padding-left: 0			
+					&:before
+						width: 0
+						content: ","
+						top: auto
+						left: auto
+						right: 3px
+						bottom: 10px
+							
+					
+			span
+				font-size: 12px
+			p
+				font-size: 13px
+				line-height: 18px
 
 	@keyframes topBar_open
 		0%
@@ -4992,7 +6088,7 @@ $anim_time: 0.3s
 			ul
 				margin-top: 0
 				li 
-					span
+					span, a
 						font-size: 13px
 						line-height: 22px
 			a.details-link
@@ -5129,6 +6225,8 @@ $anim_time: 0.3s
 	.technology
 		height: 89px
 		margin-bottom: 29px
+		&.no-margin-bottom
+			margin-bottom: 0
 	.scroll-block
 		padding: 23px 18px 20px 17px
 		width: 100%
@@ -5279,7 +6377,7 @@ $anim_time: 0.3s
 				line-height: 21px
 				margin-bottom: 25px
 				max-width: 80%
-				margin: 0 auto 28px
+				margin: 0 auto 28px 
 	.red_title
 		font-size: 14px
 		line-height: 20px
@@ -5710,7 +6808,7 @@ $anim_time: 0.3s
 			ul
 				li
 					line-height: 18px
-					span
+					span, a
 						font-size: 11px
 						line-height: 18px
 						&:before
@@ -5808,6 +6906,10 @@ $anim_time: 0.3s
 	.blog
 		margin-bottom: 23px
 		padding-top: 20px
+		&.without-padtop
+			padding-top: 2px
+			.blog__wrap
+				margin-top: 0
 		&__wrap
 			margin-top: 10px
 			padding: 0 7px
@@ -5953,6 +7055,8 @@ $anim_time: 0.3s
 	.technology
 		height: 76px
 		margin-bottom: 23px
+		&.no-margin-bottom
+			margin-bottom: 0
 	.scroll-block
 		padding: 21px 15px 24px 15px
 		&__head
