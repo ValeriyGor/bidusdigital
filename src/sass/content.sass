@@ -108,7 +108,9 @@ $anim_time: 0.3s
 			right: 118px
 			transform: rotate(30deg)
 			width: 220px
-
+.nopadding
+	padding-left: 0!important
+	padding-right: 0!important
 .specoffer
 	h2
 		margin-bottom: 38px
@@ -309,7 +311,8 @@ $anim_time: 0.3s
 			color: #b5b5b5
 			margin-left: 9px
 .success-send
-	background: inherit
+	background: url(/img/uslugi/back-success.png) center no-repeat
+	background-size: cover
 	position: absolute
 	top: 0
 	left: 0
@@ -482,6 +485,16 @@ $anim_time: 0.3s
 			position: relative
 			z-index: 250
 			font-family: 'SFUIDisplay-Bold', sans-serif
+.logotypes
+	display: flex
+	align-items: center
+	justify-content: flex-start
+	&>div
+		margin: 10px 10px 25px 0
+		max-width: 100px
+		max-height: 25px
+	img, svg
+		max-width: 100%
 
 .podcategory-item
 	height: 500px
@@ -497,9 +510,61 @@ $anim_time: 0.3s
 	&.right-pos
 		background-position: right bottom
 	&.bg-cont
-		background-size: contain
+		background-size: contain!important
 	&.bg-cov
-		background-size: cover
+		background-size: cover!important
+	&.pos-btm-cntr
+		background-position: center bottom!important
+	&.with-akcia-block
+		padding: 60px 70px 165px
+	&.full-huge-size
+		height: 500px
+		p 
+			margin: 15px 0
+			max-width: 400px
+	&.full-big-size
+		height: 420px
+		p 
+			margin: 15px 0
+	&.medium-size
+		height: 375px
+		p 
+			margin: 15px 0
+	&.small-size
+		height: 342px
+		p 
+			margin: 15px 0
+	&.big-size
+		height: 540px
+	&.very-big-size
+		height: 640px
+	&.huge-size
+		height: 760px
+	&__text
+		display: flex
+		width: 100%
+		height: 100%
+		flex-direction: column
+		justify-content: center
+		align-items: flex-start
+		padding-left: 50px
+		.small-logo
+			width: 190px
+		h2
+			text-align: left
+			margin-left: 0
+			font-size: 42px
+			max-width: 400px
+	&.flex-on-center
+		display: flex
+		align-items: center
+		justify-content: center
+		flex-direction: column
+		p 
+			max-width: 575px
+		a
+			margin-right: 10px
+			margin-left: 10px
 
 .description p 
 	font-size: 36px
@@ -510,6 +575,77 @@ $anim_time: 0.3s
 	span.red
 		color: #de0a36
 		font-family: 'SFUIDisplay-Bold', sans-serif
+.select-gift
+	padding: 77px 0
+	margin-bottom: 58px
+.gifts
+	&__img
+		margin-bottom: 10px
+		opacity: 0.99
+		transition: opacity 0.3s
+		border-radius: 3px
+	&__head
+		font-size: 24px
+		font-family: 'SFUIDisplay-Bold', sans-serif
+		color: #fff
+	&__title
+		font-size: 13px
+		color: #fff
+	&__item
+		position: relative
+		cursor: pointer
+		&.selected
+			.gifts__img
+				opacity: 0.7
+			.selected-gift
+				opacity: 1
+		
+.get-gift
+	font-size: 36px
+	color: #fff
+	display: inline-block
+	font-family: 'SFUIDisplay-Bold', sans-serif
+	margin-top: 48px
+	transition: all 0.2s
+	cursor: pointer
+	&:after
+		content: ""
+		display: inline-block
+		width: 43px
+		height: 19px
+		vertical-align: middle
+		background: url(../img/arrow-form.png) center no-repeat
+		background-size: contain
+		margin-left: 17px
+.eticets
+	line-height: 25px
+	padding: 10px 25px
+	border-radius: 23px
+	color: #fff
+	display: inline-block
+	font-size: 16px
+	font-family: 'SFUIDisplay-Bold', sans-serif
+	position: absolute
+	left: 50%
+	top: 100px
+	transform: translateX(-50%)
+	white-space: nowrap
+	min-width: 240px
+	transition: opacity .3s
+	opacity: 0
+	text-align: center
+	
+	svg
+		position: relative
+		top: 2px
+	
+.selected-gift
+	background: #22b768
+	z-index: 19
+.hover-gift
+	background: #de0a36
+	z-index: 9
+
 
 .tiser-text
 	padding-bottom: 35px
@@ -538,6 +674,9 @@ $anim_time: 0.3s
 	line-height: 60px
 	font-family: SFUIDisplay-Bold
 	padding: 74px 0
+h2.withmb
+	margin-bottom: 30px
+
 .principe
 	.columns>div
 		display: block
@@ -558,24 +697,46 @@ $anim_time: 0.3s
 		padding: 8px 40px 6px 20px
 		color: #000
 		font-family: "Open Sans"
-
+.center-block
+	margin-left: auto
+	margin-right: auto
+	display: block	
+.principes
+	margin-bottom: 40px
 .podcategory-item
 	padding: 56px 70px
 	display: block
-
+	border-radius: 3px
+	overflow: hidden
+	background-color: #fff
 	h2
 		font-size: 36px
 		letter-spacing: 0
 		line-height: 42px
 		margin-bottom: 15px
+		&.white-text
+			color: #fff
 		span
 			font-family: 'SFUIDisplay-Bold', sans-serif
+			.descr
+				font-size: 13px
+				line-height: 13px
+				color: #000
+				text-align: left
+				font-family: 'Open Sans'
+				margin-top: 0
 	p 
 		font-size: 16px
 		max-width: 360px
+		color: #fff
+		&.black-text
+			color: #000
+		&.center-block
+			max-width: 100%
+			margin: 23px 0 11px
 	a.details-link		 
 		margin-top: 28px
-
+		margin-bottom: 25px
 	ul 
 		margin-top: 25px
 		li 
@@ -594,6 +755,13 @@ $anim_time: 0.3s
 					margin-right: 10px
 					margin-bottom: 4px
 					transition: all .2s
+			&.blue
+				span, a
+					color: #0070c9
+					&:before
+						background: #0070c9
+				&:last-child
+					margin-bottom: 25px
 
 	&.left-text
 		h2
@@ -608,14 +776,119 @@ $anim_time: 0.3s
 		h2
 			margin: 0 auto
 			color: #000
+			&.white-text
+				color: #fff
 			&.small
-				max-width: 350px
+				max-width: 375px
 		span
 			display: block
 			text-align: center
 			font-size: 16px
 			margin-top: 5px
 			font-family: 'SFUIDisplay-Bold', sans-serif
+			&.descr
+				font-size: 13px
+				line-height: 13px
+				color: #000
+				text-align: left
+				font-family: 'Open Sans'
+				margin-top: 5px
+		.podcategory-item__price
+			span
+				font-size: 13px
+				line-height: 14px
+				color: #000
+				margin: 0
+				font-family: "Open Sans"
+				display: block
+				text-align: left
+
+		.podcategory-item__text
+			h2
+				margin: 20px 0
+				font-size: 42px
+
+	&__price
+		font-size: 24px
+		text-align: left
+		font-family: 'SFUIDisplay-Bold', sans-serif
+		color: #000
+		span
+			font-size: 13px
+			line-height: 20px
+			color: #000
+			display: block
+			text-align: left
+
+	&.with-akcia-block
+		padding: 60px 70px 165px
+		min-height: 620px
+		height: auto
+		position: relative
+		p 
+			margin: 14px 0
+		.akcia-block
+			h2
+				color: #fff
+			p 
+				margin: 5px 0
+				color: #fff
+				max-width: none
+
+	.akcia-block
+		position: absolute
+		bottom: 0
+		left: 0
+		background: #de0a36 url('../img/uslugi/akcia-back.png') center left no-repeat
+		background-size: contain
+		height: 165px
+		right: 0
+		width: 100%
+		display: flex
+		justify-content: center
+		align-items: center
+		color: #fff
+		padding: 0 120px
+		&.clear-white
+			background: #fff
+			border-top: 1px solid #f5f5f5
+			flex-direction: column
+			padding: 20px 25px
+			h3
+				font-family: 'SFUIDisplay-Bold', sans-serif
+				font-size: 24px
+
+		.gallerry
+			display: flex
+			padding: 20px  0 0
+			width: 100%
+			align-items: center
+			justify-content: space-between
+			&>div
+				flex: 1
+				margin: 0 15px
+				img
+					max-width: 100%
+		&__img
+			flex: 3
+			padding-top: 10px
+			img
+				display: block
+				
+		&__text
+			flex: 7
+			padding-left: 18px
+			p
+				font-family: 'SFUIDisplay-Medium', sans-serif
+				line-height: 20px
+				span
+					display: inline-block
+					line-height: inherit
+
+				.bold				
+					font-family: 'SFUIDisplay-Bold', sans-serif
+
+			
 
 .present-company
 	margin: 84px 0 65px
@@ -808,6 +1081,8 @@ $anim_time: 0.3s
 	background: #f7f7f7
 	color: #fff
 	overflow: hidden
+	&.white-back
+		background: #fff
 	&.statistics
 		background: #fff
 	.row
@@ -934,6 +1209,9 @@ $anim_time: 0.3s
 	font-family: 'SFUIDisplay-Bold', sans-serif 
 	font-size: 24px
 	line-height: 40px
+	&.on-gifts
+		margin-top: 10px
+		margin-bottom: 50px
 
 .center-text
 	text-align: center
@@ -1037,11 +1315,14 @@ $anim_time: 0.3s
 			.img 
 
 				&.hide-dots
-					.slick-dots
-						display: none
+					.slider-text:nth-of-type(1)
+						.slick-dots
+							display: none
 				.slider-text, .slick-list, .slick-track
 					height: 100%
 
+	&.with-small-margin
+		margin-top: 10px
 	.slick-dots
 		text-align: center
 		margin-top: 17px
@@ -1107,6 +1388,10 @@ $anim_time: 0.3s
 						margin-right: 10px
 						margin-bottom: 4px
 						transition: all .2s
+					&.linker
+						padding-top: 12px
+						display: block
+						
 				h4
 					font-size: 20px
 					padding-top: 3px
@@ -1115,6 +1400,7 @@ $anim_time: 0.3s
 				p 
 					line-height: 24px
 					padding-right: 25px
+					
 					span
 						display: block
 						
@@ -1124,6 +1410,8 @@ $anim_time: 0.3s
 						font-size: 16px
 						margin-top: 20px
 						margin-bottom: 2px
+
+
 				a
 					font-size: 14px
 					line-height: 14px
@@ -1154,9 +1442,83 @@ $anim_time: 0.3s
 						flex-direction: column
 						align-items: flex-start
 						justify-content: flex-end
+						&.flex-row
+							flex-direction: row
+							padding-left: 60px
+							padding-right: 20px
+						&.black-text
+							p 
+								&.gray-text
+									color: #999
+									font-size: 13px
+								color: #000
 						p 
 							font-size: 14px
 							color: #fff
+					.request__text
+						border-left: 0
+						padding-left: 40px
+						h4
+							font-size: 20px
+							line-height: 30px
+							font-family: 'SFUIDisplay-Bold', sans-serif
+							margin-bottom: 20px
+					.request__user-img 
+						margin-right: 25px
+						img
+							max-width: 80px
+							max-height: 80px
+							margin: auto
+
+					.request__user
+						display: flex
+						padding-top: 10px
+						width: 92%
+						margin-left: 40px
+						margin-bottom: 30px
+						border-bottom: 1px solid #e5e5e5
+						.flex
+							display: flex
+							justify-content: flex-start
+							align-items: center
+							flex: 0 0 50%
+							min-width: 50%
+						a, h4, p, span
+							text-align: left
+						h4
+							font-size: 18px
+						p 
+							margin-bottom: 0
+							padding-left: 0
+						.theme
+							.request__user-img 
+								margin-right: 20px
+							p 
+								max-width: 175px
+								line-height: 20px
+
+					.video-block
+						&__item
+							width: 100%
+							height: 100%
+						&__iframe
+							width: 100%
+							height: 100%
+							background: #000
+					.letter
+						&_modal
+							&_text
+								h4
+									font-size: 24px
+									font-family: 'SFUIDisplay-Bold', sans-serif
+								a
+									font-size: 14px
+									font-family: 'SFUIDisplay-Bold', sans-serif
+								p
+									font-size: 13px
+									line-height: 22px
+							&_image
+								flex: 3 
 				.map 
 					width: 100%
 					height: 100%
@@ -1205,6 +1567,12 @@ $anim_time: 0.3s
 					border-radius: 3px
 					background: #fff
 					box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.1)
+					&.with-vidos
+						.working
+							padding-left: 0
+							padding-bottom: 0
+					&.reviews-on-pages
+						padding: 0
 					.bold
 						font-family: 'SFUIDisplay-Semibold', sans-serif
 						font-size: 16px
@@ -1238,7 +1606,10 @@ $anim_time: 0.3s
 						right: 20px
 						cursor: pointer
 						transition: all 0.2s
-
+						z-index: 99
+.block-text
+	display: block
+	
 .slider-conf
 	border-radius: 3px
 	display: none 
@@ -1283,7 +1654,7 @@ $anim_time: 0.3s
 	.slick-arrow
 		top: 39%
 		transform: translateX(-50%)
-		background: url(../img/svg/arrow.svg) center no-repeat, url(img/shadow.png) center no-repeat
+		background: url(../img/svg/arrow.svg) center no-repeat //, url(img/shadow.png) center no-repeat
 		background-size: 15px 30px
 		z-index: 99
 		-webkit-filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5))
@@ -2778,6 +3149,8 @@ $anim_time: 0.3s
 .your-data
 	flex: 3
 	padding-right: 90px
+	&.next-image
+		padding-right: 30px
 	.input_block 
 		width: 100%
 		margin: 15px 26px 5px 0
@@ -2807,7 +3180,24 @@ $anim_time: 0.3s
 			background-color: #de0a36
 		&.not-this-month
 			color: #666
-
+.form-image
+	max-width: 482px
+	padding-right: 30px
+.check-data
+	display: none
+.relative-block
+	position: relative
+	
+.return-to-gifts
+	color: rgba(255, 255, 255, 0.3)
+	position: absolute
+	font-size: 13px
+	top: 63px
+	cursor: pointer
+	transition: all 0.3s
+	left: 0
+	svg
+		margin-right: 10px
 .time
 	flex: 4
 	&__wrap
@@ -2851,6 +3241,11 @@ $anim_time: 0.3s
 		font-size: 13px
 		line-height: 18px
 		font-family: 'SFUIDisplay-Medium', sans-serif
+		&.description
+			font-size: 14px
+			margin-top: 4px
+			margin-bottom: 14px
+			line-height: 24px
 		&.chance-time
 			margin-top: 21px
 		span.selected-time
@@ -3028,6 +3423,17 @@ $anim_time: 0.3s
 				&:hover 
 					h3
 						color: $link-color
+	.get-gift:hover
+		color: #de0a36
+	.return-to-gifts
+		&:hover
+			color: #fff
+	.gifts__item
+		&:hover
+			.gifts__img
+				opacity: 0.7
+			.hover-gift
+				opacity: 1
 	.accordeon
 		p
 			a
@@ -3731,13 +4137,64 @@ $anim_time: 0.3s
 			display: block
 			background-size: cover!important
 			margin-bottom: 38px
+			.akcia-block
+				height: 120px
+				padding: 0 40px
+				&__img
+					flex: 2
+					padding-top: 5px
+				&__text 
+					p
+						line-height: 16px
+				&.clear-white 
+					h3
+						font-size: 18px
+			&.with-akcia-block
+				min-height: 400px
+			&__price
+				font-size: 18px
 			&.black-text
-				padding: 20px 50px
+				padding: 20px
 				span
 					margin-top: 2px
 					font-size: 12px
-
-
+					&.descr
+						font-size: 10px
+						line-height: 10px
+						margin-top: 0
+						margin-bottom: 15px
+				.podcategory-item
+					&__text 
+						h2
+							margin: 10px 0
+							font-size: 30px
+						.small-logo
+							width: 140px
+					&__price
+						span
+							font-size: 10px
+							line-height: 10px
+			&.big-size
+				height: 370px
+			&.very-big-size
+				height: 450px
+			&.huge-size
+				height: 490px
+			&.full-big-size
+				height: 278px
+			&.full-huge-size
+				height: 300px
+				p
+					max-width: 300px
+					margin: 10px 0
+			&.small-size
+				height: 250px
+				p 
+					margin: 10px 0
+			&.medium-size
+				height: 265px
+				p 
+					margin: 10px 0
 			h2
 				font-size: 24px
 				line-height: 30px
@@ -3751,6 +4208,8 @@ $anim_time: 0.3s
 				max-width: 270px
 				font-size: 12px
 				line-height: 18px
+				&.center-block
+					margin-top: 15px
 			ul
 				margin-top: 2px
 				li 
@@ -3763,11 +4222,122 @@ $anim_time: 0.3s
 							margin-right: 6px
 			a.details-link
 				margin-top: 14px
+	.logotypes 
+		&>div
+			max-width: 68px
+			margin: 5px 5px 14px 0
+		img, svg
+			max-width: 100%
+			max-height: 18px
+	.form-call
+		&.select-gift
+			h2
+				margin-bottom: 4px
 	.button-white-border		
 		font-size: 12px
 		padding: 0 18px
 		line-height: 30px
 		border-width: 1px
+	.red_title
+		&.on-gifts
+			margin-top: 0
+			margin-bottom: 30px
+	.eticets 
+		line-height: 22px
+		font-size: 12px
+		padding: 4px 15px
+		border-radius: 15px
+		min-width: 180px
+		top: 62px
+		svg
+			transform: scale(0.7)
+			top: 3px
+	.get-gift
+		font-size: 24px
+		margin-top: 30px
+		&:after
+			width: 30px
+	.your-data.next-image
+		padding-right: 15px
+	.form-image
+		padding-right: 15px
+		max-width: 308px
+	.gifts
+		&__img
+			margin-bottom: 5px
+		&__head
+			font-size: 15px
+		&__title
+			font-size: 10px
+	.time p.description
+		font-size: 9px
+		margin-top: 0
+		margin-bottom: 6px
+		line-height: 14px
+	.return-to-gifts
+		font-size: 10px
+		top: 41px
+		svg
+			transform: scale(0.7)
+			margin-right: 5px
+			position: relative
+			top: 1px	
+	.filials 
+		.slider-for 
+			.item 
+				.img 
+					.working 
+						.letter
+							&_modal
+								&_text 
+									display: flex
+									flex-direction: column
+									h4
+										font-size: 18px
+									a
+										font-size: 12px	
+									p 
+										margin-bottom: 0
+										margin-top: 5px
+										line-height: 17px
+								&_image
+									flex: 2
+									margin-right: 20px
+						.content
+							.flex-row
+								padding-left: 45px
+								padding-right: 20px
+							&.black-text
+								p.gray-text
+									font-size: 10px
+						.video-block__item
+							h3
+								line-height: 24px
+						.request__text
+							padding-right: 55px
+							h4
+								font-size: 14px
+								line-height: 22px
+								margin-bottom: 10px
+						.request__user 
+							width: 88%
+							margin-bottom: 15px
+							h4
+								font-size: 14px
+							&-img
+								margin-right: 12px
+								img
+									width: 50px
+									height: 50px
+							.theme
+								p
+									max-width: 130px
+									line-height: 14px
+								.request__user-img
+									margin-right: 12px
+
+
+
 	.pagination-service
 		margin-top: 2px 
 		padding: 16px 0
@@ -5200,6 +5770,20 @@ $anim_time: 0.3s
 				transform: scale(1, -1)
 		a, img
 			display: none
+
+	.red_title
+		&.on-gifts
+			margin-top: 5px
+			margin-bottom: 25px
+	.gifts
+		&__item
+			margin-bottom: 40px
+	.get-gift
+		font-size: 24px
+		margin-top: 0
+		&:after
+			transform: scale(0.7)
+			margin-left: 5px
 	.vismob a
 		line-height: 27px 
 		display: block
@@ -5265,12 +5849,54 @@ $anim_time: 0.3s
 					width: 100%
 				.img
 					height: 235px
+					&.resize-auto
+						height: auto
+						.requisites
+							position: static
+							p 
+								line-height: 20px
+						.slider-text, .slick-list, .slick-track
+							height: auto
+							min-height: 375px
+						.slick-list
+							overflow: hidden !important
+						>.slider-text
+							display: none
+						.close
+							top: 0
+						.working 
+							box-shadow: none
+							.video-block__iframe
+								height: 375px
+							.request__user
+								margin-left: 0
+								width: 100%
+								padding: 10px 15px
+								display: block
+								margin-bottom: 12px
+								.flex
+									margin-bottom: 15px
+							.request__text
+								padding-left: 15px
+							.content
+								display: block
+								
+								&.flex-row
+									display: block
+								
+						.content
+							.letter_modal
+								&_image
+									height: 300px	
+							.requisites
+								.close
+									top: 0
 					.map
 						height: 262px
 					.requisites
 						background: #fafafa
 						padding: 15px 18px
-						height: 262px
+						height: auto //262px
 						box-shadow: none
 						.close
 							right: 10px
@@ -6577,26 +7203,117 @@ $anim_time: 0.3s
 			font-size: 16px
 			line-height: 25px
 			padding: 35px 0
+	.your-data
+		&.next-image
+			padding-right: 0
+			margin-bottom: 30px
+	.form-image
+		padding-right: 0
+		margin-bottom: 20px
+	.success-send
+		h2
+			text-align: center
+	.return-to-gifts
+		font-size: 0
+		top: 15px
+		svg
+			width: 20px
+	.principes
+		margin-bottom: 10px
+	.button-white-border
+		font-size: 12px
+		line-height: 30px
+		padding: 0 20px
+		border-width: 1px
+		text-align: center
+		min-width: 175px
+	.filials 
+		.slider-for 
+			.item 
+				.img 
+					.working 
+						.content
+							&.flex-row
+								flex-direction: column
+								align-items: center
+								justify-content: flex-start
+								padding-left: 15px
+								padding-right: 15px
 	.podcategory
 		.columns
 			max-width: 100%
 			padding: 0 18px
 			&:nth-of-type(1) .podcategory-item
-				background: #afbf86 url("../img/podcategory-page/back1_mob.png") center bottom -20px no-repeat!important
-				background-size: contain!important
-				height: 410px 
+			//	height: 410px
+			//	background: #afbf86 url("../img/podcategory-page/back1_mob.png") center bottom -20px no-repeat!important
+			//	background-size: contain!important
 			&:nth-of-type(4) .podcategory-item
 				background-position: center top
 		&-item
 			padding: 16px 22px
 			height: 293px
 			margin-bottom: 25px
+			&__text
+				text-align: center
+				padding-left: 0
+				justify-content: flex-start
+				align-items: center
+				.small-logo
+					width: 130px
+			&.with-akcia-block
+				min-height: 510px
+			a.details-link				
+				margin-top: 10px
+				margin-bottom: 5px
+			.akcia-block
+				flex-direction: column
+				height: auto
+				padding: 15px
+				background-size: cover
+				&__img
+					margin-bottom: 10px
+				&__text
+					padding: 0
+				&.clear-white 
+					h3
+						font-size: 16px
+				.gallerry
+					flex-wrap: wrap
+					justify-content: center
+					&>div
+						min-width: 25%
+						max-width: 40%
+						margin: 10px
 			&.black-text
-				padding: 25px 49px
+				padding: 25px 30px
+				.podcategory-item__text 
+					h2
+						margin: 10px auto
+						font-size: 26px
 				span
 					font-size: 12px
 					margin-top: 6px
-
+			&.mobile-middle-size
+				height: 370px
+			&.mobile-big-size
+				height: 425px
+			&.small-size
+				height: 360px	
+			&.medium-size
+				height: 375px
+			&.big-size
+				height: 400px
+			&.very-big-size
+				height: 455px
+			&.huge-size
+				height: 520px
+			&.full-big-size
+				height: 500px
+				a.details-link
+					display: inline-block
+					
+			&.right-pos
+				background-position: center 100%!important
 			&.left-text
 				h2
 					text-align: center
@@ -6623,7 +7340,8 @@ $anim_time: 0.3s
 						line-height: 22px
 			a.details-link
 				display: none
-				
+	.select-gift
+		margin-bottom: 40px
 	.about-description 
 		p
 			padding: 33px 0 27px
@@ -7170,7 +7888,7 @@ $anim_time: 0.3s
 			padding: 0!important
 		.slider-nav 
 			.slick-slide
-				padding: 0 20px 9px
+				padding: 3px 15px 9px
 				&.slick-current
 					padding-bottom: 8px
 
