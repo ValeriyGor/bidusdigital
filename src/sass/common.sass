@@ -47,7 +47,6 @@ h3
 	color: #000
 p
 	font-size: 14px
-
 .row, .slider-container, .blog__wrap
 	max-width: 1170px
 .slider-container, .blog__wrap
@@ -1833,6 +1832,9 @@ p
 	transition: all 0.2s 
 	&:hover
 		color: #fff
+	&.like-hover
+		color: #000
+		background: #fff
 
 .primary_link
 	font-family: 'SFUIDisplay-Bold', sans-serif 
@@ -1845,6 +1847,8 @@ p
 	transition: all 0.2s
 	background: #de0a36
 	text-align: center
+	&.big 
+		line-height: 50px
 	&:focus
 		background: #cd1829
 		color: #fff
@@ -1928,9 +1932,11 @@ p
 	background: #1f1f1f
 	padding: 115px 0 125px
 	position: relative
-	
+	&.small-visible
+		padding: 0 !important
 	&.with-calendar
 		padding: 60px 0 65px
+
 		h2
 			min-height: 1em
 			margin-bottom: 10px
@@ -2192,10 +2198,13 @@ p
 		&:hover		
 			text-shadow: none
 	.podcategory-item
-		&.black-text
-			&:hover
+		&.black-text:not(.not-hover)
+			&:hover 
 				opacity: 0.8
-
+	.akcia-block
+		transition: all 0.3s
+		&:hover 
+			opacity: 0.9
 	.head-with-image
 		a
 			&:hover
@@ -2883,6 +2892,8 @@ p
 		font-size: 12px
 		line-height: 33px
 		padding: 0 17px
+		&.big
+			line-height: 35px
 	
 	
 
@@ -3726,6 +3737,8 @@ p
 		line-height: 38px
 		font-size: 14px
 		padding: 0 20px
+		&.big 
+			line-height: 38px
 		
 	.will-be-hide
 		display: none
@@ -4010,7 +4023,8 @@ p
 		line-height: 32px
 		font-size: 12px
 		padding: 0 17px
-	
+		&.big 
+			line-height: 32px
 	
 	.mobile-accord 
 		.slick-slide

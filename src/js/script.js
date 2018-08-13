@@ -116,10 +116,17 @@ $( ".send_form" ).click(function(e) {
 $( ".sent-gift" ).click(function(e) {
     $(".gifts").hide(0);
     $('.check-data').fadeIn(300);
+    if($(window).width() < '768'){
+      $('body,html').animate({scrollTop: $(this).parents('.step-one').offset().top -70}, 300);
+    }
 });
 $( ".wait-gift").click(function(e) {
     //$('.check-data').fadeOut(0);
-    $('.success-send').fadeIn(300);
+    $('.success-send').not('.small-success').fadeIn(300);
+    
+    if($(window).width() < '768'){
+      $('body,html').animate({scrollTop: $(this).parents('.step-one').offset().top +100}, 300);
+    }
 });
 $( ".return-to-gifts" ).click(function(e) {
     $(".check-data").hide(0);
@@ -680,6 +687,13 @@ $( ".search-on-tiser input" ).focus(function() {
  // });
  $('.hidden-message').click(function(){
   $(this).parent().parent(). slideUp(300);
+  $(this).parents('.form-call').find($('.small-success')).fadeIn(300);
+  $(this).parents('.form-call').find($('.step-one')).slideUp(300);
+  $(this).parents('.form-call').addClass('small-visible');
+
+    if($(window).width() < '768'){
+      $('body,html').animate({scrollTop: $(this).parents('.row').offset().top -100}, 300);
+    }
  });
  $('.gifts__item').click(function(){
   $('.gifts__item.selected').not($(this)).removeClass('selected');

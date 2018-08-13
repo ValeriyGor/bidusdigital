@@ -31,7 +31,7 @@ $anim_time: 0.3s
 	padding-top: 218px 
 	left: 123px
 	z-index: 101
-	width: 27px
+	width: 27px 
 #gadget2
 	position: absolute
 	top: 0
@@ -321,6 +321,7 @@ $anim_time: 0.3s
 	height: 100%
 	&.small-success
 		background: #fff
+		
 	&.static-block
 		position: static
 		display: block
@@ -329,6 +330,7 @@ $anim_time: 0.3s
 		border-color: #f4f4f4
 		border-style: solid
 		border-width: 1px 0
+		display: none
 		
 		.success
 			position: absolute
@@ -504,9 +506,9 @@ $anim_time: 0.3s
 	*:not(.video-on-bg)
 		z-index: 9
 		position: relative
-	&.videograph
-		*:not(.video-on-bg)
-			text-shadow: 0px 0px 3px rgba(0, 0, 0, 1)
+	// &.videograph
+	// 	*:not(.video-on-bg)
+	// 		text-shadow: 0px 0px 3px rgba(0, 0, 0, 1)
 	&.right-pos
 		background-position: right bottom
 	&.bg-cont
@@ -703,6 +705,14 @@ h2.withmb
 	display: block	
 .principes
 	margin-bottom: 40px
+	&-dev
+		.info-block
+			margin-bottom: 30px
+			&__text
+				margin-top: 3px
+			&__half
+				&.with-padd-bottom
+					padding: 55px 0 38px
 .podcategory-item
 	padding: 56px 70px
 	display: block
@@ -732,8 +742,8 @@ h2.withmb
 		&.black-text
 			color: #000
 		&.center-block
-			max-width: 100%
-			margin: 23px 0 11px
+			max-width: 400px
+			margin: 23px auto 11px
 	a.details-link		 
 		margin-top: 28px
 		margin-bottom: 25px
@@ -780,6 +790,10 @@ h2.withmb
 				color: #fff
 			&.small
 				max-width: 375px
+			img
+				margin-right: 8px
+		&.pos-btm-cntr
+			color: #0070c9
 		span
 			display: block
 			text-align: center
@@ -1258,7 +1272,7 @@ h2.withmb
 
 			
 	&__head
-		font-family: 'SFUIDisplay-Semibold', sans-serif 
+		font-family: 'SFUIDisplay-Bold', sans-serif 
 		font-size: 36px
 		color: #fff
 		margin-right: 50px
@@ -1313,7 +1327,9 @@ h2.withmb
 	.slider-for 
 		.item
 			.img 
-
+				&.hide-arrows
+					.slick-arrow
+						display: none !important
 				&.hide-dots
 					.slider-text:nth-of-type(1)
 						.slick-dots
@@ -1444,7 +1460,7 @@ h2.withmb
 						justify-content: flex-end
 						&.flex-row
 							flex-direction: row
-							padding-left: 60px
+							padding-left: 40px
 							padding-right: 20px
 						&.black-text
 							p 
@@ -3242,10 +3258,11 @@ h2.withmb
 		line-height: 18px
 		font-family: 'SFUIDisplay-Medium', sans-serif
 		&.description
-			font-size: 14px
+			font-size: 13px
 			margin-top: 4px
 			margin-bottom: 14px
 			line-height: 24px
+			font-family: 'Open Sans', sans-serif
 		&.chance-time
 			margin-top: 21px
 		span.selected-time
@@ -3826,6 +3843,16 @@ h2.withmb
 				line-height: 15px
 				font-size: 7px
 				margin-left: 5px
+	.principes
+		margin-bottom: 30px
+		&-dev
+			.info-block
+				margin-bottom: 30px
+				&__text
+					margin-top: 3px
+				&__half
+					&.with-padd-bottom
+						padding: 30px 0 25px
 	.all-solution
 		margin-bottom: 15px
 		height: 182px
@@ -4184,6 +4211,7 @@ h2.withmb
 				height: 278px
 			&.full-huge-size
 				height: 300px
+
 				p
 					max-width: 300px
 					margin: 10px 0
@@ -5717,6 +5745,16 @@ h2.withmb
 			padding: 0 25px
 			a
 				padding: 0
+	.principes
+		margin-bottom: 30px
+		&-dev
+			.info-block
+				margin-bottom: 30px
+				&__text
+					margin-top: 3px
+				&__half
+					&.with-padd-bottom
+						padding: 35px 0 30px
 	.service
 		.row
 			padding-left: 0
@@ -5897,9 +5935,13 @@ h2.withmb
 						background: #fafafa
 						padding: 15px 18px
 						height: auto //262px
-						box-shadow: none
+						&.reviews-on-pages
+							.flex-row, .working
+								padding: 15px 0
 						.close
-							right: 10px
+							right: 0
+							padding: 25px
+
 						.load-doc
 							margin: 3px
 							padding: 0 11px
@@ -7253,6 +7295,11 @@ h2.withmb
 			padding: 16px 22px
 			height: 293px
 			margin-bottom: 25px
+			&__price
+				text-align: center
+				span
+					text-align: center
+					
 			&__text
 				text-align: center
 				padding-left: 0
@@ -7293,6 +7340,11 @@ h2.withmb
 				span
 					font-size: 12px
 					margin-top: 6px
+				.podcategory-item__price 
+					span
+						text-align: center
+						
+					
 			&.mobile-middle-size
 				height: 370px
 			&.mobile-big-size
@@ -7304,9 +7356,15 @@ h2.withmb
 			&.big-size
 				height: 400px
 			&.very-big-size
-				height: 455px
+				height: 480px
+				&.custom-mob
+					height: 415px
 			&.huge-size
 				height: 520px
+			&.full-huge-size
+				height: 500px
+				&.mobile-small
+					height: 275px
 			&.full-big-size
 				height: 500px
 				a.details-link
@@ -7889,6 +7947,7 @@ h2.withmb
 		.slider-nav 
 			.slick-slide
 				padding: 3px 15px 9px
+				margin-bottom: 10px
 				&.slick-current
 					padding-bottom: 8px
 
