@@ -532,10 +532,16 @@ $anim_time: 0.3s
 		height: 375px
 		p 
 			margin: 15px 0
+		&.custom-size
+			height: 400px
+			padding: 50px 71px
 	&.small-size
 		height: 342px
 		p 
 			margin: 15px 0
+		&.custom-size
+			height: 382px
+			padding: 50px 71px
 	&.big-size
 		height: 540px
 	&.very-big-size
@@ -564,9 +570,12 @@ $anim_time: 0.3s
 		flex-direction: column
 		p 
 			max-width: 575px
+			margin: 0
 		a
 			margin-right: 10px
 			margin-left: 10px
+			&.details-link
+				margin-bottom: 0
 
 .description p 
 	font-size: 36px
@@ -574,6 +583,8 @@ $anim_time: 0.3s
 	line-height: 50px
 	font-family: 'SFUIDisplay-Bold', sans-serif
 	padding: 50px 0
+	&.big-pdd
+		padding: 70px 0
 	span.red
 		color: #de0a36
 		font-family: 'SFUIDisplay-Bold', sans-serif
@@ -744,11 +755,17 @@ h2.withmb
 		&.center-block
 			max-width: 400px
 			margin: 23px auto 11px
+		&.full-p
+			min-width: 100%
 	a.details-link		 
 		margin-top: 28px
 		margin-bottom: 25px
 	ul 
 		margin-top: 25px
+		&.all-margin
+			margin: 14px 0 12px
+			li.blue:last-child
+				margin-bottom: 0
 		li 
 			span, a
 				font-size: 16px
@@ -822,6 +839,10 @@ h2.withmb
 				margin: 20px 0
 				font-size: 42px
 
+	&.medium-size, &.small-size
+		padding: 45px 50px
+	&.ip-tel
+		padding: 58px 70px
 	&__price
 		font-size: 24px
 		text-align: left
@@ -839,6 +860,9 @@ h2.withmb
 		min-height: 620px
 		height: auto
 		position: relative
+		&.big-size-akcia
+			min-height: 730px
+			padding-bottom: 200px
 		p 
 			margin: 14px 0
 		.akcia-block
@@ -867,22 +891,26 @@ h2.withmb
 			background: #fff
 			border-top: 1px solid #f5f5f5
 			flex-direction: column
-			padding: 20px 25px
+			padding: 15px 50px 25px
+			height: 195px
 			h3
 				font-family: 'SFUIDisplay-Bold', sans-serif
 				font-size: 24px
 
 		.gallerry
 			display: flex
-			padding: 20px  0 0
+			padding: 30px 0 0
 			width: 100%
 			align-items: center
 			justify-content: space-between
 			&>div
-				flex: 1
 				margin: 0 15px
+				text-align: center
+				max-height: 45px
+				max-width: 175px
 				img
 					max-width: 100%
+					max-height: 100%
 		&__img
 			flex: 3
 			padding-top: 10px
@@ -1064,7 +1092,12 @@ h2.withmb
 		display: block
 		text-align: center
 		margin-bottom: 62px
-
+.filials
+	&.custom-margin
+		.slider-nav
+			.slick-slide
+				padding: 10px 45px 10px
+				margin-bottom: 25px
 .filials.reviews
 	margin-top: 0
 	padding-top: 58px
@@ -1328,12 +1361,15 @@ h2.withmb
 		.item
 			.img 
 				&.hide-arrows
-					.slick-arrow
-						display: none !important
+					.requisites
+						.slick-arrow
+							display: none !important
 				&.hide-dots
 					.slider-text:nth-of-type(1)
 						.slick-dots
 							display: none
+				.slider-text
+					border-radius: 3px
 				.slider-text, .slick-list, .slick-track
 					height: 100%
 
@@ -1448,6 +1484,7 @@ h2.withmb
 					height: 100%
 					width: 100%
 					border-radius: 3px
+					overflow: hidden
 					padding-left: 23px
 					padding-bottom: 18px
 					background-size: cover
@@ -2532,6 +2569,7 @@ h2.withmb
 .info-block
 	background: #fff
 	margin-bottom: 60px
+	border-radius: 3px
 	&-full
 		display: flex
 		justify-content: space-between
@@ -3843,6 +3881,13 @@ h2.withmb
 				line-height: 15px
 				font-size: 7px
 				margin-left: 5px
+	.filials
+		&.custom-margin
+			.slider-nav
+				.slick-slide
+					padding: 5px 25px 8px
+					margin-bottom: 15px
+
 	.principes
 		margin-bottom: 30px
 		&-dev
@@ -4151,6 +4196,8 @@ h2.withmb
 			font-size: 31px
 			line-height: 40px
 			padding: 52px 0
+			&.big-pdd
+				padding: 55px 0
 	.podcategory
 		.columns
 			padding: 0 25px
@@ -4174,10 +4221,17 @@ h2.withmb
 					p
 						line-height: 16px
 				&.clear-white 
+					height: 150px
+					padding: 15px 50px 12px
 					h3
 						font-size: 18px
+				.gallerry
+					padding: 20px 0 0
 			&.with-akcia-block
 				min-height: 400px
+				&.big-size-akcia
+					min-height: 520px
+					padding-bottom: 150px
 			&__price
 				font-size: 18px
 			&.black-text
@@ -4201,6 +4255,8 @@ h2.withmb
 						span
 							font-size: 10px
 							line-height: 10px
+			&.medium-size, &.small-size
+				padding: 20px
 			&.big-size
 				height: 370px
 			&.very-big-size
@@ -4217,10 +4273,16 @@ h2.withmb
 					margin: 10px 0
 			&.small-size
 				height: 250px
+				&.custom-size
+					height: 250px
+					padding: 30px 32px
 				p 
 					margin: 10px 0
 			&.medium-size
 				height: 265px
+				&.custom-size
+					height: 265px
+					padding: 30px 32px
 				p 
 					margin: 10px 0
 			h2
@@ -5564,6 +5626,9 @@ h2.withmb
 		&.modal-open
 			overflow: hidden
 			position: fixed
+	h2
+		&.withmb
+			margin-bottom: 15px
 	.success-send 
 
 		padding-left: 18px
@@ -5626,6 +5691,15 @@ h2.withmb
 				transform: scale(0.7, 0.7)
 		h2
 			line-height: 34px
+	
+	.filials
+		&.custom-margin
+			.slider-nav
+				.slick-slide
+					padding: 5px 15px 9px
+					margin-bottom: 10px
+	.step-one.smalling
+		height: 520px
 
 	.filials
 		.nav-write-request
@@ -5749,12 +5823,14 @@ h2.withmb
 		margin-bottom: 30px
 		&-dev
 			.info-block
-				margin-bottom: 30px
+				margin-bottom: 10px
 				&__text
 					margin-top: 3px
 				&__half
 					&.with-padd-bottom
-						padding: 35px 0 30px
+						padding: 25px 0 20px
+	.podcategory-item.black-text h2 img
+		max-width: 16px
 	.service
 		.row
 			padding-left: 0
@@ -6689,6 +6765,10 @@ h2.withmb
 				margin-right: 0
 	.time
 		display: none
+		&.no-hide
+			display: block
+			padding-bottom: 20px
+			
 		&__select 
 			margin-right: 18px
 			span
@@ -7245,6 +7325,20 @@ h2.withmb
 			font-size: 16px
 			line-height: 25px
 			padding: 35px 0
+			&.big-pdd
+				padding: 35px 10px
+	.podcategory-item 
+		ul 
+			li 
+				a, span
+					display: flex
+					position: relative
+					padding-bottom: 5px
+					padding-left: 35px
+					&:before
+						position: absolute
+						left: 0
+						top: 50%
 	.your-data
 		&.next-image
 			padding-right: 0
@@ -7308,7 +7402,9 @@ h2.withmb
 				.small-logo
 					width: 130px
 			&.with-akcia-block
-				min-height: 510px
+				min-height: 660px
+				&.big-size-akcia
+					min-height: 610px
 			a.details-link				
 				margin-top: 10px
 				margin-bottom: 5px
@@ -7322,17 +7418,24 @@ h2.withmb
 				&__text
 					padding: 0
 				&.clear-white 
+					padding: 15px 45px 25px
 					h3
 						font-size: 16px
+						text-align: center
+						
 				.gallerry
 					flex-wrap: wrap
 					justify-content: center
+					padding-top: 15px
 					&>div
 						min-width: 25%
 						max-width: 40%
 						margin: 10px
+						flex: 1
 			&.black-text
 				padding: 25px 30px
+
+				
 				.podcategory-item__text 
 					h2
 						margin: 10px auto
@@ -7345,14 +7448,22 @@ h2.withmb
 						text-align: center
 						
 					
+			&.medium-size, &.small-size
+				padding: 25px 30px
 			&.mobile-middle-size
 				height: 370px
 			&.mobile-big-size
 				height: 425px
 			&.small-size
 				height: 360px	
+				&.custom-size
+					height: 360px
+					padding: 25px 30px
 			&.medium-size
 				height: 375px
+				&.custom-size
+					height: 375px
+					padding: 25px 30px
 			&.big-size
 				height: 400px
 			&.very-big-size
@@ -7396,8 +7507,15 @@ h2.withmb
 					span, a
 						font-size: 13px
 						line-height: 22px
+			&.ip-tel
+				text-align: center
+				
+				a.details-link
+					display: inline-block
 			a.details-link
 				display: none
+	.videograph
+		background-position: center top!important
 	.select-gift
 		margin-bottom: 40px
 	.about-description 
@@ -7934,6 +8052,7 @@ h2.withmb
 			line-height: 38px
 		.slick-dots
 			margin-top: 4px
+			padding-bottom: 15px
 			li 
 				width: 40px
 				height: 30px
@@ -8167,6 +8286,8 @@ h2.withmb
 				span
 					font-size: 10px
 					margin-top: 8px
+			&.medium-size, &.small-size
+				padding: 21px 38px
 			&.videograph
 				p 
 					margin-top: 12px
