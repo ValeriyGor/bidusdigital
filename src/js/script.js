@@ -689,7 +689,7 @@ $( ".search-on-tiser input" ).focus(function() {
  // });
  $('.hidden-message').click(function(){
   $(this).parent().parent(). slideUp(300);
-  $(this).parents('.form-call').find($('.small-success')).slideDown(300);
+  $(this).parents('.form-call').find($('.small-success')).slideDown(0);
   $(this).parents('.form-call').find($('.step-one')).slideUp(300);
   $(this).parents('.form-call').addClass('small-visible');
 
