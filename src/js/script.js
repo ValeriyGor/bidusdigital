@@ -688,9 +688,9 @@ $( ".search-on-tiser input" ).focus(function() {
  //     $(".result-search-on-tiser").addClass('open');
  // });
  $('.hidden-message').click(function(){
-  $(this).parent().parent(). slideUp(300);
+  $(this).parent().parent(). slideUp(0);
   $(this).parents('.form-call').find($('.small-success')).slideDown(0);
-  $(this).parents('.form-call').find($('.step-one')).slideUp(300);
+  $(this).parents('.form-call').find($('.step-one')).slideUp(0);
   $(this).parents('.form-call').addClass('small-visible');
 
     if($(window).width() < '768'){
