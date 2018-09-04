@@ -1401,11 +1401,8 @@ h2.withmb
 					background: #000
 	.slider-nav
 		.slick-track
-			transform: translate3d(0, 0, 0)!important
 			text-align: center
-			width: 100%!important
 		.slick-slide
-			width: auto!important
 			padding: 0 22px 10px 
 			border-bottom: 1px solid #d9d9d9
 			display: inline-block
@@ -3636,7 +3633,12 @@ h2.withmb
 			&-item
 				&:hover
 					opacity: 0.7
-
+	.slider-nav
+		.slick-track
+			transform: translate3d(0, 0, 0)!important
+			width: 100%!important
+		.slick-slide
+			width: auto!important
 	.filials
 		.slider-for 
 			.item
@@ -3688,6 +3690,12 @@ h2.withmb
 @media screen and (min-width: 767px) and (max-width: 1025px)
 	.consultation__order a
 		margin: 0 0 0 auto
+	.slider-nav
+		.slick-track
+			transform: translate3d(0, 0, 0)!important
+			width: 100%!important
+		.slick-slide
+			width: auto!important
 
 
 @media screen and (min-width: 767px) and (max-width: 1024px)    
@@ -3788,6 +3796,7 @@ h2.withmb
 	
 	.scroll-block
 		padding: 25px 40px 25px 25px
+		overflow: scroll
 		&__head
 			font-size: 18px
 			line-height: 50px
@@ -5706,7 +5715,7 @@ h2.withmb
 		&.custom-margin
 			.slider-nav
 				.slick-slide
-					padding: 5px 15px 9px
+					padding: 5px 10px 9px
 					margin-bottom: 10px
 	.details-servise
 		display: none!important
@@ -5786,6 +5795,7 @@ h2.withmb
 					font-size: 18px
 					line-height: 24px
 					margin-bottom: 2px
+
 	.vacancy-carousel
 		padding-top: 25px
 		h3
@@ -7027,6 +7037,68 @@ h2.withmb
 			height: 127vw   
 			margin: 0 auto
 			width: 100%
+	.gifts
+		.with-slider-mob
+			display: block
+			margin: 0
+		&__head
+			font-size: 17px
+			text-align: center
+		&__title
+			font-size: 12px
+			text-align: center
+			padding: 0 10px
+			line-height: 16px
+		&__img
+			margin-bottom: 25px
+			margin-left: auto
+			margin-right: auto
+		&__item
+			margin-bottom: 20px
+	.select-gift .check-data
+		padding-left: 10px
+		padding-right: 10px
+	.gifts
+		.red_title.on-gifts
+			padding-left: 10px
+	.mobile-gift-slider
+		.slick-dots
+			text-align: center
+			margin-bottom: 15px
+			li
+				padding: 15px 10px
+				display: inline-block
+				width: 70px
+				text-align: center
+				&.slick-active
+					button
+						opacity: 1
+
+		button
+			font-size: 0
+			width: 100%!important			
+			height: 1px!important			
+			display: block!important			
+			opacity: 0.5
+			background: #FFF
+			margin: 0 !important
+			&:after
+				display: none
+				
+			
+	.eticets
+		line-height: 20px
+		padding: 6px 10px
+		font-size: 12px
+		min-width: 200px
+		top: 59%
+		svg
+			top: 4px
+			margin-right: 3px
+	.no-padd-mob
+		padding-left: 0
+		padding-right: 0
+
 	.vacancies
 		position: relative
 		margin-bottom: 0
@@ -8099,14 +8171,15 @@ h2.withmb
 			padding: 0!important
 		.slider-nav 
 			.slick-slide
-				padding: 3px 15px 9px
+				padding: 3px 10px 9px
 				margin-bottom: 10px
+				float: left
 				&.slick-current
 					padding-bottom: 8px
 			
-			.slick-track
-				width: auto!important
-				min-width: 100%
+			// .slick-track
+				// width: auto!important
+				// min-width: 500%
 
 	.white-block.large
 		min-height: auto
@@ -8902,6 +8975,9 @@ h2.withmb
 		&.with-akcia-block	
 			min-height: 480px
 			background: #fff!important
+	.living-team
+		.medium-6
+			min-width: 100%
 
 @media screen and (min-width: 640px) and (max-width: 767px)
 	.filials .slider-for .item .img
