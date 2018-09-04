@@ -688,7 +688,7 @@ $( ".search-on-tiser input" ).focus(function() {
  // });
 $('.hidden-message').click(function(){
   $(this).parent().parent().slideUp(300);
-  $(this).parents('.form-call').find($('.small-success')).slideDown(0);
+  $(this).parents('.form-call').find($('.small-success')).slideDown(300);
   $(this).parents('.form-call').find($('.step-one')).slideUp(300);
   $(this).parents('.form-call').addClass('small-visible');
 
@@ -699,6 +699,10 @@ $('.hidden-message').click(function(){
 $('.gifts__item').click(function(){
   $('.gifts__item.selected').not($(this)).removeClass('selected');
   $(this).toggleClass('selected');
+});
+$('.subjects').on('change', function() {
+  let k = $('.subjects option:selected').text();
+  $('.trigger').text(k);
 });
 $( ".close-input-on-tiser" ).click(function() {    
     $(".result-search-on-tiser").fadeOut(150);
@@ -724,7 +728,7 @@ var wnd = $(window);
 
 wnd.scroll(function(){
 
-
+  if ($(window).width() > '1024'){      
     if ($(window).width() <= '767'){
         var top = wnd.scrollTop(),
             opacity = top > 200 ? 1 : top * 5 / 1000,
@@ -806,6 +810,7 @@ wnd.scroll(function(){
           }
         }
       }
+    }
 });
 
 function navigationFix(){
