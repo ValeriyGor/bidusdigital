@@ -1081,7 +1081,8 @@ $(document).ready(function() {
                 focusOnSelect: false,
                 centerPadding: '0px',
                 arrows: false,
-                dots: false
+                dots: false,
+                swipe: true
               }
             }
           ]
@@ -1619,15 +1620,17 @@ $(document).ready(function() {
 });
 
 function setWidthScrollblock(){
-  $('.scroll-block').each(function(){
-      var width = 0;
-      $(this).children().each(function () {
-        width += $(this).outerWidth(true);
+  if ($(window).width() > '767'){
+    $('.scroll-block').each(function(){
+        var width = 0;
+        $(this).children().each(function () {
+          width += $(this).outerWidth(true);
+        });
+        width += parseInt($(this).css('padding-left'));
+        width += parseInt($(this).css('padding-right'));
+        $(this).width(width + 20);
       });
-      width += parseInt($(this).css('padding-left'));
-      width += parseInt($(this).css('padding-right'));
-      $(this).width(width + 20);
-    });
+  }
 }
 
 $('.see-more-projects').click( function(e){
