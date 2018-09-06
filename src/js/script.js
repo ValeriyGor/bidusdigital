@@ -726,9 +726,7 @@ $( ".close-input-on-tiser" ).click(function() {
 
 var wnd = $(window);
 
-wnd.scroll(function(){
-
-  if ($(window).width() > '1024'){      
+wnd.scroll(function(){  
     if ($(window).width() <= '767'){
         var top = wnd.scrollTop(),
             opacity = top > 200 ? 1 : top * 5 / 1000,
@@ -738,6 +736,9 @@ wnd.scroll(function(){
         $(".mobile-tiser h1").css("opacity", 1 - opacity);
     }
     navigationFix();
+    
+
+  if ($(window).width() > '1024'){    
     if ($(window).width() > '767'){      
       if ($(".stack-line").length != 0) { // проверим существование элемента чтобы избежать ошибки
         var top = wnd.scrollTop(),

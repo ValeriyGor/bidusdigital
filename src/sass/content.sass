@@ -849,7 +849,7 @@ h2.withmb
 	&.ip-tel
 		padding: 58px 70px
 	&__price
-		font-size: 24px
+		font-size: 20px
 		text-align: left
 		font-family: 'SFUIDisplay-Bold', sans-serif
 		color: #000
@@ -5848,7 +5848,7 @@ h2.withmb
 					margin-top: 3px
 				&__half
 					&.with-padd-bottom
-						padding: 25px 0 20px
+						padding: 20px 0 18px
 	.podcategory-item.black-text h2 img
 		max-width: 16px
 	.service
@@ -5915,12 +5915,13 @@ h2.withmb
 	.get-gift
 		font-size: 24px
 		margin-top: 0
-		text-align: right
+		text-align: center
 		display: block
-		
 		&:after
 			transform: scale(0.7)
 			margin-left: 5px
+		&.wait-gift
+			float: right
 	.vismob a
 		line-height: 27px 
 		display: block
@@ -6581,8 +6582,8 @@ h2.withmb
 			&.reverse-mob
 				flex-direction: column-reverse
 		&__head
-			font-size: 21px
-			line-height: 27px
+			font-size: 18px
+			line-height: 24px
 			text-align: center
 			
 		&__text
@@ -6590,6 +6591,8 @@ h2.withmb
 			line-height: 20px
 			margin-top: 7px
 			margin-bottom: 10px
+			text-align: left
+			
 		&__img
 			min-height: 215px
 		.left-text, .right-text
@@ -6835,7 +6838,7 @@ h2.withmb
 			line-height: 30px
 			display: block
 			margin-bottom: 10px
-		&.with-calendar
+		&.with-calendar			
 			button
 				display: none
 				float: none
@@ -7478,6 +7481,7 @@ h2.withmb
 			margin-bottom: 25px
 			&__price
 				text-align: center
+				font-size: 17px
 				span
 					text-align: center
 					
@@ -7498,7 +7502,7 @@ h2.withmb
 				flex-direction: column
 				height: auto
 				padding: 15px
-				background: #be1238
+				background: #DE0A36
 				&__img
 					margin-bottom: 10px
 					display: none
@@ -7507,6 +7511,7 @@ h2.withmb
 					padding: 0
 					p 
 						font-size: 10px
+						line-height: 16px
 						.bold
 							margin-top: 0
 							font-family: SFUIDisplay-Regular,sans-serif
@@ -7563,7 +7568,7 @@ h2.withmb
 					height: 375px
 					padding: 25px 30px
 			&.big-size
-				height: 380px
+				height: 360px
 			&.very-big-size
 				height: 440px
 				&.custom-mob
@@ -7589,7 +7594,7 @@ h2.withmb
 			h2
 				text-align: center
 				line-height: 25px
-				font-size: 24px
+				font-size: 21px
 				margin-bottom: 8px
 				span
 					display: none
@@ -7600,6 +7605,8 @@ h2.withmb
 				&.mobile-left
 					text-align: left
 					margin-bottom: 3px
+				&.center-block
+					margin-top: 12px
 
 			ul
 				margin-top: 0
@@ -7614,6 +7621,9 @@ h2.withmb
 					display: inline-block
 			a.details-link
 				display: none
+	.mobile-gift-slider
+		margin-left: -5px!important
+		margin-right: -5px!important
 	.videograph
 		background-position: center top!important
 	.select-gift
@@ -8141,7 +8151,7 @@ h2.withmb
 
 	.filials
 		margin-top: 0
-		padding-top: 20px
+		padding-top: 30px
 		padding-bottom: 0
 		&.reviews
 			font-size: 25px
@@ -8978,6 +8988,10 @@ h2.withmb
 	.living-team
 		.medium-6
 			min-width: 100%
+	.big-size
+		max-width: 110%
+		width: 110%
+		margin-left: -5%
 
 @media screen and (min-width: 640px) and (max-width: 767px)
 	.filials .slider-for .item .img
@@ -9001,6 +9015,8 @@ h2.withmb
 		min-width: 100%
 	.info-block__half .info-block__text
 		padding: 0 20px
+	.vacancies__item
+		max-width: 50%
 	.service-blocks 
 		li 
 			a
@@ -9068,6 +9084,18 @@ h2.withmb
 					height: 32px
 					line-height: 30px
 					font-size: 12px		
+		&.full-album-left
+			background-size: 80%!important
+			background-position: right top!important
+			min-height: 300px
+			h2
+				text-align: left
+			p
+				text-align: left
+				max-width: 300px
+		.album-hide
+			display: none
+			
 	.podcategory 
 		.columns
 			&.medium-6
