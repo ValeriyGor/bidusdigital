@@ -76,7 +76,8 @@ addEvent(document, "mouseout", function(e) {
 
 $( ".curtain" ).click(function(e) {
     $(".fast-link").slideUp(0);
-  $(".result-search").slideUp(0);
+
+    $(".result-search").slideUp(0);
     $(".dropdown-filter").removeClass("open");
     $(".breadscrumb-wrap").removeClass("open");
     $('.dropdown-filter').slideUp(300);
@@ -92,6 +93,9 @@ $( ".curtain" ).click(function(e) {
     if($('.nav-header').hasClass('opened')){
       $('.nav-header').removeClass('opened');
       $('.nav').slideUp(200);
+    }
+    if($(this).hasClass('over-header')){
+      $(this).removeClass('over-header');
     }
     
     AnimateRotate($('.close-input'), -90)
@@ -390,6 +394,12 @@ $( ".open-requisites" ).click(function(e) {
       $(this).prevAll('.seen-map').attr('data-close', $(this).prevAll('.seen-map').text());
       $(this).prevAll('.seen-map').text(textPrev);
     }
+
+    var text = $(this).attr('data-close');
+    $(this).attr('data-close', $(this).text());
+    $(this).text(text);
+    console.log("change");
+    
     if($(this).hasClass('open')){
       $(this).parent().next().children(".requisites").fadeOut(300);
       $(this).removeClass('open');
@@ -410,9 +420,6 @@ $( ".open-requisites" ).click(function(e) {
       
       $(this).parent().next().find(".refreshed-slider .slider-text").get(0).slick.setPosition();
     }
-    var text = $(this).attr('data-close');
-    $(this).attr('data-close', $(this).text());
-    $(this).text(text);
     
 });
 $(".show-all-history, .toggle-workers").click(function(e) {
@@ -666,7 +673,8 @@ $( ".search-on-tiser input" ).focus(function() {
     $('.close-input-on-tiser').fadeIn(300);
     if(!$(this).parent().hasClass('active')){
       AnimateRotate($('.close-input-on-tiser'), 90);
-    }
+    };
+    $('.curtain').addClass('over-header');
     $('.curtain').fadeIn(300);
     $(this).parent().addClass('active');
   });
@@ -721,6 +729,7 @@ $( ".close-input-on-tiser" ).click(function() {
     $(this).delay(200).fadeOut(300);
     AnimateRotate($('.close-input-on-tiser'), -90);
     $('.curtain').fadeOut(300);
+    $('.curtain').removeClass('over-header');
     $(this).parent().removeClass('active');
 });
 

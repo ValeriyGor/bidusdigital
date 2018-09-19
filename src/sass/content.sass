@@ -522,6 +522,8 @@ $anim_time: 0.3s
 		padding: 60px 70px 165px
 	&.full-huge-size
 		height: 500px
+		&.black-text
+			padding: 50px 75px
 		p 
 			margin: 15px 0
 			max-width: 400px
@@ -849,7 +851,7 @@ h2.withmb
 	&.ip-tel
 		padding: 58px 70px
 	&__price
-		font-size: 20px
+		font-size: 24px
 		text-align: left
 		font-family: 'SFUIDisplay-Bold', sans-serif
 		color: #000
@@ -1069,6 +1071,7 @@ h2.withmb
 		transition: all 0.2s
 		&.active
 			font-family: 'SFUIDisplay-Bold', sans-serif, sans-serif 
+			color: #0070c9
 		&:before
 			display: inline-block
 			content: ""
@@ -3332,7 +3335,7 @@ h2.withmb
 	width: 750px
 	margin: 26px auto 80px
 	&.active
-		z-index: 990
+		z-index: 1024
 		// input
 		//  border-bottom-right-radius: 0
 		//  border-bottom-left-radius: 0
@@ -3425,7 +3428,7 @@ h2.withmb
 		right: 10px
 		cursor: pointer
 		//background: url('../img/svg/ic_close_gray.svg') center no-repeat
-		transition: all 0.3s
+		//transition: all 0.3s
 		background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"> <defs><style>.cls-1 {fill: #989898;fill-rule: evenodd;}</style></defs><path id="ic_close_gray" class="cls-1" d="M460.678,215l4.181-4.182a0.479,0.479,0,1,0-.678-0.678L460,214.321l-4.182-4.18a0.479,0.479,0,0,0-.678.678L459.321,215l-4.18,4.181a0.48,0.48,0,0,0,.339.819,0.473,0.473,0,0,0,.338-0.141L460,215.678l4.181,4.181a0.479,0.479,0,1,0,.677-0.678Z" transform="translate(-455 -210)"/></svg>') center no-repeat;
 
 		background-size: 14px
@@ -3597,10 +3600,9 @@ h2.withmb
 	.navigation:not(.disabled)
 		a 
 			&:hover
-				font-family: 'SFUIDisplay-Bold', sans-serif 
-				color: #1588e4
+				color: #0070c9
 				&:before
-					background: #1588e4
+					background: #0070c9
 					width: 20px
 			
 	.scroll-block
@@ -3633,7 +3635,7 @@ h2.withmb
 			&-item
 				&:hover
 					opacity: 0.7
-	.slider-nav
+	.slider-nav:not(.not-static)
 		.slick-track
 			transform: translate3d(0, 0, 0)!important
 			width: 100%!important
@@ -3690,7 +3692,7 @@ h2.withmb
 @media screen and (min-width: 767px) and (max-width: 1025px)
 	.consultation__order a
 		margin: 0 0 0 auto
-	.slider-nav
+	.slider-nav:not(.not-static)
 		.slick-track
 			transform: translate3d(0, 0, 0)!important
 			width: 100%!important
@@ -3713,11 +3715,11 @@ h2.withmb
 		overflow: scroll
 		max-height: 100vh
 		transform: translate(0,0)
-		height: 100%!important
+		height: 98%!important
 		margin-top: 0!important
 		padding-bottom: 25px
 		left: 50%
-		top: 0!important
+		top: 1%!important
 	#request_modal  
 		.primary_link
 			font-size: 14px
@@ -3730,6 +3732,14 @@ h2.withmb
 	.filials
 		.slider-for
 			padding: 0 15px
+	.search-on-tiser .fast-link-on-tiser a, .search-on-tiser .result-search-on-tiser a
+		font-size: 14px
+		line-height: 34px
+	.search-on-tiser .fast-link-on-tiser, .search-on-tiser .result-search-on-tiser
+		min-height: 225px
+	.filials .row
+		margin-left: 0 !important
+		margin-right: 0 !important
 	.consultation
 		height: 70px
 		padding: 20px 0
@@ -4282,6 +4292,8 @@ h2.withmb
 				height: 278px
 			&.full-huge-size
 				height: 300px
+				&.black-text
+					padding: 20px 30px
 
 				p
 					max-width: 300px
@@ -5462,7 +5474,7 @@ h2.withmb
 				width: 26px
 				height: 12px
 				vertical-align: middle
-				background: url(../img/arrow-form.png) center no-repeat
+				background: url(../img/svg/arrow-form.svg) center no-repeat
 				background-size: contain
 				margin-left: 5px
 				position: relative
@@ -5689,7 +5701,7 @@ h2.withmb
 				width: 26px
 				height: 12px
 				vertical-align: middle
-				background: url(../img/arrow-form.png) center no-repeat
+				background: url(../img/svg/arrow-form.svg) center no-repeat
 				background-size: contain
 				margin-left: 5px
 				position: relative
@@ -6862,7 +6874,7 @@ h2.withmb
 				width: 28px
 				height: 12px
 				vertical-align: middle
-				background: url('../img/arrow-form.png') center no-repeat
+				background: url('../img/svg/arrow-form.svg') center no-repeat
 				background-size: contain
 				margin-left: 17px
 				margin-top: 13px
@@ -7581,6 +7593,8 @@ h2.withmb
 				height: 500px
 				&.mobile-small
 					height: 275px
+				&.black-text
+					padding: 25px 30px
 			&.full-big-size
 				height: 500px
 				a.details-link
@@ -9136,6 +9150,8 @@ h2.withmb
 				p 
 					text-align: left
 					max-width: 50%
+				&.black-text
+					padding: 25px 30px
 				.podcategory-item__price
 					text-align: left
 	.logotypes>div

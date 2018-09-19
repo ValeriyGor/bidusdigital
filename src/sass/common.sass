@@ -22,7 +22,7 @@ body
 		background: #fff
 
 header
-	background: #202020
+	background: rgba(0,0,0,0.87)
 	position: fixed
 	top: 0
 	left: 0
@@ -366,11 +366,11 @@ p
 	10%
 		width: 58%
 		opacity: 0
-		background: #000
+		background: transparent
 	100%
 		width: 63%
 		opacity: 1
-		background: #000
+		background: transparent
 
 @keyframes show-active-tablet
 	0%
@@ -380,11 +380,11 @@ p
 	10%
 		width: 70%
 		opacity: 0
-		background: #000
+		background: transparent
 	100%
 		width: 77%
 		opacity: 1
-		background: #000
+		background: transparent
 
 .video .close-video
 	position: absolute
@@ -563,6 +563,8 @@ p
 	z-index: 399
 	display: none
 	opacity: 1
+	&.over-header
+		z-index: 1000
 
 
 .our-project 
@@ -875,6 +877,8 @@ p
 		left: 0
 		z-index: 100
 		width: 100%
+	&-slider
+		background: #000
 	.slider-head
 		height: 850px
 		margin-top: 0
@@ -886,7 +890,6 @@ p
 				padding-top: 0
 			p 
 				margin-bottom: 25px
-
 		.portfolio-slider-link
 			font-size: 16px
 			color: #fff
@@ -1699,7 +1702,8 @@ p
 		height: 100%
 		padding-left: 95px
 				
-
+.portfolio-wrapper
+	padding-bottom: 40px
 
 .tooltip-block
 	background: #e1284f
@@ -1716,6 +1720,7 @@ p
 	opacity: 1 
 	transform: translateX(50%)
 	display: none
+	cursor: default
 	&:after
 		content: ""
 		position: absolute
@@ -1931,7 +1936,7 @@ p
 
 .form-call
 	background: #1f1f1f
-	padding: 115px 0 125px
+	padding: 115px 0
 	position: relative
 	&.small-visible
 		padding: 0 !important
@@ -1960,7 +1965,7 @@ p
 			width: 43px
 			height: 19px
 			vertical-align: middle
-			background: url('../img/arrow-form.png') center no-repeat
+			background: url('../img/svg/arrow-form.svg') center no-repeat
 			background-size: contain
 			margin-left: 17px
 	h2, span
@@ -3513,6 +3518,7 @@ p
 			&:last-child
 				margin-right: 0
 	.portfolio-wrapper
+		padding-bottom: 0
 		.columns
 			padding: 0 18px
 			min-width: 100%
