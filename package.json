@@ -28,6 +28,7 @@
     "gulp-clean-css": "^3.9.2",
     "gulp-concat-css": "^3.0.0",
     "gulp-rename": "^1.2.2",
-    "gulp-uncss": "^1.0.6"
+    "gulp-uncss": "^1.0.6",
+    "jquery.maskedinput": "^1.4.1"
   }
 }
