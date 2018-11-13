@@ -58,7 +58,6 @@
 		&-fon
 			height: 60vh
 			background-image: url(/img/store/teaser768.png);
-
 .st-cap
 	height: 50px
 	background: transparent
@@ -1775,10 +1774,16 @@ label.error
 		&.fixed
 			box-shadow: 0px 3px 13px rgba(0, 0, 0, 0.08);
 
+@media screen and (min-width: 767px)
+	.st-phone
+		display: none !important
+
 @media screen and (max-width: 767px)
 	.st-cap, .st-regis, .st-teaser, .st-quote, .st-prise, .st-action, .st-cms, .st-sales, .st-design, .st-stab, .st-boon, .st-seo, .st-mark, .st-admin, .st-sec, .st-auto, .st-code, .st-folio, .st-proc, .st-adva
 		.row
-			padding: 0 5px
+			padding: 0 5px 
+	.st-desctop
+		display: none !important
 	header
 		z-index: 402
 	.st-teaser
