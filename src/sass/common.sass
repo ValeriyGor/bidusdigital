@@ -1,10 +1,9 @@
 ﻿@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,600i,700');
 @import 'font-face'
-
-@include fontFace('SFUIDisplay-Bold', '../fonts/SFUIDisplay-Bold') 
-@include fontFace('SFUIDisplay-Medium', '../fonts/SFUIDisplay-Medium')
-@include fontFace('SFUIDisplay-Semibold', '../fonts/SFUIDisplay-Semibold')
-@include fontFace('BebasNeueBold', '../fonts/BebasNeueBold')
+@include fontFace('SF Pro Display', '../fonts/SFProDisplay-Regular', normal, 400) 
+@include fontFace('SF Pro Display', '../fonts/SFProDisplay-Medium', normal, 500)
+@include fontFace('SF Pro Display', '../fonts/SFProDisplay-Semibold', normal, 600)
+@include fontFace('SF Pro Display', '../fonts/SFProDisplay-Bold', normal, 700)
 	
 $light: 300
 $normal: 400
@@ -14,30 +13,36 @@ $bold: 700
 $link-color: #0070c9
 
 $red: #ff6100
-$anim_time: 0.3s
+$anim_time: .2s
+
+*
+	font-family: 'SF Pro Display', sans-serif !important
 
 body
 	background: #f4f4f4 
+	position: relative
 	&.white-body
 		background: #fff
 
 header
-	background: rgba(0,0,0,0.87)
 	position: fixed
 	top: 0
 	left: 0
 	position: fixed
 	width: 100%
 	z-index: 999
+	transition: top 0.3s	
+	background: rgba(0,0,0,1)
+
 	&.no-transparent
-		background: rgba(0, 0, 0, 1)!important
+		background: rgba(0,0,0,1)!important
 
 h2
 	font-size: 42px
 	text-align: center
 	letter-spacing: -1px
 	line-height: 1.7em
-	font-family: 'SFUIDisplay-Bold', sans-serif
+	font-weight: 700
 	&.full-width
 		width: 100%
 		letter-spacing: 0
@@ -73,7 +78,7 @@ p
 		height: auto
 	&__tag
 		font-size: 13px
-		font-family: 'SFUIDisplay-Semibold', sans-serif
+		font-weight: 600
 		text-transform: uppercase
 		letter-spacing: 1px
 		margin-bottom: 18px
@@ -82,9 +87,10 @@ p
 		height: 100vh
 		height: calc(100vh - 45px)
 		background-size: cover
+		background-position: center
 		padding-top: 92px
 		padding-bottom: 92px
-		background-color: #e6e6e6
+		background-color: #666
 		.row
 			flex-direction: column
 			justify-content: flex-start
@@ -96,7 +102,7 @@ p
 			font-size: 48px
 			line-height: 58px
 			text-align: center
-			font-family: 'SFUIDisplay-Bold', sans-serif
+			font-weight: 700
 			color: #fff
 			max-width: 600px
 			margin: 20px auto
@@ -107,7 +113,7 @@ p
 		h2
 			font-weight: 300
 			text-align: left
-			font-family: 'SFUIDisplay-Bold', sans-serif
+			font-weight: 700
 			color: #fff
 			letter-spacing: 0
 			max-width: 45%
@@ -211,12 +217,11 @@ p
 			.row-half
 				&.invideo__media
 					z-index: 9999
-
 		p
-			font-size: 16px
+			font-size: 20px
 			line-height: 30px
 			color: #fff
-			max-width: 42%
+			max-width: 45%
 			margin-bottom: 27px
 			visibility: visible !important
 .slider-default
@@ -226,7 +231,7 @@ p
 		top: 0
 		right: 0
 		z-index: 299
-		background: url('../img/svg/arrow.svg') center no-repeat
+		background: url('/image/site/svg/arrow.svg') center no-repeat
 		background-size: 15px 30px
 		transform: rotate(180deg)
 		transition: all 0.2s
@@ -236,7 +241,7 @@ p
 		top: 0
 		left: 0
 		z-index: 299
-		background: url('../img/svg/arrow.svg') center no-repeat
+		background: url('/image/site/svg/arrow.svg') center no-repeat
 		background-size: 15px 30px
 		transition: all 0.2s
 		
@@ -403,6 +408,7 @@ p
 .header .row 
 	position: relative
 	z-index: 999
+	height: 100%
 .logo
 	width: 115px
 	&-wrap
@@ -418,13 +424,21 @@ p
 			>a
 				color: #fff
 				font-family: "Open Sans"
-				font-size: 14px
+				font-size: 15px
 				line-height: 43px 
 				padding-bottom: 2px
 				transition: all 0.3s
 				display: block
 				padding-right: 28px
 				padding-left: 35px
+				position: relative
+				&:before
+					content: ''
+					position: absolute
+					height: 100%
+					width: 5px
+					top: 0
+					right: -5px
 	
 	&.fonthide li a
 		// font-size: 0
@@ -455,18 +469,18 @@ p
 			line-height: 26px
 			margin-bottom: 0px
 			margin-top: 30px
-			font-family: "SFUIDisplay-Semibold"
+			font-weight: 600
 			color: #000
 			a 
 				margin-bottom: 0
 				font-size: 16px
 				line-height: 26px
 				color: #000
-				font-family: "SFUIDisplay-Semibold"
+				font-weight: 600
 		span
 			display: block
 		a
-			font-size: 13px
+			font-size: 14px
 			line-height: 2em
 			margin-bottom: 0
 			display: inline-block
@@ -485,11 +499,11 @@ p
 			background: #fff
 			background-size: contain
 			.small-service
-				flex: 0 0 19%
+				flex: 0 0 23%
 			.big-service
-				flex: 0 0 31%
-				max-width: 31%
-				background: #fff url('../img/brand.png') center right no-repeat
+				flex: 0 0 27%
+				max-width: 27%
+				background: #fff url('/image/site/brand.png') center right no-repeat
 				background-size: cover
 				position: relative
 				transition: all 0.3s
@@ -502,7 +516,7 @@ p
 
 
 			.medium-3
-				padding-bottom: 66px
+				padding-bottom: 30px
 			&:before
 				left: 35%
 			.brand 
@@ -539,10 +553,10 @@ p
 				width: 250px
 			span
 				font-size: 13px
-				color: #999
+				color: #000
 		&.our-company-drop
 			// width: 436px
-			// background: #fff url('../img/company.png') center right no-repeat
+			// background: #fff url('/image/site/company.png') center right no-repeat
 			// background-size: contain
 			// padding-bottom: 19px
 			// padding-left: 35px
@@ -553,18 +567,27 @@ p
 			// 	padding-top: 25px
 .head-menu__dropdown.portfolio-dropdown.our-company-drop:before
 	left: 57%
+.head-menu__dropdown.portfolio-dropdown .row
+	padding-left: 8px
+	padding-right: 8px
 .curtain
 	position: fixed
 	top: 0
-	height: 0
+	left: 0
 	background: rgba(0, 0, 0, 0.2)
 	width: 100%
 	height: 100vh
 	z-index: 399
 	display: none
-	opacity: 1
 	&.over-header
 		z-index: 1000
+	&.active
+		opacity: 1 !important
+		z-index: 401
+	&.search-active
+		opacity: 1 !important
+		display: block !important
+		z-index: 401
 
 
 .our-project 
@@ -627,7 +650,7 @@ p
 		span
 			font-size: 42px
 			line-height: 43px
-			font-family: 'SFUIDisplay-Bold', sans-serif
+			font-weight: 700
 			width: 325px
 			margin-bottom: 15px
 		img
@@ -648,7 +671,7 @@ p
 	h3
 		font-size: 36px
 		line-height: 38px
-		font-family: 'SFUIDisplay-Bold', sans-serif
+		font-weight: 700
 		color: #fff
 		position: relative
 		bottom: -36px
@@ -718,8 +741,8 @@ p
 		a:hover~p a
 			color: #0070c9
 	.arrow-down
-		&>a
-			&:hover:after
+		&:hover
+			&>a:after
 				border-color: #909090 rgba(255,212,52,0) rgba(255,212,52,0)
 	.search
 		.fast-link, .result-search
@@ -742,8 +765,8 @@ p
 		width: 95%
 		min-height: 260px
 		background: #fff
-		padding-top: 27px
-		padding-left: 33px
+		padding-top: 26px
+		padding-left: 35px
 		display: none
 		opacity: 0
 		&.open
@@ -751,15 +774,14 @@ p
 			animation-duration: 0.5s
 			animation-timing-function: ease
 			animation-fill-mode: both
-
 		p
-			font-size: 11px
+			font-size: 13px
 			color: #737373
-			margin-bottom: 6px
+			margin-bottom: 5px
 		a
 			font-size: 16px
-			padding-left: 20px
-			line-height: 38px
+			padding-left: 28px
+			line-height: 36px
 			color: #000
 			display: block
 			animation-name: ac-gn-searchresults-items-show
@@ -790,10 +812,10 @@ p
 		display: none
 		top: 0
 		right: 51px
-		background: url('../img/svg/ic_close_gray.svg') center no-repeat
+		background: url('/image/site/svg/ic_close_gray.svg') center no-repeat
 		background-size: 14px
 		&.visible
-			background: url('../img/svg/ic_close_gray.svg') center no-repeat
+			background: url('/image/site/svg/ic_close_gray.svg') center no-repeat
 			background-size: 14px
 			position: absolute
 			cursor: pointer
@@ -801,7 +823,8 @@ p
 			z-index: -999
 
 	&.active
-		width: 63%
+		width: 59%
+		max-width: 59%
 		background: transparent
 		animation-name: show-active
 		animation-duration: 0.5s
@@ -853,17 +876,16 @@ p
 	span
 		font-size: 14px
 		color: #fff
-		padding-bottom: 2px
 		position: relative
-		bottom: 2px
 		&:before
 			content: ""
 			display: inline-block
 			width: 14px
 			height: 14px
-			background: url('../img/svg/ic_call.svg') center right no-repeat
+			background: url('/image/site/svg/ic_call.svg') center right no-repeat
 			background-size: contain
 			margin-right: 8px
+			margin-top: -2px
 			vertical-align: middle
 
 .portfolio
@@ -889,16 +911,16 @@ p
 				padding-left: 50px
 				padding-top: 0
 			p 
-				margin-bottom: 25px
+				margin-bottom: 15px
 		.portfolio-slider-link
-			font-size: 16px
+			font-size: 18px
 			color: #fff
 			font-weight: 400
-			font-family: 'SFUIDisplay-Bold', sans-serif
+			font-weight: 700
 			background: none
 			text-align: left
-			line-height: 35px
-			max-height: 35px
+			line-height: 32px
+			max-height: 32px
 			padding: 0
 			margin: 0
 			&:before
@@ -909,31 +931,31 @@ p
 				background: #fff
 				margin-left: 0
 				margin-right: 10px
-				margin-bottom: 4px
+				margin-bottom: 5px
 				transition: all 0.3s
 		h3
 			font-size: 36px
 			font-weight: 300
 			line-height: 1.2em
 			color: #fff
-			font-family: 'SFUIDisplay-Bold', sans-serif
+			font-weight: 700
 		.portfolio-slider-title
-			font-size: 13px
+			font-size: 14px
 			line-height: 24px
 			color: #fff
-			margin-bottom: 30px
+			margin-bottom: 15px
 		.portfolio-slider-descr
-			font-size: 14px
+			font-size: 16px
 			color: #fff
 			line-height: 26px
-			max-width: 275px
+			max-width: 440px
 .slider-default
 	&.portfolio-slider
 		.slick-dots li
 			width: 60px
 			padding: 15px 0
 			button
-				border-top-width: 1px
+				border-top-width: 2px
 
 
 .title
@@ -1036,12 +1058,13 @@ p
 			margin-bottom: 35px
 			line-height: 30px
 		.about__worker
+			max-width: 500px		
 			p
-				font-size: 14px
+				font-size: 16px
 				font-weight: $semibold
 				line-height: 24px
 			span
-				font-size: 13px
+				font-size: 14px
 				font-weight: $normal
 				display: block
 				line-height: 22px
@@ -1063,7 +1086,7 @@ p
 .slider-about
 	.slick-arrow
 		top: 33%
-		background: url(../img/svg/arrow.svg) center no-repeat
+		background: url(/image/site/svg/arrow.svg) center no-repeat
 		background-size: 15px 30px
 	.slick-prev
 		left: -115px
@@ -1075,16 +1098,17 @@ p
 
 .white-arrow
 	.slick-arrow
-		top: 45%
-		background: #fff
+		top: 33%	
+		background: url(/image/site/svg/arrow_black.svg) center no-repeat
+		background-size: 15px 30px
 	.slick-prev
 		left: -100px
-		&:after
-			border-color: rgba(255,212,52,0) #000 rgba(255,212,52,0) rgba(255,212,52,0)
+		transition: all 0.3s
 	.slick-next
 		right: -100px
-		&:after
-			border-color: rgba(255,212,52,0) rgba(255,212,52,0) rgba(255,212,52,0) #000
+		transition: all 0.3s
+		transform: scaleX(-1)		
+		
 .light-gray-default-back
 	background-color: #E4E4E4
 .error-label
@@ -1153,7 +1177,7 @@ p
 		flex-direction: column
 		justify-content: flex-end
 		padding: 23px 18px
-		background: #292a2b url('../img/modal-back.png') center bottom no-repeat
+		background: #292a2b url('/image/site/modal-back.png') center bottom no-repeat
 		background-size: cover
 		box-shadow: inset 0 -300px 125px -78px rgba(0,0,0,0.3)
 		h3
@@ -1161,7 +1185,7 @@ p
 			font-size: 18px
 			line-height: 22px
 			margin-bottom: 10px
-			font-family: "SFUIDisplay-Bold"
+			font-weight: 700
 		p
 			color: #fff
 			font-size: 13px
@@ -1174,7 +1198,7 @@ p
 			font-size: 29px
 			line-height: 58px
 			letter-spacing: 0.5px
-			font-family: "SFUIDisplay-Bold"
+			font-weight: 700
 			&:before
 				content: ""
 				display: inline-block
@@ -1228,12 +1252,15 @@ p
 				background: #de0a36
 				font-size: 15px
 				margin-left: 15px
-				font-family: "SFUIDisplay-Bold"
+				font-weight: 700
 				text-align: center
 				color: #fff
 				display: inline-block 
 				border-radius: 3px 
 				display: inline-block
+				transition: background .2s
+				&:hover
+					background: #f70c3b
 					
 			.upload-file
 				background: #f5f5f5
@@ -1241,7 +1268,7 @@ p
 				border: 1px solid #e6e6e6
 				width: 185px
 				height: 45px
-				font-family: "SFUIDisplay-Semibold"
+				font-weight: 600
 				line-height: 43px
 				border-radius: 3px
 				text-align: center
@@ -1249,7 +1276,7 @@ p
 				display: inline-block
 				transition: background 0.3s
 				span
-					font-family: "SFUIDisplay-Semibold"
+					font-weight: 600
 
 				&:hover
 					background: #fafafa
@@ -1270,7 +1297,7 @@ p
 				border-radius: 3px
 				text-align: center
 				position: absolute
-				font-family: "SFUIDisplay-Bold"
+				font-weight: 700
 				font-size: 15px
 				line-height: 42px
 				color: #fff
@@ -1290,7 +1317,7 @@ p
 	height: 100%
 	overflow: hidden
 	z-index: 9
-	background: #000 url(../img/podcategory-page/videographic.png) center top no-repeat
+	background: #000 url(/image/site/podcategory-page/videographic.png) center top no-repeat
 	background-size: cover
 	> video
 		position: absolute
@@ -1316,7 +1343,7 @@ p
 	.name-company, .name-file
 		display: none
 		font-size: 14px
-		font-family: 'SFUIDisplay-Bold', sans-serif
+		font-weight: 700
 		color: #0070c9
 		text-overflow: ellipsis
 		white-space: nowrap
@@ -1391,7 +1418,7 @@ p
 	padding: 29px 55px
 	h3
 		font-size: 32px
-		font-family: "SFUIDisplay-Bold"
+		font-weight: 700
 		text-align: center
 	p
 		font-size: 14px
@@ -1438,7 +1465,7 @@ p
 		font-size: 16px
 		text-align: center
 		height: 45px
-		font-family: "SFUIDisplay-Bold"
+		font-weight: 700
 		transition: all 0.2s
 		// &:hover
 		// 	background: #f70c3b
@@ -1466,11 +1493,11 @@ p
 	display: inline-block
 	text-align: center
 	transition: all 0.3s 
-	font-family: 'SFUIDisplay-Semibold', sans-serif
+	font-weight: 600
 	font-size: 14px
 	background: #fff
 	&:focus
-		font-family: 'SFUIDisplay-Semibold', sans-serif
+		font-weight: 600
 	&.white-text
 		color: #fff
 	&.black-text
@@ -1483,21 +1510,25 @@ p
 	border-top: 1px solid #f4f4f4
 	padding-top: 25px
 	padding-bottom: 54px
+	&>.row
+		&>.columns
+			&:first-child
+				padding-right: 50px
 	h4
 		font-size: 16px
 		line-height: 22px
 		margin-bottom: 4px
-		font-family: 'SFUIDisplay-Bold', sans-serif
+		font-weight: 700
 	a
-		font-size: 13px
+		font-size: 14px
 		display: inline-block
 		line-height: 28px
-		color: #737373
+		color: #000
 		transition: all 0.3s 
 	p
-		font-size: 13px
-		color: #737373
-		line-height: 22px
+		font-size: 14px
+		color: #000
+		line-height: 24px
 		margin-top: 6px
 	&__contacts
 		span
@@ -1520,31 +1551,33 @@ p
 			border-radius: 50%
 			transition: all 0.3s
 			color: #fff
-			background: #ccc
 			img
 				margin: auto
 				width: 100%
 			&:nth-of-type(1)
+				background: #4267b2
 				img
 					width: 7px
-				// &:hover
-				// 	background: #4267b2
+				&:hover
+					background: #2b5099
 			&:nth-of-type(2)
+				background: #e21d44
 				img
 					width: 14px
-				// &:hover
-				// 	background: #e21d44
+				&:hover
+					background: #c91438
 			&:nth-of-type(3)
+				background: #507299
 				img
 					width: 14px
-				// &:hover
-				// 	background: #507299
+				&:hover
+					background: #395a80
 			&:nth-of-type(4)
+				background: #ff0000
 				img
 					width: 14px
-				// &:hover
-				// 	background: #ff0000
-		
+				&:hover
+					background: #d41515
 
 //uslugi page
 .breadscrumb-wrap
@@ -1595,7 +1628,7 @@ p
 	border-radius: 15px
 	padding: 0 20px
 	font-size: 13px
-	line-height: 28px
+	line-height: 30px
 	color: #fff
 	text-align: center
 	vertical-align: top
@@ -1610,7 +1643,7 @@ p
 	padding-top: 50px // 45px
 	padding-bottom: 50px // 35px
 	h1
-		font-family: 'SFUIDisplay-Bold', sans-serif
+		font-weight: 700
 		font-size: 48px
 		text-align: center
 		line-height: 64px
@@ -1619,14 +1652,9 @@ p
 		display: block
 		text-align: center
 		font-size: 24px
-		font-family: 'SFUIDisplay-Medium', sans-serif
+		font-weight: 500
 .logo-on-tiser
 	width: 400px
-
-
-	
-	
-
 
 .help-block
 	display: flex
@@ -1638,7 +1666,7 @@ p
 		width: 50%
 		font-size: 36px
 		line-height: 48px
-		font-family: 'SFUIDisplay-Bold', sans-serif
+		font-weight: 700
 	p 
 		width: 50%
 		font-size: 16px
@@ -1683,7 +1711,7 @@ p
 		font-size: 16px
 		padding-left: 0
 		line-height: 30px
-		font-family: 'SFUIDisplay-Semibold', sans-serif
+		font-weight: 600
 	ul
 		li
 			a
@@ -1747,7 +1775,7 @@ p
 	padding-top: 70px
 	h1
 		color: #fff
-		font-family: 'SFUIDisplay-Bold', sans-serif
+		font-weight: 700
 		max-width: 900px
 		text-align: center
 		margin-left: auto
@@ -1759,7 +1787,7 @@ p
 		font-size: 24px
 		line-height: 40px
 		color: #fff
-		font-family: 'SFUIDisplay-Medium', sans-serif
+		font-weight: 500
 		position: relative
 		z-index: 5
 	a
@@ -1827,7 +1855,7 @@ p
 	padding-left: 30px 
 
 .button-white-border
-	font-family: 'SFUIDisplay-Bold', sans-serif
+	font-weight: 700
 	font-size: 16px
 	padding: 0 30px
 	line-height: 41px
@@ -1843,7 +1871,7 @@ p
 		background: #fff
 
 .primary_link
-	font-family: 'SFUIDisplay-Bold', sans-serif 
+	font-weight: 700
 	font-size: 16px
 	border-radius: 3px
 	line-height: 45px
@@ -1858,7 +1886,7 @@ p
 	&:focus
 		background: #cd1829
 		color: #fff
-		font-family: 'SFUIDisplay-Bold', sans-serif 
+		font-weight: 700
 	&:hover
 		color: #fff
 	
@@ -1908,7 +1936,7 @@ p
 			display: block
 		.theme
 			font-size: 24px
-			font-family: 'SFUIDisplay-Bold', sans-serif
+			font-weight: 700
 			color: #000
 			transition: all 0.2s
 			
@@ -1916,7 +1944,7 @@ p
 	color: #000
 	font-size: 13px
 	margin-right: 15px
-	line-height: 46px
+	line-height: 48px
 	&:before
 		content: ""
 		display: inline-block
@@ -1954,7 +1982,7 @@ p
 	form
 		margin-top: 74px
 	button
-		font-family: 'SFUIDisplay-Bold', sans-serif
+		font-weight: 700
 		font-size: 36px
 		color: #fff
 		margin-left: 12px
@@ -1965,13 +1993,13 @@ p
 			width: 43px
 			height: 19px
 			vertical-align: middle
-			background: url('../img/svg/arrow-form.svg') center no-repeat
+			background: url('/image/site/svg/arrow-form.svg') center no-repeat
 			background-size: contain
 			margin-left: 17px
 	h2, span
 		text-align: left
 		color: #fff
-		font-family: 'SFUIDisplay-Bold', sans-serif
+		font-weight: 700
 		font-size: 48px
 		line-height: 54px
 		letter-spacing: 0
@@ -2003,12 +2031,12 @@ p
 		top: -3px
 		left: 0px
 		color: #fff
-		font-family: 'SFUIDisplay-Semibold', sans-serif
+		font-weight: 600
 
 	&:valid ~ .form-label
 		font-size: 11px
 		top: -3px
-		font-family: 'SFUIDisplay-Semibold' ,sans-serif
+		font-weight: 600
 		left: 0px
 .error-label
 	.form-input
@@ -2040,7 +2068,7 @@ p
 		cursor: pointer
 		border-bottom: 1px solid #636363
 		background: #1f1f1f
-		font-family: 'SFUIDisplay-Semibold', sans-serif
+		font-weight: 600
 		font-size: 20px
 		color: #fff
 		box-shadow: none
@@ -2051,7 +2079,7 @@ p
 		width: 100%
 		height: 64px
 		position: absolute
-		font-family: 'SFUIDisplay-Semibold', sans-serif
+		font-weight: 600
 		transition: all 0.3s ease
 		font-size: 20px
 		line-height: 24px
@@ -2059,13 +2087,6 @@ p
 		position: absolute
 		top: 21px
 		left: 0
-
-.slider-one-slide
-	&.white-arrow 
-		.slick-prev
-			left: -215px
-		.slick-next
-			right: -215px
 
 
 @media screen and (min-width: 1024px)
@@ -2100,14 +2121,6 @@ p
 					&:hover
 						&:before
 							width: 25px
-	
-	.white-arrow
-		.slick-prev
-			&:hover:after
-				border-color: rgba(255,212,52,0) #de0a36 rgba(255,212,52,0) rgba(255,212,52,0)
-		.slick-next
-			&:hover:after
-				border-color: rgba(255,212,52,0) rgba(255,212,52,0) rgba(255,212,52,0) #de0a36 
 
 	.modal_close
 		&:hover
@@ -2126,21 +2139,6 @@ p
 		a
 			&:hover
 				color: #0070c9
-
-		.social
-			&-link
-				&:nth-of-type(1)
-					&:hover
-						background: #4267b2
-				&:nth-of-type(2)
-					&:hover
-						background: #e21d44
-				&:nth-of-type(3)
-					&:hover
-						background: #507299
-				&:nth-of-type(4)
-					&:hover
-						background: #ff0000
 
 	.breadscrumb-wrap
 		.breadscrumb a
@@ -2427,7 +2425,7 @@ p
 		.phone span
 			font-size: 0
 			display: block
-			margin-right: 2px
+			margin-right: 2px		
 	footer
 		display: none
 	.specoffer-item__price
@@ -2475,7 +2473,7 @@ p
 			height: 40px
 			width: 40px
 			&.visible
-				background: url(../img/svg/ic_close_gray.svg) center no-repeat;
+				background: url(/image/site/svg/ic_close_gray.svg) center no-repeat;
 				background-size: 11px
 
 	.head-menu
@@ -2703,7 +2701,7 @@ p
 	.ordered-consultation, .oval-red-button
 		padding: 0 15px
 		font-size: 10px
-		line-height: 20px
+		line-height: 22px
 		height: 22px
 		border-radius: 11px
 	.head-with-image
@@ -2901,11 +2899,6 @@ p
 		padding: 0 17px
 		&.big
 			line-height: 35px
-	
-	
-
-	
-	
 
 
 @media screen and (min-width: 960px) and (max-width: 1024px)
@@ -2971,10 +2964,9 @@ p
 		top: 0
 		left: 0
 		width: 100%
-		background-color: rgba(0, 0, 0, 0)
 		z-index: 399
-		padding-top: 4px
 		height: 44px
+		background-color: transparent
 		.row>.search
 			display: none
 	#modal_form
@@ -3014,11 +3006,11 @@ p
 				font-size: 5vw
 				line-height: 30px
 				line-height: 7.5vw
-				font-family: 'SFUIDisplay-Bold', sans-serif
+				font-weight: 700
 				color: #fff
 				max-width: 68%
 				transition: all 0.1s
-				letter-spacing: 1px
+				letter-spacing: .2px
 		.video
 			.overlay
 				text-align: center
@@ -3090,7 +3082,7 @@ p
 		text-align: center
 		display: block
 		width: 100%
-		font-family: 'SFUIDisplay-Semibold', sans-serif
+		font-weight: 600
 		&:after
 			content: ""
 			display: inline-block
@@ -3120,7 +3112,7 @@ p
 				color: #0070c9
 				width: 100%
 				text-align: center
-				font-family: 'SFUIDisplay-Semibold', sans-serif
+				font-weight: 600
 				&:after
 					top: -2px
 					border-top-color: #0070c9
@@ -3183,7 +3175,7 @@ p
 		h2
 			font-size: 24px
 			line-height: 30px
-			min-height: 90px
+			min-height: auto
 			span
 				font-size: 26px
 				line-height: 30px
@@ -3207,6 +3199,11 @@ p
 	.input_block
 		width: 100%
 		margin-right: 0
+	.filials-rev-navm
+		.slick-list
+			text-align: center
+			.slick-track
+				width: 100% !important
 	
 	.head-menu
 		position: fixed
@@ -3281,13 +3278,6 @@ p
 				background: #949595!important
 				margin: 0 6px
 				cursor: pointer
-	.mob-button
-		position: absolute
-		top: 14px
-		left: 15px
-		transition: all 0.3s
-		img
-			width: 19px
 	.gadgets-anim
 		background: #fff
 	#modal_form
@@ -3348,6 +3338,7 @@ p
 	.search
 		position: static
 		width: 100%
+		max-width: 100%		
 		margin-top: 50px
 		border-bottom: 1px solid #404040
 		background: #000
@@ -3365,6 +3356,7 @@ p
 			top: 25px
 			left: 55px
 			width: calc(100% - 110px)
+			max-width: 100%
 			animation: none
 			padding-right: 0
 			input, input:focus, input:hover
@@ -3391,7 +3383,6 @@ p
 			li
 				margin: 0 6px
 				width: 30px
-
 
 	.slider-head
 		&__logo
@@ -3421,11 +3412,11 @@ p
 					animation: none
 				&.invideo
 					animation: none
-					background-image: url("../img/back-video.png")!important
+					background-image: url("/image/site/back-video.png")!important
 			&.invideo
 				height: 325px
 				animation: none
-				background-image: url("../img/back-video.png")!important
+				background-image: url("/image/site/back-video.png")!important
 				.video
 					display: none
 				.row-half
@@ -3456,16 +3447,30 @@ p
 	.portfolio
 		margin-bottom: 23px
 		margin-top: 0
-		background: url("../img/portf4.png") center no-repeat
+		background: url("/image/site/portf4.png") center no-repeat
 		background-size: cover
 		.slider-head, .slider-head__item
 			height: 485px
-		.slider-head			
+		.slider-head
 			&__item
 				padding: 18px 0 30px
 				//background: transparent!important
 				background-size: cover
 				background-position: center bottom
+				position: relative
+				&::before
+					content: ''
+					position: absolute
+					width: 100%
+					height: 100%
+					left: 0
+					right: 0
+					bottom: 0
+					top: 0
+					background: rgba(0, 0, 0, 0.4)
+				.row
+					position: relative
+					z-index: 1
 				&.center-content 
 					.row
 						flex-direction: column
@@ -3585,22 +3590,17 @@ p
 
 	@keyframes topBar_open
 		0%
-			transform: translateY(0px) rotate(0deg)
-			width: 20px
-
+			top: 7px			
+			
 		100%
-			transform: translateY(4px) rotate(45deg)
-			width: 28px
-
+			top: 10px	
 
 	@keyframes bottomBar_open
 		0%
-			transform: translateY(0px) rotate(0deg)
-			width: 20px
+			bottom: 7px		
 
 		100%
-			transform: translateY(-2px) rotate(-45deg)
-			width: 28px
+			bottom: 10px	
 
 
 	@keyframes menuLabel_open
@@ -3617,22 +3617,18 @@ p
 
 	@keyframes topBar_close
 		0%
-			transform: translateY(4px) rotate(45deg)
-			width: 25px
+			top: 10px
 
 		100%
-			transform: translateY(-1px) rotate(0deg)
-			width: 20px
+			top: 7px
 
 
 	@keyframes bottomBar_close
 		0%
-			transform: translateY(-8px) rotate(-45deg)
-			width: 25px
+			bottom: 10px
 
 		100%
-			transform: translateY(0px) rotate(0deg)
-			width: 20px
+			bottom: 7px
 
 
 	@keyframes menuLabel_close
@@ -3646,48 +3642,88 @@ p
 
 	#menu-btn
 		text-align: center
-		width: 20px
-		height: 20px
-
-		&:before, &:after 
-			content: ''
-			width: 100%
-			height: 1px
-			background-color: #FFF
+		width: 54px
+		height: 44px
+		position: absolute
+				
+	#menu-btn
+		.menuicon-top,
+		.menuicon-bottom			
 			display: block
+			width: 21px
+			height: 21px
 			position: absolute
-
-		&:before 
-				transform-origin: left center  
-		&:after
-			right: 0
-			top: 6px
-			transform-origin: right center
-
+			left: 50%
+			margin-left: -10.5px
+			top: 50%
+			margin-top: -10.5px
+			
+			&:before
+				content: ''
+				width: 100%
+				height: 1px
+				background-color: #FFF
+				display: block
+				position: absolute
+	
+		.menuicon-top	
+			&:before 
+				top: 7px
+		.menuicon-bottom					
+			&:before
+				right: 0
+				bottom: 7px
+	
 		&:hover
-			cursor: pointer
-
-		&.open   
-			&:before 
-				animation: topBar_open $anim_time ease-in-out
-				animation-fill-mode: forwards
+			cursor: pointer			
 			
+	#menu-btn				
+		&.open
+			.menuicon-top
+				transition: all .3s
+				transition-delay: .2s			
+				
+				&:before
+					animation: topBar_open $anim_time ease-in-out
+					animation-fill-mode: forwards
 			
-			&:after
-				animation: bottomBar_open $anim_time ease-in-out
-				animation-fill-mode: forwards
-						
+			.menuicon-bottom
+				transition: all .3s
+				transition-delay: .2s			
+				
+				&:before
+					animation: bottomBar_open $anim_time ease-in-out
+					animation-fill-mode: forwards
+					
+			.menuicon-top
+				transform: rotate(45deg)
+				
+			.menuicon-bottom
+				transform: rotate(-45deg)
 			
-		
+	#menu-btn			
 		&.close
-			&:before 
-				animation: topBar_close $anim_time ease-in-out
-				animation-fill-mode: forwards
+			.menuicon-top	
+				transition: all .3s
+				transition-delay: 0s			
+				transform: rotate(0deg)				
+									
+				&:before 
+					top: 10px				
+					animation: topBar_close $anim_time ease-in-out
+					animation-fill-mode: forwards
+					animation-delay: .2s	
 			
-			
-			&:after 
-				animation: bottomBar_close $anim_time ease-in-out
-				animation-fill-mode: forwards
+			.menuicon-bottom
+				transition: all .3s
+				transition-delay: 0s	
+				transform: rotate(0deg)
+							
+				&:before 
+					bottom: 10px
+					animation: bottomBar_close $anim_time ease-in-out
+					animation-fill-mode: forwards		
+					animation-delay: .2s									
 
 	.help-block
 		padding: 15px 10px 15px 25px 
@@ -3723,7 +3759,7 @@ p
 			height: 73vh
 		&.contacts-box
 			height: 76vh
-			background-image: url('../img/contacts-page/back-tiser-mob.png')!important
+			background-image: url('/image/site/contacts-page/back-tiser-mob.png')!important
 			background-repeat: no-repeat
 			background-position: center top
 			background-size: cover
@@ -3773,7 +3809,7 @@ p
 				color: #0070c9
 				margin-bottom: 5px
 		h3
-			font-family: "SFUIDisplay-Bold"
+			font-weight: 700
 		.slide-with-top
 			padding-top: 30px
 		.seen-all
@@ -3811,6 +3847,14 @@ p
 
 
 		.arrows-in-top
+			.slick-arrow
+				&::before
+					content: ''
+					position: absolute
+					left: -20px
+					top: -20px
+					right: -20px
+					bottom: -20px
 			.slick-prev
 				left: 26px
 				top: 68px
@@ -3825,7 +3869,7 @@ p
 			margin-bottom: 0
 			padding: 14px 20px
 			font-size: 19px
-			font-family: "SFUIDisplay-Bold"
+			font-weight: 700
 			&.open
 				border: 0
 				border-top: 1px solid #e6e6e6
@@ -3848,9 +3892,10 @@ p
 				height: 21px
 				background: #3f6fc5
 				position: absolute
-				right: 24px
+				right: 25px
 				transition: all 0.3s
-				top: 19px
+				top: 50%
+				margin-top: -10px				
 			&:before
 				content: ""
 				display: block
@@ -3859,32 +3904,28 @@ p
 				background: #3f6fc5
 				transition: all 0.3s
 				position: absolute
-				right: 14px
-				top: 29px
+				right: 15px
+				top: 50%
 			.seen_all
 				text-align: center
 	
 	.gray-butt		
 		.slick-prev
-			background: url('../img/svg/arrow-gray.svg') center no-repeat
+			background: url('/image/site/svg/arrow-gray.svg') center no-repeat
 			background-size: 10px
 			z-index: 999
 		.slick-next
-			background: url('../img/svg/arrow-gray.svg') center no-repeat
+			background: url('/image/site/svg/arrow-gray.svg') center no-repeat
 			background-size: 10px
 			transform: rotate(180deg)
 
 	.white-butt
 		.slick-prev
-			background: url('../img/svg/arrow.svg') center no-repeat
+			background: url('/image/site/svg/arrow.svg') center no-repeat
 			background-size: 10px
 		.slick-next
-			background: url('../img/svg/arrow.svg') center no-repeat
+			background: url('/image/site/svg/arrow.svg') center no-repeat
 			background-size: 10px
-
-		
-	
-
 
 @media screen and (min-width: 450px) and (max-width: 767px)
 	.about 
@@ -4049,7 +4090,7 @@ p
 			a
 				font-size: 9px
 				line-height: 9px
-		.arrows-in-top 
+		.arrows-in-top
 			.slick-next
 				right: 21px
 				top: 50px
