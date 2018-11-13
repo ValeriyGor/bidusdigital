@@ -23,7 +23,7 @@ $anim_time: 0.3s
 		margin-bottom: 14px
 .gadgets-anim
 	background: #fff 
-	//url("../img/gadgets.png") bottom right no-repeat
+	//url("/image/site/gadgets.png") bottom right no-repeat
 	background-size: 758px
 #gadget1
 	position: absolute
@@ -80,7 +80,7 @@ $anim_time: 0.3s
 		h3
 			display: inline-block
 			transition: all 0.2s
-			font-family: "SFUIDisplay-Bold", sans-serif
+			font-weight: 700
 		li
 			&:not(:first-child) 
 				a:before
@@ -96,8 +96,8 @@ $anim_time: 0.3s
 				
 		a 
 			color: $link-color
-			font-family: "SFUIDisplay-Bold", sans-serif
-			font-size: 14px
+			font-weight: 500
+			font-size: 16px
 			line-height: 30px
 			position: relative
 			z-index: 250
@@ -131,10 +131,10 @@ $anim_time: 0.3s
 			h3
 				line-height: 1.3em
 				margin-bottom: 7px
-				font-family: 'SFUIDisplay-Semibold', sans-serif
+				font-weight: 600
 			p 
-				color: #737373
-				line-height: 24px
+				color: #000
+				line-height: 1.6
 				transition: all 0.3s
 			h3
 				font-size: 20px
@@ -152,19 +152,19 @@ $anim_time: 0.3s
 			position: absolute
 			bottom: 23px
 			left: 29px 
-			font-family: 'SFUIDisplay-Semibold', sans-serif
+			font-weight: 600
 			&-actual
 				font-size: 24px
 				color: #000
 				vertical-align: sub
-				font-family: 'SFUIDisplay-Semibold', sans-serif
+				font-weight: 600
 				span
-					font-family: 'SFUIDisplay-Semibold', sans-serif
+					font-weight: 600
 			&-old
 				color: #a3a3a3 
 				margin-left: 15px
 				position: relative
-				font-family: 'SFUIDisplay-Semibold', sans-serif
+				font-weight: 600
 				&:after
 					content: ""
 					height: 1px
@@ -176,17 +176,16 @@ $anim_time: 0.3s
 					left: 22%
 		.profitable-price
 			height: 24px
-			width: 110px
 			text-align: center
 			font-size: 11px
-			line-height: 22px
+			line-height: 24px
 			border-radius: 12px
 			background-color: #de0a36
 			margin-left: 15px
 			color: #fff
 			display: inline-block
 			vertical-align: middle
-
+			padding: 0 15px
 
 .all-solution
 	height: 300px
@@ -201,11 +200,11 @@ $anim_time: 0.3s
 	span
 		font-size: 36px
 		line-height: 54px
-		font-family: 'SFUIDisplay-Bold', sans-serif
+		font-weight: 700
 		color: #fff
 		margin-bottom: 5px
 	p
-		font-size: 16px
+		font-size: 18px
 		line-height: 28px
 		color: #fff
 	a
@@ -244,7 +243,7 @@ $anim_time: 0.3s
 				h3                  
 					font-size: 24px
 					line-height: 32px
-					font-family: 'SFUIDisplay-Bold', sans-serif
+					font-weight: 700
 					padding: 0 22px
 				p
 					padding: 3px 50px 0 22px
@@ -271,14 +270,14 @@ $anim_time: 0.3s
 				margin-bottom: 12px
 				font-size: 20px
 				line-height: 26px
-				font-family: 'SFUIDisplay-Semibold', sans-serif
+				font-weight: 600
 				color: #000
 				transition: all 0.3s
 				display: block
 
 			p
-				line-height: 1.75em
-				color: #737373
+				line-height: 1.6
+				color: #000
 				transition: all 0.3s
 			&>div
 				position: absolute
@@ -286,7 +285,7 @@ $anim_time: 0.3s
 
 		&__category
 			font-size: 13px
-			color: #737373
+			color: #000
 			transition: all 0.3s
 		&__marker
 			display: inline-block
@@ -356,7 +355,7 @@ $anim_time: 0.3s
 		line-height: 32px
 		text-align: center
 		color: inherit
-		font-family: SFUIDisplay-Medium,sans-serif
+		font-weight: 500
 		margin-top: 10px
 	.descr
 		font-size: 16px
@@ -374,7 +373,7 @@ $anim_time: 0.3s
 		line-height: 25px
 		padding: 10px 20px
 		border-radius: 23px
-		font-family: "SFUIDisplay-Bold", sans-serif
+		font-weight: 700
 		margin-bottom: 50px
 		svg
 			position: relative
@@ -382,7 +381,7 @@ $anim_time: 0.3s
 			margin-right: 5px
 	.hidden-message
 		font-size: 36px
-		font-family: "SFUIDisplay-Bold", sans-serif
+		font-weight: 700
 		color: inherit
 		margin-top: 50px
 		cursor: pointer
@@ -392,7 +391,7 @@ $anim_time: 0.3s
 			width: 43px
 			height: 19px
 			vertical-align: middle
-			background: url(../img/arrow-form.png) center no-repeat
+			background: url(/image/site/arrow-form.png) center no-repeat
 			background-size: contain
 			margin-left: 17px
 			transform: rotate(-90deg)
@@ -401,7 +400,7 @@ $anim_time: 0.3s
 		line-height: 32px
 		margin-bottom: 20px
 		color: inherit
-		font-family: SFUIDisplay-Bold,sans-serif
+		font-weight: 700
 		img, svg
 			vertical-align: middle
 			position: relative
@@ -428,8 +427,8 @@ $anim_time: 0.3s
 			margin-left: 30px
 			vertical-align: middle
 			width: 250px
-			font-size: 12px
-			color: #999
+			font-size: 14px
+			color: #000
 	&__order
 		a
 			margin: 0
@@ -438,11 +437,11 @@ $anim_time: 0.3s
 		p
 			font-size: 12px
 			line-height: 18px
-			color: #999
+			color: #000
 		span
 			font-size: 24px
 			line-height: 24px 
-			font-family: 'SFUIDisplay-Bold', sans-serif
+			font-weight: 700
 
 .service-blocks
 	h2
@@ -464,6 +463,7 @@ $anim_time: 0.3s
 		min-height: 360px
 		background-position: right bottom
 		background-repeat: no-repeat
+		background-size: auto 100%
 	li
 		padding-left: 28px
 		a   
@@ -487,7 +487,7 @@ $anim_time: 0.3s
 			line-height: 30px
 			position: relative
 			z-index: 250
-			font-family: 'SFUIDisplay-Bold', sans-serif
+			font-weight: 700
 .logotypes
 	display: flex
 	align-items: center
@@ -519,9 +519,11 @@ $anim_time: 0.3s
 	&.pos-btm-cntr
 		background-position: center bottom!important
 	&.with-akcia-block
-		padding: 60px 70px 165px
+		padding: 60px 70px 60px
 	&.full-huge-size
 		height: 500px
+		&.black-text
+			padding: 50px 75px
 		p 
 			margin: 15px 0
 			max-width: 400px
@@ -582,13 +584,13 @@ $anim_time: 0.3s
 	font-size: 36px
 	text-align: center
 	line-height: 50px
-	font-family: 'SFUIDisplay-Bold', sans-serif
+	font-weight: 700
 	padding: 50px 0
 	&.big-pdd
 		padding: 70px 0
 	span.red
 		color: #de0a36
-		font-family: 'SFUIDisplay-Bold', sans-serif
+		font-weight: 700
 .select-gift
 	padding: 77px 0
 	margin-bottom: 58px
@@ -604,7 +606,7 @@ $anim_time: 0.3s
 		border-radius: 3px
 	&__head
 		font-size: 24px
-		font-family: 'SFUIDisplay-Bold', sans-serif
+		font-weight: 700
 		color: #fff
 	&__title
 		font-size: 13px
@@ -622,7 +624,7 @@ $anim_time: 0.3s
 	font-size: 36px
 	color: #fff
 	display: inline-block
-	font-family: 'SFUIDisplay-Bold', sans-serif
+	font-weight: 700
 	margin-top: 48px
 	transition: all 0.2s
 	cursor: pointer
@@ -632,7 +634,7 @@ $anim_time: 0.3s
 		width: 43px
 		height: 19px
 		vertical-align: middle
-		background: url(../img/arrow-form.png) center no-repeat
+		background: url(/image/site/arrow-form.png) center no-repeat
 		background-size: contain
 		margin-left: 17px
 .eticets
@@ -642,7 +644,7 @@ $anim_time: 0.3s
 	color: #fff
 	display: inline-block
 	font-size: 16px
-	font-family: 'SFUIDisplay-Bold', sans-serif
+	font-weight: 700
 	position: absolute
 	left: 50%
 	top: 100px
@@ -690,7 +692,7 @@ $anim_time: 0.3s
 	font-size: 48px
 	text-align: center
 	line-height: 60px
-	font-family: SFUIDisplay-Bold
+	font-weight: 700
 	padding: 74px 0
 h2.withmb
 	margin-bottom: 30px
@@ -709,7 +711,7 @@ h2.withmb
 		display: inline-block 
 		transition: all 0.3s 
 		margin-left: 0
-		font-family: 'SFUIDisplay-Bold', sans-serif
+		font-weight: 700
 	p
 		font-size: 13px
 		padding: 8px 40px 6px 20px
@@ -743,7 +745,7 @@ h2.withmb
 		&.white-text
 			color: #fff
 		span
-			font-family: 'SFUIDisplay-Bold', sans-serif
+			font-weight: 700
 			.descr
 				font-size: 13px
 				line-height: 13px
@@ -774,7 +776,7 @@ h2.withmb
 		li 
 			span, a
 				font-size: 16px
-				font-family: 'SFUIDisplay-Bold', sans-serif
+				font-weight: 700
 				color: #fff
 				line-height: 30px
 				&:before
@@ -821,7 +823,7 @@ h2.withmb
 			text-align: center
 			font-size: 16px
 			margin-top: 5px
-			font-family: 'SFUIDisplay-Bold', sans-serif
+			font-weight: 700
 			&.descr
 				font-size: 13px
 				line-height: 13px
@@ -851,7 +853,7 @@ h2.withmb
 	&__price
 		font-size: 24px
 		text-align: left
-		font-family: 'SFUIDisplay-Bold', sans-serif
+		font-weight: 700
 		color: #000
 		span
 			font-size: 13px
@@ -861,8 +863,8 @@ h2.withmb
 			text-align: left
 
 	&.with-akcia-block
-		padding: 60px 70px 165px
-		min-height: 620px
+		padding: 60px 70px 60px
+		min-height: 450px
 		height: auto
 		position: relative
 		&.big-size-akcia
@@ -882,7 +884,7 @@ h2.withmb
 		position: absolute
 		bottom: 0
 		left: 0
-		background: #de0a36 url('../img/uslugi/akcia-back.png') center left no-repeat
+		background: #de0a36 url('/image/site/uslugi/akcia-back.png') center left no-repeat
 		background-size: contain
 		height: 165px
 		right: 0
@@ -899,7 +901,7 @@ h2.withmb
 			padding: 15px 50px 25px
 			height: 195px
 			h3
-				font-family: 'SFUIDisplay-Bold', sans-serif
+				font-weight: 700
 				font-size: 24px
 
 		.gallerry
@@ -926,14 +928,14 @@ h2.withmb
 			flex: 7
 			padding-left: 18px
 			p
-				font-family: 'SFUIDisplay-Medium', sans-serif
+				font-weight: 500
 				line-height: 20px
 				span
 					display: inline-block
 					line-height: inherit
 
 				.bold               
-					font-family: 'SFUIDisplay-Bold', sans-serif
+					font-weight: 700
 
 			
 
@@ -955,7 +957,7 @@ h2.withmb
 			font-size: 36px
 			line-height: 40px
 			margin-bottom: 19px
-			font-family: 'SFUIDisplay-Bold', sans-serif
+			font-weight: 700
 		p 
 			font-size: 16px
 			color: #000
@@ -994,7 +996,7 @@ h2.withmb
 			font-size: 30px
 			color: #fff
 			margin-bottom: 14px
-			font-family: 'SFUIDisplay-Bold', sans-serif
+			font-weight: 700
 		span
 			color: #fff
 			font-size: 13px
@@ -1014,10 +1016,10 @@ h2.withmb
 	&_text  
 		max-width: 44%
 		text-align: center
-		
+		margin-left: 70px
 	h3
 		font-size: 36px 
-		font-family: 'SFUIDisplay-Bold', sans-serif 
+		font-weight: 700
 		color: #fff
 		line-height: 40px
 		text-align: center
@@ -1044,10 +1046,10 @@ h2.withmb
 		font-size: 23px
 		line-height: 26px
 		margin-bottom: 8px
-		font-family: 'SFUIDisplay-Bold', sans-serif 
+		font-weight: 700
 	h4
 		font-size: 20px
-		font-family: 'SFUIDisplay-Semibold', sans-serif 
+		font-weight: 600 
 		color: #000
 		margin-bottom: 6px
 	p 
@@ -1064,11 +1066,11 @@ h2.withmb
 	a 
 		color: #0070c9
 		font-size: 14px
-		font-family: 'SFUIDisplay-Medium', sans-serif 
+		font-weight: 500
 		line-height: 30px
-		transition: all 0.2s
 		&.active
-			font-family: 'SFUIDisplay-Bold', sans-serif, sans-serif 
+			font-weight: 700
+			color: #0070c9
 		&:before
 			display: inline-block
 			content: ""
@@ -1086,6 +1088,7 @@ h2.withmb
 .reviews
 	.row
 		width: 100%
+		padding-top: 10px
 	h3
 		font-size: 14px
 		width: 100%
@@ -1121,6 +1124,8 @@ h2.withmb
 	.slider-for .item
 		padding: 0
 		flex-direction: column
+		.row
+			margin: 0
 	h2
 		letter-spacing: 0
 	.slider-nav .slick-slide
@@ -1142,6 +1147,7 @@ h2.withmb
 		
 	.scroll-block
 		width: 100%
+		width: max-content
 		padding: 32px 50px 32px 10px
 		&__head
 			color: #000
@@ -1166,10 +1172,12 @@ h2.withmb
 .letter
 	background-size: cover
 	background-position: center
+	background-repeat: no-repeat
 	width: 100%
 	margin-bottom: 15px
 	display: block
 	position: relative
+	box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.1)
 	
 	&:after
 		content: ""
@@ -1190,7 +1198,7 @@ h2.withmb
 		border-radius: 50%
 		height: 50px
 		width: 50px
-		background-image: url("../img/svg/lupa.svg")
+		background-image: url("/image/site/svg/lupa.svg")
 		background-position: center
 		background-repeat: no-repeat
 		position: absolute
@@ -1203,20 +1211,20 @@ h2.withmb
 		opacity: 0
 	
 	&.vertical
-		height: 340px
+		height: 360px
 
 	&.horizontal
 		height: 190px
 
 .quest
-	background: url("../img/about-page/quest.png") center no-repeat
+	background: url("/image/site/about-page/quest.jpg") center no-repeat
 	background-size: cover
 	padding: 140px 0 175px
 	&__text
 		max-width: 330px
 		h3
 			font-size: 36px
-			font-family: 'SFUIDisplay-Bold', sans-serif 
+			font-weight: 700
 			color: #fff
 			margin-bottom: 7px
 		p 
@@ -1244,7 +1252,7 @@ h2.withmb
 			color: #fff
 			line-height: 54px
 			max-width: 100%
-			font-family: 'SFUIDisplay-Bold', sans-serif 
+			font-weight: 700
 
 	&__text
 		padding-left: 34px
@@ -1258,7 +1266,7 @@ h2.withmb
 	display: block
 	width: 100%
 	color: #de0a36
-	font-family: 'SFUIDisplay-Bold', sans-serif 
+	font-weight: 700
 	font-size: 24px
 	line-height: 40px
 	margin-top: 10px
@@ -1287,11 +1295,12 @@ h2.withmb
 .scroll-block
 	padding: 50px 50px 50px 12px
 	width: 100%
+	width: max-content	
 	transition: all ease-out 0.3s 
 	white-space: nowrap
 	&__techno
 		font-size: 60px  
-		font-family: 'SFUIDisplay-Medium', sans-serif
+		font-weight: 500
 		color: #fff
 		line-height: 100px
 		display: inline-block
@@ -1311,7 +1320,7 @@ h2.withmb
 
 			
 	&__head
-		font-family: 'SFUIDisplay-Bold', sans-serif 
+		font-weight: 700
 		font-size: 36px
 		color: #fff
 		margin-right: 50px
@@ -1321,7 +1330,7 @@ h2.withmb
 		
 
 	&__link
-		font-family: 'SFUIDisplay-Bold', sans-serif 
+		font-weight: 700
 		font-size: 60px
 		vertical-align: bottom
 		display: inline-block
@@ -1338,7 +1347,7 @@ h2.withmb
 			width: 43px
 			height: 19px
 			vertical-align: middle
-			background: url(../img/arrow-form.png) center no-repeat
+			background: url(/image/site/arrow-form.png) center no-repeat
 			background-size: contain
 			margin-left: 28px
 .conferencies
@@ -1401,17 +1410,14 @@ h2.withmb
 					background: #000
 	.slider-nav
 		.slick-track
-			transform: translate3d(0, 0, 0)!important
 			text-align: center
-			width: 100%!important
 		.slick-slide
-			width: auto!important
 			padding: 0 22px 10px 
 			border-bottom: 1px solid #d9d9d9
 			display: inline-block
 			float: none
 			h3
-				font-family: "SFUIDisplay-Semibold"
+				font-weight: 600
 			&.slick-current
 				border-bottom: 2px solid #0070c9
 				padding-bottom: 9px   
@@ -1435,7 +1441,7 @@ h2.withmb
 				vertical-align: top
 				.with-defis
 					padding-top: 20px
-					font-family: 'SFUIDisplay-Bold', sans-serif
+					font-weight: 700
 					&:before
 						display: inline-block
 						content: ""
@@ -1454,7 +1460,7 @@ h2.withmb
 					font-size: 20px
 					padding-top: 3px
 					margin-bottom: 5px
-					font-family: 'SFUIDisplay-Semibold', sans-serif
+					font-weight: 600
 				p 
 					line-height: 24px
 					padding-right: 25px
@@ -1464,7 +1470,7 @@ h2.withmb
 						
 					&.bold
 						font-weight: bold
-						font-family: 'SFUIDisplay-Semibold', sans-serif
+						font-weight: 600
 						font-size: 16px
 						margin-top: 20px
 						margin-bottom: 2px
@@ -1520,7 +1526,7 @@ h2.withmb
 						h4
 							font-size: 20px
 							line-height: 30px
-							font-family: 'SFUIDisplay-Bold', sans-serif
+							font-weight: 700
 							margin-bottom: 20px
 					.request__user-img 
 						margin-right: 25px
@@ -1569,10 +1575,10 @@ h2.withmb
 							&_text
 								h4
 									font-size: 24px
-									font-family: 'SFUIDisplay-Bold', sans-serif
+									font-weight: 700
 								a
 									font-size: 14px
-									font-family: 'SFUIDisplay-Bold', sans-serif
+									font-weight: 700
 								p
 									font-size: 13px
 									line-height: 22px
@@ -1590,7 +1596,7 @@ h2.withmb
 					background-color: #fff
 					.close
 						display: block
-						background: #fff url("../img/svg/ic_close_black.svg") center left 8px no-repeat
+						background: #fff url("/image/site/svg/ic_close_black.svg") center left 8px no-repeat
 						height: 40px
 						width: 45px
 						background-size: 11px
@@ -1633,11 +1639,11 @@ h2.withmb
 					&.reviews-on-pages
 						padding: 0
 					.bold
-						font-family: 'SFUIDisplay-Semibold', sans-serif
+						font-weight: 600
 						font-size: 16px
 					h3
 						font-size: 36px
-						font-family: 'SFUIDisplay-Bold', sans-serif
+						font-weight: 700
 					p 
 						line-height: 26px
 						margin-bottom: 16px
@@ -1649,25 +1655,61 @@ h2.withmb
 						line-height: 45px
 						color: #fff
 						margin: 7px 3px
-						font-family: 'SFUIDisplay-Bold', sans-serif
+						font-weight: 700
 						padding: 0 25px
 						transition: all 0.2s
 						span
 							color: #ff8ba2
 					.close
 						display: block
-						background: url("../img/svg/ic_close_gray.svg") center no-repeat
-						height: 27px
-						width: 27px
+						background: rgba(0, 0, 0, 0.3)
+						height: 45px
+						width: 67px
 						background-size: 11px
 						position: absolute
-						top: 20px
-						right: 20px
+						top: 12px
+						right: 0
 						cursor: pointer
 						transition: all 0.2s
 						z-index: 99
+						border-bottom-left-radius: 30px
+						border-top-left-radius: 30px
+						&::before
+							position: absolute
+							height: 45px
+							width: 67px
+							content: ''
+							top: 0
+							right: 0
+							background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M16.000,1.598 L14.400,-0.001 L8.000,6.399 L1.600,-0.001 L-0.000,1.598 L6.400,7.998 L-0.000,14.399 L1.600,15.999 L8.000,9.599 L14.400,15.999 L16.000,14.399 L9.600,7.998 L16.000,1.598 Z"/></svg>') center no-repeat
 .block-text
 	display: block
+
+.slider-text .slick-list, .slider-conf .slick-list
+	position: relative
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		height: 100%
+		width: 200px
+		z-index: 1
+		background: url(/image/site/arrow-left.png) center no-repeat
+	&:after
+		content: ''
+		position: absolute
+		top: 0
+		right: 0
+		height: 100%
+		width: 200px
+		z-index: 1
+		background: url(/image/site/arrow-right.png) center no-repeat
+
+.requisites
+	.slider-text
+		&:before, &:after
+			display: none
 	
 .slider-conf
 	border-radius: 3px
@@ -1712,27 +1754,14 @@ h2.withmb
 .light-arrow-inset
 	.slick-arrow
 		top: 39%
-		transform: translateX(-50%)
-		background: url(../img/svg/arrow.svg) center no-repeat //, url(img/shadow.png) center no-repeat
+		background: url(/image/site/svg/arrow.svg) center no-repeat //, url(img/shadow.png) center no-repeat
 		background-size: 15px 30px
 		z-index: 99
-		-webkit-filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5))
-		filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5))
-		// &:after
-		//  content: ""
-		//  left: 50%
-		//  top: 50%
-		//  transform: translate(-50%, -50%)
-		//  height: 5px
-		//  width: 5px
-		//  border-radius: 50%
-		//  box-shadow: 0 0 25px 000
-		//  z-index: 0
-		//  background: transparent
+		position: absolute
 	&44 .slick-arrow 
 		top: 48%
 	.slick-prev
-		left: 30px
+		left: 5px
 	.slick-next
 		right: 5px
 		transform: scaleX(-1)
@@ -1751,8 +1780,8 @@ h2.withmb
 		&:last-child
 			padding-bottom: 6px
 		h3
-			font-size: 24px
-			font-family: 'SFUIDisplay-Medium', sans-serif
+			font-size: 20px
+			font-weight: 500
 			font-weight: normal
 			
 		p 
@@ -1763,7 +1792,7 @@ h2.withmb
 			opacity: 1
 			padding-left: 24px 
 			h3
-				font-family: 'SFUIDisplay-Bold', sans-serif
+				font-weight: 700
 
 .video-block
 	margin-bottom: 24px
@@ -1779,7 +1808,7 @@ h2.withmb
 		padding: 0 0 25px 30px
 		h3
 			font-size: 24px
-			font-family: 'SFUIDisplay-Bold', sans-serif
+			font-weight: 700
 			color: #fff
 			text-align: left
 			line-height: 30px
@@ -1801,7 +1830,7 @@ h2.withmb
 			padding: 0 25px
 			
 	h3
-		font-family: 'SFUIDisplay-Bold', sans-serif 
+		font-weight: 700
 		color: #fff
 		font-size: 30px
 	p 
@@ -1881,14 +1910,13 @@ h2.withmb
 		float: none!important
 		&.slick-current
 
-
-
 	&__item
 		background: #000 
 		width: 80px
 		height: 80px
 		cursor: pointer
 		background: #f5f5f5
+		border: 2px solid #f5f5f5
 		border-radius: 50%
 		transition: all 0.3s
 		line-height: 75px
@@ -1900,10 +1928,11 @@ h2.withmb
 			fill: #666
 			transition: all 0.3s
 		&.slick-current
-			background: #de0a36
+			border: 2px solid #de0a36
 			path
 				fill: #fff
-
+		&:hover				
+			background: #f5f5f5 !important		
 .request
 	&__block
 		width: 100%
@@ -1921,7 +1950,7 @@ h2.withmb
 			overflow: hidden
 		h4
 			font-size: 16px
-			font-family: 'SFUIDisplay-Bold', sans-serif 
+			font-weight: 700
 			text-align: center
 			
 		p 
@@ -1942,7 +1971,7 @@ h2.withmb
 		border-left: 1px solid #d9d9d9 
 		h3
 			font-size: 18px
-			font-family: 'SFUIDisplay-Bold', sans-serif 
+			font-weight: 700
 			text-align: left
 			line-height: 24px
 			max-width: 75%
@@ -1983,18 +2012,18 @@ h2.withmb
 			font-size: 24px
 			margin-bottom: 5px
 			line-height: 36px
-			font-family: 'SFUIDisplay-Bold', sans-serif
+			font-weight: 700
 		p 
 			font-size: 13px
 			line-height: 20px
 			margin-bottom: 16px
 		.info
 			span:first-child
-				color: #737373
+				color: #000
 				font-size: 12px
 			span:nth-of-type(2)
 				font-size: 20px
-				font-family: 'SFUIDisplay-Semibold', sans-serif
+				font-weight: 600
 				color: #000
 				display: block
 				margin-bottom: 7px
@@ -2008,11 +2037,13 @@ h2.withmb
 	p 
 		font-size: 14px
 		text-align: center
+	a
+		color: #000	
 	span
 		font-size: 36px
 		display: block
 		text-align: center
-		font-family: 'SFUIDisplay-Bold', sans-serif
+		font-weight: 700
 	.soc
 		text-align: center 
 		&-item
@@ -2026,24 +2057,29 @@ h2.withmb
 			cursor: pointer
 			// &:hover
 			//  opacity: 0.7
+			a
+				display: block
+				position: relative
+				width: 100%
+				height: 100%	
+			img
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+				position: absolute	
 			&:nth-of-type(1)
-				line-height: 45px
 				img
 					width: 10px
 			&:nth-of-type(2)
-				line-height: 44px
 				img
 					width: 18px
 			&:nth-of-type(3)
-				line-height: 40px
 				img
 					width: 22px
 			&:nth-of-type(4)
-				line-height: 40px
 				img
 					width: 18px
 			&:nth-of-type(5)
-				line-height: 44px
 				img
 					width: 18px
 
@@ -2099,7 +2135,7 @@ h2.withmb
 				vertical-align: middle
 				position: relative
 				top: -2px
-				background: url('../img/svg/ic_user.svg') center no-repeat
+				background: url('/image/site/svg/ic_user.svg') center no-repeat
 				background-size: contain
 		&>div
 			display: inline-block
@@ -2112,7 +2148,7 @@ h2.withmb
 					background-size: contain
 			.author
 				&:before
-					background: url('../img/svg/ic_user-gray.svg') center no-repeat
+					background: url('/image/site/svg/ic_user-gray.svg') center no-repeat
 					background-size: contain
 				
 
@@ -2140,7 +2176,7 @@ h2.withmb
 				margin-bottom: 20px
 			span
 				font-size: 11px
-				color: #737373
+				color: #000
 				line-height: 20px
 				margin-bottom: 10px
 			ul
@@ -2175,7 +2211,7 @@ h2.withmb
 			margin-bottom: 30px
 	h2, h3
 		text-align: left
-		font-family: "SFUIDisplay-Bold"
+		font-weight: 700
 	h2
 		font-size: 24px
 		letter-spacing: 0
@@ -2189,7 +2225,7 @@ h2.withmb
 		&.postscriptum
 			font-size: 13px
 			line-height: 13px
-			color: #737373
+			color: #000
 	&-share
 		text-align: right
 		padding: 15px 6px
@@ -2238,7 +2274,7 @@ h2.withmb
 .quote
 	&__text
 		border-left: 3px solid #0070c9
-		font-family: "SFUIDisplay-Medium"
+		font-weight: 500
 		line-height: 36px
 		font-size: 24px
 		padding: 5px 70px 7px 35px
@@ -2249,7 +2285,7 @@ h2.withmb
 	margin: 30px 0 0
 	position: relative
 	span
-		font-family: "SFUIDisplay-Bold"
+		font-weight: 700
 
 .footnote
 	position: absolute
@@ -2266,7 +2302,7 @@ h2.withmb
 		color: #0070c9
 		font-size: 16px
 		line-height: 20px
-		font-family: "SFUIDisplay-Bold"
+		font-weight: 700
 	&__top
 		bottom: auto
 		right: 4px
@@ -2281,7 +2317,7 @@ h2.withmb
 			font-weight: 400
 			line-height: 20px
 			padding-right: 0
-			color: #737373  
+			color: #000
 
 .right-col
 	padding-left: 20px
@@ -2294,7 +2330,7 @@ h2.withmb
 		line-height: 20px
 		padding-right: 0
 		margin-bottom: 20px
-		color: #737373  
+		color: #000
 	&.navigation
 		padding-top: 15px
 		&.disabled
@@ -2305,17 +2341,17 @@ h2.withmb
 				&:before
 					background: #b3b3b3
 				&.active
-					font-family: SFUIDisplay-Medium,sans-serif!important
+					font-weight: 500!important
 .article .conditions-work
 		padding-top: 5px
 		h3
 			font-size: 18px
-			font-family: "SFUIDisplay-Bold"
+			font-weight: 700
 			line-height: 26px
 			margin-bottom: 10px
 		span
-			font-size: 12px
-			color: #737373
+			font-size: 13px
+			color: #000
 			display: block
 			font-family: 'Open Sans'
 		p 
@@ -2330,7 +2366,7 @@ h2.withmb
 			font-size: 13px
 			color: #000
 			margin-top: 0
-			font-family: "SFUIDisplay-Bold"
+			font-weight: 700
 		h5
 			font-size: 13px
 			line-height: 20px
@@ -2353,6 +2389,7 @@ h2.withmb
 				display: block              
 				height: 1px
 		ul
+			margin-bottom: 0
 			li
 				line-height: 16px
 				max-width: 80%
@@ -2419,7 +2456,9 @@ h2.withmb
 		line-height: 30px
 		cursor: pointer
 		transition: all 0.3s
-		font-family: "SFUIDisplay-Medium"
+		font-weight: 500
+		&:hover
+			color: #0070c9
 		&:after
 			content: ""
 			display: inline-block
@@ -2433,7 +2472,7 @@ h2.withmb
 			bottom: 3px
 			margin-left: 5px
 		&.open
-			font-family: "SFUIDisplay-Bold"
+			color: #0070c9
 			&:after
 				border-top: 6px solid #0070c9
 				border-bottom: 0
@@ -2473,7 +2512,7 @@ h2.withmb
 			content: counter(item) "."
 	.docs
 		a 
-			font-family: "SFUIDisplay-SemiBold"
+			font-weight: 600
 			font-size: 14px
 			border: 1px solid #e6e6e6
 			border-radius: 3px
@@ -2595,14 +2634,14 @@ h2.withmb
 			margin-top: 25px
 
 		&.with-padd-bottom
-			padding-bottom: 30px
+			padding-bottom: 35px
 	&__center
 		text-align: center
 	&__link
 		font-size: 16px
 		color: #0070c9
 		display: block
-		font-family: "SFUIDisplay-Bold"
+		font-weight: 700
 		&:before
 			content: ""
 			display: inline-block
@@ -2630,9 +2669,11 @@ h2.withmb
 		min-height: 280px
 	&__head
 		font-size: 36px
-		line-height: 40px
-		font-family: "SFUIDisplay-Bold"
-
+		line-height: 43px
+		font-weight: 700
+		float: left
+		width: 100%
+		margin-bottom: 15px
 	&__theme
 		font-size: 13px
 	&__text
@@ -2643,7 +2684,7 @@ h2.withmb
 	&__list
 		li
 			position: relative
-			font-family: "SFUIDisplay-Bold"
+			font-weight: 700
 			font-size: 16px
 			line-height: 22px
 			margin-bottom: 8px
@@ -2672,7 +2713,7 @@ h2.withmb
 		letter-spacing: 0
 		span
 			color: #de0a36
-			font-family: SFUIDisplay-Bold
+			font-weight: 700
 	&__item
 		padding: 45px 0 10px
 
@@ -2687,13 +2728,13 @@ h2.withmb
 
 	&__name
 		font-size: 20px
-		font-family: SFUIDisplay-Bold
+		font-weight: 700
 		text-align: center
 
 	&__position
 		color: #0070c9
 		font-size: 13px
-		font-family: 'SFUIDisplay-Bold', sans-serif
+		font-weight: 700
 		text-align: center
 
 .about-me
@@ -2714,7 +2755,7 @@ h2.withmb
 		margin-top: 20px
 		margin-right: 20px
 		vertical-align: top
-		font-family: SFUIDisplay-Bold
+		font-weight: 700
 
 .description
 	&-width-image
@@ -2724,7 +2765,7 @@ h2.withmb
 	&__text
 		font-size: 60px
 		line-height: 72px
-		font-family: 'SFUIDisplay-Bold', sans-serif
+		font-weight: 700
 		text-align: center
 		max-width: 66%
 		margin: 0 auto
@@ -2746,7 +2787,7 @@ h2.withmb
 	&__digital
 		font-size: 60px
 		line-height: 60px
-		font-family: 'SFUIDisplay-Bold', sans-serif
+		font-weight: 700
 		display: inline-block
 		vertical-align: top
 
@@ -2756,7 +2797,7 @@ h2.withmb
 		position: relative
 		white-space: normal
 		line-height: 17px
-		font-family: 'SFUIDisplay-Bold', sans-serif
+		font-weight: 700
 		display: inline-block
 		vertical-align: top
 		max-width: 130px
@@ -2813,7 +2854,7 @@ h2.withmb
 
 	&__date
 		font-size: 13px
-		font-family: 'SFUIDisplay-Bold', sans-serif
+		font-weight: 700
 		vertical-align: middle
 		margin-bottom: 5px
 		&:before
@@ -2832,7 +2873,7 @@ h2.withmb
 				background-color: #de0a36
 		&.stop
 			color: #ccc
-			font-family: 'SFUIDisplay-Medium', sans-serif
+			font-weight: 500
 			&:before
 				background-color: #ccc
 		&.all-actual
@@ -2843,7 +2884,7 @@ h2.withmb
 		font-size: 30px
 		line-height: 36px
 		margin-bottom: 5px
-		font-family: 'SFUIDisplay-Bold', sans-serif
+		font-weight: 700
 		transition: all 0.3s
 
 .nav
@@ -2856,7 +2897,7 @@ h2.withmb
 		display: inline-block
 		color: #000
 		opacity: 0.7
-		font-family: 'SFUIDisplay-Medium', sans-serif
+		font-weight: 500
 		transition: all 0.2s
 		font-size: 18px
 		border-bottom: 1px solid #d0d0d0
@@ -2864,7 +2905,7 @@ h2.withmb
 		cursor: pointer
 		&.active
 			opacity: 1
-			font-family: 'SFUIDisplay-Bold', sans-serif
+			font-weight: 700
 			padding-bottom: 9px
 			border-bottom: 2px solid #0070c9
 		&:hover
@@ -2903,7 +2944,7 @@ h2.withmb
 	.content-write-request
 		padding-bottom: 50px
 	&__head
-		font-family: 'SFUIDisplay-Bold', sans-serif
+		font-weight: 700
 		font-size: 30px
 		text-align: center
 		
@@ -2936,7 +2977,7 @@ h2.withmb
 			border-radius: 50%
 			height: 50px
 			width: 50px
-			background-image: url("../img/svg/lupa.svg")
+			background-image: url("/image/site/svg/lupa.svg")
 			background-position: center
 			background-repeat: no-repeat
 			position: absolute
@@ -2952,9 +2993,10 @@ h2.withmb
 			height: 230px
 	.thanks-letters
 		text-align: center
+		margin: 0
 		h3
 			font-size: 20px
-			font-family: 'SFUIDisplay-Bold', sans-serif
+			font-weight: 700
 			line-height: 20px
 		a 
 			font-size: 12px
@@ -3015,7 +3057,6 @@ h2.withmb
 	display: none
 	opacity: 0
 	z-index: 1009
-
 .letter_modal
 	&_image
 		flex: 7
@@ -3028,6 +3069,7 @@ h2.withmb
 		flex: 4
 		padding-top: 30px
 		padding-right: 33px
+		padding-bottom: 30px
 		p 
 			font-size: 13px
 			margin-top: 20px
@@ -3035,13 +3077,18 @@ h2.withmb
 
 		h3
 			font-size: 24px
-			font-family: 'SFUIDisplay-Bold', sans-serif
+			font-weight: 700
 			line-height: 30px
 		a
 			font-size: 14px
 			color: #0070c9
 			line-height: 20px
-
+	&.flow
+		position: absolute !important
+		height: auto !important		
+		.letter_modal_image
+			height: inherit !important	
+			background-position: center top
 #request_modal
 	width: 618px
 	height: 900px
@@ -3062,7 +3109,7 @@ h2.withmb
 #request_modal
 	h2
 		font-size: 32px
-		font-family: 'SFUIDisplay-Bold', sans-serif
+		font-weight: 700
 		letter-spacing: 0
 	p
 		font-size: 13px
@@ -3083,7 +3130,7 @@ h2.withmb
 		border: 1px solid #e6e6e6
 		width: 185px
 		height: 45px
-		font-family: "SFUIDisplay-Semibold"
+		font-weight: 600
 		line-height: 43px
 		border-radius: 3px
 		text-align: center
@@ -3091,7 +3138,7 @@ h2.withmb
 		display: inline-block
 		transition: background 0.3s
 		span
-			font-family: "SFUIDisplay-Semibold"
+			font-weight: 600
 
 		&:hover
 			background: #fafafa
@@ -3167,7 +3214,7 @@ h2.withmb
 	label
 		width: 40px
 		height: 45px
-		background: #f5f5f5 url('../img/svg/screpka.svg') center no-repeat
+		background: #f5f5f5 url('/image/site/svg/screpka.svg') center no-repeat
 		border-radius: 3px
 		border: 1px solid #e6e6e6
 		span
@@ -3203,7 +3250,7 @@ h2.withmb
 	align-items: flex-start
 	h3
 		font-size: 24px
-		font-family: 'SFUIDisplay-Bold', sans-serif
+		font-weight: 700
 		color: #fff
 		margin-bottom: 0
 .your-data
@@ -3300,7 +3347,7 @@ h2.withmb
 		color: #fff
 		font-size: 13px
 		line-height: 18px
-		font-family: 'SFUIDisplay-Medium', sans-serif
+		font-weight: 500
 		&.description
 			font-size: 13px
 			margin-top: 4px
@@ -3314,7 +3361,7 @@ h2.withmb
 			font-size: 16px
 			line-height: 26px
 			margin-bottom: 10px
-			font-family: 'SFUIDisplay-Bold', sans-serif
+			font-weight: 700
 			display: block
 			text-align: center
 		span
@@ -3335,7 +3382,7 @@ h2.withmb
 	width: 750px
 	margin: 26px auto 80px
 	&.active
-		z-index: 990
+		z-index: 1024
 		// input
 		//  border-bottom-right-radius: 0
 		//  border-bottom-left-radius: 0
@@ -3388,7 +3435,7 @@ h2.withmb
 
 		p
 			font-size: 11px
-			color: #737373
+			color: #000
 			margin-bottom: 6px
 		a
 			font-size: 16px
@@ -3427,8 +3474,8 @@ h2.withmb
 		top: 5px
 		right: 10px
 		cursor: pointer
-		//background: url('../img/svg/ic_close_gray.svg') center no-repeat
-		transition: all 0.3s
+		//background: url('/image/site/svg/ic_close_gray.svg') center no-repeat
+		//transition: all 0.3s
 		background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"> <defs><style>.cls-1 {fill: #989898;fill-rule: evenodd;}</style></defs><path id="ic_close_gray" class="cls-1" d="M460.678,215l4.181-4.182a0.479,0.479,0,1,0-.678-0.678L460,214.321l-4.182-4.18a0.479,0.479,0,0,0-.678.678L459.321,215l-4.18,4.181a0.48,0.48,0,0,0,.339.819,0.473,0.473,0,0,0,.338-0.141L460,215.678l4.181,4.181a0.479,0.479,0,1,0,.677-0.678Z" transform="translate(-455 -210)"/></svg>') center no-repeat;
 
 		background-size: 14px
@@ -3600,10 +3647,9 @@ h2.withmb
 	.navigation:not(.disabled)
 		a 
 			&:hover
-				font-family: 'SFUIDisplay-Bold', sans-serif 
-				color: #1588e4
+				color: #0070c9
 				&:before
-					background: #1588e4
+					background: #0070c9
 					width: 20px
 			
 	.scroll-block
@@ -3636,7 +3682,12 @@ h2.withmb
 			&-item
 				&:hover
 					opacity: 0.7
-
+	.slider-nav:not(.not-static)
+		.slick-track
+			transform: translate3d(0, 0, 0)!important
+			width: 100%!important
+		.slick-slide
+			width: auto!important
 	.filials
 		.slider-for 
 			.item
@@ -3688,6 +3739,12 @@ h2.withmb
 @media screen and (min-width: 767px) and (max-width: 1025px)
 	.consultation__order a
 		margin: 0 0 0 auto
+	.slider-nav:not(.not-static)
+		.slick-track
+			transform: translate3d(0, 0, 0)!important
+			width: 100%!important
+		.slick-slide
+			width: auto!important
 
 
 @media screen and (min-width: 767px) and (max-width: 1024px)    
@@ -3705,14 +3762,18 @@ h2.withmb
 		overflow: scroll
 		max-height: 100vh
 		transform: translate(0,0)
-		height: 100%!important
+		height: 98%!important
 		margin-top: 0!important
 		padding-bottom: 25px
 		left: 50%
-		top: 0!important
+		top: 1%!important
+	.podcategory-item.black-text h2 img
+		transform: scale(0.7)
+		top: 5px
 	#request_modal  
 		.primary_link
 			font-size: 14px
+			margin-bottom: 30px
 	.service-item .mobile-transparent
 		top: 21px
 		right: 56px
@@ -3722,6 +3783,14 @@ h2.withmb
 	.filials
 		.slider-for
 			padding: 0 15px
+	.search-on-tiser .fast-link-on-tiser a, .search-on-tiser .result-search-on-tiser a
+		font-size: 12px
+		line-height: 34px
+	.search-on-tiser .fast-link-on-tiser, .search-on-tiser .result-search-on-tiser
+		min-height: 225px
+	.filials .row
+		margin-left: 0 !important
+		margin-right: 0 !important
 	.consultation
 		height: 70px
 		padding: 20px 0
@@ -3788,6 +3857,7 @@ h2.withmb
 	
 	.scroll-block
 		padding: 25px 40px 25px 25px
+		overflow: scroll
 		&__head
 			font-size: 18px
 			line-height: 50px
@@ -4176,6 +4246,9 @@ h2.withmb
 							font-size: 10px
 							margin-bottom: 12px
 							padding-left: 1px
+							
+							.bold 
+								font-size: 18px
 						.load-doc
 							line-height: 30px
 							font-size: 12px
@@ -4208,9 +4281,9 @@ h2.withmb
 		.columns
 			padding: 0 25px
 		.right-big-padd
-			padding-right: 18px
+			padding-right: 13px
 		.left-big-padd
-			padding-left: 18px
+			padding-left: 13px
 		&-item
 			padding: 32px 44px
 			height: 316px
@@ -4234,14 +4307,14 @@ h2.withmb
 				.gallerry
 					padding: 20px 0 0
 			&.with-akcia-block
-				min-height: 400px
+				min-height: 435px
 				&.big-size-akcia
-					min-height: 520px
+					min-height: 500px
 					padding-bottom: 150px
 			&__price
 				font-size: 18px
 			&.black-text
-				padding: 20px
+				padding: 42px
 				span
 					margin-top: 2px
 					font-size: 12px
@@ -4264,15 +4337,18 @@ h2.withmb
 			&.medium-size, &.small-size
 				padding: 20px
 			&.big-size
-				height: 370px
+				height: 400px
 			&.very-big-size
-				height: 450px
+				height: 435px
+				padding: 20px 15px
 			&.huge-size
 				height: 490px
 			&.full-big-size
 				height: 278px
 			&.full-huge-size
 				height: 300px
+				&.black-text
+					padding: 20px 30px
 
 				p
 					max-width: 300px
@@ -5062,6 +5138,7 @@ h2.withmb
 		&__head
 			font-size: 24px
 			line-height: 30px
+			margin-bottom: 10px
 		&__text
 			font-size: 11px
 			line-height: 18px
@@ -5453,7 +5530,7 @@ h2.withmb
 				width: 26px
 				height: 12px
 				vertical-align: middle
-				background: url(../img/arrow-form.png) center no-repeat
+				background: url(/image/site/svg/arrow-form.svg) center no-repeat
 				background-size: contain
 				margin-left: 5px
 				position: relative
@@ -5680,7 +5757,7 @@ h2.withmb
 				width: 26px
 				height: 12px
 				vertical-align: middle
-				background: url(../img/arrow-form.png) center no-repeat
+				background: url(/image/site/svg/arrow-form.svg) center no-repeat
 				background-size: contain
 				margin-left: 5px
 				position: relative
@@ -5702,11 +5779,14 @@ h2.withmb
 	.scroll-block
 		width: 100%
 		overflow: scroll
+	.podcategory-item.black-text h2.small
+		br
+			display: none
 	.filials
 		&.custom-margin
 			.slider-nav
 				.slick-slide
-					padding: 5px 15px 9px
+					padding: 5px 10px 9px
 					margin-bottom: 10px
 	.details-servise
 		display: none!important
@@ -5786,6 +5866,7 @@ h2.withmb
 					font-size: 18px
 					line-height: 24px
 					margin-bottom: 2px
+
 	.vacancy-carousel
 		padding-top: 25px
 		h3
@@ -5838,7 +5919,7 @@ h2.withmb
 					margin-top: 3px
 				&__half
 					&.with-padd-bottom
-						padding: 25px 0 20px
+						padding: 20px 0 18px
 	.podcategory-item.black-text h2 img
 		max-width: 16px
 	.service
@@ -5866,7 +5947,7 @@ h2.withmb
 				h3
 					color: #0070c9
 					letter-spacing: 0px
-					font-family: 'SFUIDisplay-Semibold', sans-serif
+					font-weight: 600
 		.seen-all
 			display: block
 			height: 50px
@@ -5876,7 +5957,7 @@ h2.withmb
 			text-align: center
 			font-size: 14px
 			background: #fff
-			font-family: 'SFUIDisplay-Semibold', sans-serif
+			font-weight: 600
 			&:after
 				border: 3.5px solid transparent
 				content: ""
@@ -5905,23 +5986,27 @@ h2.withmb
 	.get-gift
 		font-size: 24px
 		margin-top: 0
-		text-align: right
+		text-align: center
 		display: block
-		
 		&:after
 			transform: scale(0.7)
 			margin-left: 5px
+		&.wait-gift
+			float: right
 	.vismob a
 		line-height: 27px 
 		display: block
 	.logo-wrap
 		position: absolute
-		top: 6px
+		top: 10px
 		left: 50%
 		transform: translate(-50%)
 	.phone span
 		font-size: 0
 		bottom: 0
+		display: block
+	.phone a
+		float: right		
 
 	.all-solution
 		margin-bottom: 18px
@@ -5930,14 +6015,14 @@ h2.withmb
 		background-position: center
 		background-size: cover
 		padding-right: 0
-		background-image: url('../img/specialoffers/alloffers_mob.png')!important
+		background-image: url('/image/site/specialoffers/alloffers_mob.png')!important
 		span
 			font-size: 21px
 			line-height: 21px
 		p
 			font-size: 13px
 			line-height: 26px
-			margin-bottom: 3px
+			margin-bottom: 7px
 		a
 			margin-top: 4px
 	.tiser-text 
@@ -6029,7 +6114,6 @@ h2.withmb
 								padding: 15px 0
 						.close
 							right: 0
-							padding: 25px
 
 						.load-doc
 							margin: 3px
@@ -6038,12 +6122,15 @@ h2.withmb
 							line-height: 27px
 						h3
 							font-size: 15px
-							font-family: SFUIDisplay-Semibold
+							font-weight: 600
 						p
 							line-height: 16px
 							font-size: 10px
 							margin-bottom: 11px
 							padding-left: 0
+							
+							.bold 
+								font-size: 15px							
 					.working 
 						border-radius: 0
 						padding-left: 18px
@@ -6067,27 +6154,26 @@ h2.withmb
 							margin-top: 18px
 							font-size: 14px
 							margin-bottom: 2px
-						span
-							display: inline-block
 						.light-gray
 							margin-right: 2px
 							margin-top: 2px
 						&.mobile-text
-							color: #3f6fc5
 							line-height: 14px
 							span
 								font-size: 13px
 								margin-right: 16px
+								font-weight: 500
 						&.address-text
 							font-size: 13px
-							line-height: 16px
+							line-height: 22px
 						&.work-days       
-							font-size: 12px
-							line-height: 14px
+							font-size: 13px
+							line-height: 22px
 							margin-bottom: 4px
 					.with-defis
 						letter-spacing: 0px
 						padding-top: 18px
+						font-weight: 500
 						&:before       
 							width: 15px
 							margin-left: 0
@@ -6097,6 +6183,7 @@ h2.withmb
 					a
 						padding-top: 0
 						font-size: 13px
+						font-weight: 500
 		.colums
 			max-width: 100%
 
@@ -6256,7 +6343,7 @@ h2.withmb
 				margin-left: 4px
 		&__seen-all
 			font-size: 14px
-			font-family: SFUIDisplay-Bold
+			font-weight: 700
 			line-height: 42px
 			display: block
 			color: #fff
@@ -6311,6 +6398,22 @@ h2.withmb
 				align-items: center
 				justify-content: center
 				margin-top: 5px
+				&:nth-of-type(1)
+					background: #4267b2
+					img
+						width: 7px
+				&:nth-of-type(2)
+					background: #e21d44
+					img
+						width: 14px
+				&:nth-of-type(3)
+					background: #507299
+					img
+						width: 14px
+				&:nth-of-type(4)
+					background: #ff0000
+					img
+						width: 14px
 
 			.social-wrap
 				display: flex
@@ -6499,7 +6602,7 @@ h2.withmb
 	.toggle-workers
 		font-size: 16px
 		border-top: 1px solid #e6e6e6
-		font-family: 'SFUIDisplay-Semibold', sans-serif
+		font-weight: 600
 		padding: 12px 0
 		font-size: 14px
 		line-height: 22px
@@ -6571,8 +6674,8 @@ h2.withmb
 			&.reverse-mob
 				flex-direction: column-reverse
 		&__head
-			font-size: 21px
-			line-height: 27px
+			font-size: 18px
+			line-height: 24px
 			text-align: center
 			
 		&__text
@@ -6580,6 +6683,8 @@ h2.withmb
 			line-height: 20px
 			margin-top: 7px
 			margin-bottom: 10px
+			text-align: left
+			
 		&__img
 			min-height: 215px
 		.left-text, .right-text
@@ -6690,7 +6795,7 @@ h2.withmb
 			background-size: cover
 		&-big
 			background-color: #DE0A36
-			background-image: url("../img/team/back-mob.png")!important
+			background-image: url("/image/site/team/back-mob.png")!important
 			background-position: center left 
 			background-repeat: no-repeat
 			background-size: cover
@@ -6771,11 +6876,13 @@ h2.withmb
 		margin-right: 0
 		display: none
 		&__list
-			margin-top: 30px
+			margin-top: 5px
 		&__item
 			margin-right: 18px
 			&:nth-of-type(7n+7)
 				margin-right: 0
+	.time p.chance-time
+		margin-top: 40px
 	.time
 		display: none
 		&.no-hide
@@ -6799,7 +6906,7 @@ h2.withmb
 
 	.profi
 		font-size: 14px
-		font-family: 'SFUIDisplay-Bold', sans-serif
+		font-weight: 700
 		color: #fff
 		img
 			width: 22px
@@ -6813,7 +6920,7 @@ h2.withmb
 		width: 28px
 		height: 36px
 		vertical-align: middle      
-		background: url('../img/svg/arrow-form-gray.svg') center no-repeat
+		background: url('/image/site/svg/arrow-form-gray.svg') center no-repeat
 		background-size: contain
 
 
@@ -6825,7 +6932,7 @@ h2.withmb
 			line-height: 30px
 			display: block
 			margin-bottom: 10px
-		&.with-calendar
+		&.with-calendar			
 			button
 				display: none
 				float: none
@@ -6834,10 +6941,11 @@ h2.withmb
 				margin-right: 6px
 				margin-left: 40px
 				margin-top: 36px
+				margin-bottom: 0
 
 		.next-step
 			font-size: 24px
-			font-family: 'SFUIDisplay-Bold', sans-serif
+			font-weight: 700
 			color: #fff
 			margin-left: 40px
 			margin-right: 6px
@@ -6849,7 +6957,7 @@ h2.withmb
 				width: 28px
 				height: 12px
 				vertical-align: middle
-				background: url('../img/arrow-form.png') center no-repeat
+				background: url('/image/site/svg/arrow-form.svg') center no-repeat
 				background-size: contain
 				margin-left: 17px
 				margin-top: 13px
@@ -6874,14 +6982,14 @@ h2.withmb
 			padding: 14px 22px
 			&.active
 				border-bottom: 1px solid #d0d0d0
-				font-family: 'SFUIDisplay-Medium', sans-serif
+				font-weight: 500
 		&-header
 			width: 100%
 			border-bottom: 1px solid #d0d0d0
 			padding: 16px 18px 14px
 			font-size: 19px
 			background: #fff
-			font-family: "SFUIDisplay-Bold"
+			font-weight: 700
 			&:after
 				content: ""
 				display: inline-block
@@ -6907,7 +7015,7 @@ h2.withmb
 		background: #fff
 		color: #0070c9
 		text-align: center
-		font-family: "SFUIDisplay-Bold"
+		font-weight: 700
 		border-top: 1px solid #f5f5f5
 		border-bottom: 0    
 		border-bottom-right-radius: 3px
@@ -6936,6 +7044,7 @@ h2.withmb
 
 	#letter_modal, #request_modal
 		max-width: 100%
+		width: 100%
 		opacity: 1
 		margin: 0
 		transform: none
@@ -6944,6 +7053,7 @@ h2.withmb
 		height: auto
 		overflow: scroll
 		flex-direction: column
+		height: 100vh
 		max-height: 100vh
 		top: 0!important
 		bottom: 0
@@ -7003,7 +7113,7 @@ h2.withmb
 			line-height: 46px
 			margin-top: 9px
 			font-size: 14px
-			font-family: 'SFUIDisplay-Medium', sans-serif
+			font-weight: 500
 			text-align: center
 			border-top: 1px solid #e5e5e5
 	.letter_modal
@@ -7027,6 +7137,68 @@ h2.withmb
 			height: 127vw   
 			margin: 0 auto
 			width: 100%
+	.gifts
+		.with-slider-mob
+			display: block
+			margin: 0
+		&__head
+			font-size: 17px
+			text-align: center
+		&__title
+			font-size: 12px
+			text-align: center
+			padding: 0 10px
+			line-height: 16px
+		&__img
+			margin-bottom: 25px
+			margin-left: auto
+			margin-right: auto
+		&__item
+			margin-bottom: 20px
+	.select-gift .check-data
+		padding-left: 10px
+		padding-right: 10px
+	.gifts
+		.red_title.on-gifts
+			padding-left: 10px
+	.mobile-gift-slider
+		.slick-dots
+			text-align: center
+			margin-bottom: 15px
+			li
+				padding: 15px 10px
+				display: inline-block
+				width: 70px
+				text-align: center
+				&.slick-active
+					button
+						opacity: 1
+
+		button
+			font-size: 0
+			width: 100%!important			
+			height: 1px!important			
+			display: block!important			
+			opacity: 0.5
+			background: #FFF
+			margin: 0 !important
+			&:after
+				display: none
+				
+			
+	.eticets
+		line-height: 20px
+		padding: 6px 10px
+		font-size: 12px
+		min-width: 200px
+		top: 59%
+		svg
+			top: 4px
+			margin-right: 3px
+	.no-padd-mob
+		padding-left: 0
+		padding-right: 0
+
 	.vacancies
 		position: relative
 		margin-bottom: 0
@@ -7079,6 +7251,7 @@ h2.withmb
 			padding: 0 7px
 			.all-command
 				padding: 40px 0 30px
+				border-radius: 3px
 			.columns
 				max-width: 100%
 			.rew-video
@@ -7266,72 +7439,11 @@ h2.withmb
 			padding-left: 25px
 			padding-bottom: 10px
 			a 
-				font-size: 14px
+				font-size: 12px
 				line-height: 26px
 				padding-top: 6px
 				padding-bottom: 6px
 				padding-right: 10px
-
-	@keyframes topBar_open
-		0%
-			transform: translateY(0px) rotate(0deg)
-			width: 20px
-
-		100%
-			transform: translateY(4px) rotate(45deg)
-			width: 28px
-
-
-	@keyframes bottomBar_open
-		0%
-			transform: translateY(0px) rotate(0deg)
-			width: 20px
-
-		100%
-			transform: translateY(-2px) rotate(-45deg)
-			width: 28px
-
-
-	@keyframes menuLabel_open
-		0%
-			transform: translateY(0px)
-			opacity: 1
-
-		100%
-			transform: translateY(8px)
-			opacity: 0
-
-
-	// CLOSE
-
-	@keyframes topBar_close
-		0%
-			transform: translateY(4px) rotate(45deg)
-			width: 25px
-
-		100%
-			transform: translateY(-1px) rotate(0deg)
-			width: 20px
-
-
-	@keyframes bottomBar_close
-		0%
-			transform: translateY(-8px) rotate(-45deg)
-			width: 25px
-
-		100%
-			transform: translateY(0px) rotate(0deg)
-			width: 20px
-
-
-	@keyframes menuLabel_close
-		0%
-			transform: translateY(8px)
-			opacity: 0
-
-		100%
-			transform: translateY(0px)
-			opacity: 1
 
 	.description 
 		p
@@ -7396,7 +7508,7 @@ h2.withmb
 			padding: 0 18px
 			&:nth-of-type(1) .podcategory-item
 			//  height: 410px
-			//  background: #afbf86 url("../img/podcategory-page/back1_mob.png") center bottom -20px no-repeat!important
+			//  background: #afbf86 url("/image/site/podcategory-page/back1_mob.png") center bottom -20px no-repeat!important
 			//  background-size: contain!important
 			&:nth-of-type(4) .podcategory-item
 				background-position: center top
@@ -7406,6 +7518,7 @@ h2.withmb
 			margin-bottom: 25px
 			&__price
 				text-align: center
+				font-size: 17px
 				span
 					text-align: center
 					
@@ -7426,7 +7539,7 @@ h2.withmb
 				flex-direction: column
 				height: auto
 				padding: 15px
-				background: #be1238
+				background: #DE0A36
 				&__img
 					margin-bottom: 10px
 					display: none
@@ -7435,9 +7548,10 @@ h2.withmb
 					padding: 0
 					p 
 						font-size: 10px
+						line-height: 16px
 						.bold
 							margin-top: 0
-							font-family: SFUIDisplay-Regular,sans-serif
+							font-weight: 400
 				h2
 					font-size: 16px
 				&.clear-white 
@@ -7488,22 +7602,27 @@ h2.withmb
 			&.medium-size
 				height: 375px
 				&.custom-size
-					height: 375px
+					height: 410px
 					padding: 25px 30px
 			&.big-size
-				height: 380px
+				height: 360px
 			&.very-big-size
 				height: 440px
 				&.custom-mob
-					height: 395px
+					height: 344px
+					background-size: 340px !important
 				&.custom-mob2
-					height: 435px
+					height: 392px
+					background-size: 370px !important
 			&.huge-size
-				height: 520px
+				height: auto
+				padding-bottom: 300px
 			&.full-huge-size
 				height: 500px
 				&.mobile-small
 					height: 275px
+				&.black-text
+					padding: 25px 30px
 			&.full-big-size
 				height: 500px
 				a.details-link
@@ -7517,7 +7636,7 @@ h2.withmb
 			h2
 				text-align: center
 				line-height: 25px
-				font-size: 24px
+				font-size: 21px
 				margin-bottom: 8px
 				span
 					display: none
@@ -7528,6 +7647,8 @@ h2.withmb
 				&.mobile-left
 					text-align: left
 					margin-bottom: 3px
+				&.center-block
+					margin-top: 12px
 
 			ul
 				margin-top: 0
@@ -7542,6 +7663,9 @@ h2.withmb
 					display: inline-block
 			a.details-link
 				display: none
+	.mobile-gift-slider
+		margin-left: -5px!important
+		margin-right: -5px!important
 	.videograph
 		background-position: center top!important
 	.select-gift
@@ -7666,7 +7790,7 @@ h2.withmb
 		margin-bottom: 45px
 		background-position: center right -200px
 		&.custom-back
-			background-image: url('../img/about-page/all-work_mob.png')!important
+			background-image: url('/image/site/about-page/all-work_mob.png')!important
 			background-size: cover
 			background-position: center
 
@@ -7708,6 +7832,8 @@ h2.withmb
 			line-height: 26px
 			padding-bottom: 5px
 			padding-top: 0
+			&:hover
+				color: #fff
 			&:after
 				margin-left: 15px
 				width: 25px
@@ -7799,7 +7925,7 @@ h2.withmb
 		margin-bottom: 0
 		padding: 13px 19px
 		font-size: 19px
-		font-family: "SFUIDisplay-Bold"
+		font-weight: 700
 		&.open
 			border: 0
 			border-top: 1px solid #e6e6e6
@@ -7836,6 +7962,7 @@ h2.withmb
 			top: 29px
 		.seen_all
 			text-align: center
+			
 	.carousel
 		.columns
 			max-width: 100%
@@ -7869,7 +7996,7 @@ h2.withmb
 		line-height: 46px
 		text-align: center
 		border-top: 1px solid #e6e6e6
-		font-family: "SFUIDisplay-Semibold"
+		font-weight: 600
 		&.opened
 			&:after
 				transform: rotate(180deg)
@@ -7887,7 +8014,7 @@ h2.withmb
 
 	.quest
 		padding: 77px 0 69px
-		background: url('../img/about-page/quest_mob.png') center right no-repeat
+		background: url('/image/site/about-page/quest_mob.png') center right no-repeat
 		background-size: cover
 		&__text
 			max-width: 100%
@@ -7977,6 +8104,7 @@ h2.withmb
 			text-align: center
 			a 
 				display: inline-block
+				margin-top: 20px;				
 	.filials.reviews 
 		.slick-slider
 			margin-top: 0
@@ -7986,7 +8114,6 @@ h2.withmb
 			display: none
 			margin: 0
 			&.thanks-letters
-				display: block
 				max-width: 73%
 				margin: 0 auto
 			
@@ -7994,9 +8121,10 @@ h2.withmb
 		margin-bottom: 18px
 		&.vertical
 			height: 102vw
+			box-shadow: none
 		&.horizontal
 			height: 51vw
-
+			box-shadow: none
 
 	.video-block
 		margin-bottom: 0
@@ -8036,7 +8164,7 @@ h2.withmb
 				position: absolute
 				bottom: 0
 				right: 16px
-				display: flex
+				display: none
 				align-items: center
 				justify-content: center
 				background: #DD0A36
@@ -8069,7 +8197,7 @@ h2.withmb
 
 	.filials
 		margin-top: 0
-		padding-top: 20px
+		padding-top: 30px
 		padding-bottom: 0
 		&.reviews
 			font-size: 25px
@@ -8088,9 +8216,10 @@ h2.withmb
 			margin-top: 4px
 			padding-bottom: 15px
 			li 
-				width: 40px
+				width: 20px
 				height: 30px
 				margin: 0 8px
+				white-space: nowrap
 
 		.slick-slider
 			margin-bottom: 0                            
@@ -8099,14 +8228,15 @@ h2.withmb
 			padding: 0!important
 		.slider-nav 
 			.slick-slide
-				padding: 3px 15px 9px
+				padding: 3px 10px 9px
 				margin-bottom: 10px
+				float: left
 				&.slick-current
 					padding-bottom: 8px
 			
-			.slick-track
-				width: auto!important
-				min-width: 100%
+			// .slick-track
+				// width: auto!important
+				// min-width: 500%
 
 	.white-block.large
 		min-height: auto
@@ -8131,6 +8261,8 @@ h2.withmb
 			padding-left: 0
 		p
 			font-size: 13px
+		a
+			color: #000
 		span
 			font-size: 27px
 			line-height: 36px
@@ -8165,28 +8297,28 @@ h2.withmb
 				background-position: left 0 bottom
 		.two-for-row:nth-of-type(2) 
 			.white-block
-				background-image: url(../img/service-page/bgitem2_mob.png)!important
+				background-image: url(/image/site/service-page/bgitem2_mob.png)!important
 				background-repeat: no-repeat
 				background-size: 340px
 				background-position: center bottom
 				padding-bottom: 120px
 		.two-for-row:nth-of-type(3)
 			.white-block
-				background-image: url(../img/service-page/bgitem3_mob.png)!important
+				background-image: url(/image/site/service-page/bgitem3_mob.png)!important
 				background-repeat: no-repeat
 				background-size: 340px
 				background-position: center bottom
 				padding-bottom: 120px
 		.two-for-row:nth-of-type(4)
 			.white-block
-				background-image: url(../img/service-page/bgitem4_mob.png)!important
+				background-image: url(/image/site/service-page/bgitem4_mob.png)!important
 				background-repeat: no-repeat
 				background-size: contain
 				background-position: center right
 				padding-bottom: 55px
 		.two-for-row:nth-of-type(5)
 			.white-block
-				background-image: url(../img/service-page/bgitem5_mob.png)!important
+				background-image: url(/image/site/service-page/bgitem5_mob.png)!important
 				background-repeat: no-repeat
 				background-size: contain
 				background-position: center right
@@ -8203,6 +8335,8 @@ h2.withmb
 	.full-width
 		width: 375px
 		max-width: 100%
+	.very-big-sizem2
+		height: 360px !important
 
 @media screen and (max-width: 450px)
 	.consultation
@@ -8443,7 +8577,7 @@ h2.withmb
 		p
 			font-size: 11px
 			line-height: 22px
-			margin-bottom: 2px
+			margin-bottom: 5px
 	.blog
 		margin-bottom: 23px
 		padding-top: 20px
@@ -8901,7 +9035,14 @@ h2.withmb
 	.podcategory-item
 		&.with-akcia-block	
 			min-height: 480px
-			background: #fff!important
+			background: #fff
+	.living-team
+		.medium-6
+			min-width: 100%
+	.big-size
+		max-width: 100%
+		width: 100%
+		margin-left: 0%
 
 @media screen and (min-width: 640px) and (max-width: 767px)
 	.filials .slider-for .item .img
@@ -8925,6 +9066,20 @@ h2.withmb
 		min-width: 100%
 	.info-block__half .info-block__text
 		padding: 0 20px
+	.principes  .info-block__half .info-block__text
+		padding: 0 10px
+		text-align: center
+	.info-block-full
+		flex-direction: row
+		min-height: 300px		
+		&.reverse-mob
+			flex-direction: row
+	.blog__wrap .columns
+		min-width: 50%
+	.vacancy-benefits .columns
+		min-width: 50%
+	.vacancies__item
+		max-width: 50%
 	.service-blocks 
 		li 
 			a
@@ -8976,6 +9131,7 @@ h2.withmb
 		display: block
 		margin-left: auto
 		margin-right: auto
+		background-size: contain
 	.podcategory-item
 		&.mobile-middle-size, &.full-big-size
 			text-align: left!important
@@ -8992,6 +9148,21 @@ h2.withmb
 					height: 32px
 					line-height: 30px
 					font-size: 12px		
+		&.full-album-left
+			background-size: 80%!important
+			background-position: right top!important
+			min-height: 300px
+			h2
+				text-align: left
+			p
+				text-align: left
+				max-width: 300px
+		.album-hide
+			display: none
+		&.flex-on-center.full-big-size p
+			text-align: center
+			max-width: 90%
+			
 	.podcategory 
 		.columns
 			&.medium-6
@@ -9032,6 +9203,8 @@ h2.withmb
 				p 
 					text-align: left
 					max-width: 50%
+				&.black-text
+					padding: 25px 30px
 				.podcategory-item__price
 					text-align: left
 	.logotypes>div
