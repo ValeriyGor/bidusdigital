@@ -31,6 +31,9 @@
 		padding: 0 145px
 		font-weight: 700
 		margin-top: 10px
+		&.big
+			padding: 0 100px
+
 	&-fon
 		width: 100%
 		height: 610px
@@ -55,6 +58,8 @@
 			font-size: 50px
 			padding: 0 230px
 			line-height: 54px
+			&.big
+				padding: 0 175px
 		&-fon
 			height: 60vh
 			background-image: url(/img/store/teaser768.png);
@@ -787,6 +792,12 @@ label.error
 	&-list
 		display: block
 		margin-top: 25px
+		&.white
+			li 
+				a 
+					color: #fff
+					&::before
+						background: #fff
 		li
 			width: 100%
 			a
@@ -843,7 +854,8 @@ label.error
 		height: 100%
 		object-fit: contain
 		margin-left: -23px
-
+.big-height
+	min-height: 700px
 .st-design
 	width: 100%
 	height: 700px
@@ -882,7 +894,7 @@ label.error
 		display: block
 		font-size: 24px
 		font-weight: 600
-		margin-top: 75px
+
 	&-title
 		display: block
 		font-size: 42px
@@ -927,6 +939,36 @@ label.error
 		width: 583px
 		height: 100%
 		object-fit: contain
+.citata
+	background-color: #fafafa
+	margin-top: 20px
+	margin-right: 50px
+	padding: 30px
+	&-content
+		font-size: 14px
+		line-height: 24px
+		margin-top: 10px
+		span
+			font-weight: 700
+.bio
+	display: flex
+	align-items: center
+	justify-content: flex-start
+	&-img
+		width: 60px
+		margin-right: 20px
+		img
+			max-width: 100%
+			display: block
+			
+	&-name
+		font-size: 24px
+		font-weight: 600
+	&-years
+		font-size: 16px
+		font-weight: 500
+
+
 
 .st-seo
 	width: 100%
@@ -995,6 +1037,8 @@ label.error
 		font-weight: 600
 		margin-top: 237px
 		color: #fff
+		&.corp-term
+			margin-top: 150px
 	&-title
 		display: block
 		font-size: 42px
@@ -1075,7 +1119,6 @@ label.error
 		display: block
 		font-size: 24px
 		font-weight: 600
-		margin-top: 187px
 		color: #fff
 	&-title
 		display: block
@@ -1090,7 +1133,11 @@ label.error
 		line-height: 30px
 		margin-top: 18px
 		color: #fff
-
+.center-vertical-flex 
+	display: flex
+	align-items: center
+	flex-direction: column 
+	justify-content: center
 .st-sm
 	width: 100%
 	height: 100%
