@@ -10,7 +10,7 @@
 	background-color: #292a2b
 	background-size: cover
 	background-position: center
-	background-image: url(/img/store/bg1.jpg)
+	background-image: url(/image/site/store/bg1.jpg)
 	br
 		display: none
 	&-title
@@ -37,7 +37,7 @@
 	&-fon
 		width: 100%
 		height: 610px
-		background-image: url(/img/store/teaser.png);
+		background-image: url(/image/site/store/teaser.png);
 		background-size: contain
 		background-repeat: no-repeat
 		background-position: center
@@ -62,7 +62,7 @@
 				padding: 0 175px
 		&-fon
 			height: 60vh
-			background-image: url(/img/store/teaser768.png);
+			background-image: url(/image/site/store/teaser768.png);
 .st-cap
 	height: 50px
 	background: transparent
@@ -730,9 +730,9 @@ label.error
 	height: 550px
 	background-size: cover
 	background-position: center
-	background-image: url(/img/store/bg2.jpg)
+	background-image: url(/image/site/store/bg2.jpg)
 	&.corporate
-		background-image: url(/img/store/st-action.png)
+		background-image: url(/image/site/store/st-action.png)
 	&-term
 		display: block
 		font-size: 24px
@@ -792,6 +792,11 @@ label.error
 	&-list
 		display: block
 		margin-top: 25px
+		&.descr-list
+			margin-top: 12px
+			li 
+				a
+					line-height: 32px;
 		&.white
 			li 
 				a 
@@ -827,6 +832,59 @@ label.error
 		height: 100%
 		object-fit: contain
 		margin: 85px -40px 0 27px
+.great-text
+	font-size: 85px
+	text-align: center
+	font-weight: bold
+	position: relative
+	
+	&.white
+		color: #fff
+.list-check
+	border-left: 1px solid #e5e5e5
+	&__item
+		border: 1px solid #ebebeb
+		height: 50px
+		border-radius: 25px
+		max-width: 89%
+		text-align: left
+		line-height: 48px
+		margin-left: auto
+		margin-right: 0
+		margin-bottom: 18px
+		padding: 0 10px 0 15px
+		display: flex
+		align-items: center
+		font-size: 18px
+		font-weight: 400
+		justify-content: flex-start
+		cursor: pointer
+		box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.06)
+
+		&:before
+			content: ""
+			display: block
+			border-radius: 50%
+			margin-right: 12px
+			border: 1px solid #ebebeb
+			width: 22px
+			height: 22px
+			background: #f5f5f5
+		&.active
+			background: #13b74b 
+			color: #fff
+			border-color: #13b74b
+			box-shadow: 0px 5px 16px 0px rgba(19, 183, 75, 0.38)
+			&:before
+				background: url('../image/site/svg/check.svg') center no-repeat
+				background-size: cover
+				border: none
+	&__title
+		font-size: 24px
+		font-weight: 500
+		text-align: center
+		margin-bottom: 22px
+		padding-left: 11%
 
 .st-sales
 	width: 100%
@@ -861,9 +919,9 @@ label.error
 	height: 700px
 	background-size: cover
 	background-position: center
-	background-image: url(/img/store/bg3.jpg)
+	background-image: url(/image/site/store/bg3.jpg)
 	&.corporate
-		background-image: url(/img/store/st-design.png)
+		background-image: url(/image/site/store/st-design.png)
 		
 	&-term
 		display: block
@@ -968,7 +1026,43 @@ label.error
 		font-size: 16px
 		font-weight: 500
 
-
+.flex-res
+	display: flex
+	align-items: flex-start
+	justify-content: center
+	flex-direction: row
+.nota-bene
+	background: #fff
+	padding-bottom: 125px
+	&__text
+		font-size: 20px
+		line-height: 32px
+		position: relative
+		font-weight: 500
+		&:before
+			content: ""
+			display: block
+			
+			width: 2px
+			height: 95%
+			background: #0070c9
+			position: absolute
+			top: 1px
+			left: -27px
+			transform: rotate(15deg)
+	&__head
+		font-size: 24px
+		font-weight: bold
+		
+.head-service-features
+	margin-top: 0
+	display: block
+	font-size: 24px
+	font-weight: 600
+.white
+	color: #fff
+.great-text
+	padding-left: 40px
 
 .st-seo
 	width: 100%
@@ -980,6 +1074,11 @@ label.error
 		font-size: 24px
 		font-weight: 600
 		margin-top: 136px
+	&-head-service-features
+		margin-top: 0
+		display: block
+		font-size: 24px
+		font-weight: 600
 	&-title
 		display: block
 		font-size: 42px
@@ -1030,7 +1129,7 @@ label.error
 	height: 700px
 	background-size: cover
 	background-position: center
-	background-image: url(/img/store/bg4.jpg)
+	background-image: url(/image/site/store/bg4.jpg)
 	&-term
 		display: block
 		font-size: 24px
@@ -1052,7 +1151,12 @@ label.error
 		line-height: 30px
 		margin-top: 21px
 		color: #fff
-
+.pagespeed 
+	img
+		width: 135px
+		vertical-align: middle
+.after-full-line
+	border-bottom: 1px solid #f2f2f2
 .st-sec
 	width: 100%
 	padding: 63px 0 64px
@@ -1114,7 +1218,7 @@ label.error
 	height: 700px
 	background-size: cover
 	background-position: center
-	background-image: url(/img/store/bg5.jpg)
+	background-image: url(/image/site/store/bg5.jpg)
 	&-term
 		display: block
 		font-size: 24px
@@ -1286,7 +1390,7 @@ label.error
 	&-laptop
 		width: 100%
 		height: 751px
-		background-image: url(/img/store/folio.png)
+		background-image: url(/image/site/store/folio.png)
 		position: relative
 		z-index: 2
 		margin: 59px auto 0
@@ -1840,7 +1944,7 @@ label.error
 		align-items: center
 		flex-wrap: wrap
 		align-content: center
-		background-image: url(/img/store/mbg1.jpg)
+		background-image: url(/image/site/store/mbg1.jpg)
 		br
 			display: block
 		&-title
@@ -1964,16 +2068,16 @@ label.error
 			margin-left: 25px
 			display: inline-block
 	.st-design
-		background-image: url(/img/store/mbg3.jpg)
+		background-image: url(/image/site/store/mbg3.jpg)
 	.st-action
-		background-image: url(/img/store/mbg2.jpg)
+		background-image: url(/image/site/store/mbg2.jpg)
 		&-button
 			&:hover
 				background: #be1238
 	.st-admin
-		background-image: url(/img/store/mbg4.jpg)
+		background-image: url(/image/site/store/mbg4.jpg)
 	.st-code
-		background-image: url(/img/store/mbg5.jpg)
+		background-image: url(/image/site/store/mbg5.jpg)
 	.st-action, .st-design, .st-admin, .st-code
 		height: 900px
 		.small-12
