@@ -212,7 +212,12 @@
 				margin-right: 22px
 				&:hover
 					color: #fff
-
+.big-phone
+	max-width: 500px
+.h1000
+	height: 1000px
+.small-pt
+	padding-top: 80px
 .st-regis
 	width: 100%
 	position: fixed
@@ -724,7 +729,19 @@ label.error
 				display: block
 				color: #000
 				float: none
-
+.title-service-features
+	display: block
+	font-size: 42px
+	font-weight: 700
+	line-height: 48px
+	margin-top: 19px
+.des-service-features
+	display: block
+	font-size: 18px
+	line-height: 30px
+	margin-top: 25px
+.bg-white
+	background: #fff
 .st-action
 	width: 100%
 	height: 550px
@@ -879,13 +896,31 @@ label.error
 				background: url('../image/site/svg/check.svg') center no-repeat
 				background-size: cover
 				border: none
+	&.no-border
+		border-left: 0
+	&.left-align 
+		.list-check__item
+			margin-left: 0
+	&__container
+		display: flex
+		align-items: center
+		.list-check__item
+			flex: 4
+			margin-right: 30px
+		.list-check__img
+			flex: 2
+
 	&__title
 		font-size: 24px
 		font-weight: 500
 		text-align: center
 		margin-bottom: 22px
 		padding-left: 11%
-
+.voronka
+	max-width: 350px
+.padding-medium
+	padding-top: 125px
+	padding-bottom: 125px
 .st-sales
 	width: 100%
 	padding: 74px 0 89px
@@ -1002,6 +1037,8 @@ label.error
 	margin-top: 20px
 	margin-right: 50px
 	padding: 30px
+	&-full
+		margin-right: 0
 	&-content
 		font-size: 14px
 		line-height: 24px
