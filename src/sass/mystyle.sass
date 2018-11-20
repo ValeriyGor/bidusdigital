@@ -330,6 +330,25 @@
 	padding-bottom: 80px
 	.bio
 		margin-bottom: 15px
+		text-decoration: none
+		transition: all 0.3s
+		cursor: pointer
+		&-name-small
+			transition: all 0.3s
+		&-img
+			transition: all 0.3s
+			img
+				transition: all 0.3s
+
+		&:hover
+			transform: translate(20px -5px)
+			.bio-name-small
+				color: #0070c9
+			.bio-img
+				transform: scale(1.25)
+				margin-right: 30px
+
+
 	.task__head
 		margin-bottom: 20px
 .article .quote 
@@ -361,7 +380,6 @@
 	font-size: 19px
 	font-weight: 600
 	text-align: center
-
 	&:before
 		height: 14px
 		width: 8px
@@ -945,7 +963,7 @@ label.error
 		line-height: 42px
 		display: block
 		margin-top: 0
-		font-weight: 600
+		font-weight: 700
 		.biggest
 			font-size: 70px
 			display: block
@@ -1346,7 +1364,7 @@ label.error
 .video-request
 	padding-top: 40px
 	position: relative
-		
+	margin-bottom: 50px
 	&__iframe
 		width: 100%
 		height: 400px
@@ -1465,6 +1483,7 @@ label.error
 
 .look-like-proj
 	padding-top: 75px
+	padding-bottom: 75px
 	.task__title
 		margin-bottom: 45px 
 
