@@ -444,6 +444,26 @@ $(".show-all-history, .toggle-workers").click(function(e) {
   $('.will-be-hide').slideToggle(300);
 });
 
+$(".process-create__show").click(function(e){
+  e.preventDefault();
+  if($(this).hasClass('opened')){
+
+    //узнаем высоту от начала страницы до блока на который ссылается якорь
+    var hAll = 0;
+    $(".process-create_window").each(function(i) {
+      hAll += $(this).height();
+      console.log(hAll);
+    });
+    var top = $(this).offset().top - hAll - 200;
+    $('body,html').animate({scrollTop: top}, 300);
+  }
+  $(this).toggleClass("opened");
+  var text = $(this).text();
+  $(this).text($(this).attr("data-hide"));
+  $(this).attr("data-hide", text);
+  $('.process-create_window').slideToggle(300);
+});
+
 $(".show-all").click(function(e) {
   var text = $(this).text();
   $(this).text($(this).attr('data-hide'));
