@@ -2178,6 +2178,128 @@ label.error
 			padding: 0 15px
 
 @media screen and (max-width: 1124px) and (min-width: 767px)
+	.nota-bene
+		padding-bottom: 90px
+		&__text
+			font-size: 16px
+			line-height: 24px
+			&:before
+				left: -10px
+		&__head
+			font-size: 18px
+			line-height: 24px
+	.trouble
+		&__list 
+			li
+				font-size: 13px
+				line-height: 16px
+				padding: 4px 0
+				&:before
+					width: 15px
+					height: 15px
+					margin-right: 8px
+		&__input
+			height: 40px
+			padding-left: 25px
+		&__placeholder
+			font-size: 14px
+			left: 25px
+			line-height: 40px
+		&__button
+			width: 135px
+			font-size: 14px
+			line-height: 40px
+			border-radius: 20px
+	.knockout
+		max-width: 45px
+	.st-folio-name
+		font-size: 22px
+	.st-folio-des
+		font-size: 13px
+		line-height: 22px
+	.st-folio-site
+		font-size: 14px
+		margin-top: 5px
+	.st-folio-img
+		width: 100px
+		height: 100px
+	.head-service-features
+		font-size: 18px
+	.title-service-features
+		font-size: 28px
+		margin-top: 10px
+		line-height: 32px
+		&-smaller
+			font-size: 24px
+			line-height: 30px
+			.biggest
+				font-size: 45px
+		.big
+			font-size: 85px
+	.emodgi
+		width: 27px
+		&-medium
+			width: 40px
+	.des-service-features
+		font-size: 11px
+		line-height: 17px
+		margin-top: 14px
+		&-smaller
+			font-size: 11px
+			line-height: 18px
+			margin-top: 10px
+	.list-tools
+		&__item
+			font-size: 60px
+			line-height: 100px
+	.pagespeed
+		font-size: 13px
+		img
+			width: 90px
+	.citata
+		margin-right: 20px
+		padding: 10px 15px
+		&-content
+			font-size: 11px
+			line-height: 18px
+		&-full
+			margin-right: 0
+	.bio
+		&-img
+			width: 40px
+			margin-right: 15px
+
+		&-name
+			font-size: 16px
+			line-height: 20px
+		&-years
+			font-size: 12px
+			line-height: 18px
+	.list-check
+		&__title
+			font-size: 20px
+			margin-bottom: 15px
+		&__item
+			&:before
+				width: 16px
+				height: 16px
+				margin-right: 6px
+			max-width: 90%
+			height: 34px
+			line-height: 34px
+			font-size: 12px
+			margin-bottom: 15px
+
+
+	.st-cms-list 
+		li 
+			a
+				font-size: 14px
+				line-height: 28px
+	.big-height
+		min-height: 475px
+	.great-text
+		font-size: 50px
 	.st-teaser-des
 		padding: 0 94px
 		font-size: 50px
@@ -2238,8 +2360,11 @@ label.error
 @media screen and (max-width: 959px) and (min-width: 767px)
 	.st-teaser-des
 		padding: 0 95px
-		font-size: 40px
+		font-size: 36px
 		line-height: 40px
+		&.big
+			padding: 0 110px
+
 	.st-quote-text
 		padding: 0 80px
 		font-size: 20px
@@ -2508,24 +2633,152 @@ label.error
 		justify-content: flex-start
 		padding-top: 15vw
 		padding-bottom: 15vw
+		&.no-pdb
+			padding-bottom: 0
 	.no-mob-background
 		background-image: none!important
-		background-color: #fff;
+		background-color: #fff!important
+		&.bg-black-mob
+			background-color: #000 !important
 	.des-service-features
 		font-size: 3.4vw
 		line-height: 6vw
 		margin-top: 2vw
 		text-align: center
 		margin-bottom: 5vw
+		&-smaller
+			font-size: 2.8vw
+			line-height: 5vw
+			margin-top: 5vw
 	.mob-border-bottom
 		border-bottom: 1px solid #f2f2f2
+		&-none
+			border-bottom: 0
 	.mob-reverse-blocks
 		flex-direction: column-reverse
 	.big-height
 		min-height: 155vw
+		&.mob175
+			min-height: 175vw
+		&.mob145
+			min-height: 145vw
+	.list-check
+		margin-top: 40px
+	.h1000
+		height: auto
+	.racket
+		background: #fff url('../image/site/landing/raket-mob.png') center left no-repeat
+		background-size: auto 100%
+	.block-mob
+		display: block
+	.trouble
+		padding-left: 30px
+		padding-right: 30px
+		&__input
+			height: 38px
+			border-radius: 19px
+		&__placeholder
+			font-size: 12px
+			line-height: 36px
+		&__button
+			font-size: 13px
+			line-height: 38px
+		&__list 
+			li
+				font-size: 12px
+				padding: 3px 0
+				&:before
+					width: 12px
+					height: 12px
+
+
+
+
+	.emodgi
+		width: 25px
+		margin-left: 5px
+		&-medium
+			width: 32px
+			margin-left: 0
+	.adaptive-portal
+		background: url('../image/site/portal/adaptive-layout-icons-back.png') bottom right no-repeat!important
+		background-size: contain!important
+	.padding-medium
+		padding-top: 15vw
+		padding-bottom: 15vw
+	.title-service-features
+		&-raket
+			font-size: 4.5vw
+			line-height: 6vw
+			text-align: left
+		&-smaller
+			font-size: 4.5vw
+			line-height: 6.5vw
+			.biggest
+				font-size: 8.3vw
+		.big
+			font-size: 15vw
+	.text-raket
+		margin-bottom: 63vw
+		&:last-child
+			margin-bottom: 0
+	.racket
+		padding-bottom: 30vw
+	.list-check__container .list-check__item
+		margin-right: 5vw
+	.mob-bg-white
+		background-color: #fff
+	.small-pt
+		padding-top: 0
+	.list-check
+		border-left: 0
+		margin-bottom: 10px
+		&__title
+			font-size: 4vw
+			padding-left: 0
+			line-height: 5vw
+			margin-top: 78px
+			margin-bottom: 18px
+		&__item
+			margin-right: auto
+			max-width: 86%
+			font-size: 3vw
+			height: 7.5vw
+			margin-bottom: 13px
+			padding: 0 10px
+			&:before
+				width: 4vw
+				height: 4vw
+				margin-right: 7px
+	.citata
+		width: 77vw
+		margin: 10px auto
+		padding: 16px 20px
+		margin-bottom: 30px
+		&-content
+			font-size: 3vw
+			line-height: 5.5vw
+	.list-tools
+		&__item
+			font-size: 10vw
+			line-height: 17vw
+
+	.bio
+		&-img
+			width: 12vw
+			margin-right: 2vw
+		&-name
+			font-size: 4.3vw
+			line-height: 5vw
+		&-years
+			font-size: 3vw
+			line-height: 4vw
+	.big-height-two
+		min-height: 262vw
+
 	.img-service-features
 		display: block
-		margin: 5vw auto
+		margin: 5vw auto 0
 		width: 100%
 		&.right-position
 			margin-right: 0
