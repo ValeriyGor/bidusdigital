@@ -49,7 +49,7 @@ $( ".error-label .close-error").hover(
   }, function(e) {
     $(this).next('.tooltip-error').fadeOut(150);
   }
-  );
+);
 
 
 //выход курсора мышки за предел окна браузера
@@ -1684,7 +1684,7 @@ $(window).on("load", function() {
 	var wnd = $(window);
 	var lastTop = 0;
 	
-	wnd.scroll(function(){  
+  wnd.scroll(function(){  
 		if ($(window).width() <= '767' && !$("header.no-transparent").length){
 			var top = wnd.scrollTop();
 			transform = true;
@@ -1692,8 +1692,9 @@ $(window).on("load", function() {
 				top = Math.abs(top)*2;
 				transform = false;
 			}
-			opacity = top > 200 ? 1 : top * 5 / 1000;
-			scale = 1 - (top > 200 ? 1 : top * 2 / 1000);
+			// opacity = top > 200 ? 1 : top * 5 / 1000;
+			opacity = 0; //
+      scale = 1 - (top > 200 ? 1 : top * 2 / 1000);
 			$("header").css("background", "rgba(0, 0, 0, " + opacity + ")");
 			if(transform){
 				$(".mobile-tiser h1").css("transform", "scale(" + scale + ")");

@@ -92,6 +92,7 @@
 	&.fixed
 		background: #fff
 		border-bottom: 1px solid #dadada
+		transition: all 0.3s
 		.st-cap-shop
 			span
 				color: #000
@@ -2794,21 +2795,25 @@ label.error
 	.st-cap, .st-regis, .st-teaser, .st-quote, .st-prise, .st-action, .st-cms, .st-sales, .st-design, .st-stab, .st-boon, .st-seo, .st-mark, .st-admin, .st-sec, .st-auto, .st-code, .st-folio, .st-proc, .st-adva
 		.row
 			padding: 0 5px 
+	.medium-offset-2, .medium-offset-1, .medium-offset-3, .medium-offset-6, .medium-offset-4, .medium-offset-5
+		margin-left: 0 !important
 	.st-desctop
 		display: none !important
 	header
 		z-index: 402
 	.ptf-teaser
-		height: 144vw
+		height: 60vw
 		min-height: 400px
-		padding-top: 10vw
+		padding-top: 5vw
 		&__title
-			font-size: 12vw
-			line-height: 15vw
+			font-size: 6vw
+			line-height: 8vw
 		&__logo
-			width: 40vw
+			width: 20vw
 		&__des
-			font-size: 5vw
+			font-size: 3vw
+	.over-mob-hdn
+		overflow: hidden
 	.container-for-video
 		position: static
 		justify-content: center
@@ -3404,49 +3409,49 @@ label.error
 					padding-left: 30px
 					margin: 0
 	.task-article
-		padding-top: 10vw
-		padding-bottom: 5vw
+		padding-top: 5vw
+		padding-bottom: 4vw
 	.article .standart-verify
-		padding-top: 7vw
-		padding-bottom: 7vw
+		padding-top: 3.5vw
+		padding-bottom: 3.5vw
 		.task__text
-			font-size: 3vw
-			line-height: 5.5vw
+			font-size: 1.8vw
+			line-height: 3vw
 			br 
 				display: none
 	.visitors
-		padding-top: 8vw
-		padding-bottom: 8vw
+		padding-top: 4vw
+		padding-bottom: 4vw
 		&__title
-			font-size: 7vw
-			line-height: 10vw
-			padding: 0 13vw
+			font-size: 3.5vw
+			line-height: 5vw
+			padding: 0 6vw
 	.bio-img
 		&__article
-			width: 15vw
-			margin-right: 4vw
+			width: 7.5vw
+			margin-right: 2vw
 	.server-details__name
-		font-size: 2vw
-		line-height: 2vw
-		margin-bottom: 2vw
+		font-size: 1vw
+		line-height: 1vw
+		margin-bottom: 1vw
 	.api-conjunction
-		font-size: 2vw
+		font-size: 1vw
 		padding: 0
 		&:before, &:after
-			height: 6px
-			width: 3px
+			height: 3px
+			width: 1.5px
 	.article 
 		.task
 			&__head
-				font-size: 6vw
-				line-height: 6vw
+				font-size: 3vw
+				line-height: 3vw
 			&__text
-				margin-top: 5vw
-				line-height: 6.3vw
-				font-size: 4vw
-				margin-bottom: 6vw
+				margin-top: 2.5vw
+				line-height: 3.2vw
+				font-size: 2vw
+				margin-bottom: 3vw
 			&__gallery
-				padding-top: 5vw
+				padding-top: 2.5vw
 				&.add-indent-bottom
 					margin-bottom: 0
 	.small-1 
@@ -3572,7 +3577,7 @@ label.error
 			height: 0
 			margin-bottom: 2px
 
-@media screen and (max-width: 400px)
+@media screen and (max-width: 450px)
 	.st-teaser
 		min-height: 400px
 		&-title
@@ -3583,6 +3588,17 @@ label.error
 		&-fon
 			height: 150px
 			min-height: auto
+	.ptf-teaser
+		height: 144vw
+		min-height: 400px
+		padding-top: 10vw
+		&__title
+			font-size: 12vw
+			line-height: 15vw
+		&__logo
+			width: 40vw
+		&__des
+			font-size: 5vw
 	.st-quote
 		padding: 26.63vw 0
 		img
@@ -3595,6 +3611,53 @@ label.error
 			span
 				font-size: 3.2vw
 				margin-top: 5vw
+
+	.task-article
+		padding-top: 10vw
+		padding-bottom: 5vw
+	.article .standart-verify
+		padding-top: 7vw
+		padding-bottom: 7vw
+		.task__text
+			font-size: 3vw
+			line-height: 5.5vw
+			br 
+				display: none
+	.visitors
+		padding-top: 8vw
+		padding-bottom: 8vw
+		&__title
+			font-size: 7vw
+			line-height: 10vw
+			padding: 0 13vw
+	.bio-img
+		&__article
+			width: 15vw
+			margin-right: 4vw
+	.server-details__name
+		font-size: 2vw
+		line-height: 2vw
+		margin-bottom: 2vw
+	.api-conjunction
+		font-size: 2vw
+		padding: 0
+		&:before, &:after
+			height: 6px
+			width: 3px
+	.article 
+		.task
+			&__head
+				font-size: 6vw
+				line-height: 6vw
+			&__text
+				margin-top: 5vw
+				line-height: 6.3vw
+				font-size: 4vw
+				margin-bottom: 6vw
+			&__gallery
+				padding-top: 5vw
+				&.add-indent-bottom
+					margin-bottom: 0
 	.st-prise
 		padding: 10.63vw 0 16vw
 		&-title
