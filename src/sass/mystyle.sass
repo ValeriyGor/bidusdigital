@@ -3037,7 +3037,7 @@ label.error
 	.filials.vector-slider
 		.slider-for 
 			.item
-				padding-bottom: 40px
+				padding-bottom: 20px
 	.small-15	
 		max-width: 140%
 		flex: 0 0 140%
@@ -3360,6 +3360,34 @@ label.error
 			background: rgba(255, 255, 255, 0.2)
 			&.fixed
 				background: #fff
+		&.white-text
+			span 
+				color: #fff
+				&:before
+					height: 0
+					width: 0
+					border: 4px solid transparent
+					border-top: 5px solid #fff
+					border-bottom: 0
+			&.fixed
+				background: #000
+				border-bottom: 1px solid black
+				&.mopen
+					background: #000
+				.st-cap-menu
+					background: #000
+					li 
+						a 
+							color: #fff
+				span 
+					color: #fff
+				&.open
+					span
+						&:before
+							transform: scaleY(-1)
+						
+
+
 		.curtain
 			display: none !important
 			background: rgba(0, 0, 0, 0)
@@ -3485,7 +3513,7 @@ label.error
 			&__gallery
 				padding-top: 2.5vw
 				&.add-indent-bottom
-					margin-bottom: 0
+					margin-bottom: 7vw
 	.small-1 
 		flex: 0 0 8.33333%
 		max-width: 8.33333%
@@ -3691,7 +3719,7 @@ label.error
 			&__gallery
 				padding-top: 5vw
 				&.add-indent-bottom
-					margin-bottom: 0
+					margin-bottom: 7vw
 	.st-prise
 		padding: 10.63vw 0 16vw
 		&-title
