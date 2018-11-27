@@ -2849,9 +2849,11 @@ label.error
 		text-align: center
 	.title-service-features
 		margin-top: 0
+		margin-bottom: 1vw
 		font-size: 6.6vw
 		line-height: 8.5vw
 		text-align: center
+
 	.great-text
 		padding-left: 0
 		font-size: 40px
@@ -2862,21 +2864,30 @@ label.error
 		padding-bottom: 15vw
 		&.no-pdb
 			padding-bottom: 0
+		&.no-ptp
+			padding-top: 0
 	.no-mob-background
 		background-image: none!important
 		background-color: #fff!important
 		&.bg-black-mob
 			background-color: #000 !important
+		&.mob-gray-back
+			background-color: #fafafa!important
+		&.mob-light-gray-back
+			background-color: #f5f5f5!important
+
 	.des-service-features
-		font-size: 3.4vw
+		font-size: 3.8vw
 		line-height: 6vw
-		margin-top: 2vw
+		margin-top: 2.5vw
 		text-align: center
 		margin-bottom: 5vw
 		&-smaller
 			font-size: 2.8vw
-			line-height: 5vw
-			margin-top: 5vw
+			line-height: 4.4vw
+			margin-top: 4vw
+		&-thin
+			padding: 0 10vw
 	.mob-border-bottom
 		border-bottom: 1px solid #f2f2f2
 		&-none
@@ -2922,14 +2933,23 @@ label.error
 
 
 	.emodgi
-		width: 25px
-		margin-left: 5px
+		width: 6vw
+		margin-left: 1.2vw
 		&-medium
-			width: 32px
+			width: 8vw
 			margin-left: 0
 	.adaptive-portal
 		background: url('../image/site/portal/adaptive-layout-icons-back.png') bottom right no-repeat!important
 		background-size: contain!important
+	.localization-mob
+		background: url('../image/site/corporate/localization-mob.png') bottom center no-repeat!important
+		background-size: cover!important
+	.corp-addcont-mob
+		background: url('../image/site/corporate/corp-addcont-mob.png') bottom center no-repeat!important
+		background-size: cover!important
+	.social-mob
+		background: url('../image/site/portal/social-mob.png') top center no-repeat!important
+		background-size: cover!important
 	.padding-medium
 		padding-top: 15vw
 		padding-bottom: 15vw
@@ -2979,9 +2999,9 @@ label.error
 				margin-right: 7px
 	.citata
 		width: 77vw
-		margin: 10px auto
+		margin: 6vw auto
 		padding: 16px 20px
-		margin-bottom: 30px
+		margin-bottom: 10vw
 		&-content
 			font-size: 3vw
 			line-height: 5.5vw
@@ -3033,12 +3053,16 @@ label.error
 
 	.img-service-features
 		display: block
-		margin: 5vw auto 0
+		margin: 5vw auto
 		width: 100%
+		&.mob-60
+			width: 60%
 		&.right-position
 			margin-right: 0
 		&.not-full-mobile
 			max-width: 93%
+		&.not-mrgbtm
+			margin-bottom: 0
 	.st-teaser
 		height: 100vh
 		min-height: 500px
@@ -3250,9 +3274,13 @@ label.error
 			margin: 6px auto 0
 		&-slider 
 			.arrow-next
-				right: -10px
+				right: -5px
+				top: 10px
+				transform: scale(0.7)
 			.arrow-prev
-				left: -10px
+				left: -5px
+				top: 10px
+				transform: scale(0.7)
 			.slick-dots
 				li
 					button
@@ -3328,6 +3356,10 @@ label.error
 		background: rgba(0, 0, 0, 0.2)
 		top: 44px
 		border-bottom: 1px solid rgba(255, 255, 255, 0.1)
+		&.white-transparent
+			background: rgba(255, 255, 255, 0.2)
+			&.fixed
+				background: #fff
 		.curtain
 			display: none !important
 			background: rgba(0, 0, 0, 0)
@@ -3377,8 +3409,8 @@ label.error
 					height: 5px
 					background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12px" height="8px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.985,0.128 L6.069,8.005 L-0.008,0.013 "/></svg>') center no-repeat
 					background-size: contain
-					top: 8px
-					right: -18px
+					top: 9px
+					right: -15px
 		&-ordered
 			height: 28px
 			line-height: 28px
@@ -3586,8 +3618,10 @@ label.error
 			font-size: 8vw
 			line-height: 9.1vw
 		&-fon
-			height: 150px
+			height: 55vw
 			min-height: auto
+			&.big-top
+				margin-top: 10vw
 	.ptf-teaser
 		height: 144vw
 		min-height: 400px
@@ -3781,11 +3815,12 @@ label.error
 		&-name
 			font-size: 5.63vw
 		&-des
-			font-size: 3.75vw
+			font-size: 3vw
 			line-height: 5vw
-			margin-top: 4.2vw
+			margin-top: 4.4vw
 			width: 100%
 			float: left
+			padding: 0 7vw
 		&-site
 			font-size: 3.13vw
 			margin-top: 0
@@ -3798,6 +3833,9 @@ label.error
 			width: 72.5vw
 			height: 45.31vw
 			margin: 4.06vw auto 0
+	.st-sm
+		display: none
+		
 	.st-proc
 		padding: 9.5vw 0
 		&-term
