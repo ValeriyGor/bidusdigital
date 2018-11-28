@@ -2629,7 +2629,7 @@ label.error
 
 	.des-service-features
 		font-size: 3.75vw
-		line-height: 5,6vw
+		line-height: 5.6vw
 		margin-top: 2.75vw
 		text-align: center
 		margin-bottom: 5vw
@@ -2811,8 +2811,8 @@ label.error
 			.slick-list
 				overflow: hidden
 	.vector-tab-text
-		margin-bottom: 20px
-		margin-top: 10px
+		margin-bottom: 15px
+		margin-top: 15px
 	.filials.vector-slider
 		.slider-for 
 			.item
@@ -3120,6 +3120,9 @@ label.error
 			margin-top: 35px
 	.transparent
 		background: #000 !important
+	.vector-tab-text
+		border-left: 1px solid #000
+		padding-left: 10px
 	.st-cap
 		background: rgba(0, 0, 0, 0.2)
 		top: 44px
@@ -3160,6 +3163,7 @@ label.error
 					li 
 						a 
 							color: #000
+
 		&.white-text
 			span 
 				color: #fff
@@ -3170,17 +3174,21 @@ label.error
 					border-top: 5px solid #fff
 					border-bottom: 0
 			&.fixed
-				background: #000
-				border-bottom: 1px solid black
+				background: #fff
+				border-bottom: 1px solid #fff
 				&.mopen
-					background: #000
+					background: #fff
 				.st-cap-menu
-					background: #000!important
+					background: #fff!important
 					li 
 						a 
-							color: #fff
+							color: #000
 				span 
-					color: #fff
+					color: #000
+				.st-cap-shop 
+					span
+						&:before
+							border-top: 5px solid #000			
 				&.open
 					span
 						&:before
@@ -3201,6 +3209,7 @@ label.error
 				span
 					&::before
 						background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="8px" height="5px"><path fill-rule="evenodd"  fill="rgb(0, 0, 0)" d="M7.990,0.080 L4.046,5.002 L-0.005,0.008 "/></svg>') center no-repeat
+				
 			.st-cap-menu
 				background: #fff
 				li
@@ -3225,6 +3234,11 @@ label.error
 					background-size: contain
 					top: 9px
 					right: -15px
+			&.black 
+				span
+					&::before
+						background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="8px" height="5px"><path fill-rule="evenodd"  fill="rgb(0, 0, 0)" d="M7.990,0.080 L4.046,5.002 L-0.005,0.008 "/></svg>') center no-repeat
+				
 		&-ordered
 			height: 28px
 			line-height: 28px
@@ -3257,6 +3271,9 @@ label.error
 	.task-article
 		padding-top: 5vw
 		padding-bottom: 4vw
+		.small-12
+			padding-left: 4vw
+			padding-right: 4vw
 	.article .standart-verify
 		padding-top: 3.5vw
 		padding-bottom: 3.5vw
@@ -3561,8 +3578,8 @@ label.error
 				margin-top: 5vw
 
 	.task-article
-		padding-top: 10vw
-		padding-bottom: 5vw
+		padding-top: 16vw
+		padding-bottom: 8vw
 	.article .standart-verify
 		padding-top: 7vw
 		padding-bottom: 7vw

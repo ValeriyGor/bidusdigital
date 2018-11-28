@@ -1692,8 +1692,7 @@ $(window).on("load", function() {
 				top = Math.abs(top)*2;
 				transform = false;
 			}
-			// opacity = top > 200 ? 1 : top * 5 / 1000;
-			opacity = 0; //
+			opacity = top > 200 ? 1 : top * 5 / 1000;
       scale = 1 - (top > 200 ? 1 : top * 2 / 1000);
 			$("header").css("background", "rgba(0, 0, 0, " + opacity + ")");
 			if(transform){
