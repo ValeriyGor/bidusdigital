@@ -1786,13 +1786,15 @@ $(window).on("load", function() {
 }); 
 
 $(document).ready(function() {
-	$('.history__item').each(function(){
-		if($(this).index() == 0){
-			$('.navigation__container ul').append('<li><a href="#'+$(this).attr('id')+'" class="active go_to">'+$(this).find('h3').text()+'</a></li>');
-		} else {
-			$('.navigation__container ul').append('<li><a href="#'+$(this).attr('id')+'" class="go_to">'+$(this).find('h3').text()+'</a></li>');
-		}
-	});  	
+	// $('.history__item').each(function(){
+	// 	if($(this).index() == 0){
+	// 		$('.navigation__container ul').append('<li><a href="#'+$(this).attr('id')+'" class="active go_to">'+$(this).find('h3').text()+'</a></li>');
+	// 	} else {
+	// 		$('.navigation__container ul').append('<li><a href="#'+$(this).attr('id')+'" class="go_to">'+$(this).find('h3').text()+'</a></li>');
+	// 	}
+	// });  	
+  // из-за этого скрипта на десктопе дублируются элементы
+  
 	setTimeout(function(){
 		resizeItems('.blog__wrap .blog-item');
 	}, 500);
