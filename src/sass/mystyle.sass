@@ -454,6 +454,10 @@
 	display: flex
 	align-items: center
 	justify-content: flex-start
+	&.left-video
+		right: auto
+		left: 0
+		justify-content: flex-end
 
 
 .media-video
@@ -2564,6 +2568,8 @@ label.error
 		justify-content: center
 		align-items: center
 		width: 100%
+		&.left-video
+			justify-content: center
 	.media-video
 		width: 80vw
 		height: 50vw

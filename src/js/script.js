@@ -49,7 +49,7 @@ $( ".error-label .close-error").hover(
   }, function(e) {
     $(this).next('.tooltip-error').fadeOut(150);
   }
-);
+  );
 
 
 //выход курсора мышки за предел окна браузера
@@ -442,26 +442,6 @@ $(".show-all-history, .toggle-workers").click(function(e) {
   $(this).text($(this).attr("data-hide"));
   $(this).attr("data-hide", text);
   $('.will-be-hide').slideToggle(300);
-});
-
-$(".process-create__show").click(function(e){
-  e.preventDefault();
-  if($(this).hasClass('opened')){
-
-    //узнаем высоту от начала страницы до блока на который ссылается якорь
-    var hAll = 0;
-    $(".process-create_window").each(function(i) {
-      hAll += $(this).height();
-      console.log(hAll);
-    });
-    var top = $(this).offset().top - hAll - 200;
-    $('body,html').animate({scrollTop: top}, 300);
-  }
-  $(this).toggleClass("opened");
-  var text = $(this).text();
-  $(this).text($(this).attr("data-hide"));
-  $(this).attr("data-hide", text);
-  $('.process-create_window').slideToggle(300);
 });
 
 $(".show-all").click(function(e) {
@@ -1684,7 +1664,7 @@ $(window).on("load", function() {
 	var wnd = $(window);
 	var lastTop = 0;
 	
-  wnd.scroll(function(){  
+	wnd.scroll(function(){  
 		if ($(window).width() <= '767' && !$("header.no-transparent").length){
 			var top = wnd.scrollTop();
 			transform = true;
@@ -1693,7 +1673,7 @@ $(window).on("load", function() {
 				transform = false;
 			}
 			opacity = top > 200 ? 1 : top * 5 / 1000;
-      scale = 1 - (top > 200 ? 1 : top * 2 / 1000);
+			scale = 1 - (top > 200 ? 1 : top * 2 / 1000);
 			$("header").css("background", "rgba(0, 0, 0, " + opacity + ")");
 			if(transform){
 				$(".mobile-tiser h1").css("transform", "scale(" + scale + ")");
@@ -1786,15 +1766,13 @@ $(window).on("load", function() {
 }); 
 
 $(document).ready(function() {
-	// $('.history__item').each(function(){
-	// 	if($(this).index() == 0){
-	// 		$('.navigation__container ul').append('<li><a href="#'+$(this).attr('id')+'" class="active go_to">'+$(this).find('h3').text()+'</a></li>');
-	// 	} else {
-	// 		$('.navigation__container ul').append('<li><a href="#'+$(this).attr('id')+'" class="go_to">'+$(this).find('h3').text()+'</a></li>');
-	// 	}
-	// });  	
-  // из-за этого скрипта на десктопе дублируются элементы
-  
+	$('.history__item').each(function(){
+		if($(this).index() == 0){
+			$('.navigation__container ul').append('<li><a href="#'+$(this).attr('id')+'" class="active go_to">'+$(this).find('h3').text()+'</a></li>');
+		} else {
+			$('.navigation__container ul').append('<li><a href="#'+$(this).attr('id')+'" class="go_to">'+$(this).find('h3').text()+'</a></li>');
+		}
+	});  	
 	setTimeout(function(){
 		resizeItems('.blog__wrap .blog-item');
 	}, 500);
