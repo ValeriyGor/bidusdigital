@@ -217,8 +217,8 @@
 					color: #000
 					transition: color .2s
 					line-height: 32px
-					&:hover
-						color: #0070c9
+					// &:hover
+					// 	color: #0070c9
 
 	&-menu
 		float: left
@@ -266,7 +266,7 @@
 		font-size: 14px
 		color: #000
 		line-height: 20px
-		margin-bottom: 20px
+		margin-bottom: 12px
 .task__step
 	img
 		max-width: 41px
@@ -479,6 +479,8 @@
 
 .media-video
 	width: 73%
+	max-width: 540px
+	max-height: 350px
 	height: 23vw
 	margin-left: 5%
 	background: #000
@@ -1309,7 +1311,7 @@ label.error
 	background-color: #fafafa
 	margin-top: 20px
 	margin-right: 50px
-	padding: 30px
+	padding: 30px 32px
 	&-full
 		margin-right: 0
 	&-content
@@ -1413,6 +1415,10 @@ label.error
 			margin: 0 auto
 			&.width90
 				max-width: 90%
+			&.transform102
+				transform: scale(1.015)
+				transform-origin: 0 100%
+				margin-bottom: 10px
 	&__title
 		text-align: center
 		font-size: 13px
@@ -1988,6 +1994,12 @@ label.error
 
 .spincrement
 	font-style: normal
+
+@media screen and (max-width: 1200px)
+	.mxw1200
+		max-width: 90%
+	.elements-site__item img.transform102
+		transform: scale(1.02)
 
 @media screen and (max-width: 1170px) and (min-width: 767px)
 	.st-cap

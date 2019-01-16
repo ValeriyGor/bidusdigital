@@ -516,7 +516,7 @@
 			</div>	
 		</div>
 		<div class="full-size-img add-indent-top">
-			<img src="/image/site/restamenu/high-load-img.png" class="mob-none" alt="">
+			<img src="/image/site/restamenu/high-load-img.jpg" class="mob-none mxw1200" alt="">
 			<img src="/image/site/restamenu/bd-mob.png" class="desktop-none" alt="">
 		</div>			
 		<div class="row">
@@ -576,7 +576,7 @@
 							<div class="scroll-x">
 								<div class="task__gallery elements-site task__gallery-200vw ">
 									<div class="elements-site__item large-12 medium-12 columns small-36">
-										<img src="/image/site/restamenu/tablet-ar.jpg" alt="">
+										<img class="transform102" src="/image/site/restamenu/tablet-ar.jpg" alt="">
 									</div>
 								</div>
 								<div class="task__gallery task__gallery-title elements-site task__gallery-200vw ">
@@ -599,7 +599,7 @@
 							<div class="scroll-x">
 								<div class="task__gallery elements-site task__gallery-200vw ">
 									<div class="elements-site__item large-12 medium-12 columns small-36">
-										<img src="/image/site/restamenu/tablet-en.jpg" alt="">
+										<img class="transform102" src="/image/site/restamenu/tablet-en.jpg" alt="">
 									</div>
 								</div>
 								<div class="task__gallery task__gallery-title elements-site task__gallery-200vw ">
@@ -622,7 +622,7 @@
 							<div class="scroll-x">
 								<div class="task__gallery elements-site task__gallery-200vw ">
 									<div class="elements-site__item large-12 medium-12 columns small-36">
-										<img src="/image/site/restamenu/tablet-ru.jpg" alt="">
+										<img class="transform102" src="/image/site/restamenu/tablet-ru.jpg" alt="">
 									</div>
 								</div>
 								<div class="task__gallery task__gallery-title elements-site task__gallery-200vw ">
@@ -642,7 +642,7 @@
 	<section class="article bg-white task-article grey-bottom">
 		<div class="row">
 			<div class="columns large-8 medium-8 medium-offset-2 large-offset-2 small-12">
-				<div class="task__step"><img src="/image/site/logoform.png" alt=""></div>
+				<div class="task__step"><img src="/image/site/restamenu/red-logo.svg" alt=""></div>
 				<div class="task__title">Итоги проекта</div>
 				<div class="task__description">Процесс работы над Restamenu оказался сложным, уникальным и интересным, мы освоились в работе с новой аудиторией и новой культурой. Мы и дальше будем развивать этот проект.</div>
 			</div>
@@ -1065,23 +1065,23 @@
 			});
 		});
 
-		$( "#slider" ).slider({
-			min: 1,
-			max: 3,
-			values: 1,
-			range: "min",
-      slide : function(event, ui) {    
-        var rgeval = ui.value;
-			  $('.strn1, .strn2, .strn3').hide();
-			  $('.strn'+ rgeval).show();
-			  $('.stcn2, .stcn3').removeClass('active');
-			  if(rgeval==2){
-			    $('.stcn2').addClass('active');
-			  } else if(rgeval==3){
-			    $('.stcn2, .stcn3').addClass('active');
-			  }      
-      }
-		});
+		// $( "#slider" ).slider({
+		// 	min: 1,
+		// 	max: 3,
+		// 	values: 1,
+		// 	range: "min",
+  //     slide : function(event, ui) {    
+  //       var rgeval = ui.value;
+		// 	  $('.strn1, .strn2, .strn3').hide();
+		// 	  $('.strn'+ rgeval).show();
+		// 	  $('.stcn2, .stcn3').removeClass('active');
+		// 	  if(rgeval==2){
+		// 	    $('.stcn2').addClass('active');
+		// 	  } else if(rgeval==3){
+		// 	    $('.stcn2, .stcn3').addClass('active');
+		// 	  }      
+  //     }
+		// });
 		</script>
 </body>
 </html>

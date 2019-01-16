@@ -864,9 +864,11 @@ h2.withmb
 
 	&.with-akcia-block
 		padding: 60px 70px 60px
-		min-height: 450px
+		min-height: 420px
 		height: auto
 		position: relative
+		margin-bottom: 225px
+		overflow: visible
 		&.big-size-akcia
 			min-height: 730px
 			padding-bottom: 200px
@@ -882,7 +884,7 @@ h2.withmb
 
 	.akcia-block
 		position: absolute
-		bottom: 0
+		bottom: -165px
 		left: 0
 		background: #de0a36 url('/image/site/uslugi/akcia-back.png') center left no-repeat
 		background-size: contain
@@ -1697,6 +1699,7 @@ h2.withmb
 		height: 100%
 		width: 200px
 		z-index: 1
+		opacity: 0.25
 		background: url(/image/site/arrow-left.png) center no-repeat
 	&:after
 		content: ''
@@ -1706,6 +1709,7 @@ h2.withmb
 		height: 100%
 		width: 200px
 		z-index: 1
+		opacity: 0.25
 		background: url(/image/site/arrow-right.png) center no-repeat
 
 .requisites
@@ -4295,6 +4299,7 @@ h2.withmb
 			.akcia-block
 				height: 120px
 				padding: 0 40px
+				bottom: -120px
 				&__img
 					flex: 2
 					padding-top: 5px
@@ -4309,7 +4314,8 @@ h2.withmb
 				.gallerry
 					padding: 20px 0 0
 			&.with-akcia-block
-				min-height: 435px
+				min-height: 280px
+				margin-bottom: 150px
 				&.big-size-akcia
 					min-height: 500px
 					padding-bottom: 150px
@@ -7540,6 +7546,7 @@ h2.withmb
 			.akcia-block
 				flex-direction: column
 				height: auto
+				bottom: -75px
 				padding: 15px
 				background: #DE0A36
 				&__img
@@ -9036,8 +9043,9 @@ h2.withmb
 @media screen and (max-width: 640px)
 	.podcategory-item
 		&.with-akcia-block	
-			min-height: 480px
-			background: #fff
+			min-height: 400px
+			background: #fff!important
+			margin-bottom: 100px
 	.living-team
 		.medium-6
 			min-width: 100%
@@ -9215,5 +9223,6 @@ h2.withmb
 	.podcategory-item 
 		.akcia-block.clear-white
 			height: 125px
+			bottom: -125px
 		&.with-akcia-block.big-size-akcia
 			min-height: 490px

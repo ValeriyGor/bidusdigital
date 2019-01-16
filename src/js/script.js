@@ -1788,9 +1788,9 @@ $(window).on("load", function() {
 $(document).ready(function() {
 	$('.history__item').each(function(){
 		if($(this).index() == 0){
-			$('.navigation__container ul').append('<li><a href="#'+$(this).attr('id')+'" class="active go_to">'+$(this).find('h3').text()+'</a></li>');
+			$('.navigation__container ul').append('<li><a href="#'+$(this).attr('id')+'" class="active go_to">'+$(this).find('.head_for_navigate').text()+'</a></li>');
 		} else {
-			$('.navigation__container ul').append('<li><a href="#'+$(this).attr('id')+'" class="go_to">'+$(this).find('h3').text()+'</a></li>');
+			$('.navigation__container ul').append('<li><a href="#'+$(this).attr('id')+'" class="go_to">'+$(this).find('.head_for_navigate').text()+'</a></li>');
 		}
 	});  	
 	setTimeout(function(){
