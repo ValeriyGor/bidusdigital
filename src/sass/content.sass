@@ -1169,6 +1169,8 @@ h2.withmb
 				background: #e6e6e6
 				vertical-align: middle
 				margin: 0 60px 0 85px
+.white-back
+	background: #fff
 .reviews 
 	.letter
 		margin-bottom: 15px
@@ -11240,6 +11242,30 @@ label.error
 
 .spincrement
 	font-style: normal
+
+.accordeon
+	&-full-row
+		padding: 40px
+	&__item
+		&-head
+			font-size: 30px
+			font-weight: 600
+			padding: 20px 0
+		&-text
+			&__row
+				padding: 35px 0 0
+				&::last-child .accordeon__item-text__content
+					border-bottom: 0
+			&__head
+				font-size: 24px
+				line-height: 36px
+				font-weight: 500
+			&__content
+				font-size: 18px
+				line-height: 30px
+				font-weight: 500
+				padding-bottom: 35px
+				border-bottom: 2px solid rgba(0,0,0,.05)
 
 @media screen and (max-width: 1200px)
 	.mxw1200
