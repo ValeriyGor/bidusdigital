@@ -3569,6 +3569,15 @@ h2.withmb
 			a
 				&:hover
 					color: #007de3
+	.accordeon
+		&__item
+			&-header
+				&:hover
+					color: #0070c9
+					.accordeon-plus
+						transition: all 0.3s
+						svg 
+							fill: #0070c9
 	.letter
 		&:hover
 			&:after, &:before
@@ -10037,6 +10046,9 @@ label.error
 	padding: 70px 0 61px
 	background: #fff
 	border-bottom: 1px solid rgba(0, 0, 0, 0.05)
+	&.big-bottom
+		padding-bottom: 90px
+
 	img
 		margin-bottom: 13px
 	&-text
@@ -11243,29 +11255,172 @@ label.error
 .spincrement
 	font-style: normal
 
+.head-with-slider
+	padding: 45px 0
+	background: #fff
+	border-bottom: 1px solid rgba(0,0,0,.05)
+
+.order-service-block
+	&__title-top
+		font-size: 14px
+		line-height: 30px
+		font-weight: 600
+		color: #de0a36
+	&__head
+		font-size: 32px
+		line-height: 36px
+		font-weight: 700
+		margin-top: 10px
+		margin-bottom: 25px
+	&__check-box
+		position: absolute
+		top: 5px
+		left: 2px
+		width: 16px
+		height: 16px
+		border-radius: 2px
+		border: 1px solid #cccaca
+
+	&__item
+		padding-left: 26px
+		position: relative
+		margin-top: 26px
+		cursor: pointer
+		input
+			display: none
+			&:checked + .order-service-block__check-box
+				background: #de0a36 url('../image/site/svg/arrow-checkbox.svg') center no-repeat;
+				background-size: 9px auto
+				border: 1px solid #de0a36
+	&__title
+		font-size: 18px
+		line-height: 24px
+		font-weight: 500
+		display: inline-block
+		position: relative
+		span
+			font-weight: 600
+			font-size: 12px
+			position: absolute
+			top: -4px
+			right: 0
+			transform: translateX(105%)
+	&__text
+		font-size: 12px
+		line-height: 16px
+		color: #666
+	&__price
+		font-size: 32px
+		line-height: 40px
+		font-weight: 500
+		margin-top: 27px
+		margin-bottom: 20px
+	&__button
+		font-size: 16px
+		font-weight: 700
+		text-align: center
+		color: #fff
+		width: 100%
+		margin: 7px 0
+	&__bottom-features
+		display: flex
+		align-items: flex-start
+		justify-content: space-between
+		margin-top: 18px
+		&>div 
+			flex: 0 0 50%
+			max-width: 50%
+			padding: 5px
+			display: flex
+			align-items: flex-start
+			justify-content: flex-start
+			img
+				margin-right: 10px
+				margin-top: 4px
+		.support
+			padding-left: 14px
+		&-title
+			font-size: 12px
+			line-height: 16px
+			max-width: 60%
+			font-weight: 500
+			span
+				font-weight: 600
+				display: block
+
+
+
+
 .accordeon
 	&-full-row
-		padding: 40px
+		.accordeon__item
+			border-bottom: 1px solid rgba(119, 119, 119, 0.1)
+	&-plus 
+		position: absolute
+		top: 22px
+		right: 15px
+		svg
+			fill: #000
+			transition: all 0.3s
 	&__item
-		&-head
+		padding: 27px 0
+		&-header
 			font-size: 30px
 			font-weight: 600
-			padding: 20px 0
+			padding-top: 20px
+			padding-bottom: 20px
+			color: #000
+			transition: all 0.3s
+			cursor: pointer
+			position: relative
+			&.open
+				margin-top: 15px
+				.accordeon-plus
+					transform: rotate(45deg)
 		&-text
+			display: none
+			padding-bottom: 28px
 			&__row
 				padding: 35px 0 0
-				&::last-child .accordeon__item-text__content
-					border-bottom: 0
+				&:last-child 
+					.accordeon__item-text__content
+						border-bottom: 0
 			&__head
 				font-size: 24px
-				line-height: 36px
+				line-height: 40px
 				font-weight: 500
 			&__content
 				font-size: 18px
 				line-height: 30px
 				font-weight: 500
-				padding-bottom: 35px
-				border-bottom: 2px solid rgba(0,0,0,.05)
+				padding-bottom: 30px
+				border-bottom: 1px solid rgba(0,0,0,.05)
+			&.active
+				display: block
+.slider4ico
+	margin-right: 60px
+.slider4iconav
+	&__item
+		img 
+			display: block
+			margin: 0 auto
+			max-width: 450px
+
+	&-nav
+		max-width: 400px 
+		margin: 25px auto 0
+		&__item
+			transition: all 0.3s
+			&:hover
+				cursor: pointer
+				opacity: 0.8
+			img
+				width: 70px
+				border-bottom: 2px solid #fff
+				margin: 5px auto
+			&.slick-current
+				img
+					border-bottom: 2px solid #000
 
 @media screen and (max-width: 1200px)
 	.mxw1200
@@ -11644,7 +11799,10 @@ label.error
 	.st-quote-text
 		padding: 0 80px
 		font-size: 20px
+		line-height: 32px
 		&.slim-text
+			font-size: 18px
+			line-height: 30px
 			padding: 0 80px
 	.st-prise
 		padding: 50px 0 77px
@@ -12927,7 +13085,7 @@ label.error
 			line-height: 7.5vw
 			padding: 0 6vw
 			&.slim-text
-				padding: 0 6vw
+				padding: 0 4vw
 			span
 				font-size: 3.2vw
 				margin-top: 5vw
@@ -13245,3 +13403,424 @@ label.error
 			padding-right: 5.63vw
 			background-size: contain
 			
+
+#modal_order, #modal_order-finish
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100vh
+	z-index: 9999
+	display: none
+	margin-top: -50vh
+
+#modal_order
+	background: #fff 
+
+#modal_order-finish
+	background: #f5f5f5
+
+.direction-column
+	flex-direction: column
+
+
+.button-send_order
+	font-size: 42px
+	line-height: 56px
+	font-weight: bold
+	margin-top: 75px
+	display: inline-block
+	color: #000
+	&.arrow-down-after
+		position: relative
+		padding-right: 37px
+		&:before
+			content: ''
+			position: absolute
+			width: 43px
+			height: 19px
+			background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="43px" height="19px"><path fill-rule="evenodd"  fill="rgb(222, 10, 54)" d="M42.747,8.854 L33.193,0.192 C32.928,-0.023 32.638,-0.063 32.323,0.067 C32.008,0.201 31.850,0.441 31.850,0.788 L31.850,6.331 L0.800,6.331 C0.568,6.331 0.377,6.404 0.228,6.552 C0.079,6.701 0.004,6.890 0.004,7.120 L0.004,11.873 C0.004,12.103 0.079,12.292 0.228,12.441 C0.377,12.588 0.568,12.664 0.800,12.664 L31.850,12.664 L31.850,18.205 C31.850,18.537 32.008,18.775 32.323,18.923 C32.638,19.055 32.928,19.006 33.194,18.775 L42.748,10.014 C42.913,9.851 42.996,9.652 42.996,9.421 C42.996,9.209 42.913,9.019 42.747,8.854 Z"/></svg>') center no-repeat
+			right: -11px
+			transform: rotate(90deg)
+			top: 22px
+
+.modal_order
+	max-width: 450px
+	width: 100%
+	&-text
+		font-size: 18px
+		line-height: 28px
+		text-align: center
+		margin-top: 10px
+	&-title
+		font-size: 30px
+		font-weight: 700
+		text-align: center
+	&-inputs-block
+		padding: 0 45px
+	&-work-block
+		background: #fff
+		border-radius: 4px 
+		overflow: hidden
+		margin-top: 40px
+		padding: 0
+	&-work-data
+		padding: 30px 45px 43px
+		.order-service-block__item
+			margin-top: 10px
+		.order-service-block__head
+			margin-top: 18px
+			font-size: 30px
+			line-height: 34px
+			margin-bottom: 25px
+
+.deadline-work
+	font-size: 18px
+	line-height: 28px
+	margin-top: 24px
+
+.semibold
+	font-weight: 600
+
+
+.bold
+	font-weight: 700
+
+.total-cost
+	padding: 25px 45px
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+	border-top: 1px solid rgba(0, 0, 0, 0.1)
+	font-size: 17px
+	line-height: 28px
+	font-weight: 600
+	span
+		font-size: 18px
+	
+.prepayment-money
+	font-size: 24px
+	line-height: 36px
+	padding: 27px 45px
+
+.pay-prepayment
+	color: #fff
+	text-align: center
+	padding: 26px 20px
+	background: #de0a36
+	font-size: 24px
+	line-height: 36px
+	display: block
+	transition: all 0.3s
+	&:hover
+		background: #cf0b33
+		color: #fff
+
+
+.change-user-data
+	color: #737373
+	font-size: 13px
+	font-weight: 400
+	transition: all 0.3s 
+	margin-bottom: 10px
+	&:hover
+		color: #000
+		svg 
+			fill: rgba(0, 0, 0, 0.5)
+			transition: all 0.3s 
+	svg  
+		fill: rgba(0, 0, 0, 0.22)
+		width: 7px
+		height: 5px
+		margin-right: 6px
+		position: relative
+		bottom: 2px
+		left: 2px
+
+.modal_order-finish
+	text-align: center
+	margin-top: 34px
+	font-size: 14px
+	color: #000
+	font-weight: 500
+
+@media screen and (max-width: 1025px) and (min-width: 767px)
+	.head-with-slider
+		padding: 15px 0 25px
+	.order-service
+		&-block
+			&__title-top
+				font-size: 12px
+				line-height: 20px
+			&__head
+				font-size: 20px
+				line-height: 28px
+				margin-top: 6px
+				margin-bottom: 15px
+			&__item	
+				margin-top: 15px
+				padding-left: 20px
+			&__check-box
+				width: 12px
+				height: 12px
+				top: 6px
+			&__title
+				font-size: 13px
+				line-height: 18px
+			&__text
+				font-size: 10px
+				line-height: 14px
+			&__price
+				font-size: 22px
+				line-height: 30px
+				margin-top: 18px
+				margin-bottom: 15px
+			&__bottom-features
+				&>div 
+					img
+						margin-right: 6px
+						margin-top: 3px
+						width: 15px
+				&-title
+					font-style: 9px
+					line-height: 13px
+
+	.slider4iconav
+		&__item
+			img
+				max-width: 100%
+	.slider4ico
+		margin-right: 20px 
+	.st-quote
+		padding: 45px 0
+		img
+			max-width: 25px
+		&.big-bottom
+			padding-bottom: 50px
+		&-text
+			font-size: 18px
+			line-height: 32px
+			&.slim-text
+				padding: 0 80px
+
+
+	.accordeon
+		&__item
+			padding: 15px 0
+			&-header
+				padding-top: 10px
+				padding-bottom: 10px
+				font-size: 20px
+				&.open
+					margin-top: 10px
+			&-text
+				&__row
+					padding-top: 20px
+				&__head
+					font-size: 18px
+					line-height: 30px
+				&__content
+					font-size: 13px
+					line-height: 24px
+					padding-bottom: 20px
+			&-text
+				padding-bottom: 12px
+		&-plus 
+			top: 13px
+			svg
+				width: 18px
+	.other-offers
+		padding: 25px 0
+
+
+@media screen and (max-width: 767px)
+	.find_text
+		padding: 0 8px
+	.content-pdbtm
+		padding-bottom: 10px
+	.content-pdtop
+		padding-top: 24px
+	.content404
+		padding-top: 16px
+		padding-bottom: 0
+	#modal_order, #modal_order-finish
+		height: 100vh
+		overflow-y: scroll
+		padding: 40px 15px
+	.mob-order-1
+		order: 1
+	.mob-order-2
+		order: 2
+	.mob-order-3
+		order: 3
+	.modal_order
+		&-title
+			font-size: 22px
+		&-text
+			font-size: 14px
+			line-height: 22px
+		&-work-block
+			margin-top: 25px
+		&-work-data
+			padding: 20px
+			.order-service-block__head
+				font-size: 20px
+				margin-top: 15px
+				line-height: 28px
+			.order-service-block__title
+				font-size: 4vw
+	.button-send_order
+		font-size: 30px
+		line-height: 42px
+		margin-top: 40px
+		&.arrow-down-after
+			&:before
+				width: 42px
+				background-size: 32px
+				height: 14px
+				top: 18px
+				right: -5px
+
+	.deadline-work
+		font-size: 16px
+		line-height: 24px
+		margin-top: 24px
+	.total-cost
+		padding: 18px 20px
+	.modal_order-finish
+		font-size: 12px
+		margin-top: 22px
+	.prepayment-money
+		padding: 24px 20px
+		font-size: 22px
+	.pay-prepayment
+		font-size: 22px
+	.order-service-block
+		padding: 2vw 3vw
+		flex: 0 0 100%!important
+		max-width: 100%
+		&__title-top
+			font-size: 2vw
+	.slider4ico
+		flex: 0 0 100%!important
+		max-width: 100%
+		&nav__item 
+			img
+				max-width: 70%
+
+	.accordeon
+		&__item
+			padding: 15px 0
+			&-header
+				font-size: 3.2vw
+				padding: 2vw
+				&.open
+					margin-top: 0
+			&-text
+				&__row
+					padding: 0
+					&:first-child
+						.accordeon__item-text__head
+							padding-top: 10px
+					.small-9
+						max-width: 100%
+						flex: 0 0 100%
+						
+				&__head
+					max-width: 100%
+					flex: 0 0 100%
+					font-size: 3vw
+					line-height: 4vw
+					padding-top: 25px
+
+				&__text
+					max-width: 100%
+					flex: 0 0 100%
+				&__content
+					padding: 0
+					font-size: 2vw
+					line-height: 4.2vw
+					padding-top: 15px
+					padding-bottom: 8vw
+		&-plus
+			right: 20px
+			top: 18px
+			svg
+				width: 14px
+
+
+
+@media screen and (max-width: 480px)
+	.back404
+		background: url('../image/site/404/header-back-mob.jpg') center no-repeat !important
+		background-size: cover
+	.head-with-slider
+		padding: 45px 0 16px
+	.order-service-block
+		padding: 5vw 5vw 4vw
+		&__title-top
+			font-size: 3vw
+		&__head
+			margin-top: 1.5vw
+			width: 90%
+			font-size: 7vw
+			line-height: 8vw
+
+		&__title
+			display: block
+			max-width: 88%
+			font-size: 5vw
+			display: inline-block
+		&__price
+			margin-top: 18px
+			margin-bottom: 13px
+			font-size: 8vw
+		&__button
+			height: 12vw
+			line-height: 12vw
+
+	.slider4ico
+		flex: 0 0 100%!important
+		max-width: 100%
+		&nav__item 
+			img
+				max-width: 100%
+	.st-quote
+		&.big-bottom
+			padding-bottom: 26vw
+	.accordeon
+		&__item
+			padding: 2vw 0
+			&-header
+				font-size: 5.5vw
+				padding: 5vw
+				&.open
+					margin-top: 0
+			&-text
+				padding-bottom: 2vw
+				&__row
+					&:first-child
+						.accordeon__item-text__head
+							padding-top: 0
+					.small-9
+						max-width: 100%
+						flex: 0 0 100%
+						padding: 0
+
+				&__head
+					max-width: 100%
+					flex: 0 0 100%
+					font-size: 4vw
+					padding: 7vw 5vw 0
+					line-height: 6vw
+				&__content
+					padding: 0 5vw
+					font-size: 3vw
+					line-height: 5.2vw
+					padding-top: 2vw
+					padding-bottom: 7vw
+
+		&-plus
+			right: 20px
+			svg
+				width: 14px
+
+

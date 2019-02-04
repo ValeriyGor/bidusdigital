@@ -1402,6 +1402,12 @@ p
 	fill: #989898
 	transition: all 0.3s
 	display: block
+	&.big-close
+		width: 18px
+		height: 18px
+	&.black
+		fill: #000 
+
 
 #call-back
 	width: 470px
@@ -1586,6 +1592,8 @@ p
 	background: rgba(255, 255, 255, 0.95)
 	position: relative
 	z-index: 9
+	&.bord-bott
+		border-bottom: 1px solid rgba(0, 0, 0, 0.05)
 	&.open
 		z-index: 999
 	.filter-block
@@ -2943,6 +2951,8 @@ p
 		font-size: 12px
 	h3
 		font-size: 17px
+	.modal_close.big-close
+		top: 48px
 	.mob-none
 		display: none!important
 	.open-mob
@@ -3755,6 +3765,8 @@ p
 		height:  76vh
 		min-height: 400px
 		margin-top: 44px
+		&.top-zero
+			padding-top: 0
 		&.trans-menu
 			margin-top: 0
 			height: 73vh
@@ -3776,7 +3788,10 @@ p
 			max-width: 65%
 			font-size: 14px
 			line-height: 20px
-			text-align: center    
+			text-align: center   
+			&.full-width
+				width: 90% 
+				max-width: 90%
 		a
 			margin-top: 20px
 	

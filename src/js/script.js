@@ -890,6 +890,23 @@ $(document).ready(function() {
       ]
     });
   } 
+  if($("div").is(".slider4iconav")){
+    $('.slider4iconav').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      fade: true,
+      asNavFor: '.slider4iconav-nav'
+    });
+    $('.slider4iconav-nav').slick({
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      asNavFor: '.slider4iconav',
+      dots: false,
+      centerMode: true,
+      focusOnSelect: true
+    });
+  } 
   if($("div").is(".default.slider-for")){
     $('.slider-for').slick({
       slidesToShow: 1,
