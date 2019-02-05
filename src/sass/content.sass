@@ -13414,6 +13414,61 @@ label.error
 	display: none
 	margin-top: -50vh
 
+#modal_worker-blog
+	position: fixed
+	top: 50%
+	left: 50%
+	width: 1006px
+	height: 684px
+	z-index: 9999
+	background: #fff
+	display: none
+	transform: translate(-50%, -50%)
+	border-radius: 3px
+.modal_worker-blog
+	&__image
+		flex: 0 0 68%
+		max-width: 68%
+		height: inherit
+		background-size: cover !important
+		border-top-left-radius: 3px
+		border-top-left-radius: 3px
+		overflow: hidden
+	&__text
+		flex: 0 0 32%
+		max-width: 32%
+		padding: 28px
+	&__head
+		font-size: 24px
+		line-height: 36px
+		font-weight: 700
+	&__location
+		font-size: 13px
+		line-height: 13px
+		color: #737373
+	&__content
+		p 
+			margin-top: 21px
+			font-size: 13px
+			line-height: 22px
+			font-family: 'Open Sans', sans-serif
+
+	&__arrow
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		width: 15px
+		height: 30px
+		background: url('../image/site/svg/arrow.svg') center no-repeat
+		background-size: contain
+
+	&__arrow-left
+		left: -95px
+	&__arrow-right
+		right: -95px
+		transform: translateY(-50%) scaleX(-1)
+
+
 #modal_order
 	background: #fff 
 
@@ -13542,9 +13597,84 @@ label.error
 	color: #000
 	font-weight: 500
 
+.worker-blog
+	display: flex
+	align-items: center
+	justify-content: space-between
+	background: #000
+	&__item
+		flex: 1
+		position: relative
+		opacity: 0.5
+		display: block
+		transition: all 0.3s
+		&-bg
+			padding-bottom: 100%
+			display: block
+			background-size: cover!important
+		p 
+			position: absolute
+			bottom: 7%
+			left: 5%
+			right: 5%
+			font-size: 0.69rem			
+			color: #fff
+			line-height: 1.1rem
+			max-height: 2.2rem
+			overflow: hidden
+
+@media screen and (min-width: 1024px)
+	.worker-blog
+		&__item
+			&:hover
+				opacity: 1
+				cursor: pointer
+	.modal_worker-blog
+		&__arrow
+			transition: all 0.3s
+			cursor: pointer
+			&:hover
+				opacity: 0.75
+
+@media screen and (max-width: 1440px) and (min-width: 1025px)
+	#modal_worker-blog
+		width: 850px
+		height: 580px
+	.modal_worker-blog
+		&__image
+			flex: 0 0 68%
+			max-width: 68%
+		&__text
+			padding: 25px
+		&__head
+			font-size: 21px
+			line-height: 30px
+		&__location
+			font-size: 12px
+			line-height: 12px
+		&__content
+			p 
+				margin-top: 15px
+				font-size: 12px
+				line-height: 18px
+				font-family: 'Open Sans', sans-serif
+
+		&__arrow
+			width: 13px
+			height: 26px
+
+		&__arrow-left
+			left: -75px
+		&__arrow-right
+			right: -75px
 @media screen and (max-width: 1025px) and (min-width: 767px)
 	.head-with-slider
 		padding: 15px 0 25px
+	.worker-blog
+		&__item
+			opacity: 1
+			p 
+				display: none
 	.order-service
 		&-block
 			&__title-top
@@ -13601,7 +13731,36 @@ label.error
 			&.slim-text
 				padding: 0 80px
 
+	#modal_worker-blog
+		width: 750px
+		height: 520px
+	.modal_worker-blog
+		&__image
+			flex: 0 0 68%
+			max-width: 68%
+		&__text
+			padding: 21px
+		&__head
+			font-size: 18px
+			line-height: 27px
+		&__location
+			font-size: 10px
+			line-height: 10px
+		&__content
+			p 
+				margin-top: 15px
+				font-size: 10px
+				line-height: 15px
+				font-family: 'Open Sans', sans-serif
 
+		&__arrow
+			width: 12px
+			height: 24px
+
+		&__arrow-left
+			left: -75px
+		&__arrow-right
+			right: -75px
 	.accordeon
 		&__item
 			padding: 15px 0
@@ -13678,7 +13837,16 @@ label.error
 				height: 14px
 				top: 18px
 				right: -5px
-
+	.worker-blog
+		flex-wrap: wrap
+		justify-content: flex-start
+		&__item
+			flex: 0 0 33.3%
+			max-width: 33.3%
+			width: 100%
+			opacity: 1
+			p 
+				display: none
 	.deadline-work
 		font-size: 16px
 		line-height: 24px
@@ -13745,6 +13913,44 @@ label.error
 			top: 18px
 			svg
 				width: 14px
+	#modal_worker-blog
+		width: 100%
+		height: 100vh
+		left: 0
+		top: 0
+		margin-top: -50vh
+		transform: none
+		overflow-y: scroll
+		border-radius: 0
+
+	.modal_worker-blog
+		&__image
+			flex: 0 0 60%
+			max-width: 60%
+			border-radius: 0
+		&__text
+			flex: 0 0 40%
+			max-width: 40%
+		&__head
+			font-size: 21px
+			line-height: 30px
+		&__location
+			font-size: 12px
+			line-height: 12px
+		&__content
+			p 
+				margin-top: 15px
+				font-size: 12px
+				line-height: 18px
+				font-family: 'Open Sans', sans-serif
+
+		&__arrow
+			display: none
+	
+		.modal_close
+			&.mobile-button				
+				display: none !important
+
 
 
 
@@ -13822,5 +14028,55 @@ label.error
 			right: 20px
 			svg
 				width: 14px
+	.modal_worker-blog
+		flex-direction: column
+		padding-bottom: 100px
+		&__image
+			flex: 0
+			padding-bottom: 100%
+			max-width: 100%
+		&__text
+			flex: 0
+			padding: 25px
+			max-width: 100%
+		&__head
+			font-size: 21px
+			line-height: 30px
+		&__location
+			font-size: 12px
+			line-height: 12px
+		&__content
+			p 
+				margin-top: 15px
+				font-size: 12px
+				line-height: 18px
+				font-family: 'Open Sans', sans-serif
+		.modal_close
+			display: none !important
+			&.mobile-button
+				font-weight: 500
+				bottom: 0
+				left: 0
+				right: 0
+				top: auto
+				width: 100%
+				height: auto
+				text-align: center
+				font-size: 16px
+				line-height: 26px
+				padding: 13px
+				background: #fff
+				position: fixed
+				display: block !important
+				border-top: 1px solid rgba(0, 0, 0, 0.2)
+				&:before
+					content: ""
+					top: -11px
+					left: 0
+					right: 0
+					width: 100%
+					height: 10px
+					background: #fff
+					position: absolute
 
 
