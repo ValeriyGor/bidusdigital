@@ -201,26 +201,26 @@
 	</section>
 	<section class="head-with-slider">
 		<div class="row align-justify">
-			<div class="columns small-12 order-service-block desktop-none mob-order-1">
+			<div class="columns small-12 order-service-block desktop-none mob-order-1 ">
 				<span class="order-service-block__title-top">Новинка</span>
 				<div class="order-service-block__head">Meticulous style guides for startup company</div>
 			</div>
-			<div class="columns small-4 order-service-block mob-order-3">
+			<div class="columns small-4 order-service-block mob-order-3 animateNumberParent">
 				<span class="order-service-block__title-top mob-none">Новинка</span>
 				<div class="order-service-block__head mob-none">Meticulous style guides for startup company</div>
 				<label class="order-service-block__item"> 
-					<input type="checkbox" checked="true">
+					<input type="checkbox" checked="true" data-exchange="5000"> 
 					<div class="order-service-block__check-box"></div>
 					<p class="order-service-block__title">Разработать styleguide <span>+5 000 ₽</span></p>
 					<p class="order-service-block__text">Документ, который будет включать в себя все стандарты использования фирменного стиля.</p>
 				</label>
 				<label class="order-service-block__item"> 
-					<input type="checkbox">
+					<input type="checkbox" data-exchange="1000">
 					<div class="order-service-block__check-box"></div>
 					<p class="order-service-block__title">Оформить профили в соц. сетях <span>+1 000 ₽</span></p>
 					<p class="order-service-block__text">На ваш выбор будет оформлено 3 профиля.</p>
 				</label>
-				<div class="order-service-block__price">51 000 ₽</div>
+				<div class="order-service-block__price animateNumberAll"><span class="count" data-value="51000">51 000</span> ₽</div>
 				<a href="#modal_order" class="order-service-block__button primary_link open-modal-btn">Оформить заявку</a>
 				<div class="order-service-block__bottom-features">
 					<div class="garrantie">
@@ -613,26 +613,26 @@
 			<div class="modal_order">
 				<div class="modal_order-title">Заявка успешно отправлена</div>
 				<div class="modal_order-text">Вы можете перевести вашу заявку в работу, оплатив часть ее стоимости сейчас, либо выбрать другие предложения и оплатить их вместе.</div>
-				<div class="modal_order-work-block">   
+				<div class="modal_order-work-block animateNumberParent">   
 					<div class="modal_order-work-data">
-						<a href="#" class="change-user-data">
+						<a href="#modal_order" class="change-user-data open-modal-btn">
 							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 							<path fill-rule="evenodd" d="M7.004,5.008 L3.501,0.001 L-0.003,5.008 "/>
 							</svg> Изменить контактные данные</a>
 						<div class="order-service-block__head">Meticulous style guides for startup company</div>
 						<label class="order-service-block__item"> 
-							<input type="checkbox" checked="true">
+							<input type="checkbox" checked="true" data-exchange="5000">
 							<div class="order-service-block__check-box"></div>
 							<p class="order-service-block__title">Разработать styleguide <span>+5 000 ₽</span></p>
 						</label>
 						<label class="order-service-block__item"> 
-							<input type="checkbox">
+							<input type="checkbox" data-exchange="1000">
 							<div class="order-service-block__check-box"></div>
-							<p class="order-service-block__title">Оформить профили в соц. сетях <span>+1 000 ₽</span></p>
+							<p class="order-service-block__title">Оформить профили в соц. сетях <span >+1 000 ₽</span></p>
 						</label>
 						<p class="semibold deadline-work">Срок выполнения: 4 рабочих дня</p>
 					</div> 					
-					<div class="total-cost">Общая стоимость: <span class="bold">56 000 ₽</span></div>
+					<div class="total-cost animateNumberAll">Общая стоимость: <span class="bold count" data-value="56000">56 000</span><span class="bold">₽</span></div>
 					<div class="prepayment-money">Предоплата: <span class="bold">28 000 ₽</span></div>
 					<a href="#" class="pay-prepayment bold">Оплатить часть работы</a>
 				</div>
