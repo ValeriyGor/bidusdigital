@@ -2097,6 +2097,9 @@ p
 		top: 21px
 		left: 0
 
+.button-send_order
+	&:active, &:focus
+		color: #DE0A36
 
 @media screen and (min-width: 1024px)
 	
@@ -2143,6 +2146,10 @@ p
 	.secondary-button
 		&:hover
 			background: #f5f5f5
+	.button-send_order
+		transition: all 0.3s
+		&:hover
+			color: #DE0A36
 
 	.footer
 		a
@@ -2952,7 +2959,11 @@ p
 	h3
 		font-size: 17px
 	.modal_close.big-close
-		top: 48px
+		top: 24px
+		width: 10px
+		height: 10px
+	.modal_order-inputs-block
+		padding: 0 10px
 	.mob-none
 		display: none!important
 	.open-mob
@@ -3765,6 +3776,9 @@ p
 		height:  76vh
 		min-height: 400px
 		margin-top: 44px
+		&.small-height-mobile
+			height: 40vh
+			min-height: 350px
 		&.top-zero
 			padding-top: 0
 		&.trans-menu

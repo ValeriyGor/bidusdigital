@@ -117,6 +117,9 @@ $( ".curtain" ).click(function(e) {
 $( ".send_form" ).click(function(e) {
   $(".success_send").fadeIn(0);
 });
+$( ".change-user-data" ).click(function(e) {
+  $("#modal_order-finish").fadeOut(300);
+});
 $( ".sent-gift" ).click(function(e) {
   $(".gifts").hide(0);
   $('.check-data').fadeIn(300);
@@ -135,6 +138,31 @@ $( ".wait-gift").click(function(e) {
 $( ".return-to-gifts" ).click(function(e) {
   $(".check-data").hide(0);
   $('.gifts').fadeIn(300);
+});
+
+$('.order-service-block__item input').change(function(e) {
+      var headParent = $(this).parents('.animateNumberParent');
+      var startmoney = headParent.find(".animateNumberAll").children('.count').attr('data-value');
+      console.log(startmoney);
+      startmoney = startmoney.replace(/\s/g, '');
+      startmoney = parseInt(startmoney);
+      var finishmoney = startmoney;
+      if($(this).prop("checked")){        
+        finishmoney = startmoney + parseInt($(this).attr('data-exchange'));
+      } else{
+        finishmoney = startmoney - parseInt($(this).attr('data-exchange'));
+      }
+      headParent.find(".animateNumberAll span").attr('data-value', finishmoney);
+      $({
+           n: startmoney
+       }).animate({
+           n: finishmoney
+       }, {
+           duration: 500,
+           step: function (a) {
+               headParent.find(".animateNumberAll").children('.count').html(a | 0)
+           }
+       })
 });
 
 $( ".accordeon__item-header" ).click(function(e) {
