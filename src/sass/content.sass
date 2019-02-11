@@ -12674,14 +12674,16 @@ label.error
 							color: #000
 
 		&.white-text
-			span 
-				color: #fff
-				&:before
-					height: 0
-					width: 0
-					border: 4px solid transparent
-					border-top: 5px solid #fff
-					border-bottom: 0
+			.st-cap-shop
+				span 
+					color: #fff
+					&:before
+						height: 0
+						width: 0
+						border: 4px solid transparent
+						border-top: 5px solid #fff
+						border-bottom: 0
+						background: none
 			&.fixed
 				background: #fff
 				border-bottom: 1px solid #fff
@@ -12697,7 +12699,10 @@ label.error
 				.st-cap-shop 
 					span
 						&:before
-							border-top: 5px solid #000			
+							border: 0	
+							height: 5px
+							width: 8px
+
 				&.open
 					span
 						&:before
