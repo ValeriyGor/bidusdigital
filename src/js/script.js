@@ -126,26 +126,26 @@ $( ".worker-blog__item" ).click(function(e) {
   putDataWorkerModal($(this));
 });
 $('.modal_worker-blog__arrow-right').click(function(e) {
-  $('#modal_worker-blog').fadeOut(300);
+  // $('#modal_worker-blog').fadeOut(300);
   if(++slideWorkerIndex >= $( ".worker-blog__item" ).length){
     slideWorkerIndex = 0;
   }
   var nextObj = $(".worker-blog__item").eq(slideWorkerIndex);
-  setTimeout(function(){
+  // setTimeout(function(){
     putDataWorkerModal(nextObj);
-  }, 300);
-  $('#modal_worker-blog').fadeIn(300);
+  // }, 300);
+  // $('#modal_worker-blog').fadeIn(300);
 });
 $('.modal_worker-blog__arrow-left').click(function(e) {
-  $('#modal_worker-blog').fadeOut(300);
+  // $('#modal_worker-blog').fadeOut(300);
   if(--slideWorkerIndex < 0){
     slideWorkerIndex = $( ".worker-blog__item" ).length-1;
   }
   var prevObj = $(".worker-blog__item").eq(slideWorkerIndex);
-  setTimeout(function(){
+  // setTimeout(function(){
     putDataWorkerModal(prevObj);
-  }, 300);
-  $('#modal_worker-blog').fadeIn(300);
+  // }, 300);
+  // $('#modal_worker-blog').fadeIn(300);
 });
 
 function putDataWorkerModal(objWorker){  
@@ -178,19 +178,26 @@ $( ".return-to-gifts" ).click(function(e) {
 $('.order-service-block__item input').change(function(e) {
       var headParent = $(this).parents('.animateNumberParent');
       var startmoney = headParent.find(".animateNumberAll").children('.count').attr('data-value');
-      console.log(startmoney);
+      var startprepay = 0;
+      var isPrePay = false;
+      if(headParent.find('.prepayment-money').length){
+        startprepay = parseInt(headParent.find('.prepayment-money').children('.count-pre-payment').attr('data-value'));
+        isPrePay = true;
+      }           
       startmoney = startmoney.replace(/\s/g, '');
       startmoney = parseInt(startmoney);
       var finishmoney = startmoney;
+      var finishpremoney = startprepay;
       if($(this).prop("checked")){        
         finishmoney = startmoney + parseInt($(this).attr('data-exchange'));
+        finishpremoney = startprepay + parseInt($(this).attr('data-exchange'))/2;
       } else{
         finishmoney = startmoney - parseInt($(this).attr('data-exchange'));
+        finishpremoney = startprepay - parseInt($(this).attr('data-exchange'))/2;
       }
-      headParent.find(".animateNumberAll span").attr('data-value', finishmoney);
-      $({
-           n: startmoney
-       }).animate({
+      headParent.find(".animateNumberAll .count").attr('data-value', finishmoney);
+      headParent.find(".prepayment-money .count-pre-payment").attr('data-value', finishpremoney);
+      $({n: startmoney}).animate({
            n: finishmoney
        }, {
            duration: 500,
@@ -198,6 +205,16 @@ $('.order-service-block__item input').change(function(e) {
                headParent.find(".animateNumberAll").children('.count').html(a | 0)
            }
        })
+      if(isPrePay){
+        $({n: startprepay}).animate({
+             n: finishpremoney
+         }, {
+             duration: 500,
+             step: function (a) {
+                 headParent.find(".prepayment-money").children('.count-pre-payment').html(a | 0)
+             }
+         })
+      }
 });
 
 $( ".accordeon__item-header" ).click(function(e) {

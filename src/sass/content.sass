@@ -816,6 +816,7 @@ h2.withmb
 				max-width: 375px
 			img
 				margin-right: 8px
+				max-width: 25px
 		&.pos-btm-cntr
 			color: #0070c9
 		span
@@ -1169,6 +1170,7 @@ h2.withmb
 				background: #e6e6e6
 				vertical-align: middle
 				margin: 0 60px 0 85px
+	
 .white-back
 	background: #fff
 .reviews 
@@ -5812,6 +5814,11 @@ h2.withmb
 	.scroll-block
 		width: 100%
 		overflow: scroll
+		transform: none !important
+		max-width: 100%
+	.no-transform-onmob
+		.slick-track
+			transform: none!important
 	.podcategory-item.black-text h2.small
 		br
 			display: none
@@ -12193,9 +12200,9 @@ label.error
 		font-size: 14px
 		background: #fff
 		font-weight: 600
-		border-top: 1px solid #ccc
-		border-bottom: 1px solid #ccc
-		margin-top: 25px
+		// border-top: 1px solid #ccc
+		// border-bottom: 1px solid #ccc
+		// margin-top: 25px
 		&:after
 			border: 3.5px solid transparent
 			content: ""
@@ -13418,7 +13425,7 @@ label.error
 
 #modal_order
 	height: 800px
-	margin-top: -400px
+	margin-top: -50vh
 	max-height: 100vh
 
 #modal_order-finish
@@ -13617,18 +13624,20 @@ label.error
 	&__item
 		flex: 1
 		position: relative
-		opacity: 0.5
 		display: block
 		transition: all 0.3s
 		&-bg
 			padding-bottom: 100%
 			display: block
+			transition: all 0.3s
+			opacity: 0.5
 			background-size: cover!important
 		p 
 			position: absolute
 			bottom: 12px
 			left: 20px
 			right: 20px
+			opacity: 0.7
 			font-size: 13px			
 			color: #fff
 			line-height: 18px
@@ -13637,10 +13646,11 @@ label.error
 
 @media screen and (min-width: 1024px)
 	.worker-blog
-		&__item
+		&__item 
 			&:hover
-				opacity: 1
-				cursor: pointer
+				.worker-blog__item-bg
+					opacity: 1
+					cursor: pointer
 	.modal_worker-blog
 		&__arrow
 			transition: all 0.3s
