@@ -610,8 +610,12 @@
 	</section>
 	<section class="big-height center-vertical-flex bg-white">
 		<div class="row align-justify align-middle mob-reverse-blocks">
-			<div class="columns small-12 medium-6 large-6 not-full-img">
+			<div class="columns small-12 medium-6 large-6 not-full-img animate-speedometr">
 				<img src="image/site/store/speed.png" alt="Стабильность"  class="img-service-features not-full-mobile">
+				<div id="speed-counter">
+					<div id="speed-counter-num">0</div> points
+				</div>
+				<div id="arrow-speed"></div>
 			</div>
 			<div class="columns small-12 medium-6 large-6">
 				<div class="head-service-features">Стабильность</div>
@@ -1131,8 +1135,33 @@
 		<script src="/js/jquery.form.js"></script>
     <script type="" src="/js/script.js"></script>
     <script type="" src="/js/myscript.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
     <script type="text/javascript">
 		$(document).ready(function(){
+			var tl = new TimelineLite();
+			var tl2 = new TimelineLite();
+			// var Cont={val:0} , NewVal = 98 ;
+
+			// TweenLite.to(Cont,2,{val:NewVal,roundProps:"val",onUpdate:function(){
+			//   document.getElementById("speed-counter-num").innerHTML=Cont.val
+			// }});
+
+			var counter = { var: 0 };
+			var tal = document.getElementById("speed-counter-num");
+			    
+			 tl2.to(counter, 2, {
+			      var: 98, 
+			      onUpdate: function () {
+			          tal.innerHTML = Math.ceil(counter.var);
+			      },
+			      ease:Circ.easeOut
+			  });
+			
+			// tl.to('#arrow-speed', 4, {rotation: '+=260', repeat: 0, transformOrigin: '85% 14%'})
+			tl.to('#arrow-speed', 1, {rotation: '+=260', repeat: 0, transformOrigin: '85% 14%', ease:Circ.easeOut})
+				.to('#arrow-speed', 1, {rotation: "+=2"})
+				.to('#arrow-speed', 0.5, {rotation: "-=2", ease:Power1.easeInOut, repeat:-1, repeatDelay:0.5});
+
 			$('.st-folio-slider').slick({
 			  slidesToShow: 1,
 			  slidesToScroll: 1,
