@@ -665,10 +665,10 @@
 			<div class="columns large-6 medium-6 small-12">
 				<div class="list-check__title small-mt-mob">Чек-лист специалиста по SEO</div>
 				<div class="list-check">
-					<div class="list-check__item active">Подобрать поисковые запросы по региону</div>
-					<div class="list-check__item active">Проанализировать конкуренцию и частотность</div>
-					<div class="list-check__item active">Распределить поисковые фразы по целевым стр...</div>
-					<div class="list-check__item">Проанализировать конкуренцию по запросам</div>
+					<div class="list-check__item"><p>Подобрать поисковые запросы по региону</p></div>
+					<div class="list-check__item"><p>Проанализировать конкуренцию и частотность</p></div>
+					<div class="list-check__item"><p>Распределить поисковые фразы по целевым стр...</p></div>
+					<div class="list-check__item"><p>Проанализировать конкуренцию по запросам</p></div>
 				</div>
 			</div>
 		</div>
@@ -1140,11 +1140,6 @@
 		$(document).ready(function(){
 			var tl = new TimelineLite();
 			var tl2 = new TimelineLite();
-			// var Cont={val:0} , NewVal = 98 ;
-
-			// TweenLite.to(Cont,2,{val:NewVal,roundProps:"val",onUpdate:function(){
-			//   document.getElementById("speed-counter-num").innerHTML=Cont.val
-			// }});
 
 			var counter = { var: 0 };
 			var tal = document.getElementById("speed-counter-num");
@@ -1159,8 +1154,14 @@
 			
 			// tl.to('#arrow-speed', 4, {rotation: '+=260', repeat: 0, transformOrigin: '85% 14%'})
 			tl.to('#arrow-speed', 1, {rotation: '+=260', repeat: 0, transformOrigin: '85% 14%', ease:Circ.easeOut})
-				.to('#arrow-speed', 1, {rotation: "+=2"})
-				.to('#arrow-speed', 0.5, {rotation: "-=2", ease:Power1.easeInOut, repeat:-1, repeatDelay:0.5});
+				.to('#arrow-speed', 0.03, {rotation: "+=2"})
+				.to('#arrow-speed', 0.05, {rotation: "-=2", ease:Power1.easeInOut, repeat:-1, repeatDelay:0.05});
+
+			// $('.list-check__item').each(function() { 		
+				// TweenLite.to($('.list-check__item'), 0, {css:{className:'+=active'}});
+				TweenMax.staggerTo( $('.list-check__item'), 2, {css:{className:'+=active'}}, 2);
+			// });
+
 
 			$('.st-folio-slider').slick({
 			  slidesToShow: 1,

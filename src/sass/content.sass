@@ -10512,7 +10512,6 @@ label.error
 		border-radius: 25px
 		max-width: 89%
 		text-align: left
-		line-height: 48px
 		margin-left: auto
 		margin-right: 0
 		margin-bottom: 9px
@@ -10520,12 +10519,17 @@ label.error
 		padding: 0 10px 0 15px
 		display: flex
 		align-items: center
-		font-size: 18px
-		font-weight: 400
 		justify-content: flex-start
 		cursor: pointer
 		box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.06)
-
+		position: relative
+		overflow: hidden
+		p 
+			position: relative
+			z-index: 1
+			line-height: 48px
+			font-size: 18px
+			font-weight: 400
 		&:before
 			content: ""
 			display: block
@@ -10535,8 +10539,20 @@ label.error
 			width: 22px
 			height: 22px
 			background: #f5f5f5
+			z-index: 1
+			transition: all 2s 
+		&:after
+			content: ""
+			width: 0
+			top: 0
+			left: 0
+			bottom: 0
+			position: absolute
+			background: #13b74b
+			transition: all 1s
+
 		&.active
-			background: #13b74b 
+			// background: #13b74b 
 			color: #fff
 			border-color: #13b74b
 			box-shadow: 0px 5px 16px 0px rgba(19, 183, 75, 0.38)
@@ -10544,6 +10560,10 @@ label.error
 				background: url('../image/site/svg/check.svg') center no-repeat
 				background-size: cover
 				border: none
+			&:after
+				width: 100%
+			p 
+				color: #fff
 	&.no-border
 		border-left: 0
 	&.left-align 
@@ -11615,10 +11635,12 @@ label.error
 				margin-right: 6px
 			max-width: 90%
 			height: 34px
-			line-height: 34px
-			font-size: 12px
 			margin-bottom: 6px
 			margin-top: 6px
+			p 
+				line-height: 34px
+				font-size: 12px
+
 	.st-cap-menu
 		&.bigger 
 			li 
@@ -12309,10 +12331,12 @@ label.error
 		&__item
 			margin-right: auto
 			max-width: 86%
-			font-size: 3vw
 			height: 7.5vw
 			margin-bottom: 13px
 			padding: 0 10px
+			p
+				font-size: 3vw
+
 			&:before
 				width: 4vw
 				height: 4vw

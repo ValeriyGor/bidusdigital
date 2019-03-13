@@ -655,37 +655,37 @@
 			<div class="columns small-12 large-6 medium-7">
 				<div class="list-check no-border left-align">
 					<div class="list-check__container">
-						<div class="list-check__item active">Настроить Яндекс.Директ</div>
+						<div class="list-check__item"><p>Настроить Яндекс.Директ</p></div>
 						<div class="list-check__img">
 							<img src="../image/site/landing/yand.jpg" alt="">
 						</div>
 					</div>
 					<div class="list-check__container">
-						<div class="list-check__item active">Настроить Google Adwords</div>
+						<div class="list-check__item"><p>Настроить Google Adwords</p></div>
 						<div class="list-check__img">
 							<img src="../image/site/landing/adwords.jpg" alt="">
 						</div>
 					</div>
 					<div class="list-check__container">
-						<div class="list-check__item active">Подключить социальные сети</div>
+						<div class="list-check__item"><p>Подключить социальные сети</p></div>
 						<div class="list-check__img">
 							<img src="../image/site/landing/soc.jpg" alt="">
 						</div>
 					</div>
 					<div class="list-check__container">
-						<div class="list-check__item active">Произвести e-mail рассылку</div>
+						<div class="list-check__item"><p>Произвести e-mail рассылку</p></div>
 						<div class="list-check__img">
 							<img src="../image/site/landing/mailchimq.jpg" alt="">
 						</div>
 					</div>
 					<div class="list-check__container">
-						<div class="list-check__item active">Продвинуть сайт в поиске, SEO</div>
+						<div class="list-check__item"><p>Продвинуть сайт в поиске, SEO</p></div>
 						<div class="list-check__img">
 							<img src="../image/site/landing/search-system.jpg" alt="">
 						</div>
 					</div>
 					<div class="list-check__container">
-						<div class="list-check__item">Разместить рекламу на порталах</div>
+						<div class="list-check__item"><p>Разместить рекламу на порталах</p></div>
 						<div class="list-check__img">
 							<img src="../image/site/landing/avito.jpg" alt="">
 						</div>
@@ -1140,8 +1140,11 @@
 		<script src="/js/jquery.form.js"></script>
     <script type="" src="/js/script.js"></script>
     <script type="" src="/js/myscript.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
     <script type="text/javascript">
 		$(document).ready(function(){
+			TweenMax.staggerTo( $('.list-check__item'), 2, {css:{className:'+=active'}}, 2);
+			
 			$('.st-folio-slider').slick({
 			  slidesToShow: 1,
 			  slidesToScroll: 1,
